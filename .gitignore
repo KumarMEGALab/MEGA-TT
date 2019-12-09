@@ -1,0 +1,17 @@
+*.o
+*.ppu
+*.bak
+lib/*
+*.lps
+*.dbg
+*.compiled
+*.or
+*.res
+*.pyc
+*.orig
+backup/*
+testing/*
+megatt
+megattproj
+
+
