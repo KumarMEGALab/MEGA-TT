@@ -16,10 +16,13 @@ type
       FLog: TStringList;
     protected
       FNewick: String;
+      FNewickFile: String;
       FTreeList: TTimeTreeList;
       FSvgWriter: TTimetreeSvgWriter;
     public
       constructor Create(newick: String);
+      constructor CreateFromFile(newickFile: String);
+
       destructor Destroy; override;
       function DrawSvg(filename: String): Boolean;
 
@@ -33,6 +36,14 @@ implementation
 constructor TNewickToSvg.Create(newick: String);
 begin
   FNewick := newick;
+  FTreeList := TTimeTreeList.Create;
+  FSvgWriter := TTimetreeSvgWriter.Create;
+  FLog := TStringList.Create;
+end;
+
+constructor TNewickToSvg.CreateFromFile(newickFile: String);
+begin
+  FNewickFile := newickFile;
   FTreeList := TTimeTreeList.Create;
   FSvgWriter := TTimetreeSvgWriter.Create;
   FLog := TStringList.Create;
@@ -54,8 +65,19 @@ begin
   Result := False;
   try
     try
-      if not FTreeList.ImportFromNewick(FNewick, nil) then
-        raise Exception.Create('failed to parse the input newick string');
+      if Trim(FNewick) <> EmptyStr then
+      begin
+        if not FTreeList.ImportFromNewick(FNewick, nil) then
+          raise Exception.Create('failed to parse the input newick string');
+      end
+      else if FileExists(FNewickFile) then
+      begin
+        if not FTreeList.ImportFromNewickFile(FNewickFile, nil) then
+          raise Exception.Create('failed to parse the input newick file');
+      end
+      else
+        raise Exception.Create('no valid input tree given for SVG generation');
+
       FSvgWriter.SetData(FTreeList);
       FSvgWriter.GenerateSvgStrings(filename);
       Result := FileExists(filename);

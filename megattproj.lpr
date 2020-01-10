@@ -26,6 +26,7 @@ type
 
   megatt = class(TCustomApplication)
   protected
+    FNewickFile: String;
     FNewickString: String;
     FMapFileNames: TStringList;
     FTreeList: TTimeTreeList;
@@ -423,25 +424,14 @@ begin
         LogfileCriticalSect := TCriticalSection.Create;
         LogStrings := TStringList.Create;
       end;
-      newickToSvg := TNewickToSvg.Create(FNewickString);
+      if Trim(FNewickString) <> EmptyStr then
+        newickToSvg := TNewickToSvg.Create(FNewickString)
+      else if FileExists(FNewickFile) then
+        newickToSvg := TNewickToSvg.CreateFromFile(FNewickFile)
+      else
+        raise Exception.Create('no valid inputs for SVG generation were found');
       if not newickToSvg.DrawSvg(OutputFileName) then
         raise Exception.Create(newickToSvg.Log.Text);
-      //LaunchTreeLoader;
-      //LaunchMapLoader;
-      //LaunchRanksLoader;
-      //LoadRanksThread.WaitFor;
-      //LoadTreeThread.WaitFor;
-      //aPruner := TTreePruner.Create;
-      //aPruner.Width := Width;
-      //aPruner.VSpacing := VSpacing;
-      //aPruner.DoNewick := DoNewick;
-      //aPruner.PanelHeight := PanelHeight;
-      //aPruner.RanksFile := RanksFile;
-      //if Assigned(LogStrings) then
-      //  aPruner.LogStrings := LogStrings;
-      //LoadNamesThread.WaitFor;
-      //if not aPruner.WriteUserTreeToSvg(FTreeList, OutputFilename, EarthImpactsFile, O2File, CO2File) then
-      //  raise Exception.Create('Failed to create SVG file for pruned tree');
       endTime := Now;
       if Assigned(LogStrings) then
       begin
@@ -580,6 +570,11 @@ begin
     else if (ParamStr(i) = '-i') or (ParamStr(i) = '--input') then
     begin
       FNewickString := ParamStr(i + 1);
+      ActionType := tatRenderNewickOnly;
+    end
+    else if (ParamStr(i) = '-if') or (ParamStr(i) = '--input-file') then
+    begin
+      FNewickFile := ParamStr(i + 1);
       ActionType := tatRenderNewickOnly;
     end
     else if (ParamStr(i) = '-ps') or (ParamStr(i) = '--prune-slow') then
