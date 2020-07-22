@@ -88,7 +88,8 @@ type
 
       constructor Create;
       destructor Destroy; override;
-      procedure SetTreeData(const AData: TTimeTreeData);
+      function TreeToTabularFormat(const Tree: TTimeTreeData; const otuNames: TStringList; const filename: String): Boolean;
+      procedure SetTreeData(const AData: TTimeTreeData; isConvertToTabular: Boolean);
       procedure GetTreeData(var AData: TTimeTreeData);
       procedure RootOnOutgroup;
       property NumTaxa: Integer read FNumTaxa write SetNumTaxa;
@@ -1442,7 +1443,50 @@ begin
   inherited Destroy;
 end;
 
-procedure TFpNodeTreeDataAdapter.SetTreeData(const AData: TTimeTreeData);
+function TFpNodeTreeDataAdapter.TreeToTabularFormat(const Tree: TTimeTreeData; const otuNames: TStringList; const filename: String): Boolean;
+var
+  Output: TextFile;
+  CurStr: String;
+
+  procedure WriteInfo(AIndex: Integer);
+  begin
+    if FNodes[AIndex].des1.Index > NumTaxa then
+      WriteInfo(FNodes[aIndex].des1.Index);
+
+    if FNodes[aIndex].des2.index > NumTaxa then
+      WriteInfo(FNodes[aIndex].des2.index);
+
+    CurStr := IntToStr(aIndex)  + ', ';
+    if FNodes[aIndex].des1.index <= NumTaxa then
+      CurStr := CurStr + otuNames[FNodes[aIndex].des1.index - 1]
+    else
+      CurStr := CurStr + Format('%5d', [FNodes[aIndex].des1.index]);
+    CurStr := CurStr + ', ';
+
+    if FNodes[aIndex].des2.index <= NumTaxa then
+      CurStr := CurStr + otuNames[FNodes[aIndex].des2.index - 1]
+    else
+      CurStr := CurStr + Format('%5d', [FNodes[aIndex].des2.index]);
+    CurStr := CurStr + ', ';
+
+    CurStr := CurStr + FloatToStrF(FNodes[aIndex].des1.branch.length, ffFixed,6,10) +', ';
+    CurStr := CurStr + FloatToStrF(FNodes[aIndex].des2.branch.length, ffFixed,6,10);
+    WriteLn(Output, CurStr);
+  end;
+begin
+  try
+    SetTreeData(Tree, True);
+    AssignFile(Output, filename);
+    Rewrite(Output);
+    WriteLn(Output, 'AncId, Desc1, Desc2, Branch Length 1, Branch Length 2');
+    WriteInfo(NumNodes); // root node
+  finally
+    CloseFile(Output);
+  end;
+  Result := FileExists(filename);
+end;
+
+procedure TFpNodeTreeDataAdapter.SetTreeData(const AData: TTimeTreeData; isConvertToTabular: Boolean);
 var
   i,j,k : integer;
 begin
@@ -1489,12 +1533,15 @@ begin
     FIsBranchLength := True;
     for i := 1 to NumNodes do
     begin
-      FNodes[i].numLeaves := 0;
-      FNodes[i].timetreeId := AData.GetTimetreeID(i-1);
-      if FNodes[i] = FRoot then
-        Continue;
-      if FNodes[i].timetreeId >= 0 then
-        FNodes[i].rank := TaxonomicRanks[FNodes[i].timetreeId];
+      if not IsConvertToTabular then
+      begin
+        FNodes[i].numLeaves := 0;
+        FNodes[i].timetreeId := AData.GetTimetreeID(i-1);
+        if FNodes[i] = FRoot then
+          Continue;
+        if FNodes[i].timetreeId >= 0 then
+          FNodes[i].rank := TaxonomicRanks[FNodes[i].timetreeId];
+      end;
       FNodes[i].branch.length := AData.BLen[i-1];
     end;
   end

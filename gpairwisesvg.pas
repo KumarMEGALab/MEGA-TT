@@ -334,7 +334,7 @@ begin
     if Assigned(AData) then
       Result := AData.Value
     else
-      raise Exception.Create('missing CI lower bound');
+      raise Exception.Create('missing CI upper bound');
   finally
     if Assigned(AJson) then
       AJson.Free;

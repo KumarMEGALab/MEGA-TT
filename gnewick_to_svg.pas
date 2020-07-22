@@ -24,12 +24,16 @@ type
       constructor CreateFromFile(newickFile: String);
 
       destructor Destroy; override;
-      function DrawSvg(filename: String): Boolean;
 
+      function DrawSvg(filename: String): Boolean;
+      function WriteTreeInTabularFormat(filename: String): Boolean;
       property Log: TStringList read FLog;
   end;
 
 implementation
+
+uses
+  gtreedataadapter, gtreedata;
 
 { TNewickToSvg }
 
@@ -90,6 +94,26 @@ begin
       end;
     end;
   finally
+  end;
+end;
+
+function TNewickToSvg.WriteTreeInTabularFormat(filename: String): Boolean;
+var
+  adapter: TFpNodeTreeDataAdapter = nil;
+  tree: TTimeTreeData = nil;
+begin
+  try
+    try
+      adapter := TFpNodeTreeDataAdapter.Create;
+      tree := FTreeList[0];
+      Result := adapter.TreeToTabularFormat(tree, FTreeList.OTUNameList, filename);
+    except
+      on E:Exception do
+        FLog.Add('Error when writing tree to tabular format: ' + E.Message);
+    end;
+  finally
+    if Assigned(adapter) then
+      adapter.Free;
   end;
 end;
 

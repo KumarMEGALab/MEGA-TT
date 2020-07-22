@@ -39,7 +39,7 @@
           </Linking>
           <Other>
             <ExecuteAfter>
-              <Command Value="python /mydata/Documents/lazarusProjects/MEGA-Lazarus/mega-tt/megatt_check_dependencies.py"/>
+              <Command Value="python /mydata/Documents/lazarusProjects/mega-git/mega-tt/megatt_check_dependencies.py"/>
             </ExecuteAfter>
           </Other>
         </CompilerOptions>
@@ -53,16 +53,16 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <CommandLineParams Value="--width 600 --height 1200 --outfile debug.svg --input-file tree.nwk"/>
-        <WorkingDirectory Value="/mydata/Documents/mega/debug/stringTooLong"/>
+        <CommandLineParams Value="--width 800 --height 400 --outfile ./outputs/crab.svg --input-file ./inputs/crab.nwk"/>
+        <WorkingDirectory Value="/mydata/Documents/megatt/newickToTabular"/>
         <Display Use="True"/>
       </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
           <local>
-            <CommandLineParams Value="--width 600 --height 1200 --outfile debug.svg --input-file tree.nwk"/>
-            <WorkingDirectory Value="/mydata/Documents/mega/debug/stringTooLong"/>
+            <CommandLineParams Value="--width 800 --height 400 --outfile ./outputs/crab.svg --input-file ./inputs/crab.nwk"/>
+            <WorkingDirectory Value="/mydata/Documents/megatt/newickToTabular"/>
             <Display Use="True"/>
           </local>
         </Mode0>

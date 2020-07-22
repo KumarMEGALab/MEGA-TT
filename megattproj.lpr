@@ -16,7 +16,7 @@ uses
   testconsts, gsvgstrings, gtimeline, gtimelinesvgwriter, gtimelineresult,
   gtimelinejsonparser, gtimelineresultbin, gtimelineresultbinarray,
   mearthimpactsrenderer, gtimescalerenderer, gscaleticks, typinfo,
-gconfidenceintervals, gnamestoidsmapper, gleafnodecounts, gnewick_to_svg;
+  gconfidenceintervals, gnamestoidsmapper, gleafnodecounts, gnewick_to_svg;
 
 type
 
@@ -47,6 +47,7 @@ type
     procedure DoTimelineSvg;
     procedure DoRenderNewick;
     procedure DoRenderNewickOnly; { skips the rendering of everything else, i.e. timescale, geopanels, etc...}
+    procedure NewickToTabularFormat;
     function ParseCommandLine: Boolean;
     procedure CountRanks;
     procedure OutputVersionInfo;
@@ -432,6 +433,8 @@ begin
         raise Exception.Create('no valid inputs for SVG generation were found');
       if not newickToSvg.DrawSvg(OutputFileName) then
         raise Exception.Create(newickToSvg.Log.Text);
+      if not newickToSvg.WriteTreeInTabularFormat(ChangeFileExt(OutputFileName, '.table')) then
+        raise Exception.Create(newickToSvg.Log.Text);
       endTime := Now;
       if Assigned(LogStrings) then
       begin
@@ -452,6 +455,11 @@ begin
     if Assigned(LogStrings) then
       LogStrings.Free;
   end;
+end;
+
+procedure megatt.NewickToTabularFormat;
+begin
+
 end;
 
 function megatt.ParseCommandLine: Boolean;

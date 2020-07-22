@@ -333,7 +333,7 @@ begin
   Result := False;
   if not studyTree.isBLen then
     Exit;
-  FTree.SetTreeData(studyTree[0]);
+  FTree.SetTreeData(studyTree[0], False);
   Result := (FTree.GetPercentMissingBlensData < (1 - BLENS_DATA_COVERAGE_NEEDED_FOR_SCALING));
   if not Result then
     studyTree.isBLen := False;
@@ -355,7 +355,7 @@ begin
       if not FTreeList.UpdateTimetreeIDs then
         raise Exception.Create('Failed to update timetree node IDs');
       aData := FTreeList.Remove(0); { we will take temporary ownership}
-      FTree.SetTreeData(aData);
+      FTree.SetTreeData(aData, False);
       if not FTree.CountRanks(aList) then
         raise Exception.Create('failed to count taxonomic ranks');
       aList.SaveToFile(outFile);
@@ -389,7 +389,7 @@ begin
     if not FTreeList.UpdateTimetreeIDs then
       raise Exception.Create('Failed to update timetree node IDs');
     aData := FTreeList.Remove(0); { we will take temporary ownership}
-    FTree.SetTreeData(aData);
+    FTree.SetTreeData(aData, False);
     if FDeepestRank <> trUnknown then
     begin
       DoMapNames := False;
@@ -489,7 +489,7 @@ var
 begin
   try
     aTree := TFpNodeTreeDataAdapter.Create;
-    aTree.SetTreeData(FTreeList[0]);
+    aTree.SetTreeData(FTreeList[0], False);
     d := aTree.GetPairwiseDistances;
     Result := WritePairwiseDistanceToCsvFile(d, SvgFile);
   finally
@@ -545,7 +545,7 @@ var
 begin
   try
     aTree := TFpNodeTreeDataAdapter.Create;
-    aTree.SetTreeData(FTreeList[0]);
+    aTree.SetTreeData(FTreeList[0], False);
     d := aTree.GetPairwiseDistances;
     FBestNumDecimals := BestNumDecimalsForHtmlTable(d);
     Result := WritePairwiseDistancesToColumnHtmlFile(d, htmlFile);
