@@ -5,7 +5,7 @@ unit gpairwisesvg;
 interface
 
 uses
-  Classes, SysUtils, fpjson, jsonparser, gconfidenceintervals;
+  Classes, SysUtils, fpjson, jsonparser, gconfidenceintervals, fgl;
 
 type
 
@@ -73,6 +73,8 @@ type
     property Title: String read FTitle write SetTitle;
   end;
 
+  TTimeTreeHitRecordList = specialize TFPGList<TTimeTreeHitRecord>;
+
   { TPairwiseResult }
 
   TPairwiseResult = class(TObject)
@@ -83,6 +85,7 @@ type
       FCIHigh: Double;
       FCILow: Double;
       FHitRecords: TList;
+      FOutliers: TTimeTreeHitRecordList;
       FIsCI: Boolean;
       FNumStudies: Integer;
       FShowSummary: Boolean;
@@ -91,6 +94,8 @@ type
       FShowExpert: Boolean;
       FTaxonA: TTimetreeTaxon;
       FTaxonB: TTimetreeTaxon;
+      function GetNumOutliers: Integer;
+      function GetOutlier(Index: Integer): TTimetreeHitRecord;
       procedure SetAncestorId(AValue: Integer);
       procedure SetMedianTime(AValue: Double);
       procedure SetMolecularTime(AValue: Double);
@@ -127,6 +132,8 @@ type
       property TaxonA: TTimetreeTaxon read FTaxonA;
       property TaxonB: TTimetreeTaxon read FTaxonB;
       property NumStudies: Integer read FNumStudies; { the actual number of studies used to generate a time estimate. Outliers get filtered out so we don't use HitRecords.Count}
+      property NumOutliers: Integer read GetNumOutliers;
+      property Outlier[Index: Integer]: TTimetreeHitRecord read GetOutlier;
   end;
 
   function CompareHitRecord(Item1: Pointer; Item2: Pointer): Integer;
@@ -195,6 +202,20 @@ begin
   FAncestorId:=AValue;
 end;
 
+function TPairwiseResult.GetNumOutliers: Integer;
+begin
+  Result := 0;
+  if Assigned(FOutliers) then
+    Result := FOutliers.Count;
+end;
+
+function TPairwiseResult.GetOutlier(Index: Integer): TTimetreeHitRecord;
+begin
+  Result := nil;
+  if Assigned(FOutliers) and (FOutliers.Count > Index) then
+    Result := FOutliers[Index];
+end;
+
 procedure TPairwiseResult.SetMedianTime(AValue: Double);
 begin
   if FMedianTime=AValue then Exit;
@@ -224,6 +245,7 @@ begin
   FTaxonA := TTimetreeTaxon.Create;
   FTaxonB := TTimetreeTaxon.Create;
   FHitRecords := TList.Create;
+  FOutliers := TTimeTreeHitRecordList.Create;
   FCIParser := TConfidenceIntervalParser.Create;
 end;
 
@@ -242,6 +264,13 @@ begin
         TTimetreeHitRecord(FHitRecords[i]).Free;
     FHitRecords.Free;
   end;
+  if Assigned(FOutliers) then
+  begin
+    if FOutliers.Count > 0 then
+      for i := 0 to FOutliers.Count - 1 do
+        FOutliers[i].Free;
+    FOutliers.Free;
+  end;
   if Assigned(FCIParser) then
     FCIParser.Free;
   inherited Destroy;
@@ -254,10 +283,10 @@ end;
 
 procedure TPairwiseResult.FilterOutliers;
 var
-  sigma, delta, stdev: Double;
+  sigma, stdev: Double;
   cConstant, mean: Double;
   dMax: Double;
-  aRec: TTimetreeHitRecord;
+  aRec: TTimetreeHitRecord = nil;
   i: Integer;
 begin
   if FHitRecords.Count > 5 then
@@ -280,8 +309,8 @@ begin
       if (TTimetreeHitRecord(FHitRecords[i]).Time > (mean + dMax)) or (TTimetreeHitRecord(FHitRecords[i]).Time < (mean - dMax)) then
       begin
         aRec := TTimetreeHitRecord(FHitRecords[i]);
+        FOutliers.Add(aRec);
         FHitRecords.Delete(i);
-        aRec.Free;
       end;
     end;
   end;

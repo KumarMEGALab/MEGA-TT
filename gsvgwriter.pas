@@ -1108,7 +1108,7 @@ begin
   TempRect.Top := TempRect.Bottom + 30;
   TempRect.Bottom := TempRect.Bottom + FFontHeight;
   if FPairwiseResult.NumStudies = 1 then
-    TextStr := Format('(Median and estimated times were derived from from %d study)', [FPairwiseResult.NumStudies])
+    TextStr := Format('(Median and estimated times were derived from %d study)', [FPairwiseResult.NumStudies])
   else
     TextStr := Format('(Median and estimated times were derived from %d studies)', [FPairwiseResult.NumStudies]);
   TextStr := WrapTextInTSpan(TextStr, (aWidth div 2), FFontHeight  + 1, 10);
@@ -1116,6 +1116,18 @@ begin
 
   TextStr := AddWrappedSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
   FStrings.Add(TextStr);
+  if FPairwiseResult.NumOutliers > 0 then
+  begin
+    if FPairwiseResult.NumOutliers = 1 then
+      TextStr := 'Note: 1 outlier study time is not displayed.'
+    else
+      TextStr := Format('Note: %d outlier study times are not displayed', [FPairwiseResult.NumOutliers]);
+    TextStr := WrapTextInTSpan(TextStr, (aWidth div 2), FFontHeight + 1, 10);
+    TempRect.Top := TempRect.Bottom + 30;
+    TempRect.Bottom := TempRect.Bottom + (NumOccurences(TextStr, '</tspan>', True) * FFontHeight*2);
+    TextStr := AddWrappedSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
+    FStrings.Add(TextStr);
+  end;
 end;
 
 function TPairwiseSvgWriter.GetTimeticksFormatString: String;
@@ -1167,7 +1179,7 @@ begin
   if mya > MinTime then
   begin
     if TimeSpan > 0.0 then
-      Result := Min(Height - FMargins.Bottom, FMargins.Top + Round((mya - MinTime) / TimeSpan * (Height - FMargins.Top *2)))
+      Result := Min(Height - FMargins.Bottom, FMargins.Top + Round((mya - MinTime) / TimeSpan * (Height - FMargins.Top*2)))
     else
       Result := FMargins.Top;
   end
@@ -1179,7 +1191,7 @@ function TPairwiseSvgWriter.YCoordToMya(y: Integer): Double;
 begin
   Assert((y >= FMargins.Top) and (y < (Height - FMargins.Bottom)));
   if CompareValue(TimeSpan, 0.0, FP_CUTOFF) > 0.0 then
-    Result := (y - FMargins.Top)/(Height - FMargins.Top - FMargins.Bottom) * TimeSpan + MinTime
+    Result := (y - FMargins.Top)/(Height - FMargins.Top*2) * TimeSpan + MinTime
   else
   begin
     Result := MinTime;

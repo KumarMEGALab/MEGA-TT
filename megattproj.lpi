@@ -53,16 +53,16 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <CommandLineParams Value="--width 800 --height 400 --outfile ./outputs/crab.svg --input-file ./inputs/crab.nwk"/>
-        <WorkingDirectory Value="/mydata/Documents/megatt/newickToTabular"/>
+        <CommandLineParams Value="--pairwise ./inputs/outlier_example.json --outfile ./output/outlier_example.svg --width 700 --height 800 --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
+        <WorkingDirectory Value="/mydata/Documents/megatt/pairwiseSvg"/>
         <Display Use="True"/>
       </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
           <local>
-            <CommandLineParams Value="--width 800 --height 400 --outfile ./outputs/crab.svg --input-file ./inputs/crab.nwk"/>
-            <WorkingDirectory Value="/mydata/Documents/megatt/newickToTabular"/>
+            <CommandLineParams Value="--pairwise ./inputs/outlier_example.json --outfile ./output/outlier_example.svg --width 700 --height 800 --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
+            <WorkingDirectory Value="/mydata/Documents/megatt/pairwiseSvg"/>
             <Display Use="True"/>
           </local>
         </Mode0>
