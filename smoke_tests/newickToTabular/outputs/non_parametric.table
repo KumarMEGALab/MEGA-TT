@@ -1,0 +1,22 @@
+AncId, Desc1, Desc2, Branch Length 1, Branch Length 2
+23, Equus caballus, Ceratotherium simum, 54.4007290300, 54.4007290300
+24, Canis lupus,    23, 77.2265940000, 22.8258649700
+25, Tursiops truncatus, Orcinus orca, 11.1423685700, 11.1423685700
+26, Bos mutus, Bison bison, 4.8800000000, 4.8800000000
+27,    25,    26, 44.8174845300, 51.0798531000
+28, Camelus ferus,    27, 64.1840240700, 8.2241709700
+29,    24,    28, 0.5283624100, 13.5709323400
+30, Cricetulus griseus, Microtus ochrogaster, 22.8260146200, 22.8260146200
+31, Chinchilla lanigera,    30, 72.8767081600, 50.0506935400
+32, Macaca fascicularis, Macaca nemestrina, 5.2781630000, 5.2781630000
+33, Mandrillus leucophaeus,    32, 12.4000000000, 7.1218370000
+34, Pan troglodytes, Homo sapiens, 6.6509050000, 6.6509050000
+35, Gorilla gorilla,    34, 9.0630955200, 2.4121905200
+36,    35, Pongo abelii, 6.6990700200, 15.7621655400
+37, Nomascus leucogenys,    36, 20.1892135400, 4.4270480100
+38,    33,    37, 17.0415468200, 9.2523332700
+39,    38, Carlito syrichta, 37.6195055800, 67.0610524000
+40, Microcebus murinus,    39, 73.8368943500, 6.7758419500
+41,    31,    40, 16.9464792600, 15.9862930700
+42,    29,    41, 18.7074327600, 6.6392017500
+43,    42, Ornithorhynchus anatinus, 80.4651090500, 176.9274982100

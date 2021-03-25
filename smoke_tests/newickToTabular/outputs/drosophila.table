@@ -1,0 +1,11 @@
+AncId, Desc1, Desc2, Branch Length 1, Branch Length 2
+12, D. affinidisjuncta, D. heteroneura, 0.0211579200, 0.0165657600
+13,    12, D. adiastola, 0.0114203800, 0.0322197300
+14,    13, D. mimica, 0.0044178400, 0.0234314900
+15,    14, D. nigra, 0.0149207700, 0.0432888700
+16, S. albovittata, D. crassifemur, 0.0442492500, 0.0545575400
+17,    15,    16, 0.0426271700, 0.0714575300
+18,    17, D. mulleri, 0.0384416700, 0.0816639400
+19, D. melanogaster, D. pseudoobscura, 0.0842951100, 0.0697270500
+20, S. lebanonensis,    19, 0.1222011100, 0.0355673900
+21,    18,    20, 0.0000000000, 0.0492593900

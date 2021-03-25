@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="776" name="tree" y="0" viewBox="0 0 900 776">
+<g class="background" id="timetree-background-colors" bg-colors="periods" >
+<polyline points="20,776 78,776 78,20 20,20 20,776" class="background" fill="#FED99A" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="78,776 160,776 160,20 78,20 78,776" class="background" fill="#FEBF4E" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="160,776 281,776 281,20 160,20 160,776" class="background" fill="#FECC5C" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="281,776 330,776 330,20 281,20 281,776" class="background" fill="#FED96A" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="330,776 359,776 359,20 330,20 330,776" class="background" fill="#7FA056" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="359,776 384,776 384,20 359,20 359,776" class="background" fill="#009270" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="384,776 399,776 399,20 384,20 384,776" class="background" fill="#B3E152" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="399,776 430,776 430,20 399,20 399,776" class="background" fill="#CB8C37" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="430,776 453,776 453,20 430,20 430,776" class="background" fill="#678F66" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="453,776 463,776 463,20 453,20 453,776" class="background" fill="#99C2B5" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="463,776 490,776 490,20 463,20 463,776" class="background" fill="#F04028" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="490,776 518,776 518,20 490,20 490,776" class="background" fill="#812B92" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="518,776 548,776 548,20 518,20 518,776" class="background" fill="#34B2C9" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="548,776 592,776 592,20 548,20 548,776" class="background" fill="#7FC64E" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="592,776 615,776 615,20 592,20 592,776" class="background" fill="#FD9A52" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="615,776 628,776 628,20 615,20 615,776" class="background" fill="#FFE619" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+</g>
+<g id="timetree-branches" class="branches" depth="unknown">
+<text x="646" y="64"> Ctenophora</text>
+<polyline points="106,177 106,59 628,59" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="59" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="59" r="12" class="node" rank="phylum" otu="true" name="Ctenophora" time="" lncount="1" id="63"/>
+<text x="646" y="88"> Platyhelminthes</text>
+<polyline points="175,173 175,83 628,83" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="83" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="83" r="12" class="node" rank="phylum" otu="true" name="Platyhelminthes" time="" lncount="245" id="66"/>
+<text x="646" y="112"> Xenacoelomorpha</text>
+<polyline points="252,144 252,107 628,107" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="107" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="107" r="12" class="node" rank="phylum" otu="true" name="Xenacoelomorpha" time="" lncount="2" id="69"/>
+<text x="646" y="136"> Chordata</text>
+<polyline points="252,156 252,131 628,131" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="131" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="131" r="12" class="node" rank="phylum" otu="true" name="Chordata" time="" lncount="26811" id="71"/>
+<text x="646" y="160"> Hemichordata</text>
+<polyline points="283,165 283,155 628,155" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="155" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="155" r="12" class="node" rank="phylum" otu="true" name="Hemichordata" time="" lncount="1" id="74"/>
+<text x="646" y="184"> Chaetognatha</text>
+<polyline points="283,169 283,179 628,179" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="179" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="179" r="12" class="node" rank="phylum" otu="true" name="Chaetognatha" time="" lncount="1" id="75"/>
+<polyline points="266,183 266,167 283,167" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="283" cy="167" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="283" cy="167" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="626" lncount="2" dof="Deuterostomia" id="73"/>
+<text x="646" y="208"> Echinodermata</text>
+<polyline points="266,187 266,203 628,203" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="203" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="203" r="12" class="node" rank="phylum" otu="true" name="Echinodermata" time="" lncount="215" id="76"/>
+<polyline points="252,160 252,185 266,185" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="266" cy="185" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="266" cy="185" r="12" class="node" rank="unknown" cilo="485" cihi="829" isci="true" time="657" lncount="3" dof="Deuterostomia" id="72"/>
+<line x1="252" y1="148" x2="252" y2="185" stroke="#000" stroke-width="2"/>
+<polyline points="190,266 190,146 252,146" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="252" cy="146" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="252" cy="146" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="684" lncount="5" dof="Bilateria" id="68"/>
+<text x="646" y="232"> Onychophora</text>
+<polyline points="302,237 302,227 628,227" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="227" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="227" r="12" class="node" rank="phylum" otu="true" name="Onychophora" time="" lncount="27" id="82"/>
+<text x="646" y="256"> Tardigrada</text>
+<polyline points="302,241 302,251 628,251" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="251" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="251" r="12" class="node" rank="phylum" otu="true" name="Tardigrada" time="" lncount="6" id="83"/>
+<polyline points="230,255 230,239 302,239" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="302" cy="239" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="302" cy="239" r="12" class="node" rank="unknown" cilo="557" cihi="660" isci="false" time="593" lncount="2" dof="Panarthropoda" id="81"/>
+<text x="646" y="280"> Arthropoda</text>
+<polyline points="230,259 230,275 628,275" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="275" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="275" r="12" class="node" rank="phylum" otu="true" name="Arthropoda" time="" lncount="19552" id="84"/>
+<polyline points="219,276 219,257 230,257" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="230" cy="257" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="230" cy="257" r="12" class="node" rank="no rank" cilo="548" cihi="898" isci="true" time="723" lncount="3" name="Panarthropoda" id="80"/>
+<text x="646" y="304"> Nematoda</text>
+<polyline points="219,280 219,299 628,299" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="299" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="299" r="12" class="node" rank="phylum" otu="true" name="Nematoda" time="" lncount="19" id="85"/>
+<text x="646" y="328"> Priapulida</text>
+<polyline points="219,292 219,323 628,323" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="323" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="323" r="12" class="node" rank="phylum" otu="true" name="Priapulida" time="" lncount="1" id="86"/>
+<line x1="219" y1="257" x2="219" y2="288" stroke="#000" stroke-width="2"/>
+<polyline points="214,388 214,290 219,290" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="219" cy="290" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="219" cy="290" r="12" class="node" rank="no rank" cilo="677" cihi="1031" isci="true" time="743" lncount="5" name="Ecdysozoa" id="78"/>
+<text x="646" y="352"> Bryozoa</text>
+<polyline points="214,417 214,347 628,347" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="347" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="347" r="12" class="node" rank="phylum" otu="true" name="Bryozoa" time="" lncount="1" id="88"/>
+<text x="646" y="376"> Annelida</text>
+<polyline points="280,387 280,371 628,371" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="371" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="371" r="12" class="node" rank="phylum" otu="true" name="Annelida" time="" lncount="139" id="93"/>
+<text x="646" y="400"> Nemertea</text>
+<polyline points="289,405 289,395 628,395" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="395" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="395" r="12" class="node" rank="phylum" otu="true" name="Nemertea" time="" lncount="2" id="95"/>
+<text x="646" y="424"> Brachiopoda</text>
+<polyline points="289,409 289,419 628,419" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="419" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="419" r="12" class="node" rank="phylum" otu="true" name="Brachiopoda" time="" lncount="34" id="96"/>
+<polyline points="280,391 280,407 289,407" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="289" cy="407" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="289" cy="407" r="12" class="node" rank="unknown" cilo="552" cihi="668" isci="false" time="617" lncount="2" dof="Lophotrochozoa" id="94"/>
+<text x="646" y="448"> Rotifera</text>
+<polyline points="280,409 280,443 628,443" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="443" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="443" r="12" class="node" rank="phylum" otu="true" name="Rotifera" time="" lncount="2" id="97"/>
+<line x1="280" y1="371" x2="280" y2="405" stroke="#000" stroke-width="2"/>
+<polyline points="250,435 250,407 280,407" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="280" cy="407" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="280" cy="407" r="12" class="node" rank="unknown" cilo="598" cihi="668" isci="false" time="633" lncount="4" dof="Lophotrochozoa" id="91"/>
+<text x="646" y="472"> Mollusca</text>
+<polyline points="250,439 250,467 628,467" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="467" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="467" r="12" class="node" rank="phylum" otu="true" name="Mollusca" time="" lncount="1977" id="98"/>
+<polyline points="214,462 214,437 250,437" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="250" cy="437" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="250" cy="437" r="12" class="node" rank="unknown" cilo="585" cihi="790" isci="true" time="688" lncount="5" dof="Lophotrochozoa" id="90"/>
+<text x="646" y="496"> Entoprocta</text>
+<polyline points="214,466 214,491 628,491" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="491" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="491" r="12" class="node" rank="phylum" otu="true" name="Entoprocta" time="" lncount="1" id="99"/>
+<line x1="214" y1="392" x2="214" y2="491" stroke="#000" stroke-width="2"/>
+<polyline points="190,270 190,390 214,390" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="214" cy="390" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="214" cy="390" r="12" class="node" rank="no rank" cilo="642" cihi="864" isci="true" time="753" lncount="12" name="Protostomia" id="77"/>
+<polyline points="175,177 175,268 190,268" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="190" cy="268" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="190" cy="268" r="12" class="node" rank="unknown" cilo="678" cihi="916" isci="true" time="797" lncount="17" dof="Bilateria" id="67"/>
+<text x="646" y="520"> Cnidaria</text>
+<polyline points="175,301 175,515 628,515" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="515" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="515" r="12" class="node" rank="phylum" otu="true" name="Cnidaria" time="" lncount="714" id="100"/>
+<line x1="175" y1="83" x2="175" y2="297" stroke="#000" stroke-width="2"/>
+<polyline points="106,181 106,299 175,299" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="175" cy="299" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="175" cy="299" r="12" class="node" rank="unknown" cilo="611" cihi="1035" isci="true" time="824" lncount="19" dof="Eumetazoa" id="64"/>
+<text x="646" y="544"> Placozoa</text>
+<polyline points="106,301 106,539 628,539" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="539" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="539" r="12" class="node" rank="phylum" otu="true" name="Placozoa" time="" lncount="1" id="101"/>
+<line x1="106" y1="59" x2="106" y2="297" stroke="#000" stroke-width="2"/>
+<polyline points="104,429 104,299 106,299" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="106" cy="299" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="106" cy="299" r="12" class="node" rank="unknown" cilo="713" cihi="1147" isci="false" time="948" lncount="21" dof="Metazoa" id="61"/>
+<text x="646" y="568"> Porifera</text>
+<polyline points="104,433 104,563 628,563" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="563" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="563" r="12" class="node" rank="phylum" otu="true" name="Porifera" time="" lncount="64" id="102"/>
+<polyline points="20,531 20,431 104,431" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="104" cy="431" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="104" cy="431" r="12" class="node" rank="kingdom" cilo="757" cihi="1147" isci="false" time="952" lncount="22" name="Metazoa" id="60"/>
+<circle cx="20" cy="531" r="4" fill="#000" />
+<circle cx="20" cy="531" r="12" class="node" rank="no rank" time="1105" cilo="749" cihi="1461" isci="true" lncount="29" name="Opisthokonta" id="59"/>
+<text x="646" y="592"> Blastocladiomycota</text>
+<polyline points="47,633 47,587 628,587" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="587" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="587" r="12" class="node" rank="phylum" otu="true" name="Blastocladiomycota" time="" lncount="1" id="104"/>
+<text x="646" y="616"> Glomeromycota</text>
+<polyline points="262,621 262,611 628,611" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="611" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="611" r="12" class="node" rank="phylum" otu="true" name="Glomeromycota" time="" lncount="1" id="108"/>
+<text x="646" y="640"> Entomophthoromycota</text>
+<polyline points="262,625 262,635 628,635" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="635" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="635" r="12" class="node" rank="phylum" otu="true" name="Entomophthoromycota" time="" lncount="31" id="109"/>
+<polyline points="178,645 178,623 262,623" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="262" cy="623" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="262" cy="623" r="12" class="node" rank="unknown" cilo="482" cihi="850" isci="false" time="666" lncount="2" dof="Fungi" id="107"/>
+<text x="646" y="664"> Basidiomycota</text>
+<polyline points="230,669 230,659 628,659" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="659" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="659" r="12" class="node" rank="phylum" otu="true" name="Basidiomycota" time="" lncount="588" id="111"/>
+<text x="646" y="688"> Ascomycota</text>
+<polyline points="230,673 230,683 628,683" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="683" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="683" r="12" class="node" rank="phylum" otu="true" name="Ascomycota" time="" lncount="1652" id="112"/>
+<polyline points="178,649 178,671 230,671" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="230" cy="671" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="230" cy="671" r="12" class="node" rank="subkingdom" cilo="603" cihi="844" isci="true" time="723" lncount="2" name="Dikarya" id="110"/>
+<polyline points="85,681 85,647 178,647" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="178" cy="647" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="178" cy="647" r="12" class="node" rank="unknown" cilo="604" cihi="909" isci="false" time="817" lncount="4" dof="Fungi" id="106"/>
+<text x="646" y="712"> Chytridiomycota</text>
+<polyline points="253,717 253,707 628,707" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="707" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="707" r="12" class="node" rank="phylum" otu="true" name="Chytridiomycota" time="" lncount="1" id="114"/>
+<text x="646" y="736"> Neocallimastigomycota</text>
+<polyline points="253,721 253,731 628,731" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="731" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="731" r="12" class="node" rank="phylum" otu="true" name="Neocallimastigomycota" time="" lncount="1" id="115"/>
+<polyline points="85,685 85,719 253,719" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="253" cy="719" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="253" cy="719" r="12" class="node" rank="unknown" cilo="680.0" cihi="682.3" isci="false" time="682.0" lncount="2" dof="Fungi" id="113"/>
+<polyline points="47,637 47,683 85,683" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="85" cy="683" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="85" cy="683" r="12" class="node" rank="unknown" cilo="690" cihi="1285" isci="true" time="987" lncount="6" dof="Fungi" id="105"/>
+<polyline points="20,535 20,635 47,635" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="47" cy="635" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="47" cy="635" r="12" class="node" rank="kingdom" cilo="779" cihi="1331" isci="true" time="1055" lncount="7" name="Fungi" id="103"/>
+</g>
+</svg>

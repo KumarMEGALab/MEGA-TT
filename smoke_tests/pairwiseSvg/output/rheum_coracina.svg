@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="700" height="800" name="wrapper" x="0" y="0" viewBox="0 0 700 800">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="800" name="pairwise-luminosity" x="5" y="0" id="pairwise-luminosity" viewBox="0 0 50 800">
+<polygon points="0,10 47,10 1,740 0,740 0,10" fill="#c70039" fill-opacity="0.85" stroke="#c70039" stroke-width="1" />
+<polyline points="1,742 1,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="2" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,752)" >  86.4</text>
+<polyline points="25,742 25,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="20" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 20,752)" >  88.9L</text>
+<polyline points="46,742 46,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="37" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 37,752)" >  91.5</text>
+<polyline points="2,742 46,742" stroke="black" stroke-width="1" stroke-linecap="square" />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="800" name="pairwise-co2" x="55" y="0" id="pairwise-co2" viewBox="0 0 50 800">
+<polygon points="0,10 3,10 2,14 2,23 1,32 1,41 1,50 1,59 0,68 0,77 0,86 0,95 0,104 0,113 0,122 0,131 0,140 0,149 0,158 0,167 0,176 0,184 0,193 0,202 1,211 1,220 1,229 1,238 1,247 1,256 1,265 1,274 1,283 2,292 2,301 2,310 2,319 2,328 2,337 3,346 3,355 3,364 3,373 3,382 4,391 4,400 4,409 4,418 5,426 5,435 5,444 6,453 6,462 6,471 7,480 7,489 8,498 8,507 9,516 9,525 10,534 10,543 11,552 11,561 12,570 13,579 14,588 14,597 15,606 16,615 17,624 18,633 19,642 20,651 22,660 23,668 24,677 26,686 27,695 29,704 30,713 32,722 34,731 35,740 0,740 0,10" fill="#ff5733" fill-opacity="0.85" stroke="#ff5733" stroke-width="1" />
+<polyline points="1,742 1,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="2" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,752)" >  0.05</text>
+<polyline points="25,742 25,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="20" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 20,752)" >  1.18%</text>
+<polyline points="46,742 46,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="37" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 37,752)" >  2.32</text>
+<polyline points="2,742 46,742" stroke="black" stroke-width="1" stroke-linecap="square" />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="800" name="pairwise-o2" x="105" y="0" id="pairwise-o2" viewBox="0 0 50 800">
+<polygon points="0,10 47,10 47,12 47,19 47,26 47,33 47,40 47,47 47,53 47,60 47,67 47,74 47,81 47,88 47,95 47,102 46,108 46,115 46,122 46,129 46,136 46,143 46,150 46,157 46,164 45,170 45,177 45,184 45,191 45,198 45,205 45,212 45,219 45,226 44,232 44,239 44,246 44,253 44,260 44,267 44,274 44,281 44,287 44,294 43,301 43,308 43,315 8,322 8,329 8,336 8,343 8,349 8,356 8,363 7,370 7,377 7,384 7,391 7,398 7,405 7,411 7,418 7,425 7,432 6,439 6,446 6,453 6,460 6,466 6,473 6,480 6,487 6,494 5,501 5,508 5,515 5,522 5,528 5,535 5,542 5,549 5,556 5,563 4,570 4,577 4,583 4,590 4,597 4,604 4,611 4,618 4,625 3,632 3,639 3,645 3,652 3,659 3,666 3,673 3,680 3,687 2,694 2,701 2,707 2,714 2,721 2,728 2,735 2,740 0,740 0,10" fill="#ffc300" fill-opacity="0.85" stroke="#ffc300" stroke-width="1" />
+<polyline points="1,742 1,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="2" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,752)" >   3.7</text>
+<polyline points="25,742 25,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="20" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 20,752)" >   3.8%</text>
+<polyline points="46,742 46,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="37" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 37,752)" >   3.9</text>
+<polyline points="2,742 46,742" stroke="black" stroke-width="1" stroke-linecap="square" />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="800" name="pairwise-impacts" x="155" y="0" id="pairwise-impacts" viewBox="0 0 50 800">
+<polyline points="2,740 48,740 48,10 2,10 2,740" stroke="white" stroke-width="1" fill="white" />
+<polyline points="25,10 25,740" fill="none" stroke-dasharray="5,5" stroke="orange" stroke-width="1" stroke-linecap="square"/>
+<g class="earth-impacts">
+<circle cx="25" cy="610" r="4" diam="30.00" age="1630" lat="-25.867" lon="120.883" name="Shoemaker" loc="Western Australia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="25" cy="70" r="3" diam="20.00" age="1120" lat="-20.917" lon="134.833" name="Amelia Creek" loc="Australia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="25" cy="155" r="2" diam="13.00" age="1200" lat="35.750" lon="-105.933" name="Santa Fe" loc="New Mexico, U.S.A." stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="25" cy="369" r="1" diam="7.50" age="1402" lat="-15.500" lon="131.183" name="Matt Wilson" loc="Northern Territory" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="25" cy="366" r="1" diam="3.00" age="1400" lat="-13.467" lon="135.033" name="Goyder" loc="Northern Territory" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+</g>
+<rect x="1" y="2" width="48" height="8" fill="white" stroke="white" stroke-width="1" />
+<rect x="1" y="740" width="48" height="60" fill="white" stroke="white" stroke-width="1" />
+<polyline points="1,742 1,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="2" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,752)" >200</text>
+<polyline points="24,742 24,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="19" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 19,752)" >0 km</text>
+<polyline points="48,742 48,747" stroke="black" stroke-width="1" stroke-linecap="square" />
+<text x="39" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 39,752)" >200</text>
+<polyline points="2,742 48,742" stroke="black" stroke-width="1" stroke-linecap="square" />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="800" name="eons" x="207" y="0" id="pairwise-eons" viewBox="0 0 25 800">
+<rect x="1" y="10" width="25" height="730" fill="none" stroke="black" stroke-width="1" />
+<rect x="1" y="10" width="25" height="730" fill="#F73563" stroke="#F73563" stroke-width="1" full-name="Proterozoic" start="2500.00" end="542.00" unit="Eon" />
+<text x="6" y="375" transform="rotate(90 6,375)" full-name="Proterozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="2500.00" end="542.00" unit="Eon" >Proterozoic</text>
+<text x="8" y="742" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 8,742)" >Eons</text>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="800" name="eras" x="232" y="0" id="pairwise-eras" viewBox="0 0 25 800">
+<rect x="1" y="10" width="25" height="730" fill="none" stroke="black" stroke-width="1" />
+<rect x="1" y="578" width="25" height="162" fill="#F7430C" stroke="#F7430C" stroke-width="1" full-name="Paleo-Proterozoic" start="2500.00" end="1600.00" unit="Era" />
+<text x="6" y="659" transform="rotate(90 6,659)" full-name="Paleo-Proterozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="2500.00" end="1600.00" unit="Era" >Paleo-Proterozoic</text>
+<rect x="1" y="10" width="25" height="568" fill="#FDB462" stroke="#FDB462" stroke-width="1" full-name="Meso-Proterozoic" start="1600.00" end="1000.00" unit="Era" />
+<text x="6" y="294" transform="rotate(90 6,294)" full-name="Meso-Proterozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="1600.00" end="1000.00" unit="Era" >Meso-Proterozoic</text>
+<text x="8" y="742" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 8,742)" >Eras</text>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="800" name="periods" x="257" y="0" id="pairwise-periods" viewBox="0 0 25 800">
+<rect x="1" y="10" width="25" height="730" fill="none" stroke="black" stroke-width="1" />
+<rect x="1" y="578" width="25" height="162" fill="#F875A7" stroke="#F875A7" stroke-width="1" full-name="Statherian" start="1800.00" end="1600.00" unit="Period" />
+<text x="6" y="659" transform="rotate(90 6,659)" full-name="Statherian" font-family="Helvetica" font-size="16" text-anchor="middle" start="1800.00" end="1600.00" unit="Period" >Statherian</text>
+<rect x="1" y="366" width="25" height="212" fill="#FDC07A" stroke="#FDC07A" stroke-width="1" full-name="Calymmian" start="1600.00" end="1400.00" unit="Period" />
+<text x="6" y="472" transform="rotate(90 6,472)" full-name="Calymmian" font-family="Helvetica" font-size="16" text-anchor="middle" start="1600.00" end="1400.00" unit="Period" >Calymmian</text>
+<rect x="1" y="155" width="25" height="211" fill="#FDCC8A" stroke="#FDCC8A" stroke-width="1" full-name="Ectasian" start="1400.00" end="1200.00" unit="Period" />
+<text x="6" y="260" transform="rotate(90 6,260)" full-name="Ectasian" font-family="Helvetica" font-size="16" text-anchor="middle" start="1400.00" end="1200.00" unit="Period" >Ectasian</text>
+<rect x="1" y="10" width="25" height="145" fill="#FED99A" stroke="#FED99A" stroke-width="1" full-name="Stenian" start="1200.00" end="1000.00" unit="Period" />
+<text x="6" y="82" transform="rotate(90 6,82)" full-name="Stenian" font-family="Helvetica" font-size="16" text-anchor="middle" start="1200.00" end="1000.00" unit="Period" >Stenian</text>
+<text x="8" y="742" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 8,742)" >Periods</text>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="60" height="800" name="hit-records" x="282" y="0" id="pairwise-hit-records" viewBox="0 0 60 800">
+<defs><linearGradient id="dotsGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="dddddd"/><stop offset="100%" stop-color="#777777"/></linearGradient></defs>
+<defs><linearGradient id="boxGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#fefcea"/><stop offset="100%" stop-color="#f1da36"/></linearGradient></defs>
+<rect x="1" y="10" width="59" height="730" fill="white" stroke="black" stroke-width="1" />
+<rect x="1" y="10" width="58" height="730" fill="white" stroke="white" stroke-width="1" />
+<polyline points="4,24 8,24" stroke="black" stroke-width="1" />
+<text x="12" y="28" color="black" font-size="10" >1077</text>
+<polyline points="4,60 8,60" stroke="black" stroke-width="1" />
+<text x="12" y="64" color="black" font-size="10" >1111</text>
+<polyline points="4,96 8,96" stroke="black" stroke-width="1" />
+<text x="12" y="100" color="black" font-size="10" >1145</text>
+<polyline points="4,132 8,132" stroke="black" stroke-width="1" />
+<text x="12" y="136" color="black" font-size="10" >1179</text>
+<polyline points="4,168 8,168" stroke="black" stroke-width="1" />
+<text x="12" y="172" color="black" font-size="10" >1213</text>
+<polyline points="4,204 8,204" stroke="black" stroke-width="1" />
+<text x="12" y="208" color="black" font-size="10" >1247</text>
+<polyline points="4,240 8,240" stroke="black" stroke-width="1" />
+<text x="12" y="244" color="black" font-size="10" >1281</text>
+<polyline points="4,276 8,276" stroke="black" stroke-width="1" />
+<text x="12" y="280" color="black" font-size="10" >1315</text>
+<polyline points="4,312 8,312" stroke="black" stroke-width="1" />
+<text x="12" y="316" color="black" font-size="10" >1349</text>
+<polyline points="4,348 8,348" stroke="black" stroke-width="1" />
+<text x="12" y="352" color="black" font-size="10" >1383</text>
+<polyline points="4,384 8,384" stroke="black" stroke-width="1" />
+<text x="12" y="388" color="black" font-size="10" >1417</text>
+<polyline points="4,420 8,420" stroke="black" stroke-width="1" />
+<text x="12" y="424" color="black" font-size="10" >1451</text>
+<polyline points="4,456 8,456" stroke="black" stroke-width="1" />
+<text x="12" y="460" color="black" font-size="10" >1485</text>
+<polyline points="4,492 8,492" stroke="black" stroke-width="1" />
+<text x="12" y="496" color="black" font-size="10" >1519</text>
+<polyline points="4,528 8,528" stroke="black" stroke-width="1" />
+<text x="12" y="532" color="black" font-size="10" >1553</text>
+<polyline points="4,564 8,564" stroke="black" stroke-width="1" />
+<text x="12" y="568" color="black" font-size="10" >1587</text>
+<polyline points="4,600 8,600" stroke="black" stroke-width="1" />
+<text x="12" y="604" color="black" font-size="10" >1621</text>
+<polyline points="4,636 8,636" stroke="black" stroke-width="1" />
+<text x="12" y="640" color="black" font-size="10" >1655</text>
+<polyline points="4,672 8,672" stroke="black" stroke-width="1" />
+<text x="12" y="676" color="black" font-size="10" >1689</text>
+<polyline points="4,708 8,708" stroke="black" stroke-width="1" />
+<text x="12" y="712" color="black" font-size="10" >1723</text>
+<circle cx="46" cy="30" r="6" fill="url(#dotsGradient)" abstract="Adaptive radiations play key roles in the generation of biodiversity and biological novelty, and therefore understanding the factors that drive them remains one of the most important challenges of evolutionary biology. Although both intrinsic innovations and extrinsic ecological opportunities contribute to diversification bursts, few studies have looked at the synergistic effect of such factors. Here we investigate the Teloschistales (Ascomycota), a group of &amp;gt;1,000 lichenized species with variation in species richness and phenotypic traits that hinted at a potential adaptive radiation. We found evidence for a dramatic increase in diversification rate for one of four families within this order--Teloschistaceae--which occurred ∼ 100 Mya (Late Cretaceous) and was associated with a switch from bark to rock and from shady to sun-exposed habitats. This adaptation to sunny habitats is likely to have been enabled by a contemporaneous key novel phenotypic innovation: the production in both vegetative structure (thallus) and fruiting body (apothecia) of anthraquinones, secondary metabolites known to protect against UV light. We found that the two ecological factors (sun exposure and rock substrate) and the phenotypic innovation (anthraquinones in the thallus) were all significant when testing for state-dependent shifts in diversification rates, and together they seem likely to be responsible for the success of the Teloschistaceae, one of the largest lichen-forming fungal lineages. Our results support the idea that adaptive radiations are driven not by a single factor or key innovation, but require a serendipitous combination of both intrinsic biotic and extrinsic abiotic and ecological factors." author="Gaya" cit-number="3989" pubmed-id="26324894" ref-id="" time="1082.2" year="2015" title="The adaptive radiation of lichen-forming Teloschistaceae is associated with sunscreening pigments and a bark-to-rock substrate shift." />
+<circle cx="46" cy="604" r="6" fill="url(#dotsGradient)" abstract="The pattern and timing of the rise in complex multicellular life during Earths history has not been established. Great disparity persists between the pattern suggested by the fossil record and that estimated by molecular clocks, especially for plants, animals, fungi, and the deepest branches of the eukaryote tree. Here, we used all available protein sequence data and molecular clock methods to place constraints on the increase in complexity through time." author="Hedges" cit-number="2796" pubmed-id="15005799" ref-id="" time="1624" year="2004" title="A molecular timescale of eukaryote evolution and the rise of complex multicellular life." />
+<circle cx="46" cy="740" r="6" fill="url(#dotsGradient)" abstract="Although macroscopic plants, animals, and fungi are the most familiar eukaryotes, the bulk of eukaryotic diversity is microbial. Elucidating the timing of diversification among the more than 70 lineages is key to understanding the evolution of eukaryotes. Here, we use taxon-rich multigene data combined with diverse fossils and a relaxed molecular clock framework to estimate the timing of the last common ancestor of extant eukaryotes and the divergence of major clades. Overall, these analyses suggest that the last common ancestor lived between 1866 and 1679 Ma, consistent with the earliest microfossils interpreted with confidence as eukaryotic. During this interval, the Earth's surface differed markedly from today; for example, the oceans were incompletely ventilated, with ferruginous and, after about 1800 Ma, sulfidic water masses commonly lying beneath moderately oxygenated surface waters. Our time estimates also indicate that the major clades of eukaryotes diverged before 1000 Ma, with most or all probably diverging before 1200 Ma. Fossils, however, suggest that diversity within major extant clades expanded later, beginning about 800 Ma, when the oceans began their transition to a more modern chemical state. In combination, paleontological and molecular approaches indicate that long stems preceded diversification in the major eukaryotic lineages." author="Parfrey" cit-number="2228" pubmed-id="21810989" ref-id="" time="1781.09" year="2011" title="Estimating the timing of early eukaryotic diversification with multigene molecular clocks." />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="353" height="800" name="results" x="346" y="0" id="pairwise-results" viewBox="0 0 353 800">
+<rect x="1" y="30" width="349" height="30" fill="url(#boxGradient)" stroke="#cccccc" stroke-width="1" />
+<text x="174" y="50" font-family="Helvetica" font-size="20" text-anchor="middle" fill="black" >Rheum</text>
+<text x="174" y="84" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=3620|rheum&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Rheum</text>
+<image width="12" height="12" x="335" y="72" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
+<text x="174" y="129" font-family="Verdana" font-size="16" text-anchor="middle" >Versus</text>
+<rect x="1" y="160" width="349" height="30" fill="url(#boxGradient)" stroke="#cccccc" stroke-width="1" />
+<text x="174" y="180" font-family="Helvetica" font-size="20" text-anchor="middle" fill="black" >Coracina</text>
+<text x="174" y="214" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=108824|coracina&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Coracina</text>
+<image width="12" height="12" x="335" y="202" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
+<text x="174" y="254" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Median Time:</text>
+<text x="174" y="272" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >1624 MYA</text>
+<text x="174" y="308" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Estimated Time:</text>
+<text x="174" y="324" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >1496 MYA</text>
+<text x="174" y="341" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Range: (1082 - 1781 MYA)</text>
+<text x="174" y="366" font-family="Helvetica" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/Mol%20Biol%20Evol-2015-Hedges-835-45.pdf" font-weight="bold" >(TTOL)</text>
+<image width="12" height="12" x="204" y="354" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
+<text x="174" y="400" font-family="Helvetica" font-size="14" text-anchor="middle" fill="black" ><tspan x="174" dy="17"> (Median and estimated times were</tspan><tspan x="174" dy="17"> derived from 3 studies)</tspan></text>
+</svg>
+</svg>

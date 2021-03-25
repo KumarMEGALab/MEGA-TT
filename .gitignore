@@ -13,5 +13,24 @@ backup/*
 testing/*
 megatt
 megattproj
+smoke_tests/README.txt
+smoke_tests/megatt_svg/guid-1.svg
+smoke_tests/megatt_svg/guid-1.table
+smoke_tests/megatt_svg/guid-2.svg
+smoke_tests/megatt_svg/guid-2.table
+smoke_tests/megatt_svg/guid-3.svg
+smoke_tests/megatt_svg/guid-3.table
+smoke_tests/megatt_svg/guid-4.svg
+smoke_tests/megatt_svg/guid-4.table
+smoke_tests/megatt_svg/guid-5.svg
+smoke_tests/megatt_svg/guid-5.table
+smoke_tests/newickToTabular/outputs/310.svg
+smoke_tests/newickToTabular/outputs/drosophila.svg
+smoke_tests/newickToTabular/outputs/eukaryota.svg
+smoke_tests/newickToTabular/outputs/non_parametric.svg
+smoke_tests/newickToTabular/outputs/primates.svg
+smoke_tests/newickToTabular/outputs/selections.svg
+smoke_tests/pruneTree_2M/
+smoke_tests/pruneTree_50K/
 
 

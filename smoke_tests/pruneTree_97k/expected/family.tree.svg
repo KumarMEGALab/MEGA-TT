@@ -1,0 +1,1049 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="4040" name="tree" y="0" viewBox="0 0 900 4040">
+<g class="background" id="timetree-background-colors" bg-colors="periods" >
+<polyline points="20,4040 69,4040 69,20 20,20 20,4040" class="background" fill="#FED96A" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="69,4040 125,4040 125,20 69,20 69,4040" class="background" fill="#7FA056" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="125,4040 171,4040 171,20 125,20 125,4040" class="background" fill="#009270" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="171,4040 199,4040 199,20 171,20 171,4040" class="background" fill="#B3E152" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="199,4040 258,4040 258,20 199,20 199,4040" class="background" fill="#CB8C37" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="258,4040 300,4040 300,20 258,20 258,4040" class="background" fill="#678F66" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="300,4040 320,4040 320,20 300,20 300,4040" class="background" fill="#99C2B5" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="320,4040 369,4040 369,20 320,20 320,4040" class="background" fill="#F04028" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="369,4040 422,4040 422,20 369,20 369,4040" class="background" fill="#812B92" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="422,4040 478,4040 478,20 422,20 422,4040" class="background" fill="#34B2C9" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="478,4040 561,4040 561,20 478,20 478,4040" class="background" fill="#7FC64E" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="561,4040 604,4040 604,20 561,20 561,4040" class="background" fill="#FD9A52" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+<polyline points="604,4040 628,4040 628,20 604,20 604,4040" class="background" fill="#FFE619" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+</g>
+<g id="timetree-branches" class="branches" depth="unknown">
+<text x="646" y="64"> Taphrinaceae</text>
+<polyline points="518,69 518,59 628,59" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="59" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="59" r="12" class="node" rank="family" otu="true" name="Taphrinaceae" time="" lncount="1" id="1061"/>
+<text x="646" y="88"> Protomycetaceae</text>
+<polyline points="518,73 518,83 628,83" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="83" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="83" r="12" class="node" rank="family" otu="true" name="Protomycetaceae" time="" lncount="1" id="1062"/>
+<polyline points="206,87 206,71 518,71" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="518" cy="71" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="518" cy="71" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="107" lncount="2" name="Taphrinales" id="1060"/>
+<text x="646" y="112"> Pneumocystidaceae</text>
+<polyline points="206,91 206,107 628,107" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="107" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="107" r="12" class="node" rank="family" otu="true" name="Pneumocystidaceae" time="" lncount="1" id="1063"/>
+<polyline points="147,108 147,89 206,89" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="206" cy="89" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="206" cy="89" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="409" lncount="3" dof="Taphrinomycotina" id="1059"/>
+<text x="646" y="136"> Schizosaccharomycetaceae</text>
+<polyline points="147,112 147,131 628,131" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="131" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="131" r="12" class="node" rank="family" otu="true" name="Schizosaccharomycetaceae" time="" lncount="1" id="1064"/>
+<polyline points="20,2025 20,110 147,110" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="147" cy="110" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="147" cy="110" r="12" class="node" rank="subphylum" cilo="0" cihi="0" isci="false" time="467" lncount="4" name="Taphrinomycotina" id="1058"/>
+<circle cx="20" cy="2025" r="4" fill="#000" />
+<circle cx="20" cy="2025" r="12" class="node" rank="phylum" time="590" cilo="444" cihi="631" isci="true" lncount="165" name="Ascomycota" id="1057"/>
+<text x="646" y="160"> Orbiliaceae</text>
+<polyline points="173,1153 173,155 628,155" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="155" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="155" r="12" class="node" rank="family" otu="true" name="Orbiliaceae" time="" lncount="15" id="1067"/>
+<text x="646" y="184"> Pezizaceae</text>
+<polyline points="250,189 250,179 628,179" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="179" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="179" r="12" class="node" rank="family" otu="true" name="Pezizaceae" time="" lncount="1" id="1071"/>
+<text x="646" y="208"> Ascobolaceae</text>
+<polyline points="250,193 250,203 628,203" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="203" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="203" r="12" class="node" rank="family" otu="true" name="Ascobolaceae" time="" lncount="1" id="1072"/>
+<text x="646" y="232"> Morchellaceae</text>
+<polyline points="519,237 519,227 628,227" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="227" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="227" r="12" class="node" rank="family" otu="true" name="Morchellaceae" time="" lncount="47" id="1078"/>
+<text x="646" y="256"> Discinaceae</text>
+<polyline points="519,241 519,251 628,251" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="251" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="251" r="12" class="node" rank="family" otu="true" name="Discinaceae" time="" lncount="3" id="1079"/>
+<polyline points="512,255 512,239 519,239" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="519" cy="239" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="519" cy="239" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="106" lncount="2" dof="Pezizales" id="1077"/>
+<text x="646" y="280"> Helvellaceae</text>
+<polyline points="512,259 512,275 628,275" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="275" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="275" r="12" class="node" rank="family" otu="true" name="Helvellaceae" time="" lncount="2" id="1080"/>
+<polyline points="441,276 441,257 512,257" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="512" cy="257" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="512" cy="257" r="12" class="node" rank="unknown" cilo="72" cihi="154" isci="false" time="113" lncount="3" dof="Pezizales" id="1076"/>
+<text x="646" y="304"> Tuberaceae</text>
+<polyline points="441,280 441,299 628,299" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="299" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="299" r="12" class="node" rank="family" otu="true" name="Tuberaceae" time="" lncount="75" id="1081"/>
+<polyline points="416,298 416,278 441,278" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="441" cy="278" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="441" cy="278" r="12" class="node" rank="unknown" cilo="160" cihi="202" isci="false" time="181" lncount="4" dof="Pezizales" id="1075"/>
+<text x="646" y="328"> Caloscyphaceae</text>
+<polyline points="416,302 416,323 628,323" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="323" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="323" r="12" class="node" rank="family" otu="true" name="Caloscyphaceae" time="" lncount="1" id="1082"/>
+<polyline points="393,327 393,300 416,300" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="416" cy="300" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="416" cy="300" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="206" lncount="5" dof="Pezizales" id="1074"/>
+<text x="646" y="352"> Pyronemataceae</text>
+<polyline points="443,357 443,347 628,347" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="347" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="347" r="12" class="node" rank="family" otu="true" name="Pyronemataceae" time="" lncount="31" id="1084"/>
+<text x="646" y="376"> Sarcoscyphaceae</text>
+<polyline points="443,361 443,371 628,371" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="371" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="371" r="12" class="node" rank="family" otu="true" name="Sarcoscyphaceae" time="" lncount="1" id="1085"/>
+<polyline points="393,331 393,359 443,359" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="443" cy="359" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="443" cy="359" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="179" lncount="2" dof="Pezizales" id="1083"/>
+<polyline points="250,256 250,329 393,329" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="393" cy="329" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="393" cy="329" r="12" class="node" rank="unknown" cilo="181" cihi="275" isci="true" time="228" lncount="7" dof="Pezizales" id="1073"/>
+<line x1="250" y1="179" x2="250" y2="252" stroke="#000" stroke-width="2"/>
+<polyline points="173,1203 173,254 250,254" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="250" cy="254" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="250" cy="254" r="12" class="node" rank="order" cilo="317" cihi="413" isci="false" time="367" lncount="9" name="Pezizales" id="1069"/>
+<text x="646" y="400"> Peltulaceae</text>
+<polyline points="450,405 450,395 628,395" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="395" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="395" r="12" class="node" rank="family" otu="true" name="Peltulaceae" time="" lncount="1" id="1090"/>
+<text x="646" y="424"> Lichinaceae</text>
+<polyline points="450,409 450,419 628,419" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="419" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="419" r="12" class="node" rank="family" otu="true" name="Lichinaceae" time="" lncount="2" id="1091"/>
+<polyline points="348,423 348,407 450,407" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="450" cy="407" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="450" cy="407" r="12" class="node" rank="order" cilo="164" cihi="181" isci="false" time="172" lncount="2" name="Lichinales" id="1089"/>
+<text x="646" y="448"> Coniocybaceae</text>
+<polyline points="348,427 348,443 628,443" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="443" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="443" r="12" class="node" rank="family" otu="true" name="Coniocybaceae" time="" lncount="8" id="1092"/>
+<polyline points="262,444 262,425 348,425" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="348" cy="425" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="348" cy="425" r="12" class="node" rank="unknown" cilo="271.0" cihi="272.1" isci="false" time="271.5" lncount="3" dof="leotiomyceta" id="1088"/>
+<text x="646" y="472"> Geoglossaceae</text>
+<polyline points="262,448 262,467 628,467" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="467" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="467" r="12" class="node" rank="family" otu="true" name="Geoglossaceae" time="" lncount="2" id="1093"/>
+<polyline points="173,1299 173,446 262,446" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="262" cy="446" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="262" cy="446" r="12" class="node" rank="unknown" cilo="325" cihi="385" isci="false" time="355" lncount="4" dof="leotiomyceta" id="1087"/>
+<text x="646" y="496"> Tubeufiaceae</text>
+<polyline points="361,501 361,491 628,491" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="491" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="491" r="12" class="node" rank="family" otu="true" name="Tubeufiaceae" time="" lncount="1" id="1102"/>
+<text x="646" y="520"> Patellariaceae</text>
+<polyline points="361,505 361,515 628,515" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="515" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="515" r="12" class="node" rank="family" otu="true" name="Patellariaceae" time="" lncount="1" id="1103"/>
+<polyline points="341,549 341,503 361,503" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="361" cy="503" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="361" cy="503" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="259" lncount="2" dof="Dothideomycetes incertae sedis" id="1101"/>
+<text x="646" y="544"> Phyllostictaceae</text>
+<polyline points="522,573 522,539 628,539" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="539" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="539" r="12" class="node" rank="family" otu="true" name="Phyllostictaceae" time="" lncount="12" id="1106"/>
+<text x="646" y="568"> Planistromellaceae</text>
+<polyline points="569,585 569,563 628,563" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="563" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="563" r="12" class="node" rank="family" otu="true" name="Planistromellaceae" time="" lncount="1" id="1109"/>
+<text x="646" y="592"> Aplosporellaceae</text>
+<polyline points="569,597 569,587 628,587" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="587" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="587" r="12" class="node" rank="family" otu="true" name="Aplosporellaceae" time="" lncount="1" id="1111"/>
+<text x="646" y="616"> Saccharataceae</text>
+<polyline points="569,601 569,611 628,611" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="611" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="611" r="12" class="node" rank="family" otu="true" name="Saccharataceae" time="" lncount="1" id="1112"/>
+<line x1="569" y1="589" x2="569" y2="611" stroke="#000" stroke-width="2"/>
+<polyline points="551,609 551,587 569,587" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="569" cy="587" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="569" cy="587" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="57" lncount="3" dof="Botryosphaeriales" id="1108"/>
+<text x="646" y="640"> Melanopsaceae</text>
+<polyline points="551,613 551,635 628,635" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="635" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="635" r="12" class="node" rank="family" otu="true" name="Melanopsaceae" time="" lncount="1" id="1113"/>
+<polyline points="522,577 522,611 551,611" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="551" cy="611" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="551" cy="611" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="75" lncount="4" dof="Botryosphaeriales" id="1107"/>
+<text x="646" y="664"> Botryosphaeriaceae</text>
+<polyline points="522,601 522,659 628,659" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="659" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="659" r="12" class="node" rank="family" otu="true" name="Botryosphaeriaceae" time="" lncount="34" id="1114"/>
+<line x1="522" y1="539" x2="522" y2="597" stroke="#000" stroke-width="2"/>
+<polyline points="341,553 341,599 522,599" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="522" cy="599" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="522" cy="599" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="103" lncount="6" name="Botryosphaeriales" id="1104"/>
+<polyline points="232,630 232,551 341,551" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="341" cy="551" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="341" cy="551" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="278" lncount="8" dof="Dothideomycetes incertae sedis" id="1100"/>
+<text x="646" y="688"> Monoblastiaceae</text>
+<polyline points="305,693 305,683 628,683" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="683" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="683" r="12" class="node" rank="family" otu="true" name="Monoblastiaceae" time="" lncount="1" id="1117"/>
+<text x="646" y="712"> Venturiaceae</text>
+<polyline points="305,697 305,707 628,707" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="707" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="707" r="12" class="node" rank="family" otu="true" name="Venturiaceae" time="" lncount="3" id="1118"/>
+<polyline points="267,711 267,695 305,695" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="305" cy="695" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="305" cy="695" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="313" lncount="2" dof="Dothideomycetes incertae sedis" id="1116"/>
+<text x="646" y="736"> Trypetheliaceae</text>
+<polyline points="267,715 267,731 628,731" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="731" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="731" r="12" class="node" rank="family" otu="true" name="Trypetheliaceae" time="" lncount="1" id="1119"/>
+<polyline points="232,634 232,713 267,713" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="267" cy="713" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="267" cy="713" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="350" lncount="3" dof="Dothideomycetes incertae sedis" id="1115"/>
+<text x="646" y="760"> Aliquandostipitaceae</text>
+<polyline points="232,846 232,755 628,755" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="755" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="755" r="12" class="node" rank="family" otu="true" name="Aliquandostipitaceae" time="" lncount="4" id="1121"/>
+<text x="646" y="784"> Melanommataceae</text>
+<polyline points="475,813 475,779 628,779" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="779" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="779" r="12" class="node" rank="family" otu="true" name="Melanommataceae" time="" lncount="1" id="1126"/>
+<text x="646" y="808"> Corynesporascaceae</text>
+<polyline points="525,849 525,803 628,803" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="803" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="803" r="12" class="node" rank="family" otu="true" name="Corynesporascaceae" time="" lncount="1" id="1128"/>
+<text x="646" y="832"> Pleosporaceae</text>
+<polyline points="569,843 569,827 628,827" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="827" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="827" r="12" class="node" rank="family" otu="true" name="Pleosporaceae" time="" lncount="5" id="1131"/>
+<text x="646" y="856"> Leptosphaeriaceae</text>
+<polyline points="577,861 577,851 628,851" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="851" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="851" r="12" class="node" rank="family" otu="true" name="Leptosphaeriaceae" time="" lncount="1" id="1133"/>
+<text x="646" y="880"> Phaeosphaeriaceae</text>
+<polyline points="577,865 577,875 628,875" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="875" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="875" r="12" class="node" rank="family" otu="true" name="Phaeosphaeriaceae" time="" lncount="2" id="1134"/>
+<polyline points="569,847 569,863 577,863" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="577" cy="863" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="577" cy="863" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="50" lncount="2" dof="Pleosporineae" id="1132"/>
+<polyline points="525,870 525,845 569,845" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="569" cy="845" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="569" cy="845" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="57" lncount="3" dof="Pleosporineae" id="1130"/>
+<text x="646" y="904"> Didymellaceae</text>
+<polyline points="525,874 525,899 628,899" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="899" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="899" r="12" class="node" rank="family" otu="true" name="Didymellaceae" time="" lncount="2" id="1135"/>
+<line x1="525" y1="853" x2="525" y2="899" stroke="#000" stroke-width="2"/>
+<polyline points="475,817 475,851 525,851" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="525" cy="851" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="525" cy="851" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="100" lncount="5" dof="Pleosporales" id="1127"/>
+<polyline points="379,915 379,815 475,815" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="475" cy="815" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="475" cy="815" r="12" class="node" rank="unknown" cilo="70" cihi="227" isci="false" time="148" lncount="6" dof="Pleosporales" id="1125"/>
+<text x="646" y="928"> Massarinaceae</text>
+<polyline points="379,957 379,923 628,923" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="923" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="923" r="12" class="node" rank="family" otu="true" name="Massarinaceae" time="" lncount="3" id="1138"/>
+<text x="646" y="952"> Didymosphaeriaceae</text>
+<polyline points="524,957 524,947 628,947" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="947" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="947" r="12" class="node" rank="family" otu="true" name="Didymosphaeriaceae" time="" lncount="1" id="1141"/>
+<text x="646" y="976"> Morosphaeriaceae</text>
+<polyline points="524,961 524,971 628,971" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="971" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="971" r="12" class="node" rank="family" otu="true" name="Morosphaeriaceae" time="" lncount="1" id="1142"/>
+<polyline points="379,975 379,959 524,959" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="524" cy="959" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="524" cy="959" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="101" lncount="2" dof="Massarineae" id="1140"/>
+<text x="646" y="1000"> Trematosphaeriaceae</text>
+<polyline points="379,979 379,995 628,995" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="995" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="995" r="12" class="node" rank="family" otu="true" name="Trematosphaeriaceae" time="" lncount="1" id="1143"/>
+<text x="646" y="1024"> Lophiostomataceae</text>
+<polyline points="379,973 379,1019 628,1019" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1019" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1019" r="12" class="node" rank="family" otu="true" name="Lophiostomataceae" time="" lncount="1" id="1144"/>
+<text x="646" y="1048"> Hysteriaceae</text>
+<polyline points="379,931 379,1043 628,1043" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1043" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1043" r="12" class="node" rank="family" otu="true" name="Hysteriaceae" time="" lncount="1" id="1145"/>
+<text x="646" y="1072"> Mytilinidiaceae</text>
+<polyline points="379,943 379,1067 628,1067" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1067" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1067" r="12" class="node" rank="family" otu="true" name="Mytilinidiaceae" time="" lncount="1" id="1146"/>
+<line x1="379" y1="815" x2="379" y2="939" stroke="#000" stroke-width="2"/>
+<polyline points="232,850 232,941 379,941" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="379" cy="941" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="379" cy="941" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="242" lncount="13" dof="Pleosporomycetidae" id="1122"/>
+<text x="646" y="1096"> Dothideaceae</text>
+<polyline points="583,1101 583,1091 628,1091" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1091" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1091" r="12" class="node" rank="family" otu="true" name="Dothideaceae" time="" lncount="1" id="1149"/>
+<text x="646" y="1120"> mitosporic Dothideales</text>
+<polyline points="583,1105 583,1115 628,1115" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1115" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1115" r="12" class="node" rank="no rank" otu="true" name="mitosporic Dothideales" time="" lncount="1" id="1150"/>
+<polyline points="451,1143 451,1103 583,1103" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="583" cy="1103" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="583" cy="1103" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="44" lncount="2" name="Dothideales" id="1148"/>
+<text x="646" y="1144"> Cladosporiaceae</text>
+<polyline points="486,1167 486,1139 628,1139" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1139" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1139" r="12" class="node" rank="family" otu="true" name="Cladosporiaceae" time="" lncount="1" id="1153"/>
+<text x="646" y="1168"> Capnodiaceae</text>
+<polyline points="486,1179 486,1163 628,1163" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1163" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1163" r="12" class="node" rank="family" otu="true" name="Capnodiaceae" time="" lncount="1" id="1155"/>
+<text x="646" y="1192"> Teratosphaeriaceae</text>
+<polyline points="507,1197 507,1187 628,1187" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1187" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1187" r="12" class="node" rank="family" otu="true" name="Teratosphaeriaceae" time="" lncount="1" id="1157"/>
+<text x="646" y="1216"> Mycosphaerellaceae</text>
+<polyline points="507,1201 507,1211 628,1211" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1211" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1211" r="12" class="node" rank="family" otu="true" name="Mycosphaerellaceae" time="" lncount="5" id="1158"/>
+<polyline points="486,1183 486,1199 507,1199" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="507" cy="1199" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="507" cy="1199" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="117" lncount="2" dof="Capnodiales" id="1156"/>
+<text x="646" y="1240"> Myriangiaceae</text>
+<polyline points="486,1189 486,1235 628,1235" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1235" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1235" r="12" class="node" rank="family" otu="true" name="Myriangiaceae" time="" lncount="1" id="1159"/>
+<line x1="486" y1="1139" x2="486" y2="1185" stroke="#000" stroke-width="2"/>
+<polyline points="451,1147 451,1187 486,1187" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="486" cy="1187" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="486" cy="1187" r="12" class="node" rank="unknown" cilo="110" cihi="144" isci="false" time="138" lncount="5" dof="Dothideomycetidae" id="1151"/>
+<polyline points="232,850 232,1145 451,1145" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="451" cy="1145" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="451" cy="1145" r="12" class="node" rank="subclass" cilo="108" cihi="235" isci="true" time="172" lncount="7" name="Dothideomycetidae" id="1147"/>
+<text x="646" y="1264"> Arthoniaceae</text>
+<polyline points="449,1281 449,1259 628,1259" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1259" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1259" r="12" class="node" rank="family" otu="true" name="Arthoniaceae" time="" lncount="1" id="1161"/>
+<text x="646" y="1288"> Roccellographaceae</text>
+<polyline points="449,1293 449,1283 628,1283" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1283" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1283" r="12" class="node" rank="family" otu="true" name="Roccellographaceae" time="" lncount="1" id="1163"/>
+<text x="646" y="1312"> Roccellaceae</text>
+<polyline points="449,1297 449,1307 628,1307" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1307" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1307" r="12" class="node" rank="family" otu="true" name="Roccellaceae" time="" lncount="4" id="1164"/>
+<line x1="449" y1="1285" x2="449" y2="1307" stroke="#000" stroke-width="2"/>
+<polyline points="232,919 232,1283 449,1283" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="449" cy="1283" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="449" cy="1283" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="174" lncount="3" name="Arthoniales" id="1160"/>
+<line x1="232" y1="551" x2="232" y2="915" stroke="#000" stroke-width="2"/>
+<polyline points="198,1264 198,917 232,917" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="232" cy="917" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="232" cy="917" r="12" class="node" rank="no rank" cilo="279" cihi="361" isci="false" time="384" lncount="35" name="dothideomyceta" id="1096"/>
+<text x="646" y="1336"> Candelariaceae</text>
+<polyline points="255,1613 255,1331 628,1331" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1331" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1331" r="12" class="node" rank="family" otu="true" name="Candelariaceae" time="" lncount="2" id="1166"/>
+<text x="646" y="1360"> Sarrameanaceae</text>
+<polyline points="350,1457 350,1355 628,1355" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1355" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1355" r="12" class="node" rank="family" otu="true" name="Sarrameanaceae" time="" lncount="1" id="1170"/>
+<text x="646" y="1384"> Trapeliaceae</text>
+<polyline points="428,1389 428,1379 628,1379" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1379" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1379" r="12" class="node" rank="family" otu="true" name="Trapeliaceae" time="" lncount="12" id="1176"/>
+<text x="646" y="1408"> Baeomycetaceae</text>
+<polyline points="428,1393 428,1403 628,1403" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1403" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1403" r="12" class="node" rank="family" otu="true" name="Baeomycetaceae" time="" lncount="4" id="1177"/>
+<polyline points="404,1413 404,1391 428,1391" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="428" cy="1391" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="428" cy="1391" r="12" class="node" rank="unknown" cilo="193.6" cihi="194.7" isci="false" time="194.2" lncount="2" dof="Ostropomycetidae" id="1175"/>
+<text x="646" y="1432"> Protothelenellaceae</text>
+<polyline points="477,1437 477,1427 628,1427" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1427" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1427" r="12" class="node" rank="family" otu="true" name="Protothelenellaceae" time="" lncount="1" id="1179"/>
+<text x="646" y="1456"> Arthrorhaphidaceae</text>
+<polyline points="477,1441 477,1451 628,1451" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1451" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1451" r="12" class="node" rank="family" otu="true" name="Arthrorhaphidaceae" time="" lncount="1" id="1180"/>
+<polyline points="404,1417 404,1439 477,1439" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="477" cy="1439" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="477" cy="1439" r="12" class="node" rank="no rank" cilo="0" cihi="0" isci="false" time="146" lncount="2" name="Ostropomycetidae incertae sedis" id="1178"/>
+<polyline points="394,1443 394,1415 404,1415" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="404" cy="1415" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="404" cy="1415" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="218" lncount="4" dof="Ostropomycetidae" id="1174"/>
+<text x="646" y="1480"> Arctomiaceae</text>
+<polyline points="394,1447 394,1475 628,1475" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1475" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1475" r="12" class="node" rank="family" otu="true" name="Arctomiaceae" time="" lncount="3" id="1181"/>
+<polyline points="378,1483 378,1445 394,1445" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="394" cy="1445" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="394" cy="1445" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="227" lncount="5" dof="Ostropomycetidae" id="1173"/>
+<text x="646" y="1504"> Stictidaceae</text>
+<polyline points="427,1524 427,1499 628,1499" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1499" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1499" r="12" class="node" rank="family" otu="true" name="Stictidaceae" time="" lncount="3" id="1183"/>
+<text x="646" y="1528"> Gyalectaceae</text>
+<polyline points="491,1533 491,1523 628,1523" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1523" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1523" r="12" class="node" rank="family" otu="true" name="Gyalectaceae" time="" lncount="1" id="1186"/>
+<text x="646" y="1552"> Coenogoniaceae</text>
+<polyline points="491,1537 491,1547 628,1547" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1547" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1547" r="12" class="node" rank="family" otu="true" name="Coenogoniaceae" time="" lncount="1" id="1187"/>
+<polyline points="449,1551 449,1535 491,1535" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="491" cy="1535" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="491" cy="1535" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="133" lncount="2" dof="Ostropales" id="1185"/>
+<text x="646" y="1576"> Graphidaceae</text>
+<polyline points="449,1555 449,1571 628,1571" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1571" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1571" r="12" class="node" rank="family" otu="true" name="Graphidaceae" time="" lncount="223" id="1188"/>
+<polyline points="427,1528 427,1553 449,1553" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="449" cy="1553" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="449" cy="1553" r="12" class="node" rank="unknown" cilo="160" cihi="192" isci="false" time="174" lncount="3" dof="Ostropales" id="1184"/>
+<polyline points="378,1487 378,1526 427,1526" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="427" cy="1526" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="427" cy="1526" r="12" class="node" rank="order" cilo="189" cihi="200" isci="false" time="195" lncount="4" name="Ostropales" id="1182"/>
+<polyline points="370,1561 370,1485 378,1485" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="378" cy="1485" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="378" cy="1485" r="12" class="node" rank="unknown" cilo="225" cihi="259" isci="false" time="243" lncount="9" dof="Ostropomycetidae" id="1172"/>
+<text x="646" y="1600"> Coccotremataceae</text>
+<polyline points="385,1640 385,1595 628,1595" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1595" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1595" r="12" class="node" rank="family" otu="true" name="Coccotremataceae" time="" lncount="4" id="1190"/>
+<text x="646" y="1624"> Microcaliciaceae</text>
+<polyline points="424,1635 424,1619 628,1619" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1619" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1619" r="12" class="node" rank="family" otu="true" name="Microcaliciaceae" time="" lncount="1" id="1194"/>
+<text x="646" y="1648"> Ochrolechiaceae</text>
+<polyline points="431,1653 431,1643 628,1643" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1643" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1643" r="12" class="node" rank="family" otu="true" name="Ochrolechiaceae" time="" lncount="1" id="1196"/>
+<text x="646" y="1672"> Megasporaceae</text>
+<polyline points="431,1657 431,1667 628,1667" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1667" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1667" r="12" class="node" rank="family" otu="true" name="Megasporaceae" time="" lncount="4" id="1197"/>
+<polyline points="424,1639 424,1655 431,1655" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="431" cy="1655" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="431" cy="1655" r="12" class="node" rank="unknown" cilo="182" cihi="200" isci="false" time="191" lncount="2" dof="Pertusariales" id="1195"/>
+<polyline points="398,1662 398,1637 424,1637" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="424" cy="1637" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="424" cy="1637" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="198" lncount="3" dof="Pertusariales" id="1193"/>
+<text x="646" y="1696"> Icmadophilaceae</text>
+<polyline points="398,1666 398,1691 628,1691" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1691" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1691" r="12" class="node" rank="family" otu="true" name="Icmadophilaceae" time="" lncount="3" id="1198"/>
+<polyline points="387,1687 387,1664 398,1664" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="398" cy="1664" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="398" cy="1664" r="12" class="node" rank="unknown" cilo="218" cihi="228" isci="false" time="223" lncount="4" dof="Pertusariales" id="1192"/>
+<text x="646" y="1720"> Pertusariaceae</text>
+<polyline points="387,1691 387,1715 628,1715" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1715" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1715" r="12" class="node" rank="family" otu="true" name="Pertusariaceae" time="" lncount="20" id="1199"/>
+<polyline points="385,1644 385,1689 387,1689" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="387" cy="1689" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="387" cy="1689" r="12" class="node" rank="unknown" cilo="198" cihi="243" isci="false" time="234" lncount="5" dof="Pertusariales" id="1191"/>
+<polyline points="370,1565 370,1642 385,1642" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="385" cy="1642" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="385" cy="1642" r="12" class="node" rank="order" cilo="229" cihi="243" isci="false" time="236" lncount="6" name="Pertusariales" id="1189"/>
+<polyline points="350,1461 350,1563 370,1563" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="370" cy="1563" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="370" cy="1563" r="12" class="node" rank="unknown" cilo="243" cihi="259" isci="false" time="250" lncount="15" dof="Ostropomycetidae" id="1171"/>
+<polyline points="327,1779 327,1459 350,1459" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="350" cy="1459" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="350" cy="1459" r="12" class="node" rank="subclass" cilo="0" cihi="0" isci="false" time="269" lncount="16" name="Ostropomycetidae" id="1169"/>
+<text x="646" y="1744"> Caliciaceae</text>
+<polyline points="457,1749 457,1739 628,1739" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1739" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1739" r="12" class="node" rank="family" otu="true" name="Caliciaceae" time="" lncount="8" id="1204"/>
+<text x="646" y="1768"> Physciaceae</text>
+<polyline points="457,1753 457,1763 628,1763" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1763" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1763" r="12" class="node" rank="family" otu="true" name="Physciaceae" time="" lncount="2" id="1205"/>
+<polyline points="384,1773 384,1751 457,1751" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="457" cy="1751" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="457" cy="1751" r="12" class="node" rank="order" cilo="164" cihi="169" isci="false" time="166" lncount="2" name="Caliciales" id="1203"/>
+<text x="646" y="1792"> Rhizocarpaceae</text>
+<polyline points="471,1797 471,1787 628,1787" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1787" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1787" r="12" class="node" rank="family" otu="true" name="Rhizocarpaceae" time="" lncount="1" id="1207"/>
+<text x="646" y="1816"> Sporastatiaceae</text>
+<polyline points="471,1801 471,1811 628,1811" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1811" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1811" r="12" class="node" rank="family" otu="true" name="Sporastatiaceae" time="" lncount="1" id="1208"/>
+<polyline points="384,1777 384,1799 471,1799" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="471" cy="1799" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="471" cy="1799" r="12" class="node" rank="order" cilo="144" cihi="161" isci="false" time="153" lncount="2" name="Rhizocarpales" id="1206"/>
+<polyline points="364,1902 364,1775 384,1775" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="384" cy="1775" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="384" cy="1775" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="236" lncount="4" dof="Lecanoromycetidae" id="1202"/>
+<text x="646" y="1840"> Porpidiaceae</text>
+<polyline points="374,1869 374,1835 628,1835" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1835" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1835" r="12" class="node" rank="family" otu="true" name="Porpidiaceae" time="" lncount="1" id="1213"/>
+<text x="646" y="1864"> Sphaerophoraceae</text>
+<polyline points="374,1869 374,1859 628,1859" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1859" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1859" r="12" class="node" rank="family" otu="true" name="Sphaerophoraceae" time="" lncount="2" id="1216"/>
+<text x="646" y="1888"> Calycidiaceae</text>
+<polyline points="374,1873 374,1883 628,1883" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1883" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1883" r="12" class="node" rank="family" otu="true" name="Calycidiaceae" time="" lncount="1" id="1217"/>
+<text x="646" y="1912"> Ramalinaceae</text>
+<polyline points="374,1885 374,1907 628,1907" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1907" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1907" r="12" class="node" rank="family" otu="true" name="Ramalinaceae" time="" lncount="11" id="1218"/>
+<text x="646" y="1936"> Cladoniaceae</text>
+<polyline points="505,1953 505,1931 628,1931" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1931" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1931" r="12" class="node" rank="family" otu="true" name="Cladoniaceae" time="" lncount="1" id="1222"/>
+<text x="646" y="1960"> Lecanoraceae</text>
+<polyline points="505,1965 505,1955 628,1955" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1955" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1955" r="12" class="node" rank="family" otu="true" name="Lecanoraceae" time="" lncount="1" id="1224"/>
+<text x="646" y="1984"> Mycoblastaceae</text>
+<polyline points="505,1969 505,1979 628,1979" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="1979" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="1979" r="12" class="node" rank="family" otu="true" name="Mycoblastaceae" time="" lncount="1" id="1225"/>
+<line x1="505" y1="1957" x2="505" y2="1979" stroke="#000" stroke-width="2"/>
+<polyline points="481,1983 481,1955 505,1955" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="505" cy="1955" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="505" cy="1955" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="119" lncount="3" dof="Lecanorineae" id="1221"/>
+<text x="646" y="2008"> Parmeliaceae</text>
+<polyline points="511,2013 511,2003 628,2003" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2003" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2003" r="12" class="node" rank="family" otu="true" name="Parmeliaceae" time="" lncount="378" id="1227"/>
+<text x="646" y="2032"> Stereocaulaceae</text>
+<polyline points="511,2017 511,2027 628,2027" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2027" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2027" r="12" class="node" rank="family" otu="true" name="Stereocaulaceae" time="" lncount="1" id="1228"/>
+<polyline points="481,1987 481,2015 511,2015" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="511" cy="2015" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="511" cy="2015" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="114" lncount="2" dof="Lecanorineae" id="1226"/>
+<polyline points="462,2016 462,1985 481,1985" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="481" cy="1985" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="481" cy="1985" r="12" class="node" rank="unknown" cilo="125" cihi="165" isci="false" time="143" lncount="5" dof="Lecanorineae" id="1220"/>
+<text x="646" y="2056"> Pilocarpaceae</text>
+<polyline points="462,2020 462,2051 628,2051" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2051" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2051" r="12" class="node" rank="family" otu="true" name="Pilocarpaceae" time="" lncount="1" id="1229"/>
+<polyline points="374,1928 374,2018 462,2018" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="462" cy="2018" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="462" cy="2018" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="161" lncount="6" dof="Lecanorineae" id="1219"/>
+<text x="646" y="2080"> Lecideaceae</text>
+<polyline points="438,2109 438,2075 628,2075" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2075" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2075" r="12" class="node" rank="family" otu="true" name="Lecideaceae" time="" lncount="1" id="1231"/>
+<text x="646" y="2104"> Nephromataceae</text>
+<polyline points="505,2121 505,2099 628,2099" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2099" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2099" r="12" class="node" rank="family" otu="true" name="Nephromataceae" time="" lncount="1" id="1234"/>
+<text x="646" y="2128"> Peltigeraceae</text>
+<polyline points="505,2133 505,2123 628,2123" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2123" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2123" r="12" class="node" rank="family" otu="true" name="Peltigeraceae" time="" lncount="1" id="1236"/>
+<text x="646" y="2152"> Lobariaceae</text>
+<polyline points="505,2137 505,2147 628,2147" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2147" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2147" r="12" class="node" rank="family" otu="true" name="Lobariaceae" time="" lncount="3" id="1237"/>
+<line x1="505" y1="2125" x2="505" y2="2147" stroke="#000" stroke-width="2"/>
+<polyline points="473,2145 473,2123 505,2123" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="505" cy="2123" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="505" cy="2123" r="12" class="node" rank="suborder" cilo="0" cihi="0" isci="false" time="119" lncount="3" name="Peltigerineae" id="1233"/>
+<text x="646" y="2176"> Collemataceae</text>
+<polyline points="473,2149 473,2171 628,2171" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2171" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2171" r="12" class="node" rank="family" otu="true" name="Collemataceae" time="" lncount="3" id="1238"/>
+<polyline points="438,2113 438,2147 473,2147" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="473" cy="2147" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="473" cy="2147" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="151" lncount="4" name="Peltigerales" id="1232"/>
+<polyline points="374,1975 374,2111 438,2111" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="438" cy="2111" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="438" cy="2111" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="184" lncount="5" dof="Lecanoromycetidae" id="1230"/>
+<text x="646" y="2200"> Brigantiaeaceae</text>
+<polyline points="536,2205 536,2195 628,2195" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2195" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2195" r="12" class="node" rank="family" otu="true" name="Brigantiaeaceae" time="" lncount="1" id="1241"/>
+<text x="646" y="2224"> Letrouitiaceae</text>
+<polyline points="536,2209 536,2219 628,2219" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2219" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2219" r="12" class="node" rank="family" otu="true" name="Letrouitiaceae" time="" lncount="1" id="1242"/>
+<polyline points="453,2229 453,2207 536,2207" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="536" cy="2207" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="536" cy="2207" r="12" class="node" rank="suborder" cilo="83" cihi="95" isci="false" time="89" lncount="2" name="Letrouitineae" id="1240"/>
+<text x="646" y="2248"> Teloschistaceae</text>
+<polyline points="476,2253 476,2243 628,2243" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2243" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2243" r="12" class="node" rank="family" otu="true" name="Teloschistaceae" time="" lncount="96" id="1244"/>
+<text x="646" y="2272"> Megalosporaceae</text>
+<polyline points="476,2257 476,2267 628,2267" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2267" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2267" r="12" class="node" rank="family" otu="true" name="Megalosporaceae" time="" lncount="5" id="1245"/>
+<polyline points="453,2233 453,2255 476,2255" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="476" cy="2255" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="476" cy="2255" r="12" class="node" rank="suborder" cilo="145" cihi="150" isci="false" time="148" lncount="2" name="Teloschistineae" id="1243"/>
+<polyline points="374,2035 374,2231 453,2231" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="453" cy="2231" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="453" cy="2231" r="12" class="node" rank="order" cilo="162" cihi="178" isci="false" time="170" lncount="4" name="Teloschistales" id="1239"/>
+<line x1="374" y1="1835" x2="374" y2="2031" stroke="#000" stroke-width="2"/>
+<polyline points="364,1906 364,2033 374,2033" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="374" cy="2033" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="374" cy="2033" r="12" class="node" rank="unknown" cilo="204" cihi="270" isci="false" time="246" lncount="19" dof="Lecanoromycetidae" id="1209"/>
+<polyline points="351,2101 351,1904 364,1904" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="364" cy="1904" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="364" cy="1904" r="12" class="node" rank="subclass" cilo="240" cihi="270" isci="false" time="256" lncount="23" name="Lecanoromycetidae" id="1201"/>
+<text x="646" y="2296"> Umbilicariaceae</text>
+<polyline points="415,2301 415,2291 628,2291" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2291" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2291" r="12" class="node" rank="family" otu="true" name="Umbilicariaceae" time="" lncount="1" id="1247"/>
+<text x="646" y="2320"> Ophioparmaceae</text>
+<polyline points="415,2305 415,2315 628,2315" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2315" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2315" r="12" class="node" rank="family" otu="true" name="Ophioparmaceae" time="" lncount="1" id="1248"/>
+<polyline points="351,2105 351,2303 415,2303" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="415" cy="2303" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="415" cy="2303" r="12" class="node" rank="order" cilo="144" cihi="285" isci="false" time="206" lncount="2" name="Umbilicariales" id="1246"/>
+<polyline points="327,1783 327,2103 351,2103" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="351" cy="2103" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="351" cy="2103" r="12" class="node" rank="unknown" cilo="240" cihi="297" isci="false" time="269" lncount="25" dof="OSLEUM clade" id="1200"/>
+<text x="646" y="2344"> Acarosporaceae</text>
+<polyline points="327,1901 327,2339 628,2339" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2339" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2339" r="12" class="node" rank="family" otu="true" name="Acarosporaceae" time="" lncount="4" id="1249"/>
+<line x1="327" y1="1459" x2="327" y2="1897" stroke="#000" stroke-width="2"/>
+<polyline points="255,1617 255,1899 327,1899" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="327" cy="1899" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="327" cy="1899" r="12" class="node" rank="unknown" cilo="131" cihi="388" isci="true" time="292" lncount="42" dof="Lecanoromycetes" id="1167"/>
+<polyline points="198,1268 198,1615 255,1615" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="255" cy="1615" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="255" cy="1615" r="12" class="node" rank="class" cilo="350" cihi="375" isci="false" time="362" lncount="43" name="Lecanoromycetes" id="1165"/>
+<polyline points="178,2154 178,1266 198,1266" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="198" cy="1266" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="198" cy="1266" r="12" class="node" rank="unknown" cilo="224" cihi="612" isci="true" time="418" lncount="78" dof="leotiomyceta" id="1095"/>
+<text x="646" y="2368"> Microdochiaceae</text>
+<polyline points="300,2409 300,2363 628,2363" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2363" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2363" r="12" class="node" rank="family" otu="true" name="Microdochiaceae" time="" lncount="1" id="1254"/>
+<text x="646" y="2392"> Diatrypaceae</text>
+<polyline points="453,2397 453,2387 628,2387" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2387" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2387" r="12" class="node" rank="family" otu="true" name="Diatrypaceae" time="" lncount="1" id="1259"/>
+<text x="646" y="2416"> Xylariaceae</text>
+<polyline points="453,2401 453,2411 628,2411" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2411" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2411" r="12" class="node" rank="family" otu="true" name="Xylariaceae" time="" lncount="5" id="1260"/>
+<text x="646" y="2440"> Apiosporaceae</text>
+<polyline points="453,2413 453,2435 628,2435" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2435" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2435" r="12" class="node" rank="family" otu="true" name="Apiosporaceae" time="" lncount="1" id="1261"/>
+<line x1="453" y1="2387" x2="453" y2="2409" stroke="#000" stroke-width="2"/>
+<polyline points="409,2433 409,2411 453,2411" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="453" cy="2411" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="453" cy="2411" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="170" lncount="3" dof="Xylariales" id="1257"/>
+<text x="646" y="2464"> Cainiaceae</text>
+<polyline points="409,2437 409,2459 628,2459" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2459" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2459" r="12" class="node" rank="family" otu="true" name="Cainiaceae" time="" lncount="1" id="1262"/>
+<polyline points="335,2457 335,2435 409,2435" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="409" cy="2435" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="409" cy="2435" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="212" lncount="4" dof="Xylariales" id="1256"/>
+<text x="646" y="2488"> Hyponectriaceae</text>
+<polyline points="335,2461 335,2483 628,2483" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2483" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2483" r="12" class="node" rank="family" otu="true" name="Hyponectriaceae" time="" lncount="1" id="1263"/>
+<polyline points="300,2413 300,2459 335,2459" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="335" cy="2459" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="335" cy="2459" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="284" lncount="5" dof="Xylariales" id="1255"/>
+<polyline points="222,2586 222,2411 300,2411" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="300" cy="2411" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="300" cy="2411" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="318" lncount="6" name="Xylariales" id="1253"/>
+<text x="646" y="2512"> Phyllachoraceae</text>
+<polyline points="253,2764 253,2507 628,2507" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2507" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2507" r="12" class="node" rank="family" otu="true" name="Phyllachoraceae" time="" lncount="1" id="1265"/>
+<text x="646" y="2536"> Magnaporthaceae</text>
+<polyline points="376,2586 376,2531 628,2531" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2531" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2531" r="12" class="node" rank="family" otu="true" name="Magnaporthaceae" time="" lncount="4" id="1270"/>
+<text x="646" y="2560"> Ophiostomataceae</text>
+<polyline points="472,2577 472,2555 628,2555" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2555" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2555" r="12" class="node" rank="family" otu="true" name="Ophiostomataceae" time="" lncount="21" id="1274"/>
+<text x="646" y="2584"> Valsaceae</text>
+<polyline points="544,2601 544,2579 628,2579" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2579" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2579" r="12" class="node" rank="family" otu="true" name="Valsaceae" time="" lncount="1" id="1276"/>
+<text x="646" y="2608"> Gnomoniaceae</text>
+<polyline points="544,2613 544,2603 628,2603" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2603" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2603" r="12" class="node" rank="family" otu="true" name="Gnomoniaceae" time="" lncount="1" id="1278"/>
+<text x="646" y="2632"> Diaporthaceae</text>
+<polyline points="544,2617 544,2627 628,2627" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2627" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2627" r="12" class="node" rank="family" otu="true" name="Diaporthaceae" time="" lncount="1" id="1279"/>
+<line x1="544" y1="2605" x2="544" y2="2627" stroke="#000" stroke-width="2"/>
+<polyline points="472,2581 472,2603 544,2603" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="544" cy="2603" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="544" cy="2603" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="82" lncount="3" name="Diaporthales" id="1275"/>
+<polyline points="431,2613 431,2579 472,2579" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="472" cy="2579" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="472" cy="2579" r="12" class="node" rank="unknown" cilo="111" cihi="192" isci="false" time="151" lncount="4" dof="Sordariomycetidae" id="1273"/>
+<text x="646" y="2656"> Togniniaceae</text>
+<polyline points="431,2617 431,2651 628,2651" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2651" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2651" r="12" class="node" rank="family" otu="true" name="Togniniaceae" time="" lncount="1" id="1280"/>
+<polyline points="402,2643 402,2615 431,2615" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="431" cy="2615" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="431" cy="2615" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="192" lncount="5" dof="Sordariomycetidae" id="1272"/>
+<text x="646" y="2680"> Coniochaetaceae</text>
+<polyline points="402,2647 402,2675 628,2675" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2675" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2675" r="12" class="node" rank="family" otu="true" name="Coniochaetaceae" time="" lncount="1" id="1281"/>
+<polyline points="376,2590 376,2645 402,2645" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="402" cy="2645" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="402" cy="2645" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="219" lncount="6" dof="Sordariomycetidae" id="1271"/>
+<text x="646" y="2704"> Sordariaceae</text>
+<polyline points="477,2718 477,2699 628,2699" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2699" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2699" r="12" class="node" rank="family" otu="true" name="Sordariaceae" time="" lncount="9" id="1283"/>
+<text x="646" y="2728"> Lasiosphaeriaceae</text>
+<polyline points="525,2739 525,2723 628,2723" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2723" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2723" r="12" class="node" rank="family" otu="true" name="Lasiosphaeriaceae" time="" lncount="1" id="1285"/>
+<text x="646" y="2752"> Chaetomiaceae</text>
+<polyline points="542,2757 542,2747 628,2747" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2747" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2747" r="12" class="node" rank="family" otu="true" name="Chaetomiaceae" time="" lncount="7" id="1287"/>
+<text x="646" y="2776"> mitosporic Sordariales</text>
+<polyline points="542,2761 542,2771 628,2771" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2771" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2771" r="12" class="node" rank="no rank" otu="true" name="mitosporic Sordariales" time="" lncount="1" id="1288"/>
+<polyline points="525,2743 525,2759 542,2759" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="542" cy="2759" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="542" cy="2759" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="84" lncount="2" dof="Sordariales" id="1286"/>
+<polyline points="477,2722 477,2741 525,2741" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="525" cy="2741" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="525" cy="2741" r="12" class="node" rank="unknown" cilo="84" cihi="109" isci="false" time="100" lncount="3" dof="Sordariales" id="1284"/>
+<polyline points="376,2627 376,2720 477,2720" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="477" cy="2720" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="477" cy="2720" r="12" class="node" rank="order" cilo="114" cihi="169" isci="false" time="146" lncount="4" name="Sordariales" id="1282"/>
+<line x1="376" y1="2531" x2="376" y2="2623" stroke="#000" stroke-width="2"/>
+<polyline points="253,2720 253,2625 376,2625" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="376" cy="2625" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="376" cy="2625" r="12" class="node" rank="unknown" cilo="114" cihi="365" isci="true" time="245" lncount="11" dof="Sordariomycetidae" id="1268"/>
+<text x="646" y="2800"> Annulatascaceae</text>
+<polyline points="253,2805 253,2795 628,2795" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2795" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2795" r="12" class="node" rank="family" otu="true" name="Annulatascaceae" time="" lncount="1" id="1290"/>
+<text x="646" y="2824"> Boliniaceae</text>
+<polyline points="253,2809 253,2819 628,2819" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2819" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2819" r="12" class="node" rank="family" otu="true" name="Boliniaceae" time="" lncount="1" id="1291"/>
+<text x="646" y="2848"> Ceratocystidaceae</text>
+<polyline points="402,2865 402,2843 628,2843" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2843" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2843" r="12" class="node" rank="family" otu="true" name="Ceratocystidaceae" time="" lncount="10" id="1295"/>
+<text x="646" y="2872"> Microascaceae</text>
+<polyline points="402,2877 402,2867 628,2867" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2867" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2867" r="12" class="node" rank="family" otu="true" name="Microascaceae" time="" lncount="3" id="1297"/>
+<text x="646" y="2896"> Halosphaeriaceae</text>
+<polyline points="402,2881 402,2891 628,2891" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2891" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2891" r="12" class="node" rank="family" otu="true" name="Halosphaeriaceae" time="" lncount="7" id="1298"/>
+<line x1="402" y1="2869" x2="402" y2="2891" stroke="#000" stroke-width="2"/>
+<polyline points="355,2931 355,2867 402,2867" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="402" cy="2867" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="402" cy="2867" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="219" lncount="3" name="Microascales" id="1294"/>
+<text x="646" y="2920"> Melanosporaceae</text>
+<polyline points="374,2997 374,2915 628,2915" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2915" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2915" r="12" class="node" rank="family" otu="true" name="Melanosporaceae" time="" lncount="1" id="1300"/>
+<text x="646" y="2944"> Stachybotriaceae</text>
+<polyline points="374,3009 374,2939 628,2939" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2939" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2939" r="12" class="node" rank="family" otu="true" name="Stachybotriaceae" time="" lncount="9" id="1302"/>
+<text x="646" y="2968"> Hypocreaceae</text>
+<polyline points="478,2973 478,2963 628,2963" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2963" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2963" r="12" class="node" rank="family" otu="true" name="Hypocreaceae" time="" lncount="12" id="1308"/>
+<text x="646" y="2992"> Clavicipitaceae</text>
+<polyline points="478,2977 478,2987 628,2987" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="2987" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="2987" r="12" class="node" rank="family" otu="true" name="Clavicipitaceae" time="" lncount="27" id="1309"/>
+<polyline points="465,2991 465,2975 478,2975" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="478" cy="2975" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="478" cy="2975" r="12" class="node" rank="unknown" cilo="116" cihi="174" isci="false" time="145" lncount="2" dof="Hypocreales" id="1307"/>
+<text x="646" y="3016"> Ophiocordycipitaceae</text>
+<polyline points="465,2995 465,3011 628,3011" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3011" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3011" r="12" class="node" rank="family" otu="true" name="Ophiocordycipitaceae" time="" lncount="42" id="1310"/>
+<polyline points="463,3012 463,2993 465,2993" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="465" cy="2993" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="465" cy="2993" r="12" class="node" rank="unknown" cilo="134" cihi="174" isci="false" time="158" lncount="3" dof="Hypocreales" id="1306"/>
+<text x="646" y="3040"> Bionectriaceae</text>
+<polyline points="463,3016 463,3035 628,3035" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3035" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3035" r="12" class="node" rank="family" otu="true" name="Bionectriaceae" time="" lncount="7" id="1311"/>
+<polyline points="436,3034 436,3014 463,3014" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="463" cy="3014" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="463" cy="3014" r="12" class="node" rank="unknown" cilo="140" cihi="179" isci="false" time="160" lncount="4" dof="Hypocreales" id="1305"/>
+<text x="646" y="3064"> Cordycipitaceae</text>
+<polyline points="436,3038 436,3059 628,3059" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3059" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3059" r="12" class="node" rank="family" otu="true" name="Cordycipitaceae" time="" lncount="29" id="1312"/>
+<polyline points="374,3057 374,3036 436,3036" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="436" cy="3036" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="436" cy="3036" r="12" class="node" rank="unknown" cilo="116" cihi="294" isci="false" time="186" lncount="5" dof="Hypocreales" id="1304"/>
+<text x="646" y="3088"> Nectriaceae</text>
+<polyline points="374,3061 374,3083 628,3083" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3083" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3083" r="12" class="node" rank="family" otu="true" name="Nectriaceae" time="" lncount="60" id="1313"/>
+<line x1="374" y1="3001" x2="374" y2="3083" stroke="#000" stroke-width="2"/>
+<polyline points="355,2935 355,2999 374,2999" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="374" cy="2999" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="374" cy="2999" r="12" class="node" rank="unknown" cilo="152" cihi="294" isci="false" time="246" lncount="8" dof="Hypocreomycetidae" id="1299"/>
+<polyline points="259,3024 259,2933 355,2933" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="355" cy="2933" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="355" cy="2933" r="12" class="node" rank="unknown" cilo="234" cihi="294" isci="false" time="265" lncount="11" dof="Hypocreomycetidae" id="1293"/>
+<text x="646" y="3112"> Glomerellaceae</text>
+<polyline points="484,3117 484,3107 628,3107" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3107" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3107" r="12" class="node" rank="family" otu="true" name="Glomerellaceae" time="" lncount="1" id="1315"/>
+<text x="646" y="3136"> Plectosphaerellaceae</text>
+<polyline points="484,3121 484,3131 628,3131" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3131" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3131" r="12" class="node" rank="family" otu="true" name="Plectosphaerellaceae" time="" lncount="3" id="1316"/>
+<polyline points="259,3028 259,3119 484,3119" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="484" cy="3119" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="484" cy="3119" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="139" lncount="2" name="Glomerellales" id="1314"/>
+<polyline points="253,2827 253,3026 259,3026" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="259" cy="3026" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="259" cy="3026" r="12" class="node" rank="subclass" cilo="194" cihi="888" isci="false" time="358" lncount="13" name="Hypocreomycetidae" id="1292"/>
+<line x1="253" y1="2768" x2="253" y2="3026" stroke="#000" stroke-width="2"/>
+<polyline points="222,2590 222,2766 253,2766" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="253" cy="2766" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="253" cy="2766" r="12" class="node" rank="unknown" cilo="261" cihi="410" isci="false" time="364" lncount="27" dof="Sordariomycetes" id="1264"/>
+<text x="646" y="3160"> Cyttariaceae</text>
+<polyline points="260,3273 260,3155 628,3155" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3155" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3155" r="12" class="node" rank="family" otu="true" name="Cyttariaceae" time="" lncount="1" id="1318"/>
+<text x="646" y="3184"> Sclerotiniaceae</text>
+<polyline points="491,3189 491,3179 628,3179" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3179" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3179" r="12" class="node" rank="family" otu="true" name="Sclerotiniaceae" time="" lncount="1" id="1325"/>
+<text x="646" y="3208"> Dermateaceae</text>
+<polyline points="491,3193 491,3203 628,3203" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3203" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3203" r="12" class="node" rank="family" otu="true" name="Dermateaceae" time="" lncount="1" id="1326"/>
+<polyline points="374,3207 374,3191 491,3191" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="491" cy="3191" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="491" cy="3191" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="133" lncount="2" dof="Helotiales" id="1324"/>
+<text x="646" y="3232"> Leotiaceae</text>
+<polyline points="374,3211 374,3227 628,3227" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3227" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3227" r="12" class="node" rank="family" otu="true" name="Leotiaceae" time="" lncount="1" id="1327"/>
+<polyline points="269,3252 269,3209 374,3209" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="374" cy="3209" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="374" cy="3209" r="12" class="node" rank="unknown" cilo="188" cihi="330" isci="false" time="247" lncount="3" dof="Helotiales" id="1323"/>
+<text x="646" y="3256"> Hemiphacidiaceae</text>
+<polyline points="269,3261 269,3251 628,3251" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3251" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3251" r="12" class="node" rank="family" otu="true" name="Hemiphacidiaceae" time="" lncount="1" id="1330"/>
+<text x="646" y="3280"> Loramycetaceae</text>
+<polyline points="269,3265 269,3275 628,3275" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3275" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3275" r="12" class="node" rank="family" otu="true" name="Loramycetaceae" time="" lncount="1" id="1331"/>
+<text x="646" y="3304"> Helotiaceae</text>
+<polyline points="269,3277 269,3299 628,3299" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3299" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3299" r="12" class="node" rank="family" otu="true" name="Helotiaceae" time="" lncount="4" id="1332"/>
+<text x="646" y="3328"> Rhytismataceae</text>
+<polyline points="476,3333 476,3323 628,3323" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3323" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3323" r="12" class="node" rank="family" otu="true" name="Rhytismataceae" time="" lncount="2" id="1334"/>
+<text x="646" y="3352"> Cudoniaceae</text>
+<polyline points="476,3337 476,3347 628,3347" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3347" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3347" r="12" class="node" rank="family" otu="true" name="Cudoniaceae" time="" lncount="16" id="1335"/>
+<polyline points="269,3274 269,3335 476,3335" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="476" cy="3335" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="476" cy="3335" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="147" lncount="2" name="Rhytismatales" id="1333"/>
+<line x1="269" y1="3209" x2="269" y2="3270" stroke="#000" stroke-width="2"/>
+<polyline points="260,3319 260,3272 269,3272" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="269" cy="3272" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="269" cy="3272" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="348" lncount="8" dof="Leotiomycetes" id="1321"/>
+<text x="646" y="3376"> Phacidiaceae</text>
+<polyline points="260,3323 260,3371 628,3371" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3371" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3371" r="12" class="node" rank="family" otu="true" name="Phacidiaceae" time="" lncount="2" id="1336"/>
+<text x="646" y="3400"> Erysiphaceae</text>
+<polyline points="260,3335 260,3395 628,3395" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3395" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3395" r="12" class="node" rank="family" otu="true" name="Erysiphaceae" time="" lncount="27" id="1337"/>
+<line x1="260" y1="3277" x2="260" y2="3395" stroke="#000" stroke-width="2"/>
+<polyline points="222,2845 222,3275 260,3275" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="260" cy="3275" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="260" cy="3275" r="12" class="node" rank="class" cilo="0" cihi="0" isci="false" time="357" lncount="11" name="Leotiomycetes" id="1317"/>
+<text x="646" y="3424"> Coryneliaceae</text>
+<polyline points="394,3489 394,3419 628,3419" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3419" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3419" r="12" class="node" rank="family" otu="true" name="Coryneliaceae" time="" lncount="1" id="1341"/>
+<text x="646" y="3448"> Arthrodermataceae</text>
+<polyline points="488,3501 488,3443 628,3443" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3443" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3443" r="12" class="node" rank="family" otu="true" name="Arthrodermataceae" time="" lncount="2" id="1344"/>
+<text x="646" y="3472"> Eremascaceae</text>
+<polyline points="488,3477 488,3467 628,3467" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3467" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3467" r="12" class="node" rank="family" otu="true" name="Eremascaceae" time="" lncount="1" id="1347"/>
+<text x="646" y="3496"> Ascosphaeraceae</text>
+<polyline points="488,3481 488,3491 628,3491" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3491" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3491" r="12" class="node" rank="family" otu="true" name="Ascosphaeraceae" time="" lncount="1" id="1348"/>
+<text x="646" y="3520"> Onygenaceae</text>
+<polyline points="522,3525 522,3515 628,3515" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3515" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3515" r="12" class="node" rank="family" otu="true" name="Onygenaceae" time="" lncount="1" id="1351"/>
+<text x="646" y="3544"> Gymnoascaceae</text>
+<polyline points="522,3529 522,3539 628,3539" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3539" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3539" r="12" class="node" rank="family" otu="true" name="Gymnoascaceae" time="" lncount="1" id="1352"/>
+<polyline points="488,3543 488,3527 522,3527" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="522" cy="3527" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="522" cy="3527" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="103" lncount="2" dof="Onygenales" id="1350"/>
+<text x="646" y="3568"> Ajellomycetaceae</text>
+<polyline points="488,3547 488,3563 628,3563" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3563" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3563" r="12" class="node" rank="family" otu="true" name="Ajellomycetaceae" time="" lncount="2" id="1353"/>
+<line x1="488" y1="3505" x2="488" y2="3563" stroke="#000" stroke-width="2"/>
+<polyline points="439,3561 439,3503 488,3503" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="488" cy="3503" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="488" cy="3503" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="136" lncount="6" name="Onygenales" id="1343"/>
+<text x="646" y="3592"> Thermoascaceae</text>
+<polyline points="506,3621 506,3587 628,3587" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3587" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3587" r="12" class="node" rank="family" otu="true" name="Thermoascaceae" time="" lncount="2" id="1355"/>
+<text x="646" y="3616"> Trichocomaceae</text>
+<polyline points="529,3621 529,3611 628,3611" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3611" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3611" r="12" class="node" rank="family" otu="true" name="Trichocomaceae" time="" lncount="1" id="1358"/>
+<text x="646" y="3640"> Aspergillaceae</text>
+<polyline points="529,3625 529,3635 628,3635" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3635" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3635" r="12" class="node" rank="family" otu="true" name="Aspergillaceae" time="" lncount="12" id="1359"/>
+<polyline points="506,3639 506,3623 529,3623" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="529" cy="3623" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="529" cy="3623" r="12" class="node" rank="unknown" cilo="50" cihi="146" isci="false" time="96" lncount="2" dof="Eurotiales" id="1357"/>
+<text x="646" y="3664"> Elaphomycetaceae</text>
+<polyline points="506,3643 506,3659 628,3659" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3659" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3659" r="12" class="node" rank="family" otu="true" name="Elaphomycetaceae" time="" lncount="1" id="1360"/>
+<line x1="506" y1="3625" x2="506" y2="3659" stroke="#000" stroke-width="2"/>
+<polyline points="439,3565 439,3623 506,3623" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="506" cy="3623" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="506" cy="3623" r="12" class="node" rank="order" cilo="0" cihi="0" isci="false" time="118" lncount="4" name="Eurotiales" id="1354"/>
+<polyline points="394,3493 394,3563 439,3563" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="439" cy="3563" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="439" cy="3563" r="12" class="node" rank="unknown" cilo="112" cihi="254" isci="true" time="183" lncount="10" dof="Eurotiomycetidae" id="1342"/>
+<polyline points="311,3597 311,3491 394,3491" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="394" cy="3491" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="394" cy="3491" r="12" class="node" rank="subclass" cilo="0" cihi="0" isci="false" time="227" lncount="11" name="Eurotiomycetidae" id="1340"/>
+<text x="646" y="3688"> Pyrenulaceae</text>
+<polyline points="339,3705 339,3683 628,3683" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3683" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3683" r="12" class="node" rank="family" otu="true" name="Pyrenulaceae" time="" lncount="2" id="1362"/>
+<text x="646" y="3712"> Herpotrichiellaceae</text>
+<polyline points="339,3717 339,3707 628,3707" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3707" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3707" r="12" class="node" rank="family" otu="true" name="Herpotrichiellaceae" time="" lncount="4" id="1364"/>
+<text x="646" y="3736"> Verrucariaceae</text>
+<polyline points="339,3721 339,3731 628,3731" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3731" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3731" r="12" class="node" rank="family" otu="true" name="Verrucariaceae" time="" lncount="4" id="1365"/>
+<line x1="339" y1="3709" x2="339" y2="3731" stroke="#000" stroke-width="2"/>
+<polyline points="311,3601 311,3707 339,3707" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="339" cy="3707" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="339" cy="3707" r="12" class="node" rank="subclass" cilo="217" cihi="344" isci="false" time="280" lncount="3" name="Chaetothyriomycetidae" id="1361"/>
+<polyline points="231,3681 231,3599 311,3599" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="311" cy="3599" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="311" cy="3599" r="12" class="node" rank="unknown" cilo="273" cihi="344" isci="false" time="307" lncount="14" dof="Eurotiomycetes" id="1339"/>
+<text x="646" y="3760"> Sphinctrinaceae</text>
+<polyline points="468,3765 468,3755 628,3755" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3755" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3755" r="12" class="node" rank="family" otu="true" name="Sphinctrinaceae" time="" lncount="1" id="1367"/>
+<text x="646" y="3784"> Mycocaliciaceae</text>
+<polyline points="468,3769 468,3779 628,3779" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3779" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3779" r="12" class="node" rank="family" otu="true" name="Mycocaliciaceae" time="" lncount="3" id="1368"/>
+<polyline points="231,3685 231,3767 468,3767" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="468" cy="3767" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="468" cy="3767" r="12" class="node" rank="order" cilo="152" cihi="156" isci="false" time="155" lncount="2" name="Mycocaliciales" id="1366"/>
+<polyline points="222,3049 222,3683 231,3683" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="231" cy="3683" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="231" cy="3683" r="12" class="node" rank="class" cilo="137" cihi="649" isci="true" time="385" lncount="16" name="Eurotiomycetes" id="1338"/>
+<line x1="222" y1="2411" x2="222" y2="3045" stroke="#000" stroke-width="2"/>
+<polyline points="178,2158 178,3047 222,3047" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="222" cy="3047" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="222" cy="3047" r="12" class="node" rank="unknown" cilo="273" cihi="481" isci="true" time="394" lncount="60" dof="leotiomyceta" id="1250"/>
+<polyline points="173,1303 173,2156 178,2156" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="178" cy="2156" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="178" cy="2156" r="12" class="node" rank="unknown" cilo="284" cihi="590" isci="true" time="437" lncount="138" dof="leotiomyceta" id="1094"/>
+<line x1="173" y1="1157" x2="173" y2="2156" stroke="#000" stroke-width="2"/>
+<polyline points="20,2547 20,1155 173,1155" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="173" cy="1155" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="173" cy="1155" r="12" class="node" rank="subphylum" cilo="358" cihi="468" isci="true" time="442" lncount="152" name="Pezizomycotina" id="1066"/>
+<text x="646" y="3808"> Endomycetaceae</text>
+<polyline points="20,3871 20,3803 628,3803" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3803" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3803" r="12" class="node" rank="family" otu="true" name="Endomycetaceae" time="" lncount="1" id="1370"/>
+<text x="646" y="3832"> mitosporic Saccharomycetales</text>
+<polyline points="554,3837 554,3827 628,3827" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3827" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3827" r="12" class="node" rank="no rank" otu="true" name="mitosporic Saccharomycetales" time="" lncount="1" id="1376"/>
+<text x="646" y="3856"> Metschnikowiaceae</text>
+<polyline points="554,3841 554,3851 628,3851" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3851" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3851" r="12" class="node" rank="family" otu="true" name="Metschnikowiaceae" time="" lncount="57" id="1377"/>
+<polyline points="502,3855 502,3839 554,3839" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="554" cy="3839" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="554" cy="3839" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="72" lncount="2" dof="Saccharomycetales" id="1375"/>
+<text x="646" y="3880"> Debaryomycetaceae</text>
+<polyline points="502,3859 502,3875 628,3875" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3875" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3875" r="12" class="node" rank="family" otu="true" name="Debaryomycetaceae" time="" lncount="5" id="1378"/>
+<polyline points="406,3876 406,3857 502,3857" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="502" cy="3857" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="502" cy="3857" r="12" class="node" rank="unknown" cilo="104" cihi="116" isci="false" time="122" lncount="3" dof="Saccharomycetales" id="1374"/>
+<text x="646" y="3904"> Pichiaceae</text>
+<polyline points="406,3880 406,3899 628,3899" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3899" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3899" r="12" class="node" rank="family" otu="true" name="Pichiaceae" time="" lncount="1" id="1379"/>
+<polyline points="315,3904 315,3878 406,3878" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="406" cy="3878" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="406" cy="3878" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="215" lncount="4" dof="Saccharomycetales" id="1373"/>
+<text x="646" y="3928"> Phaffomycetaceae</text>
+<polyline points="410,3933 410,3923 628,3923" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3923" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3923" r="12" class="node" rank="family" otu="true" name="Phaffomycetaceae" time="" lncount="1" id="1381"/>
+<text x="646" y="3952"> Saccharomycetaceae</text>
+<polyline points="410,3937 410,3947 628,3947" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3947" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3947" r="12" class="node" rank="family" otu="true" name="Saccharomycetaceae" time="" lncount="17" id="1382"/>
+<polyline points="315,3908 315,3935 410,3935" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="410" cy="3935" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="410" cy="3935" r="12" class="node" rank="unknown" cilo="211" cihi="213" isci="false" time="212" lncount="2" dof="Saccharomycetales" id="1380"/>
+<polyline points="286,3942 286,3906 315,3906" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="315" cy="3906" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="315" cy="3906" r="12" class="node" rank="unknown" cilo="161" cihi="447" isci="true" time="304" lncount="6" dof="Saccharomycetales" id="1372"/>
+<text x="646" y="3976"> Dipodascaceae</text>
+<polyline points="329,3981 329,3971 628,3971" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3971" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3971" r="12" class="node" rank="family" otu="true" name="Dipodascaceae" time="" lncount="1" id="1384"/>
+<text x="646" y="4000"> Lipomycetaceae</text>
+<polyline points="329,3985 329,3995 628,3995" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="628" cy="3995" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="628" cy="3995" r="12" class="node" rank="family" otu="true" name="Lipomycetaceae" time="" lncount="1" id="1385"/>
+<polyline points="286,3946 286,3983 329,3983" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="329" cy="3983" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="329" cy="3983" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="290" lncount="2" dof="Saccharomycetales" id="1383"/>
+<polyline points="20,3875 20,3944 286,3944" fill="none" stroke="#000" stroke-width="2"/>
+<circle cx="286" cy="3944" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="286" cy="3944" r="12" class="node" rank="unknown" cilo="294" cihi="369" isci="true" time="332" lncount="8" dof="Saccharomycetales" id="1371"/>
+<line x1="20" y1="2029" x2="20" y2="3944" stroke="#000" stroke-width="2"/>
+</g>
+</svg>

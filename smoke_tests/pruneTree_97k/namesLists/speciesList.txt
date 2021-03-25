@@ -1,0 +1,22 @@
+Pongo abelii 
+Tursiops truncatus 
+Camelus ferus 
+Canis familiaris 
+Homo sapiens 
+Macaca nemestrina 
+Microtus ochrogaster 
+Gorilla gorilla gorilla 
+Bos mutus 
+Chinchilla lanigera 
+Nomascus leucogenys 
+Pan troglodytes 
+Carlito syrichta 
+Microcebus murinus 
+Cricetulus griseus 
+Bison bison 
+Ceratotherium simum 
+Orcinus orca 
+Mandrillus leucophaeus 
+Equus caballus 
+Macaca fascicularis 
+Ornithorhynchus anatinus 
