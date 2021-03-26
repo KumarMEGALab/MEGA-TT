@@ -236,7 +236,7 @@ end;
 function TPairwiseSvgWriter.GetMaxTime: Double;
 begin
   if CompareValue(FPairwiseResult.GetMaxTime - FPairwiseResult.GetMinTime, 1.0, FP_CUTOFF) > 0 then
-    Result := Min(4600, FPairwiseResult.GetMaxTime + 2*log2(FPairwiseResult.GetMaxTime - FPairwiseResult.GetMinTime))
+    Result := Min(4600, FPairwiseResult.GetMaxTime + 1*log2(FPairwiseResult.GetMaxTime - FPairwiseResult.GetMinTime))
   else
     Result := Min(4600, FPairwiseResult.GetMaxTime*2);
 end;
@@ -244,9 +244,9 @@ end;
 function TPairwiseSvgWriter.GetMinTime: Double;
 begin
   if CompareValue(FPairwiseResult.GetMaxTime - FPairwiseResult.GetMinTime, 1.0, FP_CUTOFF) > 0 then
-    Result := Max(0, FPairwiseResult.GetMinTime - 2*log2(FPairwiseResult.GetMaxTime - FPairwiseResult.GetMinTime))
+    Result := Max(0, FPairwiseResult.GetMinTime - 1*log2(FPairwiseResult.GetMaxTime - FPairwiseResult.GetMinTime))
   else
-    Result := Max(0, FPairwiseResult.GetMinTime);
+    Result := Max(0, FPairwiseResult.GetMinTime/2);
 end;
 
 function TPairwiseSvgWriter.GetTimespan: Double;
@@ -757,7 +757,7 @@ var
 begin
   GeologicLevelName := TimespanTypeString(aType) + 's';
   x := (GeoPanelWidth(aType) div 2) - (CustomTextHeight(GeologicLevelName) div 4);
-  y := FHeight - FMargins.Bottom + 2;
+  y := FHeight - FMargins.Bottom + 2 + 8;
   svgTag := TextToVerticalSvgText(x, y, GeologicLevelName, FTimescaleFontAttribs);
   FStrings.Add(svgTag);
 end;
@@ -1179,7 +1179,7 @@ begin
   if mya > MinTime then
   begin
     if TimeSpan > 0.0 then
-      Result := Min(Height - FMargins.Bottom, FMargins.Top + Round((mya - MinTime) / TimeSpan * (Height - FMargins.Top*2)))
+      Result := Min(Height - FMargins.Bottom, FMargins.Top + Round((mya - MinTime) / TimeSpan * (Height - FMargins.Top - FMargins.Bottom)))
     else
       Result := FMargins.Top;
   end
@@ -1191,7 +1191,7 @@ function TPairwiseSvgWriter.YCoordToMya(y: Integer): Double;
 begin
   Assert((y >= FMargins.Top) and (y < (Height - FMargins.Bottom)));
   if CompareValue(TimeSpan, 0.0, FP_CUTOFF) > 0.0 then
-    Result := (y - FMargins.Top)/(Height - FMargins.Top*2) * TimeSpan + MinTime
+    Result := (y - FMargins.Top)/(Height - FMargins.Top - FMargins.Bottom) * TimeSpan + MinTime
   else
   begin
     Result := MinTime;
@@ -1204,7 +1204,7 @@ const
 
 begin
   Result.Top := 0;
-  Result.Bottom := (Height - FMargins.Bottom);
+  Result.Bottom := (Height - FMargins.Bottom) + 8;
   case aType of
     tstEon:
       begin
@@ -1245,7 +1245,7 @@ end;
 function TPairwiseSvgWriter.ResultsPanelCoords: TRect;
 begin
   Result.Top := FMargins.Top;
-  Result.Bottom := (Height - FMargins.Bottom);
+  Result.Bottom := (Height - FMargins.Bottom) + 8;
   Result.Left := GeoPanelCoords(tstPeriod).Right + TimeTicksPanelWidth + 4;
   if ShowEpochsAndAges then
     Result.Left := (Result.Left + GeoPanelWidth(tstEpoch) + GeoPanelWidth(tstAge));

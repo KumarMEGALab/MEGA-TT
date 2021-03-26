@@ -53,16 +53,16 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <CommandLineParams Value="--tree ./inputs/97k-family-tree.nwk --names-map ./inputs/97k-family-map.txt --ranks ./inputs/97k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
-        <WorkingDirectory Value="/mydata/Documents/megatt/pruneTree_97k"/>
+        <CommandLineParams Value="--pairwise ./inputs/small_div_time.json --outfile ./output/small_div_time.svg --width 700 --height 800 --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
+        <WorkingDirectory Value="/mydata/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/pairwiseSvg"/>
         <Display Use="True"/>
       </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
           <local>
-            <CommandLineParams Value="--tree ./inputs/97k-family-tree.nwk --names-map ./inputs/97k-family-map.txt --ranks ./inputs/97k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
-            <WorkingDirectory Value="/mydata/Documents/megatt/pruneTree_97k"/>
+            <CommandLineParams Value="--pairwise ./inputs/small_div_time.json --outfile ./output/small_div_time.svg --width 700 --height 800 --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
+            <WorkingDirectory Value="/mydata/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/pairwiseSvg"/>
             <Display Use="True"/>
           </local>
         </Mode0>

@@ -88,6 +88,7 @@ type
       FOutliers: TTimeTreeHitRecordList;
       FIsCI: Boolean;
       FNumStudies: Integer;
+      FRemoveOutliers: Boolean;
       FShowSummary: Boolean;
       FMedianTime: Double;
       FMolecularTime: Double;
@@ -134,6 +135,7 @@ type
       property NumStudies: Integer read FNumStudies; { the actual number of studies used to generate a time estimate. Outliers get filtered out so we don't use HitRecords.Count}
       property NumOutliers: Integer read GetNumOutliers;
       property Outlier[Index: Integer]: TTimetreeHitRecord read GetOutlier;
+      property RemoveOutliers: Boolean read FRemoveOutliers write FRemoveOutliers;
   end;
 
   function CompareHitRecord(Item1: Pointer; Item2: Pointer): Integer;
@@ -242,6 +244,7 @@ end;
 
 constructor TPairwiseResult.Create;
 begin
+  FRemoveOutliers := False;
   FTaxonA := TTimetreeTaxon.Create;
   FTaxonB := TTimetreeTaxon.Create;
   FHitRecords := TList.Create;
@@ -593,8 +596,8 @@ var
           end;
       end;
       FNumStudies := FHitRecords.Count; { need to count it here because outliers will not be drawn in the svg}
-
-      FilterOutliers;
+      if FRemoveOutliers then
+        FilterOutliers;
       SortRecords;
       HandleMissingConfidenceIntervalData
     except
