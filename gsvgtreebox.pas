@@ -334,6 +334,8 @@ type
     procedure MegaTextOutA(aHMF: THandle; aX: Integer; aY: Integer; aText: String); overload;
     function SvgOtuName(aX: Integer; aY: Integer; aText: String; aNode: TpNode): String;
   protected
+    FCircleTags: TStringList;
+    FTaxaNameTags: TStringList;
     FRenderNewickOnly: Boolean;
     FTreeSvgFile: TextFile;
     FPanelsSvgFile: TextFile;
@@ -698,6 +700,7 @@ end;
   TMySvgTreeBox = class(TSvgTreeBox)
     private
       FDoNewick: Boolean;
+      FIsMobileFriendly: Boolean;
       FO2Data: TGeoData;
       FCO2Data: TGeoData;
       FLuminosityData: TGeoData;
@@ -719,9 +722,15 @@ end;
       FGeoTimescale: TCompositeGeologicTime;
       FGeoDataChartFormatter: TGeoDataChartFormatter;
       FPanelTitleTextAttribs: array[0..1] of TXMLAttribute;
+      FDrawingCoords : array[0..600] of TPoint;
+      FTaxonName : array[0..1023] of AnsiChar;
+      FOTULocations: Array of TRect;
       procedure InitPanelTitleTextAttribs;
       procedure DrawBackground;
       procedure DrawBranches(HMF: THandle);
+      procedure DrawBranchStraight(p : TpNode);
+      procedure DrawOTUName(p: TpNode);
+      procedure DrawCompressedArea(p: TpNode);
       function DrawGeologicLevel(aLevel: TTimespanType; AddBottomBorder: Boolean = False): Integer;
       function DrawGeologicLevelVert(aLevel: TTimespanType): Integer;
       procedure DrawGeologicLevelTopBorder;
@@ -772,8 +781,8 @@ end;
       procedure SetLuminosityData(aData: TGeoData);
       procedure DrawTree(HMF : THandle); override;
       procedure DrawNewickOnly(HMF: THandle);
-      procedure GenerateSvgStrings(TreeFileName: String; PanelsFileName: String); overload;
-      procedure GenerateSvgStrings(TreeFileName: String); overload;
+      procedure GenerateSvgStrings(TreeFileName: String; PanelsFileName: String; mobileFriendly: Boolean); overload;
+      procedure GenerateSvgStrings(TreeFileName: String; mobileFriendly: Boolean); overload;
       procedure OpenSVG(aName: String; aWidth, aHeight: Integer; y: Integer; var aFile: TextFile; id: String=''); { writes the header tags}
       procedure CloseSVG(var aFile: TextFile); { closes the end tags for FTreeSVGFile}
       procedure UpdateTaxaOrder(InputIds: TLongIntList);
@@ -781,6 +790,7 @@ end;
       property ImageHeight: Integer read FImageHeight write SetImageHeight;
       property DoNewick: Boolean read FDoNewick write SetDoNewick;
       property PanelHeight: Integer read FGeoDataPanelHeight write SetPanelHeight;
+      property IsMobileFriendly: Boolean read FIsMobileFriendly write FIsMobileFriendly;
   end;
 
 var
@@ -859,159 +869,13 @@ end;
 procedure TMySvgTreeBox.DrawBranches(HMF: THandle);
 var
   topologyOnlyTag: String = '';
-  point : array[0..600] of TPoint;
-  name : array[0..1023] of AnsiChar;
-  pname : PAnsiChar;
-  pprivname: PAnsiChar;
   revflg: boolean;
   ai: integer;
-  OTULocations: Array of TRect;
   temp: String;
-
-  function ptInOTULoc(x, y: Integer): Boolean;
-  var
-    i: Integer;
-  begin
-    result := false;
-    if HideOverlappingTaxa then
-      for i := 0 to Length(OTULocations)-1 do
-      begin
-        //if (y > OTULocations[i].Top) and (y < OTULocations[i].Bottom) then
-        if (y > OTULocations[i].Top) and (y < (OTULocations[i].Top+OTULocations[i].Bottom*2) div 3) then // KT 4/6/2011 previous version was hiding taxa when they weren't actually touching yet.
-          result := true;
-      end;
-  end;
-
-  procedure addOTULoc(r: TRect);
-  begin
-    SetLength(OTULocations, Length(OTULocations)+1);
-    OTULocations[Length(OTULocations)-1] := r;
-  end;
-
-  procedure DrawOTUName(p: TpNode);
-  var x,y,d : integer;
-      PrivateNameRect: TRect;
-  begin
-
-    try
-      if not CurAttrib.ShowTaxonName then Exit;
-
-      d := GetLineWidth(p)*2;
-      if (TreeStyle = tsRadiation) or (TreeStyle = tsCircle) then
-      begin
-        if (not p.OTU) and p.compressed then
-          x := (p.des1.position.x + p.des2.position.x) div 2
-        else
-          x := p.position.x;
-        if cos(p.angle) < 0.0 then
-          x := x -p.namesize.x;
-
-        if GetTaxonMarker(p).Shape <> msNone then
-        begin
-          d := d +Round((1+abs(cos(p.angle)))*Abs(FSVGFontHeight*2.5));
-          if cos(p.angle) < 0.0 then
-            x := x -d
-          else
-            x := x +d
-        end
-        else
-        begin
-          if abs(cos(p.angle)) < sqrt(2)/2 then
-            if cos(p.angle) < 0.0 then
-              x := x +round((1-abs(cotan(p.angle)))*p.namesize.x/2) -d
-            else
-              x := x -round((1-abs(cotan(p.angle)))*p.namesize.x/2) +d
-          else if cos(p.angle) < 0.0 then
-            x := x -d
-          else
-            x := x +d;
-        end
-      end
-      else
-      begin
-        if GetTaxonMarker(p).Shape <> msNone then
-          d := d +Abs(FSVGFontHeight*5);
-        if ShowCharState then
-          d := d +CustomTextWidth(p.charstate)*4 +Abs(CharStateFontHeight)*2;
-        if (not p.OTU) and p.compressed and (not FTopoflag) then
-          x := p.des1.position.x +d
-        else
-          x := p.position.x +d;
-      end;
-      if (TreeStyle = tsRadiation) or (TreeStyle = tsCircle) then
-      begin
-        if (not p.OTU) and p.compressed then
-          y := (p.des1.position.y + p.des2.position.y) div 2
-        else
-          y := p.position.y;
-        if GetTaxonMarker(p).Shape <> msNone then
-          if sin(p.angle) < 0.0 then
-            y := y +Abs(FSVGFontHeight*2) +Round(Abs(sin(p.angle)*FSVGFontHeight*3))
-          else
-            y := y +Abs(FSVGFontHeight*2) -Round(Abs(sin(p.angle)*FSVGFontHeight*3))
-        else if abs(cos(p.angle)) < sqrt(2)/2 then
-          if sin(p.angle) < 0.0 then
-            y := y +abs(FSVGFontHeight*2) +round((2-abs(cotan(p.angle)))*abs(FSVGFontHeight)*2.5)
-          else
-            y := y +abs(FSVGFontHeight*2) -round((2-abs(cotan(p.angle)))*abs(FSVGFontHeight)*2.5)
-        else
-          if sin(p.angle) < 0.0 then
-            y := y +abs(FSVGFontHeight*2) +round(abs(tan(p.angle)*FSVGFontHeight)*2.5)
-          else
-            y := y +abs(FSVGFontHeight*2) -round(abs(tan(p.angle)*FSVGFontHeight)*2.5)
-      end
-      else if (not p.OTU) and p.compressed then
-        y := (p.des1.position.y + p.des2.position.y) div 2 +Abs(FSVGFontHeight*2)
-      else
-        y := p.position.y +Abs(FSVGFontHeight*2);
-
-      if TreeStyle = tsTraditional then
-        if p.compressed then
-          pname := StrPCopy(name, ' '+p.PrivateName)
-        else
-          pname := StrPCopy(name, ' '+p.name)
-
-      else if cos(p.angle) < 0.0 then
-        pname := StrPCopy(name, p.name)
-      else
-        pname := StrPCopy(name, ' '+p.name);
-
-      if p.PrivateName <> EmptyStr then
-      begin
-        PrivateNameRect := Rect(x+Fxbase,y+Fybase-(StrHeight(p.PrivateName)*4), x+Fxbase+(StrLength(p.PrivateName + ' ')*4), y+Fybase);
-        WriteLn(FTreeSvgFile, SvgOtuName(x+Fxbase, y+Fybase, PAnsiChar(p.PrivateName), p));
-      end
-      else
-      begin
-        if ptInOTULoc(x+Fxbase, y+Fybase) then
-          exit;
-        WriteLn(FTreeSvgFile, SvgOtuName(x+Fxbase, y+Fybase, pname, p));
-      end;
-      addOTULoc(Rect(x+Fxbase, y+Fybase, x+Fxbase+StrLength(pname), y+Fybase+(StrHeight(pname)*4)));
-    Except on E: Exception do
-      raise Exception.Create('Error in DrawOTUName: ' + E.Message);
-    end;
-  end;
 
   procedure DrawBranch(p : TpNode);
   var
     q, p2 : TpNode;
-
-      procedure DrawCompressedArea(p: TpNode);
-      var tmpPen, tmpBrush: THandle;
-      begin
-        point[0].x := p.position.x +Fxbase;
-        point[0].y := p.position.y +CurAttrib.LineWidth +Fybase;
-        point[1].x := p.position.x +Fxbase;
-        point[1].y := p.position.y -CurAttrib.LineWidth +Fybase;
-        point[2].x := p.des1.position.x +Fxbase;
-        point[2].y := p.des1.position.y +Fybase;
-        point[3].x := p.des2.position.x +Fxbase;
-        point[3].y := p.des2.position.y +Fybase;
-        MegaPolygon(HMF, point, 4, p);
-
-      end;
-
 
       procedure DrawBranchRectangle(p : TpNode);
       var
@@ -1032,15 +896,15 @@ var
           if dy > Fyunit div 4 then
             dy := Fyunit div 4;
 
-          point[0].x := p.position.x - trunc(err*Fxunit) +Fxbase;
-          point[0].y := p.position.y +dy +Fybase;
-          point[1].x := point[0].x;
-          point[1].y := p.position.y -dy +Fybase;
-          point[2].x := p.position.x + trunc(err*Fxunit) +Fxbase;
-          point[2].y := point[1].y;
-          point[3].x := point[2].x;
-          point[3].y := point[0].y;
-          MegaPolygon(HMF, point, 4);
+          FDrawingCoords[0].x := p.position.x - trunc(err*Fxunit) +Fxbase;
+          FDrawingCoords[0].y := p.position.y +dy +Fybase;
+          FDrawingCoords[1].x := FDrawingCoords[0].x;
+          FDrawingCoords[1].y := p.position.y -dy +Fybase;
+          FDrawingCoords[2].x := p.position.x + trunc(err*Fxunit) +Fxbase;
+          FDrawingCoords[2].y := FDrawingCoords[1].y;
+          FDrawingCoords[3].x := FDrawingCoords[2].x;
+          FDrawingCoords[3].y := FDrawingCoords[0].y;
+          MegaPolygon(HMF, FDrawingCoords, 4);
         end;
 
         procedure DrawVerticalLine;
@@ -1057,11 +921,11 @@ var
             //if p.attrindex <> ai then
             //  ChangeAttrib(ai);
             d := GetLineWidth(q)*2;
-            point[0].x := p.position.x +Fxbase;
-            point[0].y := q.position.y +Fybase -d +CurAttrib.LineWidth*2;
-            point[1].x := point[0].x;
-            point[1].y := p.position.y +Fybase -CurAttrib.LineWidth*2;
-            MegaPolyLine(HMF,point, 2);
+            FDrawingCoords[0].x := p.position.x +Fxbase;
+            FDrawingCoords[0].y := q.position.y +Fybase -d +CurAttrib.LineWidth*2;
+            FDrawingCoords[1].x := FDrawingCoords[0].x;
+            FDrawingCoords[1].y := p.position.y +Fybase -CurAttrib.LineWidth*2;
+            MegaPolyLine(HMF,FDrawingCoords, 2);
             //if p.attrindex <> ai then
             //  ChangeAttrib(p.attrindex);
           end;
@@ -1074,11 +938,11 @@ var
             //if p.attrindex <> ai then
             //  ChangeAttrib(ai);
             d := GetLineWidth(q)*2;
-            point[0].x := p.position.x +Fxbase;
-            point[0].y := p.position.y +Fybase +CurAttrib.LineWidth*2;
-            point[1].x := point[0].x;
-            point[1].y := q.position.y +Fybase +d -CurAttrib.LineWidth*2;
-            MegaPolyLine(HMF,point, 2);
+            FDrawingCoords[0].x := p.position.x +Fxbase;
+            FDrawingCoords[0].y := p.position.y +Fybase +CurAttrib.LineWidth*2;
+            FDrawingCoords[1].x := FDrawingCoords[0].x;
+            FDrawingCoords[1].y := q.position.y +Fybase +d -CurAttrib.LineWidth*2;
+            MegaPolyLine(HMF,FDrawingCoords, 2);
             //if p.attrindex <> ai then
             //  ChangeAttrib(p.attrindex);
           end;
@@ -1089,11 +953,11 @@ var
         begin
           if (isRooted and ShowRoot) then
           begin
-            point[0].x := Fxbase -100;
-            point[0].y := p.position.y +Fybase;
-            point[1].x := Fxbase;
-            point[1].y := point[0].y;
-            MegaPolyLine(HMF, point, 2, p);
+            FDrawingCoords[0].x := Fxbase -100;
+            FDrawingCoords[0].y := p.position.y +Fybase;
+            FDrawingCoords[1].x := Fxbase;
+            FDrawingCoords[1].y := FDrawingCoords[0].y;
+            MegaPolyLine(HMF, FDrawingCoords, 2, p);
           end;
           DrawVerticalLine;
         end
@@ -1144,14 +1008,14 @@ var
                 d := a1.LineWidth*2
               else
                 d := a2.LineWidth*2;
-              point[0].x := p.anc.position.x +Fxbase +GetNodeAttrib(p).LineWidth*2;
-              point[0].y := p.position.y +Fybase;
+              FDrawingCoords[0].x := p.anc.position.x +Fxbase +GetNodeAttrib(p).LineWidth*2;
+              FDrawingCoords[0].y := p.position.y +Fybase;
               if p.position.x = p.anc.position.x then
-                point[1].x := point[0].x
+                FDrawingCoords[1].x := FDrawingCoords[0].x
               else
-                point[1].x := p.position.x +Fxbase +d -GetNodeAttrib(p).LineWidth*2;
-              point[1].y := point[0].y;
-              MegaPolyLine(HMF, point, 2, p);
+                FDrawingCoords[1].x := p.position.x +Fxbase +d -GetNodeAttrib(p).LineWidth*2;
+              FDrawingCoords[1].y := FDrawingCoords[0].y;
+              MegaPolyLine(HMF, FDrawingCoords, 2, p);
 
               if IsLinearized and (not FTopoflag) and assigned(HeightSEFunc) and ShowHeightErrBar then
                 DrawHeightErrBar;
@@ -1171,73 +1035,25 @@ var
                 d := a1.LineWidth*2
               else
                 d := a2.LineWidth*2;
-              point[0].x := p.anc.position.x +Fxbase;
+              FDrawingCoords[0].x := p.anc.position.x +Fxbase;
               if p = p.anc.des1 then
-                point[0].y := p.anc.position.y +Fybase -CurAttrib.LineWidth*2
+                FDrawingCoords[0].y := p.anc.position.y +Fybase -CurAttrib.LineWidth*2
               else
-                point[0].y := p.anc.position.y +Fybase +CurAttrib.LineWidth*2;
-              point[1].x := point[0].x;
-              point[1].y := p.position.y +Fybase;
+                FDrawingCoords[0].y := p.anc.position.y +Fybase +CurAttrib.LineWidth*2;
+              FDrawingCoords[1].x := FDrawingCoords[0].x;
+              FDrawingCoords[1].y := p.position.y +Fybase;
               if p.position.x = p.anc.position.x then
-                point[2].x := point[1].x
+                FDrawingCoords[2].x := FDrawingCoords[1].x
               else
-                point[2].x := p.position.x +Fxbase +d -CurAttrib.LineWidth*2;
-              point[2].y := p.position.y +Fybase;
-              MegaPolyLine(HMF,point, 3, p);
+                FDrawingCoords[2].x := p.position.x +Fxbase +d -CurAttrib.LineWidth*2;
+              FDrawingCoords[2].y := p.position.y +Fybase;
+              MegaPolyLine(HMF,FDrawingCoords, 3, p);
 
               if IsLinearized and(not p.outgroup) and (not FTopoflag) and assigned(HeightSEFunc) and ShowHeightErrBar then
                 DrawHeightErrBar;
             end;
             //if GetNodeAttrib(p) <> CurAttrib then
             //    ChangeAttrib(p.attrindex);
-          end;
-        end;
-      end;
-
-      procedure DrawBranchStraight(p : TpNode);
-      begin
-        if p = FRoot then
-        begin
-          if (isRooted and ShowRoot) then
-          begin
-            point[0].x := Fxbase -100;
-            point[1].y := p.position.y +Fybase;
-            point[1].x := p.position.x +Fxbase;
-            if ShowTopologyOnly then
-            begin
-              q := p;
-              if p.des1.cursize > p.des2.cursize then
-                while not q.OTU do q := q.des1
-              else
-                while not q.OTU do q := q.des2;
-              point[0].y := point[1].y -Round(100*(q.position.y-p.position.y)/(q.position.x-p.position.x));
-             end
-             else
-               point[0].y := point[1].y;
-
-            MegaPolyLine(HMF, point, 2, p);
-          end;
-        end
-        else
-        begin
-          if not p.hidden then
-          begin
-            if p.OTU or p.compressed then
-            begin
-              DrawOTUName(p);
-            end;
-            if (not p.OTU) and p.compressed and (not FTopoflag) then
-              DrawCompressedArea(p);
-            //if ((p.anc.attrindex <> p.attrindex) and (GetNodeAttrib(p).BranchOption = boNoBranch)) or
-            //   ((p.anc.attrindex = p.attrindex) and (GetNodeAttrib(p).BranchOption = boBranchOnly)) then
-            //  ChangeAttrib(ai);
-            point[0].x := p.anc.position.x +Fxbase;
-            point[0].y := p.anc.position.y +Fybase;
-            point[1].x := p.position.x +Fxbase;
-            point[1].y := p.position.y +Fybase;
-            MegaPolyLine(HMF, point, 2, p);
-            //if CurAttrib <> GetNodeAttrib(p) then
-            //  ChangeAttrib(p.anc.attrindex);
           end;
         end;
       end;
@@ -1295,6 +1111,189 @@ begin
   DrawBranch(FRoot);
   temp := '</g>';
   WriteLn(FTreeSvgFile, temp);
+end;
+
+procedure TMySvgTreeBox.DrawBranchStraight(p: TpNode);
+var
+  q: TpNode = nil;
+begin
+  if p = FRoot then
+  begin
+    if (isRooted and ShowRoot) then
+    begin
+      FDrawingCoords[0].x := Fxbase -100;
+      FDrawingCoords[1].y := p.position.y +Fybase;
+      FDrawingCoords[1].x := p.position.x +Fxbase;
+      if ShowTopologyOnly then
+      begin
+        q := p;
+        if p.des1.cursize > p.des2.cursize then
+          while not q.OTU do q := q.des1
+        else
+          while not q.OTU do q := q.des2;
+        FDrawingCoords[0].y := FDrawingCoords[1].y -Round(100*(q.position.y-p.position.y)/(q.position.x-p.position.x));
+       end
+       else
+         FDrawingCoords[0].y := FDrawingCoords[1].y;
+
+      MegaPolyLine(0, FDrawingCoords, 2, p);
+    end;
+  end
+  else
+  begin
+    if not p.hidden then
+    begin
+      if p.OTU or p.compressed then
+      begin
+        DrawOTUName(p);
+      end;
+      if (not p.OTU) and p.compressed and (not FTopoflag) then
+        DrawCompressedArea(p);
+      FDrawingCoords[0].x := p.anc.position.x +Fxbase;
+      FDrawingCoords[0].y := p.anc.position.y +Fybase;
+      FDrawingCoords[1].x := p.position.x +Fxbase;
+      FDrawingCoords[1].y := p.position.y +Fybase;
+      MegaPolyLine(0, FDrawingCoords, 2, p);
+    end;
+  end;
+end;
+
+procedure TMySvgTreeBox.DrawOTUName(p: TpNode);
+var
+  x,y,d : integer;
+  pName: PAnsiChar;
+
+  function ptInOTULoc(x, y: Integer): Boolean;
+  var
+    i: Integer;
+  begin
+    result := false;
+    if HideOverlappingTaxa then
+      for i := 0 to Length(FOTULocations)-1 do
+      begin
+        //if (y > FOTULocations[i].Top) and (y < FOTULocations[i].Bottom) then
+        if (y > FOTULocations[i].Top) and (y < (FOTULocations[i].Top+FOTULocations[i].Bottom*2) div 3) then // KT 4/6/2011 previous version was hiding taxa when they weren't actually touching yet.
+          result := true;
+      end;
+  end;
+
+  procedure addOTULoc(r: TRect);
+  begin
+    SetLength(FOTULocations, Length(FOTULocations)+1);
+    FOTULocations[Length(FOTULocations)-1] := r;
+  end;
+
+begin
+  if not CurAttrib.ShowTaxonName then Exit;
+  try
+    d := GetLineWidth(p)*2;
+    if (TreeStyle = tsRadiation) or (TreeStyle = tsCircle) then
+    begin
+      if (not p.OTU) and p.compressed then
+        x := (p.des1.position.x + p.des2.position.x) div 2
+      else
+        x := p.position.x;
+      if cos(p.angle) < 0.0 then
+        x := x -p.namesize.x;
+
+      if GetTaxonMarker(p).Shape <> msNone then
+      begin
+        d := d +Round((1+abs(cos(p.angle)))*Abs(FSVGFontHeight*2.5));
+        if cos(p.angle) < 0.0 then
+          x := x -d
+        else
+          x := x +d
+      end
+      else
+      begin
+        if abs(cos(p.angle)) < sqrt(2)/2 then
+          if cos(p.angle) < 0.0 then
+            x := x +round((1-abs(cotan(p.angle)))*p.namesize.x/2) -d
+          else
+            x := x -round((1-abs(cotan(p.angle)))*p.namesize.x/2) +d
+        else if cos(p.angle) < 0.0 then
+          x := x -d
+        else
+          x := x +d;
+      end
+    end
+    else
+    begin
+      if GetTaxonMarker(p).Shape <> msNone then
+        d := d +Abs(FSVGFontHeight*5);
+      if ShowCharState then
+        d := d +CustomTextWidth(p.charstate)*4 +Abs(CharStateFontHeight)*2;
+      if (not p.OTU) and p.compressed and (not FTopoflag) then
+        x := p.des1.position.x +d
+      else
+        x := p.position.x +d;
+    end;
+    if (TreeStyle = tsRadiation) or (TreeStyle = tsCircle) then
+    begin
+      if (not p.OTU) and p.compressed then
+        y := (p.des1.position.y + p.des2.position.y) div 2
+      else
+        y := p.position.y;
+      if GetTaxonMarker(p).Shape <> msNone then
+        if sin(p.angle) < 0.0 then
+          y := y +Abs(FSVGFontHeight*2) +Round(Abs(sin(p.angle)*FSVGFontHeight*3))
+        else
+          y := y +Abs(FSVGFontHeight*2) -Round(Abs(sin(p.angle)*FSVGFontHeight*3))
+      else if abs(cos(p.angle)) < sqrt(2)/2 then
+        if sin(p.angle) < 0.0 then
+          y := y +abs(FSVGFontHeight*2) +round((2-abs(cotan(p.angle)))*abs(FSVGFontHeight)*2.5)
+        else
+          y := y +abs(FSVGFontHeight*2) -round((2-abs(cotan(p.angle)))*abs(FSVGFontHeight)*2.5)
+      else
+        if sin(p.angle) < 0.0 then
+          y := y +abs(FSVGFontHeight*2) +round(abs(tan(p.angle)*FSVGFontHeight)*2.5)
+        else
+          y := y +abs(FSVGFontHeight*2) -round(abs(tan(p.angle)*FSVGFontHeight)*2.5)
+    end
+    else if (not p.OTU) and p.compressed then
+      y := (p.des1.position.y + p.des2.position.y) div 2 +Abs(FSVGFontHeight*2)
+    else
+      y := p.position.y +Abs(FSVGFontHeight*2);
+
+    if TreeStyle = tsTraditional then
+      if p.compressed then
+        pname := StrPCopy(FTaxonName, ' '+p.PrivateName)
+      else
+        pname := StrPCopy(FTaxonName, ' '+p.name)
+
+    else if cos(p.angle) < 0.0 then
+      pname := StrPCopy(FTaxonName, p.name)
+    else
+      pname := StrPCopy(FTaxonName, ' '+p.name);
+
+    if p.PrivateName <> EmptyStr then
+    begin
+      //PrivateNameRect := Rect(x+Fxbase,y+Fybase-(StrHeight(p.PrivateName)*4), x+Fxbase+(StrLength(p.PrivateName + ' ')*4), y+Fybase);
+      WriteLn(FTreeSvgFile, SvgOtuName(x+Fxbase, y+Fybase, PAnsiChar(p.PrivateName), p));
+    end
+    else
+    begin
+      if ptInOTULoc(x+Fxbase, y+Fybase) then
+        exit;
+      WriteLn(FTreeSvgFile, SvgOtuName(x+Fxbase, y+Fybase, pname, p));
+    end;
+    addOTULoc(Rect(x+Fxbase, y+Fybase, x+Fxbase+StrLength(pname), y+Fybase+(StrHeight(pname)*4)));
+  Except on E: Exception do
+    raise Exception.Create('Error in DrawOTUName: ' + E.Message);
+  end;
+end;
+
+procedure TMySvgTreeBox.DrawCompressedArea(p: TpNode);
+begin
+  FDrawingCoords[0].x := p.position.x +Fxbase;
+  FDrawingCoords[0].y := p.position.y +CurAttrib.LineWidth +Fybase;
+  FDrawingCoords[1].x := p.position.x +Fxbase;
+  FDrawingCoords[1].y := p.position.y -CurAttrib.LineWidth +Fybase;
+  FDrawingCoords[2].x := p.des1.position.x +Fxbase;
+  FDrawingCoords[2].y := p.des1.position.y +Fybase;
+  FDrawingCoords[3].x := p.des2.position.x +Fxbase;
+  FDrawingCoords[3].y := p.des2.position.y +Fybase;
+  MegaPolygon(0, FDrawingCoords, 4, p);
 end;
 
 function TMySvgTreeBox.DrawGeologicLevel(aLevel: TTimespanType; AddBottomBorder: Boolean = False): Integer;
@@ -2423,9 +2422,10 @@ begin
   end;
 end;
 
-procedure TMySvgTreeBox.GenerateSvgStrings(TreeFileName: String; PanelsFileName: String);
+procedure TMySvgTreeBox.GenerateSvgStrings(TreeFileName: String; PanelsFileName: String; mobileFriendly: Boolean);
 begin
   try
+    FIsMobileFriendly := mobileFriendly;
     AssignFile(FTreeSvgFile, TreeFileName);
     Rewrite(FTreeSvgFile);
     AssignFile(FPanelsSvgFile, PanelsFileName);
@@ -2437,9 +2437,10 @@ begin
   end;
 end;
 
-procedure TMySvgTreeBox.GenerateSvgStrings(TreeFileName: String);
+procedure TMySvgTreeBox.GenerateSvgStrings(TreeFileName: String; mobileFriendly: Boolean);
 begin
   try
+    FIsMobileFriendly := mobileFriendly;
     FRenderNewickOnly := True;
     AssignFile(FTreeSvgFile, TreeFileName);
     Rewrite(FTreeSvgFile);
@@ -2452,14 +2453,21 @@ end;
 procedure TMySvgTreeBox.OpenSVG(aName: String; aWidth, aHeight: Integer; y: Integer; var aFile: TextFile; id: String='');
 var
   Temp: String;
+  widthStr: String = '';
 begin
+  if FIsMobileFriendly then
+    widthStr := '100%'
+  else
+    widthStr := IntToStr(aWidth);
   Temp := '<svg xmlns=' + DBLQ + 'http://www.w3.org/2000/svg' + DBLQ + ' xmlns:xlink=' + DBLQ + 'http://www.w3.org/1999/xlink' + DBLQ + ' version=' + DBLQ + '1.1' + DBLQ + ' ';
-  Temp := Temp + 'width=' + DBLQ + IntToStr(aWidth) + DBLQ + ' height=' + DBLQ + IntToStr(aHeight) + DBLQ + ' ';
+  Temp := Temp + 'width=' + DBLQ + widthStr + DBLQ + ' height=' + DBLQ + IntToStr(aHeight) + DBLQ + ' ';
   Temp := Temp + 'name=' + dblq + aName + dblq + ' ';
   Temp := Temp + 'y=' + dblq + IntToStr(y) + dblq + ' ';
   if id <> EmptyStr then
     Temp := Temp + 'id=' + dblq + id + dblq + ' ';
-  Temp := Temp + 'viewBox=' + DBLQ + '0 0 ' + IntToStr(aWidth) + ' ' + IntToStr(aHeight) + DBLQ + '>';
+  if not FIsMobileFriendly then
+    Temp := Temp + 'viewBox=' + DBLQ + '0 0 ' + IntToStr(aWidth) + ' ' + IntToStr(aHeight) + DBLQ;
+  Temp := Temp + '>';
   WriteLn(aFile, Temp);
 end;
 
@@ -2513,6 +2521,8 @@ end;
 constructor TCustomSvgTree.Create;
 begin
     inherited Create;
+    FCircleTags := TStringList.Create;
+    FTaxaNameTags := TStringList.Create;
     FRenderNewickOnly := False;
     FUserSuppliedATaxaList := False;
     FDoLogScale := False;
@@ -2596,6 +2606,10 @@ begin
     GroupAttrib.Free;
     FBranchInfo.Free;
     FNodeInfo.Free;
+    if Assigned(FCircleTags) then
+      FCircleTags.Free;
+    if Assigned(FTaxaNameTags) then
+      FTaxaNameTags.Free;
     inherited Destroy;
 end;
 

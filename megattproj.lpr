@@ -75,6 +75,7 @@ type
 
     function EverythingIsLoaded: Boolean;
   public
+    IsMobileFriendly: Boolean;
     DrawUnnamedTimelineNodes: Boolean;
     LogFile: String;
     LogStrings: TStringList;
@@ -224,6 +225,7 @@ begin
       aPruner := TTreePruner.Create;
       if DoLogScale then
         aPruner.DoLogScale := True;
+      aPruner.IsMobileFriendly := IsMobileFriendly;
       aPruner.Width := Width;
       aPruner.VSpacing := VSpacing;
       aPruner.DoNewick := DoNewick;
@@ -376,6 +378,7 @@ begin
       LoadRanksThread.WaitFor;
       LoadTreeThread.WaitFor;
       aPruner := TTreePruner.Create;
+      aPruner.IsMobileFriendly := IsMobileFriendly;
       aPruner.Width := Width;
       aPruner.VSpacing := VSpacing;
       aPruner.DoNewick := DoNewick;
@@ -464,9 +467,10 @@ end;
 
 function megatt.ParseCommandLine: Boolean;
 var
-  TempStr: AnsiString;
+  TempStr: AnsiString = '';
   i: Integer;
   Index: Integer;
+  tempBool: Boolean = False;
 begin
   DrawUnnamedTimelineNodes := False;
   LogFile := EmptyStr;
@@ -648,6 +652,18 @@ begin
     begin
      OutputVersionInfo;
      exit;
+    end
+    else if (ParamStr(i) = '-mf') or (ParamStr(i) = '--mobile-friendly') then
+    begin
+      TempStr := LowerCase(Trim(ParamStr(i + 1)));
+      if SameText(TempStr, 'true') then
+        IsMobileFriendly := True
+      else if SameText(TempStr, 'false') then
+        IsMobileFriendly := False
+      else
+      begin
+        WriteLn(Format('invalid value given for %s parameter. Got %s but expected either "true" or "false"', [ParamStr(i), ParamStr(i + 1)]));
+      end;
     end
     else if (ParamStr(i) = '-st') or (ParamStr(i) = '--studytree') then
       IsStudyTree := True
@@ -1203,6 +1219,7 @@ end;
 constructor megatt.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
+  IsMobileFriendly := True;
   StopOnException:=True;
   DoPruneTreeSlow := False;
   O2File := EmptyStr;

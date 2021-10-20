@@ -21,6 +21,7 @@ type
       FDeepestRank: TTaxonomicRank;
       FDoLogScale: Boolean;
       FDoNewick: Boolean;
+      FIsMobileFriendly: Boolean;
       FPanelHeight: Integer;
       FRanksFile: String;
       FVSpacing: Integer;
@@ -59,6 +60,7 @@ type
       property PanelHeight: Integer read FPanelHeight write SetPanelHeight;
       property CanScaleTree: Boolean read FCanScaleTree write SetCanScaleTree;
       property StudyTimeNodeHeights: TDoubleArray write SetStudyTimeNodeHeights;
+      property IsMobileFriendly: Boolean read FIsMobileFriendly write FIsMobileFriendly;
   end;
 
   { TPairwiseSvgWriter }
@@ -1506,6 +1508,7 @@ end;
 
 constructor TTimetreeSvgWriter.Create;
 begin
+  FIsMobileFriendly := True;
   FCanScaleTree := True;
   FTreeBox := TMySvgTreeBox.Create;
   FDeepestRank := trUnknown;
@@ -1577,12 +1580,12 @@ procedure TTimetreeSvgWriter.GenerateSvgStrings(TreeFile: String; PanelsFile: St
 begin
   //FTreeBox.TreeIndex := Index +1;
   FTreeBox.RanksFile := FRanksFile;
-  FTreeBox.GenerateSvgStrings(TreeFile, PanelsFile);
+  FTreeBox.GenerateSvgStrings(TreeFile, PanelsFile, FIsMobileFriendly);
 end;
 
 procedure TTimetreeSvgWriter.GenerateSvgStrings(TreeFile: String);
 begin
-  FTreeBox.GenerateSvgStrings(TreeFile);
+  FTreeBox.GenerateSvgStrings(TreeFile, FIsMobileFriendly);
 end;
 
 procedure TTimetreeSvgWriter.ProgressCallback(AProgress: Integer);

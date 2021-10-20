@@ -22,6 +22,7 @@ type
       FDoLogScale: Boolean;
       FDoMapNames: Boolean;
       FDoNewick: Boolean;
+      FIsMobileFriendly: Boolean;
       FLogStrings: TStringList;
       FPanelHeight: Integer;
       //FNamesMapFile: String;
@@ -72,6 +73,7 @@ type
       property RanksFile: String read FRanksFile write FRanksFile;
       property DeepestRank: TTaxonomicRank read FDeepestRank write FDeepestRank;
       property Width: Integer read FWidth write SetWidth;
+      property IsMobileFriendly: Boolean read FIsMobileFriendly write FIsMobileFriendly;
       property DoLogScale: Boolean read FDoLogScale write SetDoLogScale;
       property DoNewick: Boolean read FDoNewick write SetDoNewick;
       property VSpacing: Integer read FVSpacing write SetVSpacing;
@@ -310,6 +312,7 @@ begin
   FDeepestRank := trUnknown;
   FDoLogScale := False;
   FLogStrings := nil;
+  FIsMobileFriendly := True;
 end;
 
 destructor TTreePruner.Destroy;
@@ -460,6 +463,7 @@ begin
     FSvgWriter.RanksFile := FRanksFile;
     if FNodeIds.Count >= 3 then
       FSvgWriter.UpdateTaxaOrder(FNodeIds);
+    FSvgWriter.IsMobileFriendly := FIsMobileFriendly;
     FSvgWriter.GenerateSvgStrings(ChangeFileExt(SvgFile, '.tree.svg'), ChangeFileExt(SvgFile, '.panels.svg'), 0);
     if Assigned(FLogStrings) then
     begin
