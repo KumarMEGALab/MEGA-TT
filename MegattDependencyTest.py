@@ -11,7 +11,7 @@ from subprocess import Popen, PIPE
 class MegattDependencyTest():
     
     def __init__(self):
-        self.megatt  = '/mydata/Documents/lazarusProjects/mega-git/mega-tt/megatt'
+        self.megatt  = './megatt'
         self.init_expected_dependencies()
         self.current_dependencies = [] 
         

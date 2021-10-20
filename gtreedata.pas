@@ -407,7 +407,7 @@ var
   TempInt: Integer;
 begin
   Result := False;
-  Assert((OtuNames.Count = FNoOfOTUs) and (IntNodeLbls.Count = (FNoOfOTUs - 2)));
+  Assert((OtuNames.Count = FNoOfOTUs) and (IntNodeLbls.Count = (FNoOfOTUs - 2)), Format('namesCount=%d, otuCount=%d, lblsCount=%d, expLblsCount=%d', [OtuNames.Count, FNoOfOTUs, IntNodeLbls.Count, FNoOfOTUs - 2]));
   for i := 0 to (FNoOfOTUs -  1) do
     if TryStrToInt(OtuNames[i], TempInt) then
       FTimetreeIDs[i] := TempInt

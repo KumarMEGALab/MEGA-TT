@@ -39,7 +39,7 @@ type
                     trSuperClass, trClass, trSubClass, trInfraClass, trCohort, trSubCohort, trSuperOrder, trOrder,
                     trSubOrder, trInfraOrder, trParvOrder, trSuperFamily, trFamily, trSubFamily,
                     trTribe, trSubTribe, trGenus, trSubGenus, trSpeciesGroup,
-                    trSpeciesSubGroup, trSpecies, trSubSpecies, trVarietas);
+                    trSpeciesSubGroup, trSpecies, trSubSpecies, trVarietas, trClade);
   TTaxonomicRankArray = array of TTaxonomicRank;
 
   TRanksCount = record
@@ -74,6 +74,7 @@ type
     speciesSubGroup: Integer;
     subSpecies: Integer;
     varietas: Integer;
+    clade: Integer;
   end;
 
   TRanksCountArray = array of TRanksCount;
@@ -100,7 +101,7 @@ var
   i: Integer;
   Index: Integer;
   Rank: TTaxonomicRank;
-  debug: Integer;
+  //debug: Integer;
 begin
   IsSuccess := False;
   sList := nil;
@@ -113,7 +114,7 @@ begin
       sList.LoadFromFile(aFile);
       if sList.Count > 0 then
       begin
-        debug := sList.Count;
+        //debug := sList.Count;
         SetLength(Result, 5561270 + 10000); { there are IDs in the timetree DB that skip a number so just add extra, we don't want to search this list, just access items directly by their timetree ID}
         for i := 0 to Length(Result) - 1 do
           Result[i] := trUnknown;
@@ -209,6 +210,8 @@ begin
     Result := trCohort
   else if Temp = 'subcohort' then
     Result := trSubCohort
+  else if Temp = 'clade' then
+    Result := trClade
   else
     raise Exception.Create('invalid taxonomic rank string: ' + Temp);
 end;
@@ -247,6 +250,7 @@ begin
   trNoRank: Result := 'no rank';
   trCohort: Result := 'cohort';
   trSubCohort: Result := 'subcohort';
+  trClade: Result := 'clade';
   trUnknown: Result := 'unknown';
   end;
 end;
@@ -254,7 +258,7 @@ end;
 function IsValidRankForSearch(const aRank: TTaxonomicRank): Boolean;
 begin
   case aRank of
-    trVarietas, trNoRank, trUnknown, trSuperKingdom: Result := False;
+    trVarietas, trNoRank, trUnknown, trSuperKingdom, trClade: Result := False;
     trKingdom: Result := True;
     trSubKingdom: Result := True;
     trSuperPhylum: Result := True;
