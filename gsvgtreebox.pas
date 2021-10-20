@@ -872,6 +872,7 @@ var
   revflg: boolean;
   ai: integer;
   temp: String;
+  i: Integer;
 
   procedure DrawBranch(p : TpNode);
   var
@@ -1108,9 +1109,17 @@ begin
     topologyOnlyTag := ' scaled="false"';
   temp := '<g id=' + DBLQ + TreeName + '-branches' + DBLQ + ' ' + 'class=' + DBLQ + 'branches' + DBLQ + ' ' + 'depth=' + DBLQ +  TaxonomicRankToString(FDeepestRank) + DBLQ + topologyOnlyTag + '>';
   WriteLn(FTreeSvgFile, temp);
+  FCircleTags.Add('<g id=' + DBLQ + TreeName + '-nodes' + DBLQ + ' ' + 'class=' + DBLQ + 'branches' + DBLQ + ' ' + 'depth=' + DBLQ +  TaxonomicRankToString(FDeepestRank) + DBLQ + '>');
+  FTaxaNameTags.Add('<g id=' + DBLQ + TreeName + '-names' + DBLQ + ' ' + 'class=' + DBLQ + 'branches' + DBLQ + ' ' + 'depth=' + DBLQ +  TaxonomicRankToString(FDeepestRank) + DBLQ + '>');
   DrawBranch(FRoot);
+  FCircleTags.Add('</g>');
+  FTaxaNameTags.Add('</g>');
   temp := '</g>';
   WriteLn(FTreeSvgFile, temp);
+  for i := 0 to FCircleTags.Count - 1 do
+    WriteLn(FTreeSvgFile, FCircleTags[i]);
+  for i := 0 to FTaxaNameTags.Count - 1 do
+    WriteLn(FTreeSvgFile, FTaxaNameTags[i]);
 end;
 
 procedure TMySvgTreeBox.DrawBranchStraight(p: TpNode);
@@ -1268,14 +1277,15 @@ begin
 
     if p.PrivateName <> EmptyStr then
     begin
-      //PrivateNameRect := Rect(x+Fxbase,y+Fybase-(StrHeight(p.PrivateName)*4), x+Fxbase+(StrLength(p.PrivateName + ' ')*4), y+Fybase);
-      WriteLn(FTreeSvgFile, SvgOtuName(x+Fxbase, y+Fybase, PAnsiChar(p.PrivateName), p));
+      FTaxaNameTags.Add(SvgOtuName(x+Fxbase, y+Fybase, PAnsiChar(p.PrivateName), p));
+      //WriteLn(FTreeSvgFile, SvgOtuName(x+Fxbase, y+Fybase, PAnsiChar(p.PrivateName), p));
     end
     else
     begin
       if ptInOTULoc(x+Fxbase, y+Fybase) then
         exit;
-      WriteLn(FTreeSvgFile, SvgOtuName(x+Fxbase, y+Fybase, pname, p));
+      FTaxaNameTags.Add(SvgOtuName(x+Fxbase, y+Fybase, pname, p));
+      //WriteLn(FTreeSvgFile, SvgOtuName(x+Fxbase, y+Fybase, pname, p));
     end;
     addOTULoc(Rect(x+Fxbase, y+Fybase, x+Fxbase+StrLength(pname), y+Fybase+(StrHeight(pname)*4)));
   Except on E: Exception do
@@ -3424,7 +3434,8 @@ begin
     else
       fillColor := FSvgLineColor;
     Temp := Temp + 'fill=' + DBLQ + fillColor + DBLQ + ' />';
-    WriteLn(FTreeSvgFile, Temp);
+    FCircleTags.Add(Temp);
+    //WriteLn(FTreeSvgFile, Temp);
 
     { draw a large circle that is not visible but will have the on-click handler}
     Temp := '<circle cx=' + DBLQ + IntToStr(Points[NumPoints - 1].X) + DBLQ + ' ';
@@ -3466,7 +3477,8 @@ begin
 
     Temp := Temp + 'id=' + DBLQ + IdStr + DBLQ + '/>';
     if not FRenderNewickOnly then
-      WriteLn(FTreeSvgFile, Temp);
+      FCircleTags.Add(Temp);
+      //WriteLn(FTreeSvgFile, Temp);
 
     if (not FRenderNewickOnly) and (not (aNode = FRoot)) and (aNode.anc.anc = nil) and (aNode = aNode.anc.des1) then { this is descendent 1 of the root node}
     begin
@@ -3475,7 +3487,8 @@ begin
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
       Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
       Temp := Temp + 'fill=' + DBLQ + FSvgLineColor + DBLQ + ' />';
-      WriteLn(FTreeSvgFile, Temp);
+      FCircleTags.Add(Temp);
+      //WriteLn(FTreeSvgFile, Temp);
 
       Temp := '<circle cx=' + DBLQ + IntToStr(Points[0].X) + DBLQ + ' ';
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
@@ -3501,7 +3514,8 @@ begin
         Temp := Temp + 'name=' + dblq +  dblq + ' ';
       end;
       Temp := Temp + 'id=' + DBLQ + IntToStr(aNode.anc.timetreeId) + DBLQ + '/>';
-      WriteLn(FTreeSvgFile, Temp);
+      FCircleTags.Add(Temp);
+      //WriteLn(FTreeSvgFile, Temp);
     end;
   end;
 end;
