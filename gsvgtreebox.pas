@@ -87,6 +87,7 @@ type
     AttribList: TNodeAttribList;
     GroupAttrib: TNodeAttribList;
   private
+    FSvgTreeImageWidth: Integer;
     FDeepestRank: TTaxonomicRank;
     FDoLogScale: Boolean;
     FGeoTimescaleHeight: Integer;
@@ -328,12 +329,13 @@ type
     function GetNumCalibrations: Integer;
     function HasCalibrations: Boolean;
     function FindAncestorName(aNode: TpNode): String;
-    procedure MegaPolyline(aHMF: THandle; Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
-    procedure MegaPolygon(aHMT: THandle; Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
-    procedure MegaTextOutA(aHMF: THandle; aX: Integer; aY: Integer; aText: PAnsiChar); overload;
-    procedure MegaTextOutA(aHMF: THandle; aX: Integer; aY: Integer; aText: String); overload;
+    procedure MegaPolyline(Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
+    procedure MegaPolygon(Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
+    procedure MegaTextOutA(aX: Integer; aY: Integer; aText: PAnsiChar); overload;
+    procedure MegaTextOutA(aX: Integer; aY: Integer; aText: String); overload;
     function SvgOtuName(aX: Integer; aY: Integer; aText: String; aNode: TpNode): String;
   protected
+    FIsMobileFriendly: Boolean;
     FCircleTags: TStringList;
     FTaxaNameTags: TStringList;
     FRenderNewickOnly: Boolean;
@@ -700,7 +702,6 @@ end;
   TMySvgTreeBox = class(TSvgTreeBox)
     private
       FDoNewick: Boolean;
-      FIsMobileFriendly: Boolean;
       FO2Data: TGeoData;
       FCO2Data: TGeoData;
       FLuminosityData: TGeoData;
@@ -725,12 +726,14 @@ end;
       FDrawingCoords : array[0..600] of TPoint;
       FTaxonName : array[0..1023] of AnsiChar;
       FOTULocations: Array of TRect;
+
       procedure InitPanelTitleTextAttribs;
       procedure DrawBackground;
-      procedure DrawBranches(HMF: THandle);
+      procedure DrawBranches(aWidth: Integer);
       procedure DrawBranchStraight(p : TpNode);
       procedure DrawOTUName(p: TpNode);
       procedure DrawCompressedArea(p: TpNode);
+      procedure AddTreeSvgUseTags;
       function DrawGeologicLevel(aLevel: TTimespanType; AddBottomBorder: Boolean = False): Integer;
       function DrawGeologicLevelVert(aLevel: TTimespanType): Integer;
       procedure DrawGeologicLevelTopBorder;
@@ -780,7 +783,7 @@ end;
       procedure SetCO2Data(aData: TGeoData);
       procedure SetLuminosityData(aData: TGeoData);
       procedure DrawTree(HMF : THandle); override;
-      procedure DrawNewickOnly(HMF: THandle);
+      procedure DrawNewickOnly;
       procedure GenerateSvgStrings(TreeFileName: String; PanelsFileName: String; mobileFriendly: Boolean); overload;
       procedure GenerateSvgStrings(TreeFileName: String; mobileFriendly: Boolean); overload;
       procedure OpenSVG(aName: String; aWidth, aHeight: Integer; y: Integer; var aFile: TextFile; id: String=''); { writes the header tags}
@@ -866,7 +869,7 @@ begin
   end;
 end;
 
-procedure TMySvgTreeBox.DrawBranches(HMF: THandle);
+procedure TMySvgTreeBox.DrawBranches(aWidth: Integer);
 var
   topologyOnlyTag: String = '';
   revflg: boolean;
@@ -905,7 +908,7 @@ var
           FDrawingCoords[2].y := FDrawingCoords[1].y;
           FDrawingCoords[3].x := FDrawingCoords[2].x;
           FDrawingCoords[3].y := FDrawingCoords[0].y;
-          MegaPolygon(HMF, FDrawingCoords, 4);
+          MegaPolygon(FDrawingCoords, 4);
         end;
 
         procedure DrawVerticalLine;
@@ -926,7 +929,7 @@ var
             FDrawingCoords[0].y := q.position.y +Fybase -d +CurAttrib.LineWidth*2;
             FDrawingCoords[1].x := FDrawingCoords[0].x;
             FDrawingCoords[1].y := p.position.y +Fybase -CurAttrib.LineWidth*2;
-            MegaPolyLine(HMF,FDrawingCoords, 2);
+            MegaPolyLine(FDrawingCoords, 2);
             //if p.attrindex <> ai then
             //  ChangeAttrib(p.attrindex);
           end;
@@ -943,7 +946,7 @@ var
             FDrawingCoords[0].y := p.position.y +Fybase +CurAttrib.LineWidth*2;
             FDrawingCoords[1].x := FDrawingCoords[0].x;
             FDrawingCoords[1].y := q.position.y +Fybase +d -CurAttrib.LineWidth*2;
-            MegaPolyLine(HMF,FDrawingCoords, 2);
+            MegaPolyLine(FDrawingCoords, 2);
             //if p.attrindex <> ai then
             //  ChangeAttrib(p.attrindex);
           end;
@@ -958,7 +961,7 @@ var
             FDrawingCoords[0].y := p.position.y +Fybase;
             FDrawingCoords[1].x := Fxbase;
             FDrawingCoords[1].y := FDrawingCoords[0].y;
-            MegaPolyLine(HMF, FDrawingCoords, 2, p);
+            MegaPolyLine(FDrawingCoords, 2, p);
           end;
           DrawVerticalLine;
         end
@@ -1016,7 +1019,7 @@ var
               else
                 FDrawingCoords[1].x := p.position.x +Fxbase +d -GetNodeAttrib(p).LineWidth*2;
               FDrawingCoords[1].y := FDrawingCoords[0].y;
-              MegaPolyLine(HMF, FDrawingCoords, 2, p);
+              MegaPolyLine(FDrawingCoords, 2, p);
 
               if IsLinearized and (not FTopoflag) and assigned(HeightSEFunc) and ShowHeightErrBar then
                 DrawHeightErrBar;
@@ -1048,7 +1051,7 @@ var
               else
                 FDrawingCoords[2].x := p.position.x +Fxbase +d -CurAttrib.LineWidth*2;
               FDrawingCoords[2].y := p.position.y +Fybase;
-              MegaPolyLine(HMF,FDrawingCoords, 3, p);
+              MegaPolyLine(FDrawingCoords, 3, p);
 
               if IsLinearized and(not p.outgroup) and (not FTopoflag) and assigned(HeightSEFunc) and ShowHeightErrBar then
                 DrawHeightErrBar;
@@ -1105,6 +1108,7 @@ var
   end;
 
 begin
+  FSvgTreeImageWidth := aWidth;
   if IsStudyTree and ShowTopologyOnly then
     topologyOnlyTag := ' scaled="false"';
   temp := '<g id=' + DBLQ + TreeName + '-branches' + DBLQ + ' ' + 'class=' + DBLQ + 'branches' + DBLQ + ' ' + 'depth=' + DBLQ +  TaxonomicRankToString(FDeepestRank) + DBLQ + topologyOnlyTag + '>';
@@ -1145,7 +1149,7 @@ begin
        else
          FDrawingCoords[0].y := FDrawingCoords[1].y;
 
-      MegaPolyLine(0, FDrawingCoords, 2, p);
+      MegaPolyLine(FDrawingCoords, 2, p);
     end;
   end
   else
@@ -1162,7 +1166,7 @@ begin
       FDrawingCoords[0].y := p.anc.position.y +Fybase;
       FDrawingCoords[1].x := p.position.x +Fxbase;
       FDrawingCoords[1].y := p.position.y +Fybase;
-      MegaPolyLine(0, FDrawingCoords, 2, p);
+      MegaPolyLine(FDrawingCoords, 2, p);
     end;
   end;
 end;
@@ -1303,7 +1307,26 @@ begin
   FDrawingCoords[2].y := p.des1.position.y +Fybase;
   FDrawingCoords[3].x := p.des2.position.x +Fxbase;
   FDrawingCoords[3].y := p.des2.position.y +Fybase;
-  MegaPolygon(0, FDrawingCoords, 4, p);
+  MegaPolygon(FDrawingCoords, 4, p);
+end;
+
+procedure TMySvgTreeBox.AddTreeSvgUseTags;
+begin
+  WriteLn(FTreeSvgFile, Format('<svg viewBox="0 0 %d %d" preserveAspectRatio="none">', [FSvgTreeImageWidth, minHeight*4]));
+  WriteLn(FTreeSvgFile, Format('<use href="#%s-background-colors" width="1" height="1"/>', [TreeName]));
+  WriteLn(FTreeSvgFile, '</svg>');
+  WriteLn(FTreeSvgFile, Format('<svg viewBox="0 0 %d %d" preserveAspectRatio="none">', [FSvgTreeImageWidth, minHeight*4]));
+  WriteLn(FTreeSvgFile, Format('<use href="#%s-branches"/>', [TreeName]));
+  WriteLn(FTreeSvgFile, '</svg>');
+  WriteLn(FTreeSvgFile, Format('<svg preserveAspectRatio="none">', []));
+  WriteLn(FTreeSvgFile, Format('<use href="#%s-nodes"/>', [TreeName]));
+  WriteLn(FTreeSvgFile, '</svg>');
+  WriteLn(FTreeSvgFile, Format('<svg preserveAspectRatio="none">', []));
+  WriteLn(FTreeSvgFile, Format('<use href="#%s-names"/>', [TreeName]));
+  WriteLn(FTreeSvgFile, '</svg>');
+  //WriteLn(FTreeSvgFile, Format('', []));
+  //
+  //WriteLn(FTreeSvgFile, '</svg>');
 end;
 
 function TMySvgTreeBox.DrawGeologicLevel(aLevel: TTimespanType; AddBottomBorder: Boolean = False): Integer;
@@ -1610,7 +1633,7 @@ begin
       //        y := position.y +Abs(TimesFontHeight) * 5 + dv;
 
       ptext := StrPCopy(text, DivTimeStr);
-      MegaTextOutA(0, x + Fxbase, y + Fybase, ptext);
+      MegaTextOutA(x + Fxbase, y + Fybase, ptext);
     end;
   end;
   WriteLn(FTreeSvgFile, '</g>');
@@ -2285,7 +2308,7 @@ var
 begin
   if FRenderNewickOnly then
   begin
-    DrawNewickOnly(HMF);
+    DrawNewickOnly;
     Exit;
   end;
 
@@ -2325,8 +2348,11 @@ begin
   try
     UpdateFXCoordinates;
     OpenSvg('tree', aWidth, treeHeight, y, FTreeSVGFile);
+    WriteLn(FTreeSVGFile, '<defs>');
     DrawBackground;
-    DrawBranches(HMF);
+    DrawBranches(aWidth);
+    WriteLn(FTreeSVGFile, '</defs>');
+    AddTreeSvgUseTags;
     CloseSvg(FTreeSVGFile);
 
     if not (ShowTopologyOnly and IsStudyTree) then
@@ -2398,7 +2424,7 @@ begin
   end;
 end;
 
-procedure TMySvgTreeBox.DrawNewickOnly(HMF: THandle);
+procedure TMySvgTreeBox.DrawNewickOnly;
 var
   aList: TStringList=nil;
   aWidth: Integer=0;
@@ -2418,8 +2444,11 @@ begin
   try
     UpdateFXCoordinates;
     OpenSvg('tree', aWidth, treeHeight, y, FTreeSVGFile);
+    WriteLn(FTreeSVGFile, '<defs>');
     DrawBackground;
-    DrawBranches(HMF);
+    DrawBranches(aWidth);
+    WriteLn(FTreeSVGFile, '</defs>');
+    AddTreeSvgUseTags;
     CloseSvg(FTreeSVGFile);
   except
     on E:Exception do
@@ -2531,6 +2560,7 @@ end;
 constructor TCustomSvgTree.Create;
 begin
     inherited Create;
+    FIsMobileFriendly := True;
     FCircleTags := TStringList.Create;
     FTaxaNameTags := TStringList.Create;
     FRenderNewickOnly := False;
@@ -3380,7 +3410,7 @@ begin
 
 end;
 
-procedure TCustomSvgTree.MegaPolyline(aHMF: THandle; Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
+procedure TCustomSvgTree.MegaPolyline(Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
 var
   Temp: String;
   i: Integer;
@@ -3390,6 +3420,15 @@ var
   dof: String;
   fillColor: String;
   aHeight: Double;
+
+  function CircleXCoordString(aX: Integer): String;
+  begin
+    if FIsMobileFriendly then
+      Result := Format('%s%.1f%%%s', [DBLQ, aX/FSvgTreeImageWidth*100, DBLQ])
+    else
+      Result := Format('%s%d%s', [DBLQ, aX, DBLQ]);
+  end;
+
 begin
   Assert(NumPoints >= 2);
   if NumPoints = 2 then
@@ -3419,7 +3458,7 @@ begin
     else
       aRank := trUnknown;
 
-    Temp := '<circle cx=' + DBLQ + IntToStr(Points[NumPoints - 1].X) + DBLQ + ' ';
+    Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
     Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
     Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
     Temp := Temp + 'stroke=' + DBLQ + FSvgLineColor + DBLQ + ' ';
@@ -3438,7 +3477,7 @@ begin
     //WriteLn(FTreeSvgFile, Temp);
 
     { draw a large circle that is not visible but will have the on-click handler}
-    Temp := '<circle cx=' + DBLQ + IntToStr(Points[NumPoints - 1].X) + DBLQ + ' ';
+    Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
     Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
     Temp := Temp + 'r=' + DBLQ + '12' + DBLQ + ' ';
     Temp := Temp + 'class=' + DBLQ + 'node' + DBLQ + ' ';
@@ -3483,14 +3522,14 @@ begin
     if (not FRenderNewickOnly) and (not (aNode = FRoot)) and (aNode.anc.anc = nil) and (aNode = aNode.anc.des1) then { this is descendent 1 of the root node}
     begin
       FormatTimeIntervalStrings(aNode.anc.height, aNode.anc.ciLower, aNode.anc.ciUpper, timeStr, ciLowStr, ciHighStr);
-      Temp := '<circle cx=' + DBLQ + IntToStr(Points[0].X) + DBLQ + ' ';
+      Temp := '<circle cx=' + CircleXCoordString(Points[0].X) + ' ';
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
       Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
       Temp := Temp + 'fill=' + DBLQ + FSvgLineColor + DBLQ + ' />';
       FCircleTags.Add(Temp);
       //WriteLn(FTreeSvgFile, Temp);
 
-      Temp := '<circle cx=' + DBLQ + IntToStr(Points[0].X) + DBLQ + ' ';
+      Temp := '<circle cx=' + CircleXCoordString(Points[0].X) + ' ';
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
       Temp := Temp + 'r=' + DBLQ + '12' + DBLQ + ' ';
       Temp := Temp + 'class=' + DBLQ + 'node' + DBLQ + ' ';
@@ -3520,7 +3559,7 @@ begin
   end;
 end;
 
-procedure TCustomSvgTree.MegaPolygon(aHMT: THandle; Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
+procedure TCustomSvgTree.MegaPolygon(Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
 var
   Temp: String;
   i: Integer;
@@ -3547,7 +3586,7 @@ begin
   WriteLn(FTreeSvgFile, Temp);
 end;
 
-procedure TCustomSvgTree.MegaTextOutA(aHMF: THandle; aX: Integer; aY: Integer; aText: PAnsiChar);
+procedure TCustomSvgTree.MegaTextOutA(aX: Integer; aY: Integer; aText: PAnsiChar);
 var
   Temp: String;
 begin
@@ -3557,7 +3596,7 @@ begin
   WriteLn(FTreeSvgFile, Temp);
 end;
 
-procedure TCustomSvgTree.MegaTextOutA(aHMF: THandle; aX: Integer; aY: Integer; aText: String);
+procedure TCustomSvgTree.MegaTextOutA(aX: Integer; aY: Integer; aText: String);
 var
   Temp: String;
 begin
@@ -3568,10 +3607,19 @@ begin
 end;
 
 function TCustomSvgTree.SvgOtuName(aX: Integer; aY: Integer; aText: String; aNode: TpNode): String;
+
+  function XCoordAttr: String;
+  begin
+    if FIsMobileFriendly then
+      Result := Format('%s%.1f%%%s', [DBLQ, (aX + FSvgFontHeight)/FSvgTreeImageWidth*100, DBLQ])
+    else
+      Result := Format('%s%d%s', [DBLQ, aX, DBLQ]);
+  end;
+
 begin
   if (aNode.timetreeId >= 0) and (not FRenderNewickOnly) then
     aNode.rank := TaxonomicRanks[aNode.timetreeId];
-  Result := '<text x=' + DBLQ + IntToStr(aX + FSvgFontHeight) + DBLQ + ' ';
+  Result := '<text x=' + XCoordAttr + ' ';
   Result := Result + 'y=' + DBLQ + IntToStr(aY - FSvgFontHeight - (FSvgFontHeight div 2) - 3) + DBLQ + ' ';
   if aNode.rank >= trSpecies then
     Result := Result + 'font-style=' + dblq + 'italic' + dblq + ' ';

@@ -9,12 +9,17 @@
 __author__ = " Glen Stecher <gstecher@bd3software.com>"
 __date__ = "$Oct 25, 2018 8:26:28 PM$"
 
+import os
+import shutil
+
 from MegattDependencyTest import MegattDependencyTest
 
 if __name__ == "__main__":
-    print "Running megatt dependency test"
+    print("Running megatt dependency test")
     test = MegattDependencyTest()
-    if test.run_test() != True:
-        print "DEPENDENCY TEST FAILED! Check that no dependencies on graphical libraries exist"
+    if not test.run_test():
+        print("DEPENDENCY TEST FAILED! Check that no dependencies on graphical libraries exist")
     else:
-        print "Dependency test passed!"
+        print("Dependency test passed!")
+        print("copying executable to smoke tests directory")
+        shutil.copyfile('./megatt', os.path.join('smoke_tests', 'megatt'))

@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="728" name="tree" y="0" >
+<defs>
 <g class="background" id="timetree-background-colors" bg-colors="periods" >
 <polyline points="20,728 392,728 392,20 20,20 20,728" class="background" fill="#FD9A52" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
 <polyline points="392,728 628,728 628,20 392,20 392,728" class="background" fill="#FFE619" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
@@ -58,136 +59,149 @@
 <polyline points="20,259 20,377 67,377" fill="none" stroke="#000" stroke-width="2"/>
 </g>
 <g id="timetree-nodes" class="branches" depth="unknown">
-<circle cx="628" cy="59" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="59" r="12" class="node" rank="genus" otu="true" name="Perodicticus" time="" lncount="1" id="20810"/>
-<circle cx="628" cy="83" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="83" r="12" class="node" rank="genus" otu="true" name="Arctocebus" time="" lncount="2" id="20811"/>
-<circle cx="419" cy="71" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="419" cy="71" r="12" class="node" rank="unknown" cilo="16.2" cihi="24.6" isci="true" time="20.4" lncount="2" dof="Lorisidae" id="20809"/>
-<circle cx="628" cy="107" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="107" r="12" class="node" rank="genus" otu="true" name="Loris" time="" lncount="2" id="20813"/>
-<circle cx="628" cy="131" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="131" r="12" class="node" rank="genus" otu="true" name="Nycticebus" time="" lncount="5" id="20814"/>
-<circle cx="359" cy="119" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="359" cy="119" r="12" class="node" rank="unknown" cilo="21.7" cihi="30.7" isci="true" time="26.2" lncount="2" dof="Lorisidae" id="20812"/>
-<circle cx="246" cy="95" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="246" cy="95" r="12" class="node" rank="family" cilo="34" cihi="40" isci="true" time="37" lncount="4" name="Lorisidae" id="20808"/>
-<circle cx="628" cy="155" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="155" r="12" class="node" rank="genus" otu="true" name="Euoticus" time="" lncount="1" id="20816"/>
-<circle cx="628" cy="179" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="179" r="12" class="node" rank="genus" otu="true" name="Otolemur" time="" lncount="3" id="20819"/>
-<circle cx="628" cy="203" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="203" r="12" class="node" rank="genus" otu="true" name="Galago" time="" lncount="7" id="20820"/>
-<circle cx="437" cy="191" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="437" cy="191" r="12" class="node" rank="unknown" cilo="15.0" cihi="20.3" isci="true" time="18.6" lncount="2" dof="Galagidae" id="20818"/>
-<circle cx="628" cy="227" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="227" r="12" class="node" rank="genus" otu="true" name="Galagoides" time="" lncount="6" id="20821"/>
-<circle cx="393" cy="209" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="393" cy="209" r="12" class="node" rank="unknown" cilo="19.0" cihi="26.9" isci="true" time="22.9" lncount="3" dof="Galagidae" id="20817"/>
-<circle cx="350" cy="182" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="350" cy="182" r="12" class="node" rank="family" cilo="21.0" cihi="33.2" isci="true" time="27.1" lncount="4" name="Galagidae" id="20815"/>
-<circle cx="241" cy="138" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="241" cy="138" r="12" class="node" rank="infraorder" cilo="34" cihi="42" isci="true" time="38" lncount="8" name="Lorisiformes" id="20807"/>
-<circle cx="20" cy="255" r="4" fill="#000" />
-<circle cx="20" cy="255" r="12" class="node" rank="suborder" time="59" cilo="56" cihi="62" isci="true" lncount="27" name="Strepsirrhini" id="20806"/>
-<circle cx="628" cy="251" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="251" r="12" class="node" rank="genus" otu="true" name="Daubentonia" time="" lncount="1" id="20823"/>
-<circle cx="628" cy="275" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="275" r="12" class="node" rank="genus" otu="true" name="Palaeopropithecus" time="" lncount="2" id="20827"/>
-<circle cx="628" cy="299" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="299" r="12" class="node" rank="genus" otu="true" name="Hadropithecus" time="" lncount="1" id="20829"/>
-<circle cx="628" cy="323" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="323" r="12" class="node" rank="genus" otu="true" name="Avahi" time="" lncount="5" id="20832"/>
-<circle cx="628" cy="347" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="347" r="12" class="node" rank="genus" otu="true" name="Propithecus" time="" lncount="7" id="20833"/>
-<circle cx="368" cy="335" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="368" cy="335" r="12" class="node" rank="unknown" cilo="12.8" cihi="37.8" isci="true" time="25.3" lncount="2" dof="Indriidae" id="20831"/>
-<circle cx="628" cy="371" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="371" r="12" class="node" rank="genus" otu="true" name="Indri" time="" lncount="1" id="20834"/>
-<circle cx="331" cy="353" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="331" cy="353" r="12" class="node" rank="unknown" cilo="17.6" cihi="40.4" isci="true" time="29.0" lncount="3" dof="Indriidae" id="20830"/>
-<circle cx="319" cy="314" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="319" cy="314" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="30" lncount="5" dof="Lemuriformes" id="20826"/>
-<circle cx="628" cy="395" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="395" r="12" class="node" rank="genus" otu="true" name="Lepilemur" time="" lncount="17" id="20837"/>
-<circle cx="628" cy="419" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="419" r="12" class="node" rank="genus" otu="true" name="Megaladapis" time="" lncount="1" id="20838"/>
-<circle cx="283" cy="407" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="283" cy="407" r="12" class="node" rank="family" cilo="0" cihi="0" isci="false" time="34" lncount="2" name="Lepilemuridae" id="20836"/>
-<circle cx="628" cy="443" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="443" r="12" class="node" rank="genus" otu="true" name="Cheirogaleus" time="" lncount="4" id="20841"/>
-<circle cx="628" cy="467" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="467" r="12" class="node" rank="genus" otu="true" name="Phaner" time="" lncount="1" id="20842"/>
-<circle cx="294" cy="455" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="294" cy="455" r="12" class="node" rank="unknown" cilo="27" cihi="38" isci="false" time="33" lncount="2" dof="Cheirogaleidae" id="20840"/>
-<circle cx="628" cy="491" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="491" r="12" class="node" rank="genus" otu="true" name="Microcebus" time="" lncount="19" id="20845"/>
-<circle cx="628" cy="515" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="515" r="12" class="node" rank="genus" otu="true" name="Mirza" time="" lncount="2" id="20846"/>
-<circle cx="439" cy="503" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="439" cy="503" r="12" class="node" rank="unknown" cilo="14.6" cihi="22.3" isci="true" time="18.4" lncount="2" dof="Cheirogaleidae" id="20844"/>
-<circle cx="628" cy="539" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="539" r="12" class="node" rank="genus" otu="true" name="Allocebus" time="" lncount="1" id="20847"/>
-<circle cx="408" cy="521" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="408" cy="521" r="12" class="node" rank="unknown" cilo="17.5" cihi="25.0" isci="false" time="21.5" lncount="3" dof="Cheirogaleidae" id="20843"/>
-<circle cx="266" cy="464" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="266" cy="464" r="12" class="node" rank="unknown" cilo="31" cihi="39" isci="true" time="35" lncount="7" dof="Lemuriformes" id="20835"/>
-<circle cx="241" cy="389" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="241" cy="389" r="12" class="node" rank="unknown" cilo="33" cihi="42" isci="true" time="38" lncount="12" dof="Lemuriformes" id="20825"/>
-<circle cx="628" cy="563" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="563" r="12" class="node" rank="genus" otu="true" name="Pachylemur" time="" lncount="1" id="20850"/>
-<circle cx="628" cy="587" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="587" r="12" class="node" rank="genus" otu="true" name="Varecia" time="" lncount="2" id="20851"/>
-<circle cx="508" cy="575" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="508" cy="575" r="12" class="node" rank="unknown" cilo="0.0" cihi="0.0" isci="false" time="11.7" lncount="2" dof="Lemuridae" id="20849"/>
-<circle cx="628" cy="611" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="611" r="12" class="node" rank="genus" otu="true" name="Prolemur" time="" lncount="1" id="20855"/>
-<circle cx="628" cy="635" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="635" r="12" class="node" rank="genus" otu="true" name="Hapalemur" time="" lncount="3" id="20856"/>
-<circle cx="539" cy="623" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="539" cy="623" r="12" class="node" rank="unknown" cilo="6.9" cihi="8.0" isci="false" time="8.7" lncount="2" dof="Lemuridae" id="20854"/>
-<circle cx="628" cy="659" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="659" r="12" class="node" rank="genus" otu="true" name="Lemur" time="" lncount="1" id="20857"/>
-<circle cx="487" cy="641" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="487" cy="641" r="12" class="node" rank="unknown" cilo="8.4" cihi="19.0" isci="true" time="13.7" lncount="3" dof="Lemuridae" id="20853"/>
-<circle cx="628" cy="683" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="628" cy="683" r="12" class="node" rank="genus" otu="true" name="Eulemur" time="" lncount="11" id="20858"/>
-<circle cx="428" cy="662" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="428" cy="662" r="12" class="node" rank="unknown" cilo="16.8" cihi="22.2" isci="true" time="19.5" lncount="4" dof="Lemuridae" id="20852"/>
-<circle cx="367" cy="618" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="367" cy="618" r="12" class="node" rank="family" cilo="22.2" cihi="28.7" isci="true" time="25.5" lncount="6" name="Lemuridae" id="20848"/>
-<circle cx="235" cy="503" r="4" stroke="#000" stroke-width="1" fill="#000" />
-<circle cx="235" cy="503" r="12" class="node" rank="infraorder" cilo="35" cihi="42" isci="true" time="38" lncount="18" name="Lemuriformes" id="20824"/>
-<circle cx="67" cy="377" r="4" stroke="#000" stroke-width="1" fill="none" />
-<circle cx="67" cy="377" r="12" class="node" rank="unknown" cilo="51" cihi="58" isci="true" time="55" lncount="19" dof="Strepsirrhini" id="20822"/>
+<circle cx="69.8%" cy="59" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="59" r="12" class="node" rank="genus" otu="true" name="Perodicticus" time="" lncount="1" id="20810"/>
+<circle cx="69.8%" cy="83" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="83" r="12" class="node" rank="genus" otu="true" name="Arctocebus" time="" lncount="2" id="20811"/>
+<circle cx="46.6%" cy="71" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="46.6%" cy="71" r="12" class="node" rank="unknown" cilo="16.2" cihi="24.6" isci="true" time="20.4" lncount="2" dof="Lorisidae" id="20809"/>
+<circle cx="69.8%" cy="107" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="107" r="12" class="node" rank="genus" otu="true" name="Loris" time="" lncount="2" id="20813"/>
+<circle cx="69.8%" cy="131" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="131" r="12" class="node" rank="genus" otu="true" name="Nycticebus" time="" lncount="5" id="20814"/>
+<circle cx="39.9%" cy="119" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="39.9%" cy="119" r="12" class="node" rank="unknown" cilo="21.7" cihi="30.7" isci="true" time="26.2" lncount="2" dof="Lorisidae" id="20812"/>
+<circle cx="27.3%" cy="95" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="27.3%" cy="95" r="12" class="node" rank="family" cilo="34" cihi="40" isci="true" time="37" lncount="4" name="Lorisidae" id="20808"/>
+<circle cx="69.8%" cy="155" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="155" r="12" class="node" rank="genus" otu="true" name="Euoticus" time="" lncount="1" id="20816"/>
+<circle cx="69.8%" cy="179" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="179" r="12" class="node" rank="genus" otu="true" name="Otolemur" time="" lncount="3" id="20819"/>
+<circle cx="69.8%" cy="203" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="203" r="12" class="node" rank="genus" otu="true" name="Galago" time="" lncount="7" id="20820"/>
+<circle cx="48.6%" cy="191" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="48.6%" cy="191" r="12" class="node" rank="unknown" cilo="15.0" cihi="20.3" isci="true" time="18.6" lncount="2" dof="Galagidae" id="20818"/>
+<circle cx="69.8%" cy="227" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="227" r="12" class="node" rank="genus" otu="true" name="Galagoides" time="" lncount="6" id="20821"/>
+<circle cx="43.7%" cy="209" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="43.7%" cy="209" r="12" class="node" rank="unknown" cilo="19.0" cihi="26.9" isci="true" time="22.9" lncount="3" dof="Galagidae" id="20817"/>
+<circle cx="38.9%" cy="182" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="38.9%" cy="182" r="12" class="node" rank="family" cilo="21.0" cihi="33.2" isci="true" time="27.1" lncount="4" name="Galagidae" id="20815"/>
+<circle cx="26.8%" cy="138" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="26.8%" cy="138" r="12" class="node" rank="infraorder" cilo="34" cihi="42" isci="true" time="38" lncount="8" name="Lorisiformes" id="20807"/>
+<circle cx="2.2%" cy="255" r="4" fill="#000" />
+<circle cx="2.2%" cy="255" r="12" class="node" rank="suborder" time="59" cilo="56" cihi="62" isci="true" lncount="27" name="Strepsirrhini" id="20806"/>
+<circle cx="69.8%" cy="251" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="251" r="12" class="node" rank="genus" otu="true" name="Daubentonia" time="" lncount="1" id="20823"/>
+<circle cx="69.8%" cy="275" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="275" r="12" class="node" rank="genus" otu="true" name="Palaeopropithecus" time="" lncount="2" id="20827"/>
+<circle cx="69.8%" cy="299" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="299" r="12" class="node" rank="genus" otu="true" name="Hadropithecus" time="" lncount="1" id="20829"/>
+<circle cx="69.8%" cy="323" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="323" r="12" class="node" rank="genus" otu="true" name="Avahi" time="" lncount="5" id="20832"/>
+<circle cx="69.8%" cy="347" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="347" r="12" class="node" rank="genus" otu="true" name="Propithecus" time="" lncount="7" id="20833"/>
+<circle cx="40.9%" cy="335" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="40.9%" cy="335" r="12" class="node" rank="unknown" cilo="12.8" cihi="37.8" isci="true" time="25.3" lncount="2" dof="Indriidae" id="20831"/>
+<circle cx="69.8%" cy="371" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="371" r="12" class="node" rank="genus" otu="true" name="Indri" time="" lncount="1" id="20834"/>
+<circle cx="36.8%" cy="353" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="36.8%" cy="353" r="12" class="node" rank="unknown" cilo="17.6" cihi="40.4" isci="true" time="29.0" lncount="3" dof="Indriidae" id="20830"/>
+<circle cx="35.4%" cy="314" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="35.4%" cy="314" r="12" class="node" rank="unknown" cilo="0" cihi="0" isci="false" time="30" lncount="5" dof="Lemuriformes" id="20826"/>
+<circle cx="69.8%" cy="395" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="395" r="12" class="node" rank="genus" otu="true" name="Lepilemur" time="" lncount="17" id="20837"/>
+<circle cx="69.8%" cy="419" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="419" r="12" class="node" rank="genus" otu="true" name="Megaladapis" time="" lncount="1" id="20838"/>
+<circle cx="31.4%" cy="407" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="31.4%" cy="407" r="12" class="node" rank="family" cilo="0" cihi="0" isci="false" time="34" lncount="2" name="Lepilemuridae" id="20836"/>
+<circle cx="69.8%" cy="443" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="443" r="12" class="node" rank="genus" otu="true" name="Cheirogaleus" time="" lncount="4" id="20841"/>
+<circle cx="69.8%" cy="467" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="467" r="12" class="node" rank="genus" otu="true" name="Phaner" time="" lncount="1" id="20842"/>
+<circle cx="32.7%" cy="455" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="32.7%" cy="455" r="12" class="node" rank="unknown" cilo="27" cihi="38" isci="false" time="33" lncount="2" dof="Cheirogaleidae" id="20840"/>
+<circle cx="69.8%" cy="491" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="491" r="12" class="node" rank="genus" otu="true" name="Microcebus" time="" lncount="19" id="20845"/>
+<circle cx="69.8%" cy="515" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="515" r="12" class="node" rank="genus" otu="true" name="Mirza" time="" lncount="2" id="20846"/>
+<circle cx="48.8%" cy="503" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="48.8%" cy="503" r="12" class="node" rank="unknown" cilo="14.6" cihi="22.3" isci="true" time="18.4" lncount="2" dof="Cheirogaleidae" id="20844"/>
+<circle cx="69.8%" cy="539" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="539" r="12" class="node" rank="genus" otu="true" name="Allocebus" time="" lncount="1" id="20847"/>
+<circle cx="45.3%" cy="521" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="45.3%" cy="521" r="12" class="node" rank="unknown" cilo="17.5" cihi="25.0" isci="false" time="21.5" lncount="3" dof="Cheirogaleidae" id="20843"/>
+<circle cx="29.6%" cy="464" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="29.6%" cy="464" r="12" class="node" rank="unknown" cilo="31" cihi="39" isci="true" time="35" lncount="7" dof="Lemuriformes" id="20835"/>
+<circle cx="26.8%" cy="389" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="26.8%" cy="389" r="12" class="node" rank="unknown" cilo="33" cihi="42" isci="true" time="38" lncount="12" dof="Lemuriformes" id="20825"/>
+<circle cx="69.8%" cy="563" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="563" r="12" class="node" rank="genus" otu="true" name="Pachylemur" time="" lncount="1" id="20850"/>
+<circle cx="69.8%" cy="587" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="587" r="12" class="node" rank="genus" otu="true" name="Varecia" time="" lncount="2" id="20851"/>
+<circle cx="56.4%" cy="575" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="56.4%" cy="575" r="12" class="node" rank="unknown" cilo="0.0" cihi="0.0" isci="false" time="11.7" lncount="2" dof="Lemuridae" id="20849"/>
+<circle cx="69.8%" cy="611" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="611" r="12" class="node" rank="genus" otu="true" name="Prolemur" time="" lncount="1" id="20855"/>
+<circle cx="69.8%" cy="635" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="635" r="12" class="node" rank="genus" otu="true" name="Hapalemur" time="" lncount="3" id="20856"/>
+<circle cx="59.9%" cy="623" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="59.9%" cy="623" r="12" class="node" rank="unknown" cilo="6.9" cihi="8.0" isci="false" time="8.7" lncount="2" dof="Lemuridae" id="20854"/>
+<circle cx="69.8%" cy="659" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="659" r="12" class="node" rank="genus" otu="true" name="Lemur" time="" lncount="1" id="20857"/>
+<circle cx="54.1%" cy="641" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="54.1%" cy="641" r="12" class="node" rank="unknown" cilo="8.4" cihi="19.0" isci="true" time="13.7" lncount="3" dof="Lemuridae" id="20853"/>
+<circle cx="69.8%" cy="683" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="69.8%" cy="683" r="12" class="node" rank="genus" otu="true" name="Eulemur" time="" lncount="11" id="20858"/>
+<circle cx="47.6%" cy="662" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="47.6%" cy="662" r="12" class="node" rank="unknown" cilo="16.8" cihi="22.2" isci="true" time="19.5" lncount="4" dof="Lemuridae" id="20852"/>
+<circle cx="40.8%" cy="618" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="40.8%" cy="618" r="12" class="node" rank="family" cilo="22.2" cihi="28.7" isci="true" time="25.5" lncount="6" name="Lemuridae" id="20848"/>
+<circle cx="26.1%" cy="503" r="4" stroke="#000" stroke-width="1" fill="#000" />
+<circle cx="26.1%" cy="503" r="12" class="node" rank="infraorder" cilo="35" cihi="42" isci="true" time="38" lncount="18" name="Lemuriformes" id="20824"/>
+<circle cx="7.4%" cy="377" r="4" stroke="#000" stroke-width="1" fill="none" />
+<circle cx="7.4%" cy="377" r="12" class="node" rank="unknown" cilo="51" cihi="58" isci="true" time="55" lncount="19" dof="Strepsirrhini" id="20822"/>
 </g>
 <g id="timetree-names" class="branches" depth="unknown">
-<text x="646" y="64"> Perodicticus</text>
-<text x="646" y="88"> Arctocebus</text>
-<text x="646" y="112"> Loris</text>
-<text x="646" y="136"> Nycticebus</text>
-<text x="646" y="160"> Euoticus</text>
-<text x="646" y="184"> Otolemur</text>
-<text x="646" y="208"> Galago</text>
-<text x="646" y="232"> Galagoides</text>
-<text x="646" y="256"> Daubentonia</text>
-<text x="646" y="280"> Palaeopropithecus</text>
-<text x="646" y="304"> Hadropithecus</text>
-<text x="646" y="328"> Avahi</text>
-<text x="646" y="352"> Propithecus</text>
-<text x="646" y="376"> Indri</text>
-<text x="646" y="400"> Lepilemur</text>
-<text x="646" y="424"> Megaladapis</text>
-<text x="646" y="448"> Cheirogaleus</text>
-<text x="646" y="472"> Phaner</text>
-<text x="646" y="496"> Microcebus</text>
-<text x="646" y="520"> Mirza</text>
-<text x="646" y="544"> Allocebus</text>
-<text x="646" y="568"> Pachylemur</text>
-<text x="646" y="592"> Varecia</text>
-<text x="646" y="616"> Prolemur</text>
-<text x="646" y="640"> Hapalemur</text>
-<text x="646" y="664"> Lemur</text>
-<text x="646" y="688"> Eulemur</text>
+<text x="71.8%" y="64"> Perodicticus</text>
+<text x="71.8%" y="88"> Arctocebus</text>
+<text x="71.8%" y="112"> Loris</text>
+<text x="71.8%" y="136"> Nycticebus</text>
+<text x="71.8%" y="160"> Euoticus</text>
+<text x="71.8%" y="184"> Otolemur</text>
+<text x="71.8%" y="208"> Galago</text>
+<text x="71.8%" y="232"> Galagoides</text>
+<text x="71.8%" y="256"> Daubentonia</text>
+<text x="71.8%" y="280"> Palaeopropithecus</text>
+<text x="71.8%" y="304"> Hadropithecus</text>
+<text x="71.8%" y="328"> Avahi</text>
+<text x="71.8%" y="352"> Propithecus</text>
+<text x="71.8%" y="376"> Indri</text>
+<text x="71.8%" y="400"> Lepilemur</text>
+<text x="71.8%" y="424"> Megaladapis</text>
+<text x="71.8%" y="448"> Cheirogaleus</text>
+<text x="71.8%" y="472"> Phaner</text>
+<text x="71.8%" y="496"> Microcebus</text>
+<text x="71.8%" y="520"> Mirza</text>
+<text x="71.8%" y="544"> Allocebus</text>
+<text x="71.8%" y="568"> Pachylemur</text>
+<text x="71.8%" y="592"> Varecia</text>
+<text x="71.8%" y="616"> Prolemur</text>
+<text x="71.8%" y="640"> Hapalemur</text>
+<text x="71.8%" y="664"> Lemur</text>
+<text x="71.8%" y="688"> Eulemur</text>
 </g>
+</defs>
+<svg viewBox="0 0 900 728" preserveAspectRatio="none">
+<use href="#timetree-background-colors" width="1" height="1"/>
+</svg>
+<svg viewBox="0 0 900 728" preserveAspectRatio="none">
+<use href="#timetree-branches"/>
+</svg>
+<svg preserveAspectRatio="none">
+<use href="#timetree-nodes"/>
+</svg>
+<svg preserveAspectRatio="none">
+<use href="#timetree-names"/>
+</svg>
 </svg>

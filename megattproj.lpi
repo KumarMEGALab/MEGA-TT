@@ -53,16 +53,16 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <CommandLineParams Value="-o tt-widget60a6cd90445001.17919746.svg --earth-impacts ./scripts/megatt/earth_impacts.csv --o2 ./scripts/megatt/O2.txt --co2 ./scripts/megatt/CO2.txt --luminosity ./scripts/megatt/luminosity.txt --leaf-counts ./scripts/megatt/140k-leafNodeCounts.csv --geo-bg-colors auto --tree-name timetree --prune --newick --svg --width 900 --tree ./scripts/megatt/140k-order-tree.nwk --names-map ./scripts/megatt/140k-order-map.txt --ranks ./scripts/megatt/140k-order-ranks.txt --confidence-intervals ./scripts/megatt/140k-order-ci.csv --target-rank order --vspacing 2 --panel-height 1 -ids ids.txt"/>
-        <WorkingDirectory Value="/home/gstecher/Documents/megatt/sandbox"/>
+        <CommandLineParams Value="--tree ./inputs/97k-family-tree.nwk --names-map ./inputs/97k-family-map.txt --ranks ./inputs/97k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+        <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/pruneTree_97k"/>
         <Display Use="True"/>
       </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
           <local>
-            <CommandLineParams Value="-o tt-widget60a6cd90445001.17919746.svg --earth-impacts ./scripts/megatt/earth_impacts.csv --o2 ./scripts/megatt/O2.txt --co2 ./scripts/megatt/CO2.txt --luminosity ./scripts/megatt/luminosity.txt --leaf-counts ./scripts/megatt/140k-leafNodeCounts.csv --geo-bg-colors auto --tree-name timetree --prune --newick --svg --width 900 --tree ./scripts/megatt/140k-order-tree.nwk --names-map ./scripts/megatt/140k-order-map.txt --ranks ./scripts/megatt/140k-order-ranks.txt --confidence-intervals ./scripts/megatt/140k-order-ci.csv --target-rank order --vspacing 2 --panel-height 1 -ids ids.txt"/>
-            <WorkingDirectory Value="/home/gstecher/Documents/megatt/sandbox"/>
+            <CommandLineParams Value="--tree ./inputs/97k-family-tree.nwk --names-map ./inputs/97k-family-map.txt --ranks ./inputs/97k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+            <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/pruneTree_97k"/>
             <Display Use="True"/>
           </local>
         </Mode0>

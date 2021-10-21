@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="650" name="wrapper" y="0" >
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="60" name="timetree-geo-timescales" y="0" >
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="20" name="periods" y="0" id="timetree-periods" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="650" name="wrapper" y="0" viewBox="0 0 900 650">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="60" name="timetree-geo-timescales" y="0" viewBox="0 0 900 60">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="20" name="periods" y="0" id="timetree-periods" viewBox="0 0 900 20">
 <rect x="20" y="0" width="609" height="20" fill="none" stroke="#555555" stroke-width="1" />
 <rect x="21" y="2" width="49" height="16" fill="#FED96A" stroke="#FED96A" stroke-width="3" full-name="Ediacaran" start="630.00" end="542.00" unit="Period" title="Ediacaran" />
 <text x="32" y="16" full-name="Ediacaran" start="630.00" end="542.00" unit="Period" font-family="Helvetica">EDI</text>
@@ -33,7 +33,7 @@
 <text x="633" y="16" fill="black" font-size="12" font-family="Helvetica">Periods</text>
 <polyline points="19,0 628,0" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="20" name="eras" y="20" id="timetree-eras" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="20" name="eras" y="20" id="timetree-eras" viewBox="0 0 900 20">
 <rect x="20" y="0" width="609" height="20" fill="none" stroke="#555555" stroke-width="1" />
 <rect x="21" y="1" width="49" height="17" fill="#FEB342" stroke="#FEB342" stroke-width="3" full-name="Neo-Proterozoic" start="1000.00" end="542.00" unit="Era" title="Neo-Proterozoic" />
 <text x="40" y="16" full-name="Neo-Proterozoic" start="1000.00" end="542.00" unit="Era" font-family="Helvetica">Z</text>
@@ -48,7 +48,7 @@
 <rect x="629" y="-1" width="3" height="21" fill="white" stroke="white" stroke-width="1" />
 <text x="633" y="15" fill="black" font-size="12" font-family="Helvetica">Eras</text>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="20" name="eons" y="40" id="timetree-eons" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="20" name="eons" y="40" id="timetree-eons" viewBox="0 0 900 20">
 <rect x="20" y="0" width="609" height="20" fill="none" stroke="#555555" stroke-width="1" />
 <rect x="21" y="1" width="49" height="17" fill="#F73563" stroke="#F73563" stroke-width="3" full-name="Proterozoic" start="2500.00" end="542.00" unit="Eon" title="Proterozoic" />
 <text x="36" y="16" full-name="Proterozoic" start="2500.00" end="542.00" unit="Eon" font-family="Helvetica">Pr</text>
@@ -62,7 +62,7 @@
 </svg>
 <text x="688" y="36" font-height="16" fill="#1c6bc9" font-family="Helvetica">Geologic Timescale</text>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="35" name="timescale" y="60" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="35" name="timescale" y="60" viewBox="0 0 900 35">
 <g class="timescale">
 <polyline points="20,5 628,5" fill="none" stroke="#333" stroke-width="1" stroke-linecap="square" />
 <polyline points="628,5 628,20" fill="none" stroke="#333" stroke-width="1" stroke-linecap="square" />
@@ -80,7 +80,7 @@
 <text x="688" y="24" font-height="16" fill="#1c6bc9" font-family="Helvetica">Time (MYA)</text>
 </g>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="115" name="impacts" y="110" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="115" name="impacts" y="110" viewBox="0 0 900 115">
 <g class="earth-impacts">
 <polyline points="20,105 628,105 628,5" stroke="white" stroke-width="1" fill="white" />
 <polyline points="20,55 628,55" fill="none" stroke-dasharray="5,5" stroke="orange" stroke-width="1" stroke-linecap="square"/>
@@ -269,7 +269,7 @@
 </g>
 <polyline points="20,105 628,105 628,5" fill="none" stroke="#aaaaaa" stroke-width="1" stroke-linecap="square"/>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="115" name="o2" y="225" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="115" name="o2" y="225" viewBox="0 0 900 115">
 <g class="geo-data" name="o2" >
 <polyline points="20,105 628,105 628,5" fill="none" stroke="#aaaaaa" stroke-width="1" stroke-linecap="square"/>
 <text x="688" y="59" font-height="16" fill="#1c6bc9" font-family="Helvetica">Oxygen</text>
@@ -282,7 +282,7 @@
 <polygon points="628,104 628,73 622,73 616,73 609,72 602,70 596,68 589,67 582,65 575,64 569,64 562,64 555,64 549,64 542,64 535,64 529,65 522,65 515,67 508,68 502,69 495,71 488,72 482,74 475,75 468,76 462,76 455,77 448,77 441,77 435,76 428,76 421,75 415,74 408,73 401,69 395,66 388,62 381,55 374,49 368,43 361,37 354,31 348,25 341,19 334,12 328,9 321,6 314,6 307,7 301,9 294,12 287,16 281,19 274,24 267,28 261,33 254,38 247,43 240,49 234,54 227,59 220,64 214,68 207,72 200,75 194,79 187,82 180,85 173,88 167,90 160,92 153,93 147,94 140,95 133,96 127,96 120,96 113,96 106,96 100,97 93,97 86,97 80,97 73,97 66,98 60,98 53,100 46,100 39,101 33,101 26,102 20,102 20,104 628,104" fill="#ffc300" fill-opacity="0.75" stroke="#ffc300" stroke-width="1" />
 </g>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="115" name="co2" y="340" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="115" name="co2" y="340" viewBox="0 0 900 115">
 <g class="geo-data" name="co2" >
 <polyline points="20,105 628,105 628,5" fill="none" stroke="#aaaaaa" stroke-width="1" stroke-linecap="square"/>
 <text x="688" y="59" font-height="16" fill="#1c6bc9" font-family="Helvetica">Carbon Dioxide</text>
@@ -295,7 +295,7 @@
 <polygon points="628,104 628,101 627,102 626,102 625,102 624,101 623,101 622,102 621,103 620,103 619,103 618,103 617,102 616,103 615,103 614,103 613,103 612,103 611,101 610,102 609,103 608,102 607,102 606,102 605,102 604,103 603,102 602,101 601,100 600,99 599,100 598,100 597,99 596,97 595,95 594,93 593,92 592,92 591,93 590,94 589,94 588,95 587,94 586,93 585,92 584,91 583,91 582,90 581,89 580,89 579,89 578,90 577,89 576,89 575,90 574,94 573,94 572,96 571,96 570,96 569,96 568,96 567,96 566,96 565,95 564,95 563,94 562,93 561,93 559,92 558,92 557,91 556,91 555,90 554,90 553,89 552,89 551,88 550,88 549,87 548,87 547,86 546,86 544,86 543,86 542,86 541,86 540,86 539,86 538,86 537,86 536,86 535,85 534,85 533,84 532,84 531,83 530,83 529,83 527,82 526,82 525,81 524,81 523,80 522,79 521,79 520,78 519,77 518,77 517,76 516,75 515,75 514,74 513,73 511,73 510,73 509,73 508,73 507,74 506,74 505,74 504,75 503,76 502,77 501,78 500,79 499,80 498,81 497,82 496,83 495,84 494,84 493,85 492,85 491,86 489,87 488,87 487,88 486,89 485,89 484,89 483,89 482,88 481,88 480,87 479,86 478,85 477,85 476,84 475,83 473,83 472,82 471,82 470,82 469,81 468,81 467,81 466,81 465,81 464,81 463,81 462,81 461,81 460,81 459,81 458,82 457,82 455,82 454,82 453,82 452,82 451,83 450,83 449,83 448,83 447,84 446,84 445,84 444,84 443,84 442,85 441,85 440,85 439,85 438,85 436,85 435,85 434,85 433,86 432,86 431,86 430,85 429,85 428,85 427,85 426,85 425,85 424,85 423,85 422,85 421,84 420,84 418,84 417,84 416,84 415,83 414,83 413,83 412,83 411,83 410,83 409,83 408,83 407,83 406,84 405,84 404,84 403,85 402,85 401,86 399,87 398,88 397,89 396,90 395,90 394,91 393,92 392,92 391,93 390,93 389,94 388,94 387,94 386,95 385,95 384,95 383,95 382,96 381,96 380,96 378,96 377,96 376,97 375,97 374,97 373,97 372,97 371,97 370,97 369,97 368,98 367,98 366,98 365,98 364,98 363,98 362,99 361,99 359,99 358,99 357,99 356,99 355,99 354,100 353,100 352,100 351,100 350,100 349,101 348,101 347,101 346,101 345,102 344,102 343,102 342,102 340,102 339,102 338,102 337,102 336,102 335,102 334,102 333,102 332,102 331,102 330,102 329,102 328,102 327,102 326,102 325,102 324,102 322,102 321,102 320,102 319,101 318,101 317,101 316,101 315,101 314,101 313,101 312,101 311,101 310,101 309,101 308,101 307,100 305,100 304,100 303,99 302,99 301,99 300,98 299,98 298,98 297,97 296,97 295,97 294,96 293,96 292,95 291,95 289,94 288,92 287,90 286,87 285,85 284,82 283,80 282,77 281,75 280,73 278,71 277,69 276,67 275,66 274,64 273,63 272,61 271,60 270,58 269,57 268,56 267,56 265,55 264,54 263,54 262,53 261,52 260,51 259,51 258,50 257,50 256,50 255,50 254,50 253,50 252,50 251,49 249,49 248,49 247,49 246,50 245,50 244,51 243,51 242,52 241,52 240,53 239,54 238,54 237,55 236,55 235,56 234,57 233,57 232,58 231,59 230,59 229,60 227,60 226,59 225,59 224,58 223,58 222,57 221,57 220,56 219,56 218,55 217,54 216,53 215,53 214,52 212,51 211,50 210,49 209,48 208,47 207,46 206,45 205,44 204,44 203,43 202,42 201,41 200,41 199,40 197,39 196,39 195,38 194,38 193,37 192,36 191,36 190,35 189,35 188,34 187,33 186,33 185,33 184,32 182,32 181,32 180,31 179,31 178,31 177,30 176,30 175,30 174,29 173,29 172,28 171,28 170,27 169,27 168,26 166,26 165,25 164,25 163,24 162,24 161,23 160,23 159,22 158,22 157,21 156,21 155,21 154,21 153,22 152,22 151,22 149,22 148,23 147,23 146,23 145,24 144,24 143,24 142,24 141,25 140,25 139,25 138,26 137,26 136,26 135,27 134,27 133,27 132,27 130,27 129,26 128,26 127,26 126,26 125,26 124,26 123,26 122,26 121,25 120,25 119,25 118,25 117,25 116,24 115,24 113,23 112,22 111,21 110,20 109,20 108,19 107,18 106,17 105,16 104,15 103,14 102,13 101,12 100,11 98,10 97,9 96,8 95,7 94,6 93,6 92,7 91,9 90,11 89,13 88,15 87,17 86,19 85,21 84,23 83,25 82,27 81,29 80,30 79,32 78,34 77,36 76,37 75,39 74,41 73,43 72,44 71,47 69,49 68,51 67,53 66,56 65,58 64,61 63,63 62,64 61,66 60,66 59,67 58,67 57,67 56,68 55,68 54,69 53,69 52,69 51,70 50,70 49,71 48,72 47,73 46,73 45,74 44,75 42,75 41,76 40,76 34,76 24,76 20,75 20,104 628,104" fill="#ff5733" fill-opacity="0.75" stroke="#ff5733" stroke-width="1" />
 </g>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="115" name="luminosity" y="455" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="115" name="luminosity" y="455" viewBox="0 0 900 115">
 <g class="geo-data" name="luminosity" >
 <polyline points="20,105 628,105 628,5" fill="none" stroke="#aaaaaa" stroke-width="1" stroke-linecap="square"/>
 <text x="688" y="59" font-height="16" fill="#1c6bc9" font-family="Helvetica">Solar Luminosity</text>
