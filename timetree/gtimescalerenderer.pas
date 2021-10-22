@@ -16,6 +16,7 @@ type
 
   TTimescaleRenderer = class(TObject)
     private
+      FScalingFactor: Integer;
       FNumTimeScaleTicks: Integer;
       FSvgStrings: TStringList;
       FIsLogScale: Boolean;
@@ -54,7 +55,7 @@ type
       constructor Create;
       destructor Destroy; override;
 
-      function Render(aRect: TRect; maxTime: Double; times: TArrayOfGeologicTime): TStringList;
+      function Render(aRect: TRect; maxTime: Double; times: TArrayOfGeologicTime; scalingFactor: Integer = 0): TStringList;
 
       property IsLogScale: Boolean read FIsLogScale write SetIsLogScale;
       property NumTimeScaleTicks: Integer read FNumTimeScaleTicks write SetNumTimeScaleTicks;
@@ -319,7 +320,7 @@ begin
     TimeText := FScaleTicks[i].Timetext;
     x := Points[0].X - (CustomTextWidth(TimeText) div 3);
     y := Points[1].Y + FMargins.Top + CustomTextHeight(TimeText, 8);
-    SvgString := TextToSvgText(x, y, TimeText, FTextAttribs);
+    SvgString := TextToSvgText(x, y, TimeText, FTextAttribs, FScalingFactor);
     FSvgStrings.Add(SvgString);
   end;
 end;
@@ -363,6 +364,7 @@ end;
 
 constructor TTimescaleRenderer.Create;
 begin
+  FScalingFactor := 0;
   MapMyaToCoordsFunc := nil;
   FIsLogScale := False;
   FSvgStrings := TStringList.Create;
@@ -386,8 +388,9 @@ begin
   inherited Destroy;
 end;
 
-function TTimescaleRenderer.Render(aRect: TRect; maxTime: Double; times: TArrayOfGeologicTime): TStringList;
+function TTimescaleRenderer.Render(aRect: TRect; maxTime: Double; times: TArrayOfGeologicTime; scalingFactor: Integer = 0): TStringList;
 begin
+  FScalingFactor := scalingFactor;
   Assert(Assigned(MapMyaToCoordsFunc));
   Result := TStringList.Create;
   FSvgStrings.Clear;

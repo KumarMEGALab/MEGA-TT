@@ -21,5 +21,3 @@ if __name__ == "__main__":
         print("DEPENDENCY TEST FAILED! Check that no dependencies on graphical libraries exist")
     else:
         print("Dependency test passed!")
-        print("copying executable to smoke tests directory")
-        shutil.copyfile('./megatt', os.path.join('smoke_tests', 'megatt'))

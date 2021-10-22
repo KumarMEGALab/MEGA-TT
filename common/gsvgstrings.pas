@@ -9,9 +9,10 @@ uses
 
 function PointsToSvgLine(Points: array of TPoint; Attributes: array of TXmlAttribute): String;
 function PointsToSvgPolygon(Points: array of TPoint; Attributes: array of TXmlAttribute): String;
-function TextToSvgText(x, y: Integer; aText: String; Attributes: array of TXmlAttribute): String;
+function TextToSvgText(x, y: Integer; aText: String; Attributes: array of TXmlAttribute; xScalingFactor: Integer = 0): String;
 function TextToVerticalSvgText(x, y: Integer; aText: String; Attributes: array of TXmlAttribute): String;
-function RectToSvgRect(aRect: TRect; Attributes: array of TXmlAttribute): String;
+function RectToSvgRect(aRect: TRect; Attributes: array of TXmlAttribute): String; overload;
+function RectToSvgRect(aRect: TRect; Attributes: array of TXmlAttribute; xScalingFactor: Integer): String; overload;
 function RectToPolyline(aRect: TRect; LineAttributes: array of TXMLAttribute): String;
 function CircleToSvgCircle(x,y,r: Integer; Attributes: array of TXmlAttribute): String;
 function AddSvgTextToRect(aRect: TRect; aText: String; Attributes: array of TXMLAttribute; aFontHeight: Integer=16): String;
@@ -58,11 +59,16 @@ begin
   Result := Result + '/>';
 end;
 
-function TextToSvgText(x, y: Integer; aText: String; Attributes: array of TXmlAttribute): String;
+function TextToSvgText(x, y: Integer; aText: String; Attributes: array of TXmlAttribute; xScalingFactor: Integer = 0): String;
 var
   i: Integer;
+  tempStr: String = '';
 begin
-  Result := '<text x=' + DBLQ + IntToStr(x) + DBLQ + ' ';
+  if xScalingFactor <> 0 then
+    tempStr := Format('%s%.1f%%%s', [DBLQ, x/xScalingFactor*100, DBLQ])
+  else
+    tempStr := Format('%s%d%s', [DBLQ, x, DBLQ]);
+  Result := '<text x=' + tempStr + ' ';
   Result := Result + 'y=' + DBLQ + IntToStr(y) + DBLQ + ' ';
   if Length(Attributes) > 0 then
   begin
@@ -95,6 +101,23 @@ begin
   Result := '<rect x=' + dblq + IntToStr(aRect.Left + 1) + dblq + ' ';
   Result := Result + 'y=' + dblq + IntToStr(aRect.Top) + dblq + ' ';
   Result := Result + 'width=' + dblq + IntToStr(aRect.Right - aRect.Left) + dblq + ' ';
+  Result := Result + 'height=' + dblq + IntToStr(aRect.Bottom - aRect.Top) + dblq + ' ';
+  if Length(Attributes) > 0 then
+    for i := 0 to Length(Attributes) - 1 do
+      Result := Result + Attributes[i].Name + '=' + dblq + Attributes[i].Value + dblq + ' ';
+  Result := Trim(Result) + ' />';
+end;
+
+function RectToSvgRect(aRect: TRect; Attributes: array of TXmlAttribute; xScalingFactor: Integer): String;
+var
+  i: Integer;
+  tempStr: String = '';
+begin
+  tempStr := Format('%s%.1f%%%s', [dblq, (aRect.Left + 1)/xScalingFactor*100,dblq]);
+  Result := '<rect x=' + tempStr + ' ';
+  Result := Result + 'y=' + dblq + IntToStr(aRect.Top) + dblq + ' ';
+  tempStr := Format('%s%.1f%%%s', [dblq, (aRect.Right - aRect.Left)/xScalingFactor*100, dblq]);
+  Result := Result + 'width=' + tempStr + ' ';
   Result := Result + 'height=' + dblq + IntToStr(aRect.Bottom - aRect.Top) + dblq + ' ';
   if Length(Attributes) > 0 then
     for i := 0 to Length(Attributes) - 1 do

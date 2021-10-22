@@ -769,9 +769,9 @@ end;
       function PointsToSvgLine(Points: array of TPoint; aColor: String; aWidth: String): String; overload;
       function PointsToSvgLine(Points: array of TPoint; Attributes: array of TXmlAttribute; aColor: String; aWidth: String): String; overload;
       function PointsToSvgPolygon(Points: array of TPoint; Attributes: array of TXmlAttribute): String;
-      function TextToSvgText(x, y: Integer; aText: String; aHeight: Integer=16; aColor: String='black'): String; overload;
-      function TextToSvgText(x, y: Integer; aText: String; Attributes: array of TXMLAttribute): String; overload;
-      function AddSvgTextToRect(aRect: TRect; aText: String; Attributes: array of TXMLAttribute): String;
+      function TextToSvgText(x, y: Integer; aText: String; doScaleWidth: Boolean; aHeight: Integer=16; aColor: String='black'): String; overload;
+      function TextToSvgText(x, y: Integer; aText: String; Attributes: array of TXMLAttribute; aScalingFactor: Integer = 0): String; overload;
+      function AddSvgTextToRect(aRect: TRect; aText: String; Attributes: array of TXMLAttribute; aScalingFactor: Integer = 0): String;
       function AddVerticalSvgTextToRect(aRect: TRect; aText: String; fHeight: String; Attributes: array of TXMLAttribute): String;
       function GeoTimescaleHeight: Integer;
     public
@@ -788,6 +788,8 @@ end;
       procedure GenerateSvgStrings(TreeFileName: String; mobileFriendly: Boolean); overload;
       procedure OpenSVG(aName: String; aWidth, aHeight: Integer; y: Integer; var aFile: TextFile; id: String=''); { writes the header tags}
       procedure CloseSVG(var aFile: TextFile); { closes the end tags for FTreeSVGFile}
+      procedure OpenGroupDefs(var aFile: TextFile; groupId: String; className: String = '');
+      procedure CloseGroupDefs(var aFile: TextFile; aWidth: Integer; aHeight: Integer; groupId: String);
       procedure UpdateTaxaOrder(InputIds: TLongIntList);
       property ImageWidth: Integer read FImageWidth write SetImageWidth;
       property ImageHeight: Integer read FImageHeight write SetImageHeight;
@@ -1359,7 +1361,11 @@ begin
     rectAttribs[1].Value := '#555555';
     rectAttribs[2].Name := 'stroke-width';
     rectAttribs[2].Value := '1';
-    WriteLn(FPanelsSvgFile, RectToSvgRect(aRect, rectAttribs));
+    if FIsMobileFriendly then
+      Temp := RectToSvgRect(aRect, rectAttribs, FSvgTreeImageWidth)
+    else
+      Temp := RectToSvgRect(aRect, rectAttribs);
+    WriteLn(FPanelsSvgFile, Temp);
 
     SetLength(rectAttribs, 8);
     SetLength(textAttribs, 4);
@@ -1402,14 +1408,20 @@ begin
       rectAttribs[5].Value := Format('%.2f', [times[i].EndMya]);
       rectAttribs[6].Value := TimespanTypeString(times[i].TimespanType);
       rectAttribs[7].Value := times[i].Name;
-      Temp := RectToSvgRect(aRect, rectAttribs);
+      if FIsMobileFriendly then
+        Temp := RectToSvgRect(aRect, rectAttribs, FSvgTreeImageWidth)
+      else
+        Temp := RectToSvgRect(aRect, rectAttribs);
       WriteLn(FPanelsSvgFile, Temp);
 
       textAttribs[0].Value := times[i].Name;
       textAttribs[1].Value := Format('%.2f', [times[i].StartMya]);
       textAttribs[2].Value := Format('%.2f', [times[i].EndMya]);
       textAttribs[3].Value := TimespanTypeString(times[i].TimespanType);
-      Temp := AddSvgTextToRect(aRect, times[i].GetBestFitText(aRect), textAttribs);
+      if FIsMobileFriendly then
+        Temp := AddSvgTextToRect(aRect, times[i].GetBestFitText(aRect), textAttribs, FSvgTreeImageWidth)
+      else
+        Temp := AddSvgTextToRect(aRect, times[i].GetBestFitText(aRect), textAttribs);
       if Temp <> EmptyStr then
         WriteLn(FPanelsSvgFile, Temp);
     end;
@@ -1449,12 +1461,15 @@ begin
     rectAttribs[1].Value := 'white';
     rectAttribs[2].Name := 'stroke-width';
     rectAttribs[2].Value := '1';
-    WriteLn(FPanelsSvgFile, RectToSvgRect(aRect, rectAttribs));
+    if FIsMobileFriendly then
+      WriteLn(FPanelsSvgFile, RectToSvgRect(aRect, rectAttribs, FSvgTreeImageWidth))
+    else
+      WriteLn(FPanelsSvgFile, RectToSvgRect(aRect, rectAttribs));
 
     { write the name of the geologic level}
     x := aRect.Left + 5;
     y :=  (aRect.Top + Round((aRect.Bottom - aRect.Top) / 2) + (FScaleValFontHeight div 2));
-    WriteLn(FPanelsSvgFile, TextToSvgText(x, y, TimespanTypeString(aLevel) + 's', FScaleValFontHeight));
+    WriteLn(FPanelsSvgFile, TextToSvgText(x, y, TimespanTypeString(aLevel) + 's', FIsMobileFriendly, FScaleValFontHeight));
   end;
 end;
 
@@ -1551,7 +1566,10 @@ var
   titleSvg: String;
 begin
   coords := GeoTimescaleTitleCoords;
-  titleSvg := TextToSvgText(coords.x, coords.y, 'Geologic Timescale', FPanelTitleTextAttribs);
+  if FIsMobileFriendly then
+    titleSvg := TextToSvgText(coords.x, coords.y, 'Geologic Timescale', FPanelTitleTextAttribs, FSvgTreeImageWidth)
+  else
+    titleSvg := TextToSvgText(coords.x, coords.y, 'Geologic Timescale', FPanelTitleTextAttribs);
   WriteLn(FPanelsSvgFile, titleSvg);
 end;
 
@@ -1643,14 +1661,9 @@ procedure TMySvgTreeBox.DrawEarthImpacts;
 var
   aImpacts: TEarthImpactsArray;
   i: Integer;
-  Temp: String;
-  x, y, r: Integer;
-  aRadius: Double;
   aRect: TRect;
-  LinePoints: array[0..1] of TPoint;
   MaxDiam: Integer;
   attribs: array[0..1] of TXMLAttribute;
-  ageStr: String;
   renderer: TEarthImpactsRenderer=nil;
   svgStrings: TStringList=nil;
 begin
@@ -1680,7 +1693,6 @@ end;
 procedure TMySvgTreeBox.DrawEarthImpactsPanelBorder;
 var
   aRect: TRect;
-  Temp: String;
   p: array [0..2] of TPoint;
 begin
   aRect := ImpactsPanelCoords;
@@ -1740,7 +1752,7 @@ begin
   aText := IntToStr(MaxDiam);
   x := aRect.Right + 14;
   y := aRect.Top + (FScaleValFontHeight div 2) +1;
-  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, FScaleValFontHeight, 'black'));
+  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, False, FScaleValFontHeight, 'black'));
 
   if FGeoDataPanelHeight > 50 then
   begin
@@ -1754,7 +1766,7 @@ begin
     { draw the 1/4 value}
     aText := IntToStr(Trunc(RoundTo((MaxDiam / 2), 2)));
     y := aRect.Top + Round(FGeoDataPanelHeight / 4) +(FScaleValFontHeight div 4);
-    WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, FScaleValFontHeight, 'black'));
+    WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, False, FScaleValFontHeight, 'black'));
   end;
 
 
@@ -1768,7 +1780,7 @@ begin
   { draw the center value}
   aText := '0 km';
   y := aRect.Top + Round(FGeoDataPanelHeight / 2) +(FScaleValFontHeight div 4);
-  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, FScaleValFontHeight));
+  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, False, FScaleValFontHeight));
 
   if FGeoDataPanelHeight > 50 then
   begin
@@ -1782,7 +1794,7 @@ begin
     { draw the 3/4 value}
     aText := IntToStr(Trunc(RoundTo((MaxDiam / 2), 2)));
     y := aRect.Top + Round(FGeoDataPanelHeight * 0.75) +(FScaleValFontHeight div 4);
-    WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, FScaleValFontHeight));
+    WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, False, FScaleValFontHeight));
   end;
 
   { draw the bottom tick}
@@ -1795,7 +1807,7 @@ begin
   { draw the bottom value}
   aText := IntToStr(MaxDiam);
   y := aRect.Bottom + (FScaleValFontHeight div 4);
-  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, FScaleValFontHeight));
+  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, False, FScaleValFontHeight));
 end;
 
 procedure TMySvgTreeBox.DrawGeoDataPanel(aRect: TRect; aData: TGeoData);
@@ -1843,7 +1855,7 @@ begin
   aText := Format('%6.2f', [MaxVal]);
   x := aRect.Right + 14;
   y :=  aRect.Top + (FScaleValFontHeight div 2);
-  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, FScaleValFontHeight));
+  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, False, FScaleValFontHeight));
 
 
   { draw the center tick}
@@ -1856,7 +1868,7 @@ begin
   { draw the center value}
   aText := Format('%6.2f' + aData.LegendKey, [MinVal + (MaxVal - MinVal) / 2]);
   y := aRect.Top + Round(FGeoDataPanelHeight / 2) +(FScaleValFontHeight div 4);
-  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, FScaleValFontHeight));
+  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, False, FScaleValFontHeight));
 
     { draw the bottom tick}
   LinePoints[0].X := aRect.Right + 2;
@@ -1868,7 +1880,7 @@ begin
   { draw the bottom value}
   aText := Format('%8.2f',[MinVal]);
   y := aRect.Bottom + (FScaleValFontHeight div 4);
-  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, FScaleValFontHeight));
+  WriteLn(FPanelsSvgFile, TextToSvgText(x, y, aText, False, FScaleValFontHeight));
 end;
 
 procedure TMySvgTreeBox.DrawGeoDataPanelData(aRect: TRect; aData: TGeoData);
@@ -1940,14 +1952,18 @@ begin
       FGeologicTimes := FGeoTimescale.GetTimescale(FRoot.height, tstAge)
     else
       FGeologicTimes := FGeoTimescale.GetTimescale(FRoot.height, tstPeriod);
-    SvgStrings := Renderer.Render(aRect, FRoot.height, FGeologicTimes);
-    WriteLn(FPanelsSvgFile, '<g class=' + dblq + 'timescale' + dblq + '>');
+    if FIsMobileFriendly then
+      SvgStrings := Renderer.Render(aRect, FRoot.height, FGeologicTimes, FSvgTreeImageWidth)
+    else
+      SvgStrings := Renderer.Render(aRect, FRoot.height, FGeologicTimes);
     if SvgStrings.Count > 0 then
       for i := 0 to SvgStrings.Count - 1 do
         WriteLn(FPanelsSvgFile, SvgStrings[i]);
     titleCoords := TimescaleTitleCoords;
-    WriteLn(FPanelsSvgFile, TextToSvgText(titleCoords.X, titleCoords.Y, 'Time (MYA)', FPanelTitleTextAttribs));
-    WriteLn(FPanelsSvgFile, '</g>');
+    if FIsMobileFriendly then
+      WriteLn(FPanelsSvgFile, TextToSvgText(titleCoords.X, titleCoords.Y, 'Time (MYA)', FPanelTitleTextAttribs, FSvgTreeImageWidth))
+    else
+      WriteLn(FPanelsSvgFile, TextToSvgText(titleCoords.X, titleCoords.Y, 'Time (MYA)', FPanelTitleTextAttribs));
   finally
     if Assigned(Renderer) then
       Renderer.Free;
@@ -2148,11 +2164,16 @@ begin
   Result := Result + '/>';
 end;
 
-function TMySvgTreeBox.TextToSvgText(x, y: Integer; aText: String; Attributes: array of TXMLAttribute): String;
+function TMySvgTreeBox.TextToSvgText(x, y: Integer; aText: String; Attributes: array of TXMLAttribute; aScalingFactor: Integer = 0): String;
 var
   i: Integer;
+  tempStr: String = '';
 begin
-  Result := '<text x=' + DBLQ + IntToStr(x) + DBLQ + ' ';
+  if aScalingFactor <> 0 then
+    tempStr := Format('%s%.1f%%%s', [DBLQ, x/aScalingFactor*100, DBLQ])
+  else
+    tempStr := Format('%s%d%s', [DBLQ, x, DBLQ]);
+  Result := '<text x=' + tempStr + ' ';
   Result := Result + 'y=' + DBLQ + IntToStr(y) + DBLQ + ' ';
   if Length(Attributes) > 0 then
   begin
@@ -2163,9 +2184,15 @@ begin
   Result := Result + HtmlEntities(aText) + '</text>';
 end;
 
-function TMySvgTreeBox.TextToSvgText(x, y: Integer; aText: String; aHeight: Integer=16; aColor: String='black'): String;
+function TMySvgTreeBox.TextToSvgText(x, y: Integer; aText: String; doScaleWidth: Boolean; aHeight: Integer=16; aColor: String='black'): String;
+var
+  tempStr: String = '';
 begin
-  Result := '<text x=' + DBLQ + IntToStr(x) + DBLQ + ' ';
+  if FIsMobileFriendly then
+    tempStr := Format('%s%.1f%%%s', [DBLQ, x/FSvgTreeImageWidth*100, DBLQ])
+  else
+    tempStr := Format('%s%d%s', [DBLQ, x, DBLQ]);
+  Result := '<text x=' + tempStr + ' ';
   Result := Result + 'y=' + DBLQ + IntToStr(y) + DBLQ + ' ';
   Result := Result + 'fill=' + DBLQ + aColor + DBLQ + ' ';
   Result := Result + 'font-size=' + DBLQ + IntToStr(aHeight) + DBLQ + ' ';
@@ -2173,7 +2200,7 @@ begin
   Result := Result + HtmlEntities(aText) + '</text>';
 end;
 
-function TMySvgTreeBox.AddSvgTextToRect(aRect: TRect; aText: String; Attributes: array of TXMLAttribute): String;
+function TMySvgTreeBox.AddSvgTextToRect(aRect: TRect; aText: String; Attributes: array of TXMLAttribute; aScalingFactor: Integer =  0): String;
 var
   aWidth: Integer;
   tWidth: Integer;
@@ -2196,7 +2223,7 @@ begin
   x := aRect.Left + Round((aWidth - tWidth) * 0.5);
   y := Round(aRect.Bottom - FGeoTimescaleHeight *0.125);
   if (Temp[1] <> '.') and (aWidth > tWidth) then
-    Result := TextToSvgText(x, y, Temp, Attributes)
+    Result := TextToSvgText(x, y, Temp, Attributes, aScalingFactor)
   else
     Result := EmptyStr;
 end;
@@ -2362,54 +2389,75 @@ begin
       if ShowEpochsAndAges then
       begin
         OpenSvg('ages', aWidth, agesHeight, y, FPanelsSvgFile, TreeName + '-ages');
+        OpenGroupDefs(FPanelsSvgFile, 'timescale-ages', 'geo-timescale');
         y := y + DrawGeologicLevel(tstAge);
         DrawGeologicLevelTopBorder;
+        CloseGroupDefs(FPanelsSvgFile, aWidth, agesHeight, 'timescale-ages');
         CloseSvg(FPanelsSvgFile);
+
         OpenSvg('epochs', aWidth, epochsHeight, y, FPanelsSvgFile, TreeName + '-epochs');
+        OpenGroupDefs(FPanelsSvgFile, 'timescale-epochs', 'geo-timescale');
         y := y + DrawGeologicLevel(tstEpoch);
+        CloseGroupDefs(FPanelsSvgFile, aWidth, epochsHeight, 'timescale-epochs');
         CloseSvg(FPanelsSvgFile);
       end;
       OpenSvg('periods', aWidth, FGeoTimescaleHeight, y, FPanelsSvgFile, TreeName + '-periods');
+      OpenGroupDefs(FPanelsSvgFile, 'timescale-periods', 'geo-timescale');
       DrawGeologicLevel(tstPeriod);
       if not ShowEpochsAndAges then
         DrawGeologicLevelTopBorder;
+      CloseGroupDefs(FPanelsSvgFile, aWidth, FGeoTimescaleHeight, 'timescale-periods');
       CloseSvg(FPanelsSvgFile);
 
       y := y + FGeoTimescaleHeight;
       OpenSvg('eras', aWidth, FGeoTimescaleHeight, y, FPanelsSvgFile, TreeName + '-eras');
+      OpenGroupDefs(FPanelsSvgFile, 'timescale-eras', 'geo-timescale');
       DrawGeologicLevel(tstEra);
+      CloseGroupDefs(FPanelsSvgFile, aWidth, FGeoTimescaleHeight, 'timescale-eras');
       CloseSvg(FPanelsSvgFile);
 
       y := y + FGeoTimescaleHeight;
       OpenSvg('eons', aWidth, FGeoTimescaleHeight, y, FPanelsSvgFile, TreeName + '-eons');
+      OpenGroupDefs(FPanelsSvgFile, 'timescale-eons', 'geo-timescale');
       DrawGeologicLevel(tstEon, True);
+      CloseGroupDefs(FPanelsSvgFile, aWidth, FGeoTimescaleHeight, 'timescale-eons');
       CloseSvg(FPanelsSvgFile);
       DrawGeologicTimescaleTitle;
       CloseSvg(FPanelsSvgFile);
 
       y := y + FGeoTimescaleHeight;
       OpenSvg('timescale', aWidth, FTimescaleHeight, y, FPanelsSvgFile);
+      OpenGroupDefs(FPanelsSvgFile, 'timescale', 'timescale');
       DrawTimescale;
+      CloseGroupDefs(FPanelsSvgFile, aWidth, FTimescaleHeight, 'timescale');
       CloseSvg(FPanelsSvgFile);
 
       y := y + FTimescaleHeight + (FPanelsMargin);
       OpenSvg('impacts', aWidth, FGeoDataPanelHeight + FPanelsMargin, y, FPanelsSvgFile);
+      OpenGroupDefs(FPanelsSvgFile, 'earth-impacts', 'earth-impacts');
       DrawEarthImpacts;
+      CloseGroupDefs(FPanelsSvgFile, aWidth, FGeoDataPanelHeight + FPanelsMargin, 'earth-impacts');
       CloseSvg(FPanelsSvgFile);
 
       y := y +FGeoDataPanelHeight + FPanelsMargin;
       OpenSvg('o2', aWidth, FGeoDataPanelHeight + FPanelsMargin, y, FPanelsSvgFile);
+      OpenGroupDefs(FPanelsSvgFile, 'o2', 'geo-data');
       DrawGeoDataPanel(O2PanelCoords, FO2Data);
+      CloseGroupDefs(FPanelsSvgFile, aWidth, FGeoDataPanelHeight + FPanelsMargin, 'o2');
       CloseSvg(FPanelsSvgFile);
 
       y := y + FGeoDataPanelHeight + FPanelsMargin;
       OpenSvg('co2', aWidth, FGeoDataPanelHeight + FPanelsMargin, y, FPanelsSvgFile);
+      OpenGroupDefs(FPanelsSvgFile, 'co2', 'geo-data');
       DrawGeoDataPanel(CO2PanelCoords, FCO2Data);
+      CloseGroupDefs(FPanelsSvgFile, aWidth, FGeoDataPanelHeight + FPanelsMargin, 'co2');
       CloseSvg(FPanelsSvgFile);
 
       y := y + FGeoDataPanelHeight + FPanelsMargin;
       OpenSvg('luminosity', aWidth, FGeoDataPanelHeight + FPanelsMargin, y, FPanelsSvgFile);
+      OpenGroupDefs(FPanelsSvgFile, 'luminosity', 'geo-data');
       DrawGeoDataPanel(LuminosityPanelCoords, FLuminosityData);
+      CloseGroupDefs(FPanelsSvgFile, aWidth, FGeoDataPanelHeight + FPanelsMargin, 'luminosity');
       CloseSvg(FPanelsSvgFile);
       CloseSvg(FPanelsSvgFile);
     end;
@@ -2515,6 +2563,24 @@ begin
   WriteLn(aFile, '</svg>');
 end;
 
+procedure TMySvgTreeBox.OpenGroupDefs(var aFile: TextFile; groupId: String; className: String);
+begin
+  WriteLn(aFile, '<defs>');
+  if className <> EmptyStr then
+    WriteLn(aFile, Format('<g id="%s" class="%s">', [groupId, className]))
+  else
+    WriteLn(aFile, Format('<g id="%s">', [groupId]));
+end;
+
+procedure TMySvgTreeBox.CloseGroupDefs(var aFile: TextFile; aWidth: Integer; aHeight: Integer; groupId: String);
+begin
+  WriteLn(aFile, '</g>');
+  WriteLn(aFile, '</defs>');
+  WriteLn(aFile, Format('<svg viewBox="0 0 %d %d" preserveAspectRatio="none">', [aWidth, aHeight]));
+  WriteLn(aFile, Format('<use href="#%s"/>', [groupId]));
+  WriteLn(aFile, '</svg>');
+end;
+
 procedure TMySvgTreeBox.UpdateTaxaOrder(InputIds: TLongIntList);
 var
   i: Integer;
@@ -2579,7 +2645,8 @@ begin
     FSvgDisabledNodeColor := 'none';
     FSvgTimedNodeColor := '#2ecc71';
     FSvgFontHeight := 16;
-    FSvgFont := 'Helvetica';
+    //FSvgFont := 'Helvetica';
+    FSvgFont := 'RobotoCondensed';
     FSvgLineWidth := 2;
     FSvgBgColor := 'white';
     HideOverlappingTaxa := False;
