@@ -2,31 +2,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="903" name="timeline-luminosity" id="timeline-luminosity" x="5" y="0" viewBox="0 0 50 903">
 <polygon points="0,10 40,10 37,665 3,853 0,853 0,10" fill="#c70039" fill-opacity="0.85" stroke="#c70039" stroke-width="1" />
 <polyline points="1,858 1,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 2,868)" >  71.3</text>
+<text x="2" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 2,868)" >  71.3</text>
 <polyline points="25,858 25,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="22" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 22,868)" >  85.6L</text>
+<text x="22" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 22,868)" >  85.6L</text>
 <polyline points="46,858 46,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="39" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 39,868)" >   100.0</text>
+<text x="39" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 39,868)" >   100.0</text>
 <polyline points="2,858 46,858" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="903" name="timeline-co2" id="timeline-co2" x="55" y="0" viewBox="0 0 50 903">
 <polygon points="0,10 0,10 0,11 0,12 0,13 0,14 0,15 0,16 0,17 0,18 0,19 0,20 0,21 0,22 0,23 0,24 0,25 0,26 0,27 0,28 0,29 0,30 0,31 0,32 0,33 0,34 0,35 0,36 0,37 0,38 0,39 0,40 0,41 0,42 0,43 0,44 0,45 0,46 0,47 0,48 0,49 0,50 0,51 0,52 0,53 0,54 0,55 0,56 0,57 0,58 0,59 0,60 0,61 0,62 0,63 0,64 0,65 0,66 0,67 0,68 0,69 0,70 0,71 0,72 0,73 0,74 0,75 0,77 0,78 0,79 0,80 0,81 0,83 0,84 0,85 0,86 0,87 0,89 0,90 0,91 0,92 0,93 0,95 0,96 0,97 0,98 0,99 0,101 0,102 0,103 0,104 0,105 0,107 0,108 0,109 0,110 0,111 0,113 0,114 0,115 0,116 0,117 0,119 0,120 0,121 0,122 1,123 1,125 1,126 1,127 1,128 1,129 1,131 1,132 1,133 1,134 1,135 1,137 1,138 1,139 1,140 1,141 1,143 1,144 1,145 1,146 1,147 1,149 1,150 1,151 1,152 1,153 1,154 1,156 1,157 1,158 0,159 0,160 0,162 0,163 0,164 0,165 0,166 0,167 0,169 0,170 0,171 0,172 0,173 0,175 0,176 0,177 0,178 0,179 0,181 0,182 0,183 0,184 1,185 1,187 1,188 1,189 1,190 1,191 1,193 1,194 1,195 1,196 1,197 1,199 1,200 1,201 1,202 1,203 1,205 1,206 1,207 1,208 0,209 0,211 0,212 0,213 0,214 0,215 0,216 0,218 0,219 0,220 0,221 0,222 0,224 0,225 0,226 0,227 0,228 0,230 0,231 0,232 0,233 0,234 0,236 0,237 0,238 0,239 0,240 0,242 0,243 0,244 0,245 0,246 0,248 0,249 0,250 0,251 0,252 0,254 0,255 0,256 0,257 0,258 0,259 0,261 0,262 0,263 0,264 0,265 0,267 0,268 0,269 0,270 0,271 0,272 0,274 0,275 0,276 0,277 0,278 0,280 0,281 0,282 0,283 0,284 0,286 0,287 0,288 0,289 0,290 0,291 0,293 0,294 0,295 0,296 0,297 0,299 0,300 0,301 0,302 0,303 0,305 0,306 0,307 0,308 0,309 0,311 0,312 0,313 0,314 0,315 0,316 0,318 0,319 0,320 0,321 0,322 0,324 0,325 0,326 0,327 0,328 0,330 0,331 0,332 0,333 0,334 0,336 0,337 0,338 0,339 0,340 0,342 0,343 0,344 0,345 0,346 0,347 0,349 0,350 0,351 0,352 0,353 0,355 0,356 0,357 0,358 0,359 0,361 0,362 0,363 0,364 0,365 0,367 0,368 0,369 0,370 0,371 0,373 0,374 0,375 0,376 0,377 0,379 0,380 0,381 0,382 0,383 0,385 0,386 0,387 0,388 0,389 0,391 0,392 0,393 0,394 0,396 0,397 1,398 1,399 1,401 1,402 1,403 1,404 1,405 1,407 1,408 1,409 1,410 1,412 1,413 1,414 1,415 1,416 1,418 1,419 1,420 1,421 1,423 1,424 1,425 1,426 1,427 1,429 1,430 1,431 1,432 1,433 1,435 1,436 1,437 1,438 1,439 1,441 1,442 1,443 1,444 1,445 1,446 1,448 1,449 1,450 1,451 1,452 1,454 1,455 1,456 1,457 1,458 1,459 1,461 1,462 1,463 1,464 1,465 1,467 1,468 1,469 1,470 1,471 1,473 1,474 1,475 1,476 1,477 1,479 1,480 1,481 1,482 1,484 1,485 1,486 1,487 1,488 1,490 1,491 1,492 1,493 1,494 2,496 2,497 2,498 2,499 2,500 2,502 2,503 2,504 2,505 2,507 2,508 2,509 2,510 2,511 2,513 2,514 2,515 2,516 2,517 2,519 2,520 2,521 2,522 2,523 2,525 2,526 2,527 2,528 2,529 2,531 2,532 2,533 2,534 2,535 2,537 2,538 2,539 2,540 2,541 2,543 2,544 2,545 2,546 2,547 2,549 2,550 2,551 2,552 2,553 2,555 2,556 2,557 2,558 2,559 2,560 2,562 2,563 2,564 2,565 2,566 2,568 2,569 2,570 2,571 2,572 2,574 2,575 2,576 2,577 2,578 2,580 2,581 2,582 2,583 2,584 2,586 2,587 2,588 2,589 2,590 2,592 2,593 2,594 2,595 2,596 2,598 2,599 2,600 2,601 2,602 2,604 2,605 2,606 2,607 2,609 2,610 2,611 2,612 2,613 2,615 2,616 2,617 2,618 2,619 2,620 2,621 2,623 2,624 2,625 2,626 2,627 2,628 2,630 2,631 2,632 2,633 2,634 1,635 1,637 1,638 1,639 1,640 1,665 1,666 1,667 1,668 1,669 1,670 1,671 1,672 0,673 0,674 0,675 0,676 0,677 0,678 0,679 0,680 0,681 1,682 1,683 1,684 1,685 1,686 1,687 1,688 1,689 0,690 0,691 0,692 0,693 0,694 0,695 0,696 0,697 0,698 0,699 0,700 0,701 0,702 0,703 1,704 1,705 1,706 1,707 1,708 1,709 1,710 2,711 2,712 2,713 2,714 3,715 3,716 4,717 4,718 5,719 5,720 6,721 7,722 8,723 9,724 10,725 10,726 10,727 10,728 9,729 9,730 8,731 8,732 7,733 7,734 6,735 6,736 6,737 6,738 5,739 5,740 5,741 5,742 5,743 5,744 5,745 5,746 5,747 5,748 5,749 5,750 5,751 6,752 8,753 11,754 15,755 16,756 17,757 17,758 17,759 18,760 18,761 18,762 19,763 19,764 20,765 20,766 20,767 21,768 21,769 21,770 22,771 22,772 23,773 23,774 24,775 24,776 25,777 25,778 25,779 26,780 27,781 27,782 28,783 28,784 28,785 29,786 30,787 31,788 31,789 31,790 32,791 33,792 34,793 34,794 35,795 35,796 35,797 35,798 35,799 35,800 35,801 36,802 36,803 37,804 37,805 37,806 37,807 37,808 37,809 38,810 38,811 38,812 38,813 38,814 39,815 39,816 39,817 39,818 39,819 40,820 40,821 40,822 40,823 40,824 41,825 41,826 41,827 41,828 41,829 42,830 42,831 42,832 42,833 43,834 43,835 43,836 43,837 43,838 43,839 43,841 43,843 43,845 43,846 43,848 43,850 43,851 0,851 0,10" fill="#ff5733" fill-opacity="0.85" stroke="#ff5733" stroke-width="1" />
 <polyline points="1,858 1,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 2,868)" >   0.0</text>
+<text x="2" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 2,868)" >   0.0</text>
 <polyline points="25,858 25,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="22" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 22,868)" >   5.6%</text>
+<text x="22" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 22,868)" >   5.6%</text>
 <polyline points="46,858 46,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="39" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 39,868)" >    11.3</text>
+<text x="39" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 39,868)" >    11.3</text>
 <polyline points="2,858 46,858" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="903" name="timeline-o2" id="timeline-o2" x="105" y="0" viewBox="0 0 50 903">
 <polygon points="0,10 27,10 27,16 27,24 27,31 28,39 28,47 29,54 29,62 29,69 29,77 29,84 29,92 29,100 29,107 29,115 29,122 29,130 29,137 28,145 28,152 28,160 27,168 27,175 27,183 26,190 26,198 26,205 26,213 26,220 26,228 26,236 27,243 27,251 27,258 28,266 29,273 30,281 31,288 33,296 34,304 36,311 37,319 39,326 40,334 42,341 42,349 43,356 43,364 43,372 42,379 42,387 41,394 40,402 39,409 38,417 37,424 35,432 34,440 33,447 32,455 31,462 29,470 28,477 27,485 27,492 26,500 25,508 24,515 24,523 23,530 23,538 22,545 22,553 22,561 22,568 22,576 22,583 22,591 22,598 21,606 21,613 21,621 21,629 21,636 21,665 21,666 20,667 20,668 19,669 18,670 16,671 15,672 13,673 12,674 11,675 9,676 9,677 8,678 7,679 7,680 6,681 6,682 6,683 5,684 5,685 5,686 5,687 5,688 5,689 5,690 5,691 5,692 5,693 5,694 5,695 5,696 5,697 5,698 5,699 5,700 5,701 5,702 5,703 5,704 5,705 5,706 5,707 5,708 5,709 5,710 5,711 5,712 5,713 5,714 5,715 5,716 5,717 5,718 5,719 5,720 5,721 5,722 5,723 5,724 5,725 5,726 5,727 4,728 4,729 4,730 4,731 4,732 3,733 3,734 3,735 3,736 3,737 2,738 2,739 2,740 2,741 2,742 2,743 1,744 1,745 1,746 1,747 1,748 0,749 0,750 0,751 0,752 0,753 0,754 0,755 0,756 0,757 0,758 0,759 0,760 0,761 0,762 0,763 0,764 0,765 0,766 0,767 0,768 2,769 0,770 0,771 0,772 0,773 0,774 0,775 1,776 1,777 0,778 0,779 0,780 0,781 0,782 0,783 0,784 0,785 0,786 0,787 0,788 0,789 0,790 0,791 0,792 0,793 0,794 0,795 0,796 0,797 0,798 0,799 0,800 0,801 0,802 0,803 0,804 0,805 0,806 0,807 0,808 0,809 0,810 0,811 0,812 0,813 0,814 0,815 0,821 0,826 0,831 0,836 0,841 0,846 0,851 0,851 0,10" fill="#ffc300" fill-opacity="0.85" stroke="#ffc300" stroke-width="1" />
 <polyline points="1,858 1,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 2,868)" >   0.0</text>
+<text x="2" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 2,868)" >   0.0</text>
 <polyline points="25,858 25,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="22" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 22,868)" >  16.6%</text>
+<text x="22" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 22,868)" >  16.6%</text>
 <polyline points="46,858 46,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="39" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 39,868)" >    33.2</text>
+<text x="39" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 39,868)" >    33.2</text>
 <polyline points="2,858 46,858" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="903" name="timeline-impacts" id="timeline-impacts" x="155" y="0" viewBox="0 0 50 903">
@@ -222,71 +222,72 @@
 <circle cx="26" cy="10" r="1" diam="0.01" age="1.000E-003" lat="37.583" lon="-99.167" name="Haviland" loc="Kansas, U.S.A." stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
 </g>
 <polyline points="1,858 1,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 2,868)" >200</text>
+<text x="2" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 2,868)" >200</text>
 <polyline points="24,858 24,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="21" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 21,868)" >0 km</text>
+<text x="21" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 21,868)" >0 km</text>
 <polyline points="44,858 44,863" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="37" y="868" color="black" font-size="10" font-family="Helvetica" transform="rotate(90 37,868)" >200</text>
+<text x="37" y="868" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 37,868)" >200</text>
 <polyline points="2,858 44,858" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="903" name="timeline-geo-timescales" id="timeline-geo-timescales" x="210" y="0" viewBox="0 0 50 903">
 <rect x="1" y="10" width="25" height="843" fill="none" stroke="black" stroke-width="1" full-name="" start="" end="" unit="" />
 <rect x="1" y="825" width="25" height="28" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1" full-name="Hadeon" start="4600.00" end="4000.00" unit="Eon" />
-<text x="6" y="839" transform="rotate(90 6,839)" full-name="Hadeon" font-family="Helvetica" font-size="16" text-anchor="middle" start="4600.00" end="4000.00" unit="Eon" >HDE</text>
+<text x="6" y="839" transform="rotate(90 6,839)" full-name="Hadeon" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="4600.00" end="4000.00" unit="Eon" >HDE</text>
 <rect x="1" y="756" width="25" height="69" fill="#F0047F" stroke="#F0047F" stroke-width="1" full-name="Archean" start="4000.00" end="2500.00" unit="Eon" />
-<text x="6" y="790" transform="rotate(90 6,790)" full-name="Archean" font-family="Helvetica" font-size="16" text-anchor="middle" start="4000.00" end="2500.00" unit="Eon" >Archean</text>
+<text x="6" y="790" transform="rotate(90 6,790)" full-name="Archean" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="4000.00" end="2500.00" unit="Eon" >Archean</text>
 <rect x="1" y="665" width="25" height="91" fill="#F73563" stroke="#F73563" stroke-width="1" full-name="Proterozoic" start="2500.00" end="542.00" unit="Eon" />
-<text x="6" y="710" transform="rotate(90 6,710)" full-name="Proterozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="2500.00" end="542.00" unit="Eon" >Proterozoic</text>
+<text x="6" y="710" transform="rotate(90 6,710)" full-name="Proterozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="2500.00" end="542.00" unit="Eon" >Proterozoic</text>
 <rect x="1" y="10" width="25" height="655" fill="#9AD9DD" stroke="#9AD9DD" stroke-width="1" full-name="Phanerozoic" start="542.00" end="0.00" unit="Eon" />
-<text x="6" y="337" transform="rotate(90 6,337)" full-name="Phanerozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="542.00" end="0.00" unit="Eon" >Phanerozoic</text>
+<text x="6" y="337" transform="rotate(90 6,337)" full-name="Phanerozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="542.00" end="0.00" unit="Eon" >Phanerozoic</text>
 <rect x="26" y="10" width="25" height="843" fill="none" stroke="black" stroke-width="1" full-name="" start="" end="" unit="" />
 <rect x="26" y="807" width="25" height="46" fill="#DA037F" stroke="#DA037F" stroke-width="1" full-name="Eoarchean" start="4600.00" end="3600.00" unit="Era" />
-<text x="31" y="830" transform="rotate(90 31,830)" full-name="Eoarchean" font-family="Helvetica" font-size="16" text-anchor="middle" start="4600.00" end="3600.00" unit="Era" >EA</text>
+<text x="31" y="830" transform="rotate(90 31,830)" full-name="Eoarchean" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="4600.00" end="3600.00" unit="Era" >EA</text>
 <rect x="26" y="788" width="25" height="19" fill="#F4449F" stroke="#F4449F" stroke-width="1" full-name="Paleoarchean" start="3600.00" end="3200.00" unit="Era" />
-<text x="31" y="797" transform="rotate(90 31,797)" full-name="Paleoarchean" font-family="Helvetica" font-size="16" text-anchor="middle" start="3600.00" end="3200.00" unit="Era" >U</text>
+<text x="31" y="797" transform="rotate(90 31,797)" full-name="Paleoarchean" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="3600.00" end="3200.00" unit="Era" >U</text>
 <rect x="26" y="770" width="25" height="18" fill="#F768A9" stroke="#F768A9" stroke-width="1" full-name="Mesoarchean" start="3200.00" end="2800.00" unit="Era" />
-<text x="31" y="779" transform="rotate(90 31,779)" full-name="Mesoarchean" font-family="Helvetica" font-size="16" text-anchor="middle" start="3200.00" end="2800.00" unit="Era" >V</text>
+<text x="31" y="779" transform="rotate(90 31,779)" full-name="Mesoarchean" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="3200.00" end="2800.00" unit="Era" >V</text>
 <rect x="26" y="756" width="25" height="14" fill="#F99BC1" stroke="#F99BC1" stroke-width="1" full-name="Neoarchean" start="2800.00" end="2500.00" unit="Era" />
-<text x="31" y="763" transform="rotate(90 31,763)" full-name="Neoarchean" font-family="Helvetica" font-size="16" text-anchor="middle" start="2800.00" end="2500.00" unit="Era" >W</text>
+<text x="31" y="763" transform="rotate(90 31,763)" full-name="Neoarchean" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="2800.00" end="2500.00" unit="Era" >W</text>
 <rect x="26" y="714" width="25" height="42" fill="#F7430C" stroke="#F7430C" stroke-width="1" full-name="Paleo-Proterozoic" start="2500.00" end="1600.00" unit="Era" />
-<text x="31" y="735" transform="rotate(90 31,735)" full-name="Paleo-Proterozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="2500.00" end="1600.00" unit="Era" >X</text>
+<text x="31" y="735" transform="rotate(90 31,735)" full-name="Paleo-Proterozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="2500.00" end="1600.00" unit="Era" >X</text>
 <rect x="26" y="686" width="25" height="28" fill="#FDB462" stroke="#FDB462" stroke-width="1" full-name="Meso-Proterozoic" start="1600.00" end="1000.00" unit="Era" />
-<text x="31" y="700" transform="rotate(90 31,700)" full-name="Meso-Proterozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="1600.00" end="1000.00" unit="Era" >Y</text>
+<text x="31" y="700" transform="rotate(90 31,700)" full-name="Meso-Proterozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="1600.00" end="1000.00" unit="Era" >Y</text>
 <rect x="26" y="665" width="25" height="21" fill="#FEB342" stroke="#FEB342" stroke-width="1" full-name="Neo-Proterozoic" start="1000.00" end="542.00" unit="Era" />
-<text x="31" y="675" transform="rotate(90 31,675)" full-name="Neo-Proterozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="1000.00" end="542.00" unit="Era" >Z</text>
+<text x="31" y="675" transform="rotate(90 31,675)" full-name="Neo-Proterozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="1000.00" end="542.00" unit="Era" >Z</text>
 <rect x="26" y="302" width="25" height="363" fill="#99C08D" stroke="#99C08D" stroke-width="1" full-name="Paleozoic" start="542.00" end="251.00" unit="Era" />
-<text x="31" y="483" transform="rotate(90 31,483)" full-name="Paleozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="542.00" end="251.00" unit="Era" >Paleozoic</text>
+<text x="31" y="483" transform="rotate(90 31,483)" full-name="Paleozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="542.00" end="251.00" unit="Era" >Paleozoic</text>
 <rect x="26" y="86" width="25" height="216" fill="#67C5CA" stroke="#67C5CA" stroke-width="1" full-name="Mesozoic" start="251.00" end="65.50" unit="Era" />
-<text x="31" y="194" transform="rotate(90 31,194)" full-name="Mesozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="251.00" end="65.50" unit="Era" >Mesozoic</text>
+<text x="31" y="194" transform="rotate(90 31,194)" full-name="Mesozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="251.00" end="65.50" unit="Era" >Mesozoic</text>
 <rect x="26" y="10" width="25" height="76" fill="#F2F91D" stroke="#F2F91D" stroke-width="1" full-name="Cenozoic" start="65.50" end="0.00" unit="Era" />
-<text x="31" y="48" transform="rotate(90 31,48)" full-name="Cenozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="65.50" end="0.00" unit="Era" >Cenozoic</text>
+<text x="31" y="48" transform="rotate(90 31,48)" full-name="Cenozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="65.50" end="0.00" unit="Era" >Cenozoic</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="903" name="timescale" x="255" y="0" viewBox="0 0 50 903">
 <polyline points="12,10 12,853" stroke="black" stroke-width="1" stroke-linecap="square" />
 <polyline points="12,10 16,10" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="13" color="black" font-size="10" font-family="Helvetica" >0</text>
+<text x="20" y="13" color="black" font-size="10" font-family="Roboto Condensed" >0</text>
 <polyline points="12,126 16,126" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="129" color="black" font-size="10" font-family="Helvetica" >100</text>
+<text x="20" y="129" color="black" font-size="10" font-family="Roboto Condensed" >100</text>
 <polyline points="12,242 16,242" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="245" color="black" font-size="10" font-family="Helvetica" >200</text>
+<text x="20" y="245" color="black" font-size="10" font-family="Roboto Condensed" >200</text>
 <polyline points="12,359 16,359" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="362" color="black" font-size="10" font-family="Helvetica" >300</text>
+<text x="20" y="362" color="black" font-size="10" font-family="Roboto Condensed" >300</text>
 <polyline points="12,475 16,475" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="478" color="black" font-size="10" font-family="Helvetica" >400</text>
+<text x="20" y="478" color="black" font-size="10" font-family="Roboto Condensed" >400</text>
 <polyline points="12,591 16,591" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="594" color="black" font-size="10" font-family="Helvetica" >500</text>
+<text x="20" y="594" color="black" font-size="10" font-family="Roboto Condensed" >500</text>
 <polyline points="12,686 16,686" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="689" color="black" font-size="10" font-family="Helvetica" >1000</text>
+<text x="20" y="689" color="black" font-size="10" font-family="Roboto Condensed" >1000</text>
 <polyline points="12,733 16,733" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="736" color="black" font-size="10" font-family="Helvetica" >2000</text>
+<text x="20" y="736" color="black" font-size="10" font-family="Roboto Condensed" >2000</text>
 <polyline points="12,779 16,779" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="782" color="black" font-size="10" font-family="Helvetica" >3000</text>
+<text x="20" y="782" color="black" font-size="10" font-family="Roboto Condensed" >3000</text>
 <polyline points="12,825 16,825" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="828" color="black" font-size="10" font-family="Helvetica" >4000</text>
+<text x="20" y="828" color="black" font-size="10" font-family="Roboto Condensed" >4000</text>
 <polyline points="12,853 16,853" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="856" color="black" font-size="10" font-family="Helvetica" >4600</text>
+<text x="20" y="856" color="black" font-size="10" font-family="Roboto Condensed" >4600</text>
 <polyline points="12,665 16,665" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="668" color="black" font-size="10" font-family="Helvetica" >542</text>
+<text x="20" y="668" color="black" font-size="10" font-family="Roboto Condensed" >542</text>
+<text x="21" y="863" color="black" font-size="10" font-family="Roboto Condensed" transform="rotate(90 21,863)" >MYA</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="290" height="903" name="results" id="timeline-results" x="305" y="0" viewBox="0 0 290 903">
 <defs><linearGradient id="boxGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#fefcea"/><stop offset="100%" stop-color="#f1da36"/></linearGradient><linearGradient id="grayBoxGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#eee"/><stop offset="100%" stop-color="#ccc"/></linearGradient></defs>
@@ -332,113 +333,113 @@
 <circle cx="10" cy="737" r="4" fill="url(#dotsGradient)" id="2759" scientific-name="Eukaryota" time="2101" ci_lo="1781" ci_hi="2291" rank="superkingdom" isci="false" stroke="none" stroke-width="1" tt_id="23070" />
 <circle cx="10" cy="839" r="4" fill="url(#dotsGradient)" id="131567" scientific-name="cellular organisms" time="4290" ci_lo="1698" ci_hi="4290" rank="unknown" isci="true" stroke="none" stroke-width="1" tt_id="1" />
 <rect x="87" y="5" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Human-Chimp" title="unknown" class="rank-tooltip" tt_id="81815" />
-<text x="163" y="21" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Human-Chimp</text>
+<text x="163" y="21" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Human-Chimp</text>
 <rect x="87" y="34" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Homininae" title="subfamily" class="rank-tooltip" tt_id="81811" />
-<text x="163" y="50" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Homininae</text>
+<text x="163" y="50" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Homininae</text>
 <rect x="87" y="63" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Hominidae" title="family" class="rank-tooltip" tt_id="81810" />
-<text x="163" y="79" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Hominidae</text>
+<text x="163" y="79" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Hominidae</text>
 <rect x="87" y="92" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Hominoidea" title="superfamily" class="rank-tooltip" tt_id="81778" />
-<text x="163" y="108" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Hominoidea</text>
+<text x="163" y="108" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Hominoidea</text>
 <rect x="87" y="121" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Catarrhini" title="parvorder" class="rank-tooltip" tt_id="81534" />
-<text x="163" y="137" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Catarrhini</text>
+<text x="163" y="137" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Catarrhini</text>
 <rect x="87" y="150" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Simiiformes" title="infraorder" class="rank-tooltip" tt_id="81328" />
-<text x="163" y="166" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Simiiformes</text>
+<text x="163" y="166" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Simiiformes</text>
 <rect x="87" y="179" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Haplorrhini" title="suborder" class="rank-tooltip" tt_id="81327" />
-<text x="163" y="195" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Haplorrhini</text>
+<text x="163" y="195" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Haplorrhini</text>
 <rect x="87" y="208" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Primates" title="order" class="rank-tooltip" tt_id="81111" />
-<text x="163" y="224" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Primates</text>
+<text x="163" y="224" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Primates</text>
 <rect x="87" y="237" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Euarchontoglires" title="superorder" class="rank-tooltip" tt_id="77731" />
-<text x="163" y="253" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Euarchontoglires</text>
+<text x="163" y="253" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Euarchontoglires</text>
 <rect x="87" y="266" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Boreoeutheria" title="no rank" class="rank-tooltip" tt_id="74263" />
-<text x="163" y="282" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Boreoeutheria</text>
+<text x="163" y="282" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Boreoeutheria</text>
 <rect x="87" y="295" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Eutheria" title="no rank" class="rank-tooltip" tt_id="74262" />
-<text x="163" y="311" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Eutheria</text>
+<text x="163" y="311" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Eutheria</text>
 <rect x="87" y="324" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Theria" title="no rank" class="rank-tooltip" tt_id="73706" />
-<text x="163" y="340" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Theria</text>
+<text x="163" y="340" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Theria</text>
 <rect x="87" y="353" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Mammalia" title="class" class="rank-tooltip" tt_id="73705" />
-<text x="163" y="369" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Mammalia</text>
+<text x="163" y="369" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Mammalia</text>
 <rect x="87" y="382" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Amniota" title="no rank" class="rank-tooltip" tt_id="49475" />
-<text x="163" y="398" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Amniota</text>
+<text x="163" y="398" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Amniota</text>
 <rect x="87" y="411" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Tetrapoda" title="no rank" class="rank-tooltip" tt_id="42459" />
-<text x="163" y="427" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Tetrapoda</text>
+<text x="163" y="427" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Tetrapoda</text>
 <rect x="87" y="440" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Sarcopterygii" title="no rank" class="rank-tooltip" tt_id="42449" />
-<text x="163" y="456" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Sarcopterygii</text>
+<text x="163" y="456" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Sarcopterygii</text>
 <rect x="87" y="469" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Euteleostomi" title="no rank" class="rank-tooltip" tt_id="28759" />
-<text x="163" y="485" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Euteleostomi</text>
+<text x="163" y="485" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Euteleostomi</text>
 <rect x="87" y="498" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Gnathostomata" title="no rank" class="rank-tooltip" tt_id="28527" />
-<text x="163" y="514" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Gnathostomata</text>
+<text x="163" y="514" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Gnathostomata</text>
 <rect x="87" y="527" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Vertebrata" title="no rank" class="rank-tooltip" tt_id="28526" />
-<text x="163" y="543" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Vertebrata</text>
+<text x="163" y="543" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Vertebrata</text>
 <rect x="87" y="556" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Chordata" title="phylum" class="rank-tooltip" tt_id="28521" />
-<text x="163" y="572" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Chordata</text>
+<text x="163" y="572" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Chordata</text>
 <rect x="87" y="585" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Deuterostomia" title="no rank" class="rank-tooltip" tt_id="28520" />
-<text x="163" y="601" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Deuterostomia</text>
+<text x="163" y="601" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Deuterostomia</text>
 <rect x="87" y="614" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Bilateria" title="no rank" class="rank-tooltip" tt_id="28025" />
-<text x="163" y="630" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Bilateria</text>
+<text x="163" y="630" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Bilateria</text>
 <rect x="87" y="643" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Eumetazoa" title="no rank" class="rank-tooltip" tt_id="28022" />
-<text x="163" y="659" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Eumetazoa</text>
+<text x="163" y="659" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Eumetazoa</text>
 <rect x="87" y="672" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Metazoa" title="kingdom" class="rank-tooltip" tt_id="28020" />
-<text x="163" y="688" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Metazoa</text>
+<text x="163" y="688" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Metazoa</text>
 <rect x="87" y="701" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Opisthokonta" title="no rank" class="rank-tooltip" tt_id="23346" />
-<text x="163" y="717" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Opisthokonta</text>
+<text x="163" y="717" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Opisthokonta</text>
 <rect x="87" y="730" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="Eukaryota" title="superkingdom" class="rank-tooltip" tt_id="23070" />
-<text x="163" y="746" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Eukaryota</text>
+<text x="163" y="746" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Eukaryota</text>
 <rect x="87" y="817" width="154" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" scientific-name="cellular organisms" title="unknown" class="rank-tooltip" tt_id="1" />
-<text x="163" y="833" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >cellular organisms</text>
+<text x="163" y="833" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >cellular organisms</text>
 <rect x="248" y="5" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="21" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >7</text>
+<text x="267" y="21" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >7</text>
 <rect x="248" y="34" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="50" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >9</text>
+<text x="267" y="50" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >9</text>
 <rect x="248" y="63" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="79" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >16</text>
+<text x="267" y="79" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >16</text>
 <rect x="248" y="92" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="108" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >20</text>
+<text x="267" y="108" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >20</text>
 <rect x="248" y="121" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="137" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >29</text>
+<text x="267" y="137" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >29</text>
 <rect x="248" y="150" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="166" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >43</text>
+<text x="267" y="166" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >43</text>
 <rect x="248" y="179" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="195" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >67</text>
+<text x="267" y="195" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >67</text>
 <rect x="248" y="208" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="224" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >74</text>
+<text x="267" y="224" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >74</text>
 <rect x="248" y="237" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="253" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >90</text>
+<text x="267" y="253" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >90</text>
 <rect x="248" y="266" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="282" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >96</text>
+<text x="267" y="282" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >96</text>
 <rect x="248" y="295" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="311" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >105</text>
+<text x="267" y="311" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >105</text>
 <rect x="248" y="324" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="340" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >159</text>
+<text x="267" y="340" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >159</text>
 <rect x="248" y="353" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="369" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >177</text>
+<text x="267" y="369" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >177</text>
 <rect x="248" y="382" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="398" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >312</text>
+<text x="267" y="398" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >312</text>
 <rect x="248" y="411" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="427" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >352</text>
+<text x="267" y="427" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >352</text>
 <rect x="248" y="440" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="456" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >413</text>
+<text x="267" y="456" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >413</text>
 <rect x="248" y="469" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="485" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >435</text>
+<text x="267" y="485" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >435</text>
 <rect x="248" y="498" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="514" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >473</text>
+<text x="267" y="514" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >473</text>
 <rect x="248" y="527" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="543" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >615</text>
+<text x="267" y="543" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >615</text>
 <rect x="248" y="556" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="572" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >684</text>
+<text x="267" y="572" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >684</text>
 <rect x="248" y="585" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="601" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >684</text>
+<text x="267" y="601" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >684</text>
 <rect x="248" y="614" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="630" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >824</text>
+<text x="267" y="630" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >824</text>
 <rect x="248" y="643" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="659" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >948</text>
+<text x="267" y="659" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >948</text>
 <rect x="248" y="672" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="688" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >952</text>
+<text x="267" y="688" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >952</text>
 <rect x="248" y="701" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="717" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >1105</text>
+<text x="267" y="717" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >1105</text>
 <rect x="248" y="730" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="746" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >2101</text>
+<text x="267" y="746" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >2101</text>
 <rect x="248" y="817" width="40" height="21" fill="url(#boxGradient)" stroke="#bbbbbb" stroke-width="1" rx="3" ry="3" class="div-time" title="unknown" />
-<text x="267" y="833" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >4290</text>
+<text x="267" y="833" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >4290</text>
 <polyline points="13,18 37,18 81,14" stroke="black" stroke-width="1" fill="none" stroke-dasharray="2,2" />
 <polyline points="13,21 37,21 81,43" stroke="black" stroke-width="1" fill="none" stroke-dasharray="2,2" />
 <polyline points="13,28 37,28 81,72" stroke="black" stroke-width="1" fill="none" stroke-dasharray="2,2" />

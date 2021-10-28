@@ -2646,7 +2646,7 @@ begin
     FSvgTimedNodeColor := '#2ecc71';
     FSvgFontHeight := 16;
     //FSvgFont := 'Helvetica';
-    FSvgFont := 'RobotoCondensed';
+    FSvgFont := 'Roboto Condensed';
     FSvgLineWidth := 2;
     FSvgBgColor := 'white';
     HideOverlappingTaxa := False;

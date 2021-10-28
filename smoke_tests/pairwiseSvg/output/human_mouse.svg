@@ -2,31 +2,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="600" name="pairwise-luminosity" x="5" y="0" id="pairwise-luminosity" viewBox="0 0 50 600">
 <polygon points="0,10 47,10 1,540 0,540 0,10" fill="#c70039" fill-opacity="0.85" stroke="#c70039" stroke-width="1" />
 <polyline points="1,542 1,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,552)" >  97.7</text>
+<text x="2" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 2,552)" >  97.7</text>
 <polyline points="25,542 25,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 20,552)" >  98.6L</text>
+<text x="20" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 20,552)" >  98.6L</text>
 <polyline points="46,542 46,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="37" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 37,552)" >  99.6</text>
+<text x="37" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 37,552)" >  99.6</text>
 <polyline points="2,542 46,542" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="600" name="pairwise-co2" x="55" y="0" id="pairwise-co2" viewBox="0 0 50 600">
 <polygon points="0,10 19,10 19,11 20,12 20,13 20,14 21,15 21,16 20,17 20,18 20,19 20,20 20,21 20,22 21,23 20,24 20,25 19,26 18,27 13,28 12,29 12,30 13,31 13,32 9,33 9,36 9,38 9,40 9,43 9,45 9,47 10,50 11,52 12,55 13,57 14,59 15,62 16,64 17,67 18,69 19,72 19,74 20,76 21,79 22,81 23,84 24,86 25,88 25,91 26,93 26,95 26,98 26,100 26,103 26,105 26,107 26,110 26,112 26,115 27,117 28,119 28,122 29,124 30,127 31,129 31,131 32,134 33,136 34,139 35,141 36,143 37,146 38,148 39,151 41,153 42,155 43,158 44,160 45,163 46,165 47,167 48,170 48,172 48,175 47,177 47,179 47,182 46,184 45,186 43,189 41,191 39,193 38,196 36,198 34,200 33,203 31,205 30,207 29,210 28,212 27,215 26,217 25,219 23,222 22,224 21,226 20,229 20,231 21,233 22,236 23,238 24,241 26,243 27,245 28,248 29,250 30,253 32,255 32,258 33,260 33,262 34,265 34,267 34,269 35,272 35,274 35,277 35,279 34,281 34,284 34,286 34,288 33,291 33,293 33,296 33,298 33,300 32,303 32,305 31,307 31,310 30,312 30,315 30,317 29,319 29,322 28,324 28,326 28,329 28,331 28,334 27,336 27,338 27,341 27,343 27,345 27,348 27,350 27,353 27,355 27,357 27,360 27,362 27,365 28,367 28,369 28,372 29,374 29,376 29,379 30,381 30,384 30,386 31,388 31,391 31,393 32,396 31,398 31,400 31,403 30,405 30,407 30,410 29,412 28,415 27,417 26,419 25,422 23,424 22,426 20,429 19,431 17,433 16,436 15,438 14,440 13,443 13,445 12,447 12,450 11,452 11,455 10,457 10,459 9,462 9,464 9,466 9,469 8,471 8,474 8,476 7,478 7,481 7,483 7,485 6,488 6,490 6,493 6,495 6,497 6,500 5,502 5,504 5,507 4,509 4,512 4,514 4,516 3,519 3,521 3,523 3,526 3,528 2,531 2,533 1,535 1,538 0,540 0,540 0,10" fill="#ff5733" fill-opacity="0.85" stroke="#ff5733" stroke-width="1" />
 <polyline points="1,542 1,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,552)" >  0.03</text>
+<text x="2" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 2,552)" >  0.03</text>
 <polyline points="25,542 25,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 20,552)" >  0.12%</text>
+<text x="20" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 20,552)" >  0.12%</text>
 <polyline points="46,542 46,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="37" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 37,552)" >  0.21</text>
+<text x="37" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 37,552)" >  0.21</text>
 <polyline points="2,542 46,542" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="600" name="pairwise-o2" x="105" y="0" id="pairwise-o2" viewBox="0 0 50 600">
 <polygon points="0,10 9,10 11,11 11,26 12,41 12,56 12,71 11,86 11,101 11,116 11,131 11,146 9,161 8,177 7,192 6,207 5,222 4,237 2,252 2,267 1,282 1,297 1,312 1,327 2,342 2,357 3,372 4,387 4,403 7,418 10,433 13,448 19,463 23,478 28,493 33,508 38,523 43,538 47,540 0,540 0,10" fill="#ffc300" fill-opacity="0.85" stroke="#ffc300" stroke-width="1" />
 <polyline points="1,542 1,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,552)" >  20.2</text>
+<text x="2" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 2,552)" >  20.2</text>
 <polyline points="25,542 25,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 20,552)" >  25.6%</text>
+<text x="20" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 20,552)" >  25.6%</text>
 <polyline points="46,542 46,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="37" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 37,552)" >  31.0</text>
+<text x="37" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 37,552)" >  31.0</text>
 <polyline points="2,542 46,542" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="600" name="pairwise-impacts" x="155" y="0" id="pairwise-impacts" viewBox="0 0 50 600">
@@ -99,71 +99,71 @@
 <rect x="1" y="2" width="48" height="8" fill="white" stroke="white" stroke-width="1" />
 <rect x="1" y="540" width="48" height="60" fill="white" stroke="white" stroke-width="1" />
 <polyline points="1,542 1,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,552)" >200</text>
+<text x="2" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 2,552)" >200</text>
 <polyline points="24,542 24,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="19" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 19,552)" >0 km</text>
+<text x="19" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 19,552)" >0 km</text>
 <polyline points="48,542 48,547" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="39" y="552" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 39,552)" >200</text>
+<text x="39" y="552" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 39,552)" >200</text>
 <polyline points="2,542 48,542" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="600" name="eons" x="207" y="0" id="pairwise-eons" viewBox="0 0 25 600">
 <rect x="1" y="10" width="25" height="530" fill="none" stroke="black" stroke-width="1" />
 <rect x="1" y="10" width="25" height="530" fill="#9AD9DD" stroke="#9AD9DD" stroke-width="1" full-name="Phanerozoic" start="542.00" end="0.00" unit="Eon" />
-<text x="6" y="275" transform="rotate(90 6,275)" full-name="Phanerozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="542.00" end="0.00" unit="Eon" >Phanerozoic</text>
-<text x="8" y="550" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 8,550)" >Eons</text>
+<text x="6" y="275" transform="rotate(90 6,275)" full-name="Phanerozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="542.00" end="0.00" unit="Eon" >Phanerozoic</text>
+<text x="8" y="550" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 8,550)" >Eons</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="600" name="eras" x="232" y="0" id="pairwise-eras" viewBox="0 0 25 600">
 <rect x="1" y="10" width="25" height="530" fill="none" stroke="black" stroke-width="1" />
 <rect x="1" y="489" width="25" height="51" fill="#99C08D" stroke="#99C08D" stroke-width="1" full-name="Paleozoic" start="542.00" end="251.00" unit="Era" />
-<text x="6" y="514" transform="rotate(90 6,514)" full-name="Paleozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="542.00" end="251.00" unit="Era" >Pz</text>
+<text x="6" y="514" transform="rotate(90 6,514)" full-name="Paleozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="542.00" end="251.00" unit="Era" >Pz</text>
 <rect x="1" y="60" width="25" height="429" fill="#67C5CA" stroke="#67C5CA" stroke-width="1" full-name="Mesozoic" start="251.00" end="65.50" unit="Era" />
-<text x="6" y="274" transform="rotate(90 6,274)" full-name="Mesozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="251.00" end="65.50" unit="Era" >Mesozoic</text>
+<text x="6" y="274" transform="rotate(90 6,274)" full-name="Mesozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="251.00" end="65.50" unit="Era" >Mesozoic</text>
 <rect x="1" y="10" width="25" height="50" fill="#F2F91D" stroke="#F2F91D" stroke-width="1" full-name="Cenozoic" start="65.50" end="0.00" unit="Era" />
-<text x="6" y="35" transform="rotate(90 6,35)" full-name="Cenozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="65.50" end="0.00" unit="Era" >Cz</text>
-<text x="8" y="550" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 8,550)" >Eras</text>
+<text x="6" y="35" transform="rotate(90 6,35)" full-name="Cenozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="65.50" end="0.00" unit="Era" >Cz</text>
+<text x="8" y="550" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 8,550)" >Eras</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="600" name="periods" x="257" y="0" id="pairwise-periods" viewBox="0 0 25 600">
 <rect x="1" y="10" width="25" height="530" fill="none" stroke="black" stroke-width="1" />
 <rect x="1" y="489" width="25" height="51" fill="#F04028" stroke="#F04028" stroke-width="1" full-name="Permian" start="299.00" end="251.00" unit="Period" />
-<text x="6" y="514" transform="rotate(90 6,514)" full-name="Permian" font-family="Helvetica" font-size="16" text-anchor="middle" start="299.00" end="251.00" unit="Period" >P</text>
+<text x="6" y="514" transform="rotate(90 6,514)" full-name="Permian" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="299.00" end="251.00" unit="Period" >P</text>
 <rect x="1" y="370" width="25" height="119" fill="#812B92" stroke="#812B92" stroke-width="1" full-name="Triassic" start="251.00" end="199.60" unit="Period" />
-<text x="6" y="429" transform="rotate(90 6,429)" full-name="Triassic" font-family="Helvetica" font-size="16" text-anchor="middle" start="251.00" end="199.60" unit="Period" >Triassic</text>
+<text x="6" y="429" transform="rotate(90 6,429)" full-name="Triassic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="251.00" end="199.60" unit="Period" >Triassic</text>
 <rect x="1" y="245" width="25" height="125" fill="#34B2C9" stroke="#34B2C9" stroke-width="1" full-name="Jurassic" start="199.60" end="145.50" unit="Period" />
-<text x="6" y="307" transform="rotate(90 6,307)" full-name="Jurassic" font-family="Helvetica" font-size="16" text-anchor="middle" start="199.60" end="145.50" unit="Period" >Jurassic</text>
+<text x="6" y="307" transform="rotate(90 6,307)" full-name="Jurassic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="199.60" end="145.50" unit="Period" >Jurassic</text>
 <rect x="1" y="60" width="25" height="185" fill="#7FC64E" stroke="#7FC64E" stroke-width="1" full-name="Cretaceous" start="145.50" end="65.50" unit="Period" />
-<text x="6" y="152" transform="rotate(90 6,152)" full-name="Cretaceous" font-family="Helvetica" font-size="16" text-anchor="middle" start="145.50" end="65.50" unit="Period" >Cretaceous</text>
+<text x="6" y="152" transform="rotate(90 6,152)" full-name="Cretaceous" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="145.50" end="65.50" unit="Period" >Cretaceous</text>
 <rect x="1" y="10" width="25" height="50" fill="#FD9A52" stroke="#FD9A52" stroke-width="1" full-name="Paleogene" start="65.50" end="23.03" unit="Period" />
-<text x="6" y="35" transform="rotate(90 6,35)" full-name="Paleogene" font-family="Helvetica" font-size="16" text-anchor="middle" start="65.50" end="23.03" unit="Period" >Pg</text>
-<text x="8" y="550" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 8,550)" >Periods</text>
+<text x="6" y="35" transform="rotate(90 6,35)" full-name="Paleogene" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="65.50" end="23.03" unit="Period" >Pg</text>
+<text x="8" y="550" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 8,550)" >Periods</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="74" height="600" name="epochs" x="282" y="0" id="pairwise-epochs" viewBox="0 0 74 600">
 <rect x="1" y="10" width="74" height="530" fill="none" stroke="black" stroke-width="1" />
 <rect x="1" y="535" width="74" height="5" fill="#EF5845" stroke="#EF5845" stroke-width="1" full-name="Cisuralian" start="299.00" end="270.60" unit="Epoch" />
 <rect x="1" y="511" width="74" height="24" fill="#FB745C" stroke="#FB745C" stroke-width="1" full-name="Guadalupian" start="270.60" end="260.40" unit="Epoch" />
-<text x="37" y="527" full-name="Guadalupian" font-family="Helvetica" font-size="14" text-anchor="middle" start="270.60" end="260.40" unit="Epoch" >GUA</text>
+<text x="37" y="527" full-name="Guadalupian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="270.60" end="260.40" unit="Epoch" >GUA</text>
 <rect x="1" y="489" width="74" height="22" fill="#FBA794" stroke="#FBA794" stroke-width="1" full-name="Lopingian" start="260.40" end="251.00" unit="Epoch" />
-<text x="37" y="504" full-name="Lopingian" font-family="Helvetica" font-size="14" text-anchor="middle" start="260.40" end="251.00" unit="Epoch" >Lopingian</text>
+<text x="37" y="504" full-name="Lopingian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="260.40" end="251.00" unit="Epoch" >Lopingian</text>
 <rect x="1" y="475" width="74" height="14" fill="#983999" stroke="#983999" stroke-width="1" full-name="Lower" start="251.00" end="245.00" unit="Epoch" />
-<text x="37" y="486" full-name="Lower" font-family="Helvetica" font-size="14" text-anchor="middle" start="251.00" end="245.00" unit="Epoch" >Lower</text>
+<text x="37" y="486" full-name="Lower" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="251.00" end="245.00" unit="Epoch" >Lower</text>
 <rect x="1" y="436" width="74" height="39" fill="#B168B1" stroke="#B168B1" stroke-width="1" full-name="Middle" start="245.00" end="228.00" unit="Epoch" />
-<text x="37" y="459" full-name="Middle" font-family="Helvetica" font-size="14" text-anchor="middle" start="245.00" end="228.00" unit="Epoch" >Middle</text>
+<text x="37" y="459" full-name="Middle" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="245.00" end="228.00" unit="Epoch" >Middle</text>
 <rect x="1" y="370" width="74" height="66" fill="#BD8CC3" stroke="#BD8CC3" stroke-width="1" full-name="Upper" start="228.00" end="199.60" unit="Epoch" />
-<text x="37" y="407" full-name="Upper" font-family="Helvetica" font-size="14" text-anchor="middle" start="228.00" end="199.60" unit="Epoch" >Upper</text>
+<text x="37" y="407" full-name="Upper" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="228.00" end="199.60" unit="Epoch" >Upper</text>
 <rect x="1" y="315" width="74" height="55" fill="#42AED0" stroke="#42AED0" stroke-width="1" full-name="Lower" start="199.60" end="175.60" unit="Epoch" />
-<text x="37" y="346" full-name="Lower" font-family="Helvetica" font-size="14" text-anchor="middle" start="199.60" end="175.60" unit="Epoch" >Lower</text>
+<text x="37" y="346" full-name="Lower" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="199.60" end="175.60" unit="Epoch" >Lower</text>
 <rect x="1" y="281" width="74" height="34" fill="#80CFD8" stroke="#80CFD8" stroke-width="1" full-name="Middle" start="175.60" end="161.20" unit="Epoch" />
-<text x="37" y="302" full-name="Middle" font-family="Helvetica" font-size="14" text-anchor="middle" start="175.60" end="161.20" unit="Epoch" >Middle</text>
+<text x="37" y="302" full-name="Middle" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="175.60" end="161.20" unit="Epoch" >Middle</text>
 <rect x="1" y="245" width="74" height="36" fill="#B3E3EE" stroke="#B3E3EE" stroke-width="1" full-name="Upper" start="161.20" end="145.50" unit="Epoch" />
-<text x="37" y="267" full-name="Upper" font-family="Helvetica" font-size="14" text-anchor="middle" start="161.20" end="145.50" unit="Epoch" >Upper</text>
+<text x="37" y="267" full-name="Upper" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="161.20" end="145.50" unit="Epoch" >Upper</text>
 <rect x="1" y="139" width="74" height="106" fill="#8CCD57" stroke="#8CCD57" stroke-width="1" full-name="Lower" start="145.50" end="99.60" unit="Epoch" />
-<text x="37" y="196" full-name="Lower" font-family="Helvetica" font-size="14" text-anchor="middle" start="145.50" end="99.60" unit="Epoch" >Lower</text>
+<text x="37" y="196" full-name="Lower" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="145.50" end="99.60" unit="Epoch" >Lower</text>
 <rect x="1" y="60" width="74" height="79" fill="#A6D84A" stroke="#A6D84A" stroke-width="1" full-name="Upper" start="99.60" end="65.50" unit="Epoch" />
-<text x="37" y="103" full-name="Upper" font-family="Helvetica" font-size="14" text-anchor="middle" start="99.60" end="65.50" unit="Epoch" >Upper</text>
+<text x="37" y="103" full-name="Upper" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="99.60" end="65.50" unit="Epoch" >Upper</text>
 <rect x="1" y="37" width="74" height="23" fill="#FDA75F" stroke="#FDA75F" stroke-width="1" full-name="Paleocene" start="65.50" end="55.80" unit="Epoch" />
-<text x="37" y="52" full-name="Paleocene" font-family="Helvetica" font-size="14" text-anchor="middle" start="65.50" end="55.80" unit="Epoch" >Paleocene</text>
+<text x="37" y="52" full-name="Paleocene" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="65.50" end="55.80" unit="Epoch" >Paleocene</text>
 <rect x="1" y="10" width="74" height="27" fill="#FDB46C" stroke="#FDB46C" stroke-width="1" full-name="Eocene" start="55.80" end="33.90" unit="Epoch" />
-<text x="37" y="27" full-name="Eocene" font-family="Helvetica" font-size="14" text-anchor="middle" start="55.80" end="33.90" unit="Epoch" >Eocene</text>
-<text x="33" y="550" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 33,550)" >Epochs</text>
+<text x="37" y="27" full-name="Eocene" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="55.80" end="33.90" unit="Epoch" >Eocene</text>
+<text x="33" y="550" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 33,550)" >Epochs</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="86" height="600" name="ages" x="356" y="0" id="pairwise-ages" viewBox="0 0 86 600">
 <rect x="1" y="10" width="86" height="530" fill="none" stroke="black" stroke-width="1" />
@@ -172,26 +172,26 @@
 <rect x="1" y="524" width="86" height="5" fill="#FB8D76" stroke="#FB8D76" stroke-width="1" full-name="Wordian" start="268.00" end="265.80" unit="Age" />
 <rect x="1" y="511" width="86" height="13" fill="#FB9A85" stroke="#FB9A85" stroke-width="1" full-name="Capitanian" start="265.80" end="260.40" unit="Age" />
 <rect x="1" y="496" width="86" height="15" fill="#FCB4A2" stroke="#FCB4A2" stroke-width="1" full-name="Wuchiapingian" start="260.40" end="253.80" unit="Age" />
-<text x="43" y="507" full-name="Wuchiapingian" font-family="Helvetica" font-size="14" text-anchor="middle" start="260.40" end="253.80" unit="Age" >WUC</text>
+<text x="43" y="507" full-name="Wuchiapingian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="260.40" end="253.80" unit="Age" >WUC</text>
 <rect x="1" y="489" width="86" height="7" fill="#FCC0B2" stroke="#FCC0B2" stroke-width="1" full-name="Changhsingian" start="253.80" end="251.00" unit="Age" />
 <rect x="1" y="486" width="86" height="3" fill="#A4469F" stroke="#A4469F" stroke-width="1" full-name="Induan" start="251.00" end="249.70" unit="Age" />
 <rect x="1" y="475" width="86" height="11" fill="#B051A5" stroke="#B051A5" stroke-width="1" full-name="Olenekian" start="249.70" end="245.00" unit="Age" />
 <rect x="1" y="457" width="86" height="18" fill="#BC75B7" stroke="#BC75B7" stroke-width="1" full-name="Anisian" start="245.00" end="237.00" unit="Age" />
-<text x="43" y="470" full-name="Anisian" font-family="Helvetica" font-size="14" text-anchor="middle" start="245.00" end="237.00" unit="Age" >Anisian</text>
+<text x="43" y="470" full-name="Anisian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="245.00" end="237.00" unit="Age" >Anisian</text>
 <rect x="1" y="436" width="86" height="21" fill="#C983BF" stroke="#C983BF" stroke-width="1" full-name="Ladinian" start="237.00" end="228.00" unit="Age" />
-<text x="43" y="450" full-name="Ladinian" font-family="Helvetica" font-size="14" text-anchor="middle" start="237.00" end="228.00" unit="Age" >Ladinian</text>
+<text x="43" y="450" full-name="Ladinian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="237.00" end="228.00" unit="Age" >Ladinian</text>
 <rect x="1" y="409" width="86" height="27" fill="#C99BCB" stroke="#C99BCB" stroke-width="1" full-name="Carnian" start="228.00" end="216.50" unit="Age" />
-<text x="43" y="426" full-name="Carnian" font-family="Helvetica" font-size="14" text-anchor="middle" start="228.00" end="216.50" unit="Age" >Carnian</text>
+<text x="43" y="426" full-name="Carnian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="228.00" end="216.50" unit="Age" >Carnian</text>
 <rect x="1" y="379" width="86" height="30" fill="#D6AAD3" stroke="#D6AAD3" stroke-width="1" full-name="Norian" start="216.50" end="203.60" unit="Age" />
-<text x="43" y="398" full-name="Norian" font-family="Helvetica" font-size="14" text-anchor="middle" start="216.50" end="203.60" unit="Age" >Norian</text>
+<text x="43" y="398" full-name="Norian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="216.50" end="203.60" unit="Age" >Norian</text>
 <rect x="1" y="370" width="86" height="9" fill="#E3B9DB" stroke="#E3B9DB" stroke-width="1" full-name="Rhaetian" start="203.60" end="199.60" unit="Age" />
 <rect x="1" y="363" width="86" height="7" fill="#4EB3D3" stroke="#4EB3D3" stroke-width="1" full-name="Hettangian" start="199.60" end="196.50" unit="Age" />
 <rect x="1" y="347" width="86" height="16" fill="#67BCD8" stroke="#67BCD8" stroke-width="1" full-name="Sinemurian" start="196.50" end="189.60" unit="Age" />
-<text x="43" y="359" full-name="Sinemurian" font-family="Helvetica" font-size="14" text-anchor="middle" start="196.50" end="189.60" unit="Age" >Sinemurian</text>
+<text x="43" y="359" full-name="Sinemurian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="196.50" end="189.60" unit="Age" >Sinemurian</text>
 <rect x="1" y="332" width="86" height="15" fill="#80C5DD" stroke="#80C5DD" stroke-width="1" full-name="Pliensbachian" start="189.60" end="183.00" unit="Age" />
-<text x="43" y="343" full-name="Pliensbachian" font-family="Helvetica" font-size="14" text-anchor="middle" start="189.60" end="183.00" unit="Age" >PLB</text>
+<text x="43" y="343" full-name="Pliensbachian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="189.60" end="183.00" unit="Age" >PLB</text>
 <rect x="1" y="315" width="86" height="17" fill="#99CEE3" stroke="#99CEE3" stroke-width="1" full-name="Toarcian" start="183.00" end="175.60" unit="Age" />
-<text x="43" y="327" full-name="Toarcian" font-family="Helvetica" font-size="14" text-anchor="middle" start="183.00" end="175.60" unit="Age" >Toarcian</text>
+<text x="43" y="327" full-name="Toarcian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="183.00" end="175.60" unit="Age" >Toarcian</text>
 <rect x="1" y="305" width="86" height="10" fill="#9AD9DD" stroke="#9AD9DD" stroke-width="1" full-name="Aalenian" start="175.60" end="171.60" unit="Age" />
 <rect x="1" y="296" width="86" height="9" fill="#A6DDE0" stroke="#A6DDE0" stroke-width="1" full-name="Bajocian" start="171.60" end="167.70" unit="Age" />
 <rect x="1" y="289" width="86" height="7" fill="#B3E2E3" stroke="#B3E2E3" stroke-width="1" full-name="Bathonian" start="167.70" end="164.70" unit="Age" />
@@ -202,27 +202,27 @@
 <rect x="1" y="233" width="86" height="12" fill="#8CCD60" stroke="#8CCD60" stroke-width="1" full-name="Berriasian" start="145.50" end="140.20" unit="Age" />
 <rect x="1" y="224" width="86" height="9" fill="#99D36A" stroke="#99D36A" stroke-width="1" full-name="Valanginian" start="140.20" end="136.40" unit="Age" />
 <rect x="1" y="209" width="86" height="15" fill="#A6D975" stroke="#A6D975" stroke-width="1" full-name="Hauterivian" start="136.40" end="130.00" unit="Age" />
-<text x="43" y="220" full-name="Hauterivian" font-family="Helvetica" font-size="14" text-anchor="middle" start="136.40" end="130.00" unit="Age" >HAU</text>
+<text x="43" y="220" full-name="Hauterivian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="136.40" end="130.00" unit="Age" >HAU</text>
 <rect x="1" y="197" width="86" height="12" fill="#B3DF7F" stroke="#B3DF7F" stroke-width="1" full-name="Barremian" start="130.00" end="125.00" unit="Age" />
 <rect x="1" y="167" width="86" height="30" fill="#BFE48A" stroke="#BFE48A" stroke-width="1" full-name="Aptian" start="125.00" end="112.00" unit="Age" />
-<text x="43" y="186" full-name="Aptian" font-family="Helvetica" font-size="14" text-anchor="middle" start="125.00" end="112.00" unit="Age" >Aptian</text>
+<text x="43" y="186" full-name="Aptian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="125.00" end="112.00" unit="Age" >Aptian</text>
 <rect x="1" y="139" width="86" height="28" fill="#CCEA97" stroke="#CCEA97" stroke-width="1" full-name="Albian" start="112.00" end="99.60" unit="Age" />
-<text x="43" y="157" full-name="Albian" font-family="Helvetica" font-size="14" text-anchor="middle" start="112.00" end="99.60" unit="Age" >Albian</text>
+<text x="43" y="157" full-name="Albian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="112.00" end="99.60" unit="Age" >Albian</text>
 <rect x="1" y="124" width="86" height="15" fill="#B3DE53" stroke="#B3DE53" stroke-width="1" full-name="Cenomanian" start="99.60" end="93.50" unit="Age" />
-<text x="43" y="135" full-name="Cenomanian" font-family="Helvetica" font-size="14" text-anchor="middle" start="99.60" end="93.50" unit="Age" >Cenomanian</text>
+<text x="43" y="135" full-name="Cenomanian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="99.60" end="93.50" unit="Age" >Cenomanian</text>
 <rect x="1" y="115" width="86" height="9" fill="#BFE35D" stroke="#BFE35D" stroke-width="1" full-name="Turonian" start="93.50" end="89.30" unit="Age" />
 <rect x="1" y="107" width="86" height="8" fill="#CCE968" stroke="#CCE968" stroke-width="1" full-name="Coniacian" start="89.30" end="85.80" unit="Age" />
 <rect x="1" y="101" width="86" height="6" fill="#D9EF74" stroke="#D9EF74" stroke-width="1" full-name="Santonian" start="85.80" end="83.50" unit="Age" />
 <rect x="1" y="71" width="86" height="30" fill="#E6F47F" stroke="#E6F47F" stroke-width="1" full-name="Campanian" start="83.50" end="70.60" unit="Age" />
-<text x="43" y="90" full-name="Campanian" font-family="Helvetica" font-size="14" text-anchor="middle" start="83.50" end="70.60" unit="Age" >Campanian</text>
+<text x="43" y="90" full-name="Campanian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="83.50" end="70.60" unit="Age" >Campanian</text>
 <rect x="1" y="60" width="86" height="11" fill="#F2FA8C" stroke="#F2FA8C" stroke-width="1" full-name="Maastrichtian" start="70.60" end="65.50" unit="Age" />
 <rect x="1" y="51" width="86" height="9" fill="#FDB462" stroke="#FDB462" stroke-width="1" full-name="Danian" start="65.50" end="61.70" unit="Age" />
 <rect x="1" y="44" width="86" height="7" fill="#FEBF65" stroke="#FEBF65" stroke-width="1" full-name="Selandian" start="61.70" end="58.70" unit="Age" />
 <rect x="1" y="37" width="86" height="7" fill="#FDBF6F" stroke="#FDBF6F" stroke-width="1" full-name="Thanetian" start="58.70" end="55.80" unit="Age" />
 <rect x="1" y="20" width="86" height="17" fill="#FCA773" stroke="#FCA773" stroke-width="1" full-name="Ypresian" start="55.80" end="48.60" unit="Age" />
-<text x="43" y="32" full-name="Ypresian" font-family="Helvetica" font-size="14" text-anchor="middle" start="55.80" end="48.60" unit="Age" >Ypresian</text>
+<text x="43" y="32" full-name="Ypresian" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="55.80" end="48.60" unit="Age" >Ypresian</text>
 <rect x="1" y="10" width="86" height="10" fill="#FCB482" stroke="#FCB482" stroke-width="1" full-name="Lutetian" start="48.60" end="40.40" unit="Age" />
-<text x="39" y="550" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 39,550)" >Ages</text>
+<text x="39" y="550" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 39,550)" >Ages</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="60" height="600" name="hit-records" x="442" y="0" id="pairwise-hit-records" viewBox="0 0 60 600">
 <defs><linearGradient id="dotsGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="dddddd"/><stop offset="100%" stop-color="#777777"/></linearGradient></defs>
@@ -269,6 +269,7 @@
 <text x="12" y="496" color="black" font-size="10" >252</text>
 <polyline points="4,518 8,518" stroke="black" stroke-width="1" />
 <text x="12" y="522" color="black" font-size="10" >263</text>
+<text x="25" y="550" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 25,550)" >MYA</text>
 <circle cx="46" cy="28" r="6" fill="url(#dotsGradient)" abstract="Tunicates are the closest relatives of vertebrates and are widely used as models to study the evolutionary developmental biology of chordates. Their phylogeny, however, remains poorly understood, and to date, only the 18S rRNA nuclear gene and mitogenomes have been used to delineate the major groups of tunicates. To resolve their evolutionary relationships and provide a first estimate of their divergence times, we used a transcriptomic approach to build a phylogenomic dataset including all major tunicate lineages, consisting of 258 evolutionarily conserved orthologous genes from representative species." author="Delsuc" cit-number="4419" pubmed-id="29653534" ref-id="" time="51.87" year="2018" title="A phylogenomic framework and timescale for comparative studies of tunicates." />
 <circle cx="46" cy="43" r="6" fill="url(#dotsGradient)" abstract="Changes in the palaeoenvironment and paleoclimate expedite the process of evolutionary divergence in animals. The evolutionary events of some small mammals distributed in Xinjiang Arid Region remain ambiguous. Thus, it is necessary to predict their evolutionary histories based on divergence estimates. Some museum specimens were involved in this analysis because of sampling limitation for threatened species in the arid region. A related problem is that some mutilated specimens without complete taxonomic data made it difficult to directly analyze species divergence. Here, sequences of cytochrome c oxydase I were used to identify museum specimens and combined with cytochrome b to estimate the recent divergence of extant small mammals constrained with eight fossil calibrations. The results showed that the massive species differentiation emerged during the Middle and Late Miocene periods. We inferred that differentiation of these small mammals might be associated with the retreat of the Tethys Sea from the Tarim Basin around the Eocene-Oligocene boundary and the global climate fluctuations during the Miocene period. Furthermore, the aridification and changes in the Taklimakan and Gurbantunggut Deserts might have driven the diversification of intraspecies and the emergence of cryptic species since the Late Pleistocene." author="Yin" cit-number="4050" pubmed-id="0" ref-id="Yin2014a" time="58.4" year="2014" title="The divergence of small mammals in Xinjiang, China, as revealed by phylogentic analyses of COI and Cytb" />
 <circle cx="46" cy="59" r="6" fill="url(#dotsGradient)" abstract="The timing of the origin and diversification of rodents remains controversial, due to conflicting results from molecular clocks and paleontological data. The fossil record tends to support an early Cenozoic origin of crown-group rodents. In contrast, most molecular studies place the origin and initial diversification of crown-Rodentia deep in the Cretaceous, although some molecular analyses have recovered estimated divergence times that are more compatible with the fossil record. Here we attempt to resolve this conflict by carrying out a molecular clock investigation based on a nine-gene sequence dataset and a novel set of seven fossil constraints, including two new rodent records (the earliest known representatives of Cardiocraniinae and Dipodinae). Our results indicate that rodents originated around 61.7-62.4 Ma, shortly after the Cretaceous/Paleogene (K/Pg) boundary, and diversified at the intraordinal level around 57.7-58.9 Ma. These estimates are broadly consistent with the paleontological record, but challenge previous molecular studies that place the origin and early diversification of rodents in the Cretaceous. This study demonstrates that, with reliable fossil constraints, the incompatibility between paleontological and molecular estimates of rodent divergence times can be eliminated using currently available tools and genetic markers. Similar conflicts between molecular and paleontological evidence bedevil attempts to establish the origination times of other placental groups. The example of the present study suggests that more reliable fossil calibration points may represent the key to resolving these controversies." author="Wu" cit-number="3055" pubmed-id="23071573" ref-id="" time="65.2" year="2012" title="Molecular and paleontological evidence for a post-Cretaceous origin of rodents." />
@@ -347,21 +348,21 @@
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="193" height="600" name="results" x="506" y="0" id="pairwise-results" viewBox="0 0 193 600">
 <rect x="1" y="30" width="189" height="30" fill="url(#boxGradient)" stroke="#cccccc" stroke-width="1" />
-<text x="94" y="50" font-family="Helvetica" font-size="20" text-anchor="middle" fill="black" >human</text>
+<text x="94" y="50" font-family="Roboto Condensed" font-size="20" text-anchor="middle" fill="black" >human</text>
 <text x="94" y="84" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=9606&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Homo sapiens</text>
 <image width="12" height="12" x="175" y="72" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
 <text x="94" y="129" font-family="Verdana" font-size="16" text-anchor="middle" >Versus</text>
 <rect x="1" y="160" width="189" height="30" fill="url(#boxGradient)" stroke="#cccccc" stroke-width="1" />
-<text x="94" y="180" font-family="Helvetica" font-size="20" text-anchor="middle" fill="black" >house mouse</text>
+<text x="94" y="180" font-family="Roboto Condensed" font-size="20" text-anchor="middle" fill="black" >house mouse</text>
 <text x="94" y="214" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=10090&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Mus musculus</text>
 <image width="12" height="12" x="175" y="202" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="94" y="254" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Median Time:</text>
-<text x="94" y="272" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >89 MYA</text>
-<text x="94" y="308" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Estimated Time:</text>
-<text x="94" y="324" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >90 MYA</text>
-<text x="94" y="341" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >CI: (85 - 97 MYA)</text>
-<text x="94" y="366" font-family="Helvetica" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/Mol%20Biol%20Evol-2015-Hedges-835-45.pdf" font-weight="bold" >(TTOL)</text>
+<text x="94" y="254" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Median Time:</text>
+<text x="94" y="272" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >89 MYA</text>
+<text x="94" y="308" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Estimated Time:</text>
+<text x="94" y="324" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >90 MYA</text>
+<text x="94" y="341" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >CI: (85 - 97 MYA)</text>
+<text x="94" y="366" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/Mol%20Biol%20Evol-2015-Hedges-835-45.pdf" font-weight="bold" >(TTOL)</text>
 <image width="12" height="12" x="124" y="354" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="94" y="400" font-family="Helvetica" font-size="14" text-anchor="middle" fill="black" ><tspan x="94" dy="17"> (Median and</tspan><tspan x="94" dy="17"> estimated times</tspan><tspan x="94" dy="17"> were derived from</tspan><tspan x="94" dy="17"> 75 studies)</tspan></text>
+<text x="94" y="400" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="94" dy="17"> (Median and</tspan><tspan x="94" dy="17"> estimated times</tspan><tspan x="94" dy="17"> were derived from</tspan><tspan x="94" dy="17"> 75 studies)</tspan></text>
 </svg>
 </svg>

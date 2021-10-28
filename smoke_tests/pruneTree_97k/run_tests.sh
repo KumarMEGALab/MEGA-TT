@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./megatt --tree ./inputs/97k-family-tree.nwk --names-map ./inputs/97k-family-map.txt --ranks ./inputs/97k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs --mobile-friendly false
+./megatt --tree ./inputs/97k-family-tree.nwk --names-map ./inputs/97k-family-map.txt --ranks ./inputs/97k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs
 if [ $? = 0 ]; then
     echo "Completed - family tree"
 else

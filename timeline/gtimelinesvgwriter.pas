@@ -649,7 +649,7 @@ var
   aRect: TRect;
   temp: String;
   points: array[0..1] of TPoint;
-  i: Integer;
+  i, x, y: Integer;
   mya: Double;
 begin
   InitTimescaleTicks;
@@ -675,6 +675,10 @@ begin
     Temp := TextToSvgText(points[1].X + 4, points[0].Y + Round(FTimescaleFontHeight / 3), Format('%.0f', [mya]), FTimescaleFontAttribs);
     FSvgStrings.Add(Temp);
   end;
+  x := Round((aRect.Right - aRect.Left)/2 - (CustomTextHeight('MYA') div 4));
+  y := aRect.Bottom + 10;
+  Temp := TextToVerticalSvgText(x, y, 'MYA', FTimescaleFontAttribs);
+  FSvgStrings.Add(Temp);
   CloseSvg;
 end;
 
@@ -964,7 +968,7 @@ procedure TTimelineSvgWriter.InitGeoScaleFontAttribs;
 begin
   FGeoScaleFontAttribs[0].Name := 'full-name';
   FGeoScaleFontAttribs[1].Name := 'font-family';
-  FGeoScaleFontAttribs[1].Value := 'Helvetica';
+  FGeoScaleFontAttribs[1].Value := 'Roboto Condensed';
   FGeoScaleFontAttribs[2].Name := 'font-size';
   FGeoScaleFontAttribs[2].Value := IntToStr(FFontHeight);
   FGeoScaleFontAttribs[3].Name := 'text-anchor';
@@ -994,7 +998,7 @@ begin
   FTimescaleFontAttribs[1].Name := 'font-size';
   FTimescaleFontAttribs[1].Value := IntToStr(FTimescaleFontHeight);
   FTimescaleFontAttribs[2].Name := 'font-family';
-  FTimescaleFontAttribs[2].Value := 'Helvetica';
+  FTimescaleFontAttribs[2].Value := 'Roboto Condensed';
 end;
 
 procedure TTimelineSvgWriter.InitNamesBoxAttribs;
@@ -1046,7 +1050,7 @@ end;
 procedure TTimelineSvgWriter.InitNamesFontAttribs;
 begin
   FNamesFontAttribs[0].Name := 'font-family';
-  FNamesFontAttribs[0].Value := 'Helvetica';
+  FNamesFontAttribs[0].Value := 'Roboto Condensed';
   FNamesFontAttribs[1].Name := 'font-size';
   FNamesFontAttribs[1].Value := IntToStr(FFontHeight);
   FNamesFontAttribs[2].Name := 'text-anchor';

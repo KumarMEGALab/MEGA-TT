@@ -314,7 +314,7 @@ begin
   FTimescaleFontAttribs[1].Name := 'font-size';
   FTimescaleFontAttribs[1].Value := IntToStr(FSmallFontHeight);
   FTimescaleFontAttribs[2].Name := 'font-family';
-  FTimescaleFontAttribs[2].Value := 'Helvetica';
+  FTimescaleFontAttribs[2].Value := 'Roboto Condensed';
 end;
 
 procedure TPairwiseSvgWriter.InitXMLAttributes;
@@ -695,7 +695,7 @@ begin
     SetLength(textAttribs, 7);
     textAttribs[0].Name := 'full-name';
     textAttribs[1].Name := 'font-family';
-    textAttribs[1].Value := 'Helvetica';
+    textAttribs[1].Value := 'Roboto Condensed';
     textAttribs[2].Name := 'font-size';
     textAttribs[2].Value := IntToStr(FFontHeight);
     textAttribs[3].Name := 'text-anchor';
@@ -769,7 +769,7 @@ var
   aRect: TRect;
   Temp: String;
   tickSpacing: Integer;
-  i: Integer;
+  i, x, y: Integer;
   p: array [0..1] of TPoint;
   mya: Double;
   ticksFormatString: String;
@@ -807,6 +807,10 @@ begin
     FStrings.Add(Temp);
     inc(i, tickSpacing);
   end;
+  x := Round((aRect.Right - aRect.Left)/2 - (CustomTextHeight('MYA') div 4));
+  y := aRect.Bottom + 10;
+  Temp := TextToVerticalSvgText(x, y, 'MYA', FTimescaleFontAttribs);
+  FStrings.Add(Temp);
 end;
 
 procedure TPairwiseSvgWriter.AddDefs;
@@ -902,7 +906,7 @@ begin
 
   SetLength(textAttribs, 4);
   textAttribs[0].Name := 'font-family';
-  textAttribs[0].Value := 'Helvetica';
+  textAttribs[0].Value := 'Roboto Condensed';
   textAttribs[1].Name := 'font-size';
   textAttribs[1].Value := IntToStr(FHeaderFontHeight);
   textAttribs[2].Name := 'text-anchor';
@@ -960,7 +964,7 @@ begin
 
   SetLength(textAttribs, 4);
   textAttribs[0].Name := 'font-family';
-  textAttribs[0].Value := 'Helvetica';
+  textAttribs[0].Value := 'Roboto Condensed';
   textAttribs[1].Name := 'font-size';
   textAttribs[1].Value := IntToStr(FHeaderFontHeight);
   textAttribs[2].Name := 'text-anchor';
@@ -1020,7 +1024,7 @@ begin
   TempRect.Bottom := TempRect.Top + 20;
   SetLength(textAttribs, 4);
   textAttribs[0].Name := 'font-family';
-  textAttribs[0].Value := 'Helvetica';
+  textAttribs[0].Value := 'Roboto Condensed';
   textAttribs[1].Name := 'font-size';
   textAttribs[1].Value := IntToStr(FFontHeight);
   textAttribs[2].Name := 'text-anchor';
@@ -1100,7 +1104,7 @@ begin
   { draw the number of studies}
   SetLength(textAttribs, 4);
   textAttribs[0].Name := 'font-family';
-  textAttribs[0].Value := 'Helvetica';
+  textAttribs[0].Value := 'Roboto Condensed';
   textAttribs[1].Name := 'font-size';
   textAttribs[1].Value := IntToStr(FFontHeight - 2);
   textAttribs[2].Name := 'text-anchor';
@@ -1371,7 +1375,7 @@ begin
   FFontHeight := 16;
   FSmallFontHeight := 14;
   FHeaderFontHeight := 20;
-  FFontName := 'Helvetica';
+  FFontName := 'Roboto Condensed';
   FMargins.Top := 10;
   FMargins.Bottom := 60;
   FMargins.Left := 0;
