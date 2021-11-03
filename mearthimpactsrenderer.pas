@@ -14,6 +14,7 @@ type
 
   TEarthImpactsRenderer = class(TObject)
     private
+      FAddGroupDefinition: Boolean;
       FHeight: Integer;
       FImpacts: TEarthImpactsArray;
       FIsFullSvg: Boolean;
@@ -22,6 +23,7 @@ type
       FWidth: Integer;
       FRect: TRect;
       FSvgStrings: TStringList;
+      FShapeStrings: TStringList;
       procedure DrawBorder;
       procedure DrawCenterLine;
       procedure DrawScale;
@@ -37,11 +39,13 @@ type
 
       function Render(aOrientation: TOrientation; aRect: TRect; aMaxImpactHeight: Integer=-1): TStringList; overload;
       function Render: TStringList; overload;
+      procedure Render(const aOrientation: TOrientation; const aRect: TRect; var shapeStrings: TStringList; aMaxImpactHeight: Integer = -1);
       property Orientation: TOrientation read FOrientation;
       property Width: Integer read FWidth;
       property Height: Integer read FHeight;
       property MaxImpactDiameter: Integer read FMaxImpactDiameter;
       property IsFullSvg: Boolean read FIsFullSvg write SetIsFullSvg;
+      property AddGroupDefinition: Boolean read FAddGroupDefinition write FAddGroupDefinition;
   end;
 
 implementation
@@ -90,7 +94,10 @@ begin
   attribs[2].name := 'fill';
   attribs[2].value := 'white';
   BorderStr := PointsToSvgLine(p, attribs);
-  FSvgStrings.Add(BorderStr);
+  if (FOrientation = tHorizontal) and Assigned(FShapeStrings) then
+    FShapeStrings.Add(BorderStr)
+  else
+    FSvgStrings.Add(BorderStr);
 end;
 
 procedure TEarthImpactsRenderer.DrawCenterLine;
@@ -124,7 +131,10 @@ begin
   LineString := LineString + 'fill=' + dblq + 'none' + dblq + ' ';
   LineString := LineString + 'stroke-dasharray=' + dblq + '5,5' + dblq + ' ';
   LineString := LineString + 'stroke=' + DBLQ + 'orange' + DBLQ + ' stroke-width=' + DBLQ + '1' + DBLQ + ' stroke-linecap=' + DBLQ + 'square' + DBLQ + '/>';
-  FSvgStrings.Add(LineString);
+  if (FOrientation = tHorizontal) and Assigned(FShapeStrings) then
+    FShapeStrings.Add(LineString)
+  else
+    FSvgStrings.Add(LineString);
 end;
 
 procedure TEarthImpactsRenderer.DrawScale;
@@ -152,8 +162,8 @@ begin
     tHorizontal: y := FRect.Top + Round(FHeight * 0.5);
     tVertical: x := FRect.Left + Round(FWidth * 0.5);
   end;
-
-  FSvgStrings.Add('<g class=' + dblq + 'earth-impacts' + dblq + '>');
+  if FAddGroupDefinition then
+    FSvgStrings.Add('<g class=' + dblq + 'earth-impacts' + dblq + '>');
   if Length(FImpacts) > 0 then
     for i := 0 to Length(FImpacts) - 1 do
     begin
@@ -188,9 +198,18 @@ begin
       SvgTag := SvgTag + 'stroke-width=' + dblq + '1' + dblq + ' ';
       SvgTag := SvgTag + 'fill-opacity=' + dblq + '0.4' + dblq + ' ';
       SvgTag := SvgTag + 'fill=' + dblq + 'red' + dblq + ' />';
-      FSvgStrings.Add(SvgTag);
+      if (FOrientation = tHorizontal) and Assigned(FShapeStrings) then
+        FShapeStrings.Add(SvgTag)
+      else
+        FSvgStrings.Add(SvgTag);
     end;
-  FSvgStrings.Add('</g>');
+  if FAddGroupDefinition then
+  begin
+    if (FOrientation = tHorizontal) and Assigned(FShapeStrings) then
+      FShapeStrings.Add('</g>')
+    else
+      FSvgStrings.Add('</g>');
+  end;
 end;
 
 procedure TEarthImpactsRenderer.DrawTitle;
@@ -244,6 +263,7 @@ end;
 
 constructor TEarthImpactsRenderer.Create(aImpacts: TEarthImpactsArray);
 begin
+  FAddGroupDefinition := True;
   FIsFullSvg := False;
   FImpacts := aImpacts;
   FOrientation := tHorizontal;
@@ -253,6 +273,7 @@ begin
   FRect.Right := DEFAULT_DATA_PANEL_HEIGHT;
   FMaxImpactDiameter := DEFAULT_MAX_IMPACT_HEIGHT;
   FSvgStrings := TStringList.Create;
+  FShapeStrings := nil;
 end;
 
 destructor TEarthImpactsRenderer.Destroy;
@@ -302,6 +323,25 @@ begin
     CloseSvg;
   Result := TStringList.Create;
   Result.AddStrings(FSvgStrings);
+end;
+
+procedure TEarthImpactsRenderer.Render(const aOrientation: TOrientation; const aRect: TRect; var shapeStrings: TStringList; aMaxImpactHeight: Integer);
+begin
+  try
+    FOrientation := aOrientation;
+    FRect.Top := aRect.Top;
+    FRect.Bottom := aRect.Bottom;
+    FRect.Left := aRect.Left;
+    FRect.Right := aRect.Right;
+    FWidth := FRect.Right - FRect.Left;
+    FHeight := FRect.Bottom - FRect.Top;
+    if aMaxImpactHeight > 0 then
+      FMaxImpactDiameter := aMaxImpactHeight;
+    FShapeStrings := shapeStrings;
+    Render;
+  finally
+    FShapeStrings := nil;
+  end;
 end;
 
 end.

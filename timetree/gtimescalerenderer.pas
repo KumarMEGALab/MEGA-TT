@@ -43,9 +43,9 @@ type
       procedure InitMargins;
       procedure SetIsLogScale(AValue: Boolean);
       procedure DrawBackground;
-      procedure DrawScaleTicks;
-      procedure DrawHorizLine;
-      procedure DrawTextForTicks;
+      procedure DrawScaleTicks(aList: TStringList);
+      procedure DrawHorizLine(aList: TStringList);
+      procedure DrawTextForTicks(aList: TStringList);
       procedure FindBestScaleTickIncrement;
       function FindBestLogScaleBase: Integer;
       procedure SetNumTimeScaleTicks(AValue: Integer);
@@ -55,8 +55,8 @@ type
       constructor Create;
       destructor Destroy; override;
 
-      function Render(aRect: TRect; maxTime: Double; times: TArrayOfGeologicTime; scalingFactor: Integer = 0): TStringList;
-
+      function Render(aRect: TRect; maxTime: Double; times: TArrayOfGeologicTime; scalingFactor: Integer = 0): TStringList; overload;
+      procedure Render(aRect: TRect; maxTime: Double; times: TArrayOfGeologicTime; var lineStrings: TStringList; var textStrings: TStringList; scalingFactor: Integer = 0); overload;
       property IsLogScale: Boolean read FIsLogScale write SetIsLogScale;
       property NumTimeScaleTicks: Integer read FNumTimeScaleTicks write SetNumTimeScaleTicks;
       property TickHeight: Integer read FTickHeight write SetTickHeight;
@@ -275,7 +275,7 @@ begin
   end;
 end;
 
-procedure TTimescaleRenderer.DrawScaleTicks;
+procedure TTimescaleRenderer.DrawScaleTicks(aList: TStringList);
 var
   i: Integer;
   Points: TArrayOfTPoint;
@@ -290,11 +290,11 @@ begin
   begin
     Points := FScaleTicks[i].Points;
     SvgString := PointsToSvgLine(Points, FLineAttribs);
-    FSvgStrings.Add(SvgString);
+    aList.Add(SvgString);
   end;
 end;
 
-procedure TTimescaleRenderer.DrawHorizLine;
+procedure TTimescaleRenderer.DrawHorizLine(aList: TStringList);
 var
   SvgLine: String;
 begin
@@ -303,10 +303,10 @@ begin
   FLinePoints[1].X := FDrawingArea.Right;
   FLinePoints[1].Y := FLinePoints[0].Y;
   SvgLine := PointsToSvgLine(FLinePoints, FLineAttribs);
-  FSvgStrings.Add(SvgLine);
+  aList.Add(SvgLine);
 end;
 
-procedure TTimescaleRenderer.DrawTextForTicks;
+procedure TTimescaleRenderer.DrawTextForTicks(aList: TStringList);
 var
   i: Integer;
   SvgString: String;
@@ -321,7 +321,7 @@ begin
     x := Points[0].X - (CustomTextWidth(TimeText) div 3);
     y := Points[1].Y + FMargins.Top + CustomTextHeight(TimeText, 8);
     SvgString := TextToSvgText(x, y, TimeText, FTextAttribs, FScalingFactor);
-    FSvgStrings.Add(SvgString);
+    aList.Add(SvgString);
   end;
 end;
 
@@ -397,11 +397,22 @@ begin
   FDrawingArea := aRect;
   FMaxTime := maxTime;
   FGeologicTimes := times;
-  //DrawBackground;
-  DrawHorizLine;
-  DrawScaleTicks;
-  DrawTextForTicks;
+  DrawHorizLine(FSvgStrings);
+  DrawScaleTicks(FSvgStrings);
+  DrawTextForTicks(FSvgStrings);
   Result.Assign(FSvgStrings);
+end;
+
+procedure TTimescaleRenderer.Render(aRect: TRect; maxTime: Double;times: TArrayOfGeologicTime; var lineStrings: TStringList; var textStrings: TStringList; scalingFactor: Integer);
+begin
+  FScalingFactor := scalingFactor;
+  Assert(Assigned(MapMyaToCoordsFunc));
+  FDrawingArea := aRect;
+  FMaxTime := maxTime;
+  FGeologicTimes := times;
+  DrawHorizLine(LineStrings);
+  DrawScaleTicks(LineStrings);
+  DrawTextForTicks(textStrings);
 end;
 
 end.
