@@ -14,7 +14,9 @@ type
   TTimelineResult = class(TObject)
 
     private
+      FAdjustedAge: Double;
       FBranchLength: Double;
+      FCiString: String;
       FCommonName: String;
       FConfidenceIntervalHigh: Double;
       FConfidenceIntervalLow: Double;
@@ -68,6 +70,8 @@ type
       property ConfidenceIntervalLow: Double read FConfidenceIntervalLow write FConfidenceIntervalLow;
       property ConfidenceIntervalHigh: Double read FConfidenceIntervalHigh write FConfidenceIntervalHigh;
       property IsConfidenceInterval: Boolean read FIsConfidenceInterval write FIsConfidenceInterval;
+      property CiString: String read FCiString write FCiString;
+      property AdjustedAge: Double read FAdjustedAge write FAdjustedAge;
   end;
 
 
@@ -121,6 +125,7 @@ end;
 
 constructor TTimelineResult.Create;
 begin
+  FAdjustedAge := 0.0;
   FBranchLength := 0.0;
   FConfidenceIntervalHigh := 0.0;
   FConfidenceIntervalLow := 0.0;
@@ -131,6 +136,7 @@ begin
   FTimeTreeId := -1;
   FScientificName := EmptyStr;
   FTaxonomicRank := trUnknown;
+  FCiString := EmptyStr;
 end;
 
 function TTimelineResult.IsEqual(Other: TTimelineResult): Boolean;
@@ -160,6 +166,8 @@ begin
   FConfidenceIntervalLow := Source.FConfidenceIntervalLow;
   FConfidenceIntervalHigh := Source.FConfidenceIntervalHigh;
   FIsConfidenceInterval := Source.FIsConfidenceInterval;
+  FCiString := Source.FCiString;
+  FAdjustedAge := Source.FAdjustedAge;
 end;
 
 

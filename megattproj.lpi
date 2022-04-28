@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="11"/>
+    <Version Value="12"/>
     <General>
       <Flags>
         <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+        <MainUnitHasScaledStatement Value="False"/>
+        <CompatibilityMode Value="True"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <MainUnit Value="0"/>
       <Title Value="megattproj"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
@@ -53,16 +55,16 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <CommandLineParams Value="--tree ./inputs/97k-genus-tree.nwk --names-map ./inputs/97k-genus-map.txt --ranks ./inputs/97k-genus-ranks.txt --target-rank genus -ci inputs/genus_ci.csv -leaf-counts inputs/leafNodeCounts.csv --ids ./ids/ids2.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/genus.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
-        <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/pruneTree_97k"/>
+        <CommandLineParams Value="--timeline ./inputs/human.json --width 600 --height 800 --outfile ./outputs/human.svg --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
+        <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/timelinesearch"/>
         <Display Use="True"/>
       </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
           <local>
-            <CommandLineParams Value="--tree ./inputs/97k-genus-tree.nwk --names-map ./inputs/97k-genus-map.txt --ranks ./inputs/97k-genus-ranks.txt --target-rank genus -ci inputs/genus_ci.csv -leaf-counts inputs/leafNodeCounts.csv --ids ./ids/ids2.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/genus.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
-            <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/pruneTree_97k"/>
+            <CommandLineParams Value="--timeline ./inputs/human.json --width 600 --height 800 --outfile ./outputs/human.svg --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
+            <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/timelinesearch"/>
             <Display Use="True"/>
           </local>
         </Mode0>

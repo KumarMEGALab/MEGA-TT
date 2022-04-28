@@ -457,11 +457,9 @@ begin
       begin
         RanksStringSplitter.Clear;
         SplitOnSingleChar(FRanksLoader[i], ',', RanksStringSplitter, False);
-        if not RanksStringSplitter.Count = 34 then
-        begin
-          FMessageLog.Add('Expected 34 tokens but got ' + IntToStr(RanksStringSplitter.Count));
-          Exit;
-        end;
+        if not (RanksStringSplitter.Count = 34) then
+          raise Exception.Create(Format('Expected 34 tokens but got %d at line %d', [RanksStringSplitter.Count, i + 1]));
+
         debug := RanksStringSplitter[0];
         id := StrToInt(RanksStringSplitter[0]);
         aCount := StrToInt(RanksStringSplitter[30]);
@@ -472,6 +470,7 @@ begin
       on E:Exception do
       begin
         FMessageLog.Add('Exception encountered in LoadRanksFile: ' + E.Message);
+        WriteLn(FMessageLog.Text);
       end;
     end;
   finally

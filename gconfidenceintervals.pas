@@ -39,7 +39,7 @@ type
       constructor Create;
       destructor Destroy; override;
 
-      function ProcessConfidenceInterval(const EstimatesStr: String; const adjustedAge: Double; const preAdjustedAge: Double;  var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean;
+      function ProcessConfidenceInterval(const EstimatesStr: String; const adjustedAge: Double; const preAdjustedAge: Double;  var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean; deprecated 'CIs are now handled completely on the server';
   end;
 
   { TLoadConfidenceIntervalsThread }
@@ -176,6 +176,7 @@ function TConfidenceIntervalParser.ProcessConfidenceInterval(const EstimatesStr:
 var
   numEstimates: Integer;
 begin
+  //raise Exception.Create('Application Error: call to deprecated TConfidenceIntervalParser.ProcessConfidenceInterval function');
   numEstimates := ParseTimeEstimates(EstimatesStr);
   if (numEstimates > 1) and (numEstimates < 5) then
   begin

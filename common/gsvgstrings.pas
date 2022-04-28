@@ -104,7 +104,10 @@ begin
   Result := Result + 'height=' + dblq + IntToStr(aRect.Bottom - aRect.Top) + dblq + ' ';
   if Length(Attributes) > 0 then
     for i := 0 to Length(Attributes) - 1 do
-      Result := Result + Attributes[i].Name + '=' + dblq + Attributes[i].Value + dblq + ' ';
+    begin
+      if Trim(Attributes[i].Name) <> EmptyStr then
+        Result := Result + Attributes[i].Name + '=' + dblq + Attributes[i].Value + dblq + ' ';
+    end;
   Result := Trim(Result) + ' />';
 end;
 

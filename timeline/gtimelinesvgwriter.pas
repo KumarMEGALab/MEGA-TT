@@ -37,7 +37,7 @@ type
       FGeoScaleFontAttribs: array[0..6] of TXMLAttribute;
       FTimescaleLineAttribs: array[0..2] of TXMLAttribute;
       FTimescaleFontAttribs: array[0..2] of TXMLAttribute;
-      FResultCircleAttribs: array[0..10] of TXMLAttribute;
+      FResultCircleAttribs: array[0..11] of TXMLAttribute;
       FTimescaleTicks: TArrayOfTPoint;
       FNamesFontAttribs: array[0..3] of TXMLAttribute;
       FNamesBoxAttribs: array of TXMLAttribute;
@@ -714,10 +714,10 @@ begin
       FResultCircleAttribs[2].Value := aResult.ScientificName;
       FResultCircleAttribs[3].Name := 'time';
       FResultCircleAttribs[3].Value := divTimeStr;
-      FResultCircleAttribs[4].Name := 'ci_lo';
-      FResultCircleAttribs[4].Value := ciLowStr;
-      FResultCircleAttribs[5].Name := 'ci_hi';
-      FResultCircleAttribs[5].Value := ciHighStr;
+      FResultCircleAttribs[4].Name := 'ci_string';
+      FResultCircleAttribs[4].Value := aResult.CiString;
+      FResultCircleAttribs[5].Name := 'is_range';
+      FResultCircleAttribs[5].Value := LowerCase(BoolToStr((aResult.CiString <> EmptyStr) and (Pos('Range', aResult.CiString) > 0), True));
       FResultCircleAttribs[6].Name := 'rank';
       FResultCircleAttribs[6].Value := TaxonomicRankToString(aResult.TaxonomicRank);
       FResultCircleAttribs[7].Name := 'isci';
@@ -728,6 +728,8 @@ begin
       FResultCircleAttribs[9].Value := '1';
       FResultCircleAttribs[10].Name := 'tt_id';
       FResultCircleAttribs[10].Value := IntToStr(aResult.TimeTreeId);
+      FResultCircleAttribs[11].Name := 'adjusted_age';
+      FResultCircleAttribs[11].Value := FloatToStr(aResult.AdjustedAge);
       SvgTag := CircleToSvgCircle(x, y, r, FResultCircleAttribs);
       FSvgStrings.Add(SvgTag);
     end;
@@ -749,10 +751,10 @@ begin
       FResultCircleAttribs[2].Value := aResult.ScientificName;
       FResultCircleAttribs[3].Name := 'time';
       FResultCircleAttribs[3].Value := divTimeStr;
-      FResultCircleAttribs[4].Name := 'ci_lo';
-      FResultCircleAttribs[4].Value := ciLowStr;
-      FResultCircleAttribs[5].Name := 'ci_hi';
-      FResultCircleAttribs[5].Value := ciHighStr;
+      FResultCircleAttribs[4].Name := 'ci_string';
+      FResultCircleAttribs[4].Value := aResult.CiString;
+      FResultCircleAttribs[5].Name := 'is_range';
+      FResultCircleAttribs[5].Value := LowerCase(BoolToStr((aResult.CiString <> EmptyStr) and (Pos('Range', aResult.CiString) > 0), True));
       FResultCircleAttribs[6].Name := 'rank';
       FResultCircleAttribs[6].Value := TaxonomicRankToString(aResult.TaxonomicRank);
       FResultCircleAttribs[7].Name := 'isci';
@@ -763,6 +765,8 @@ begin
       FResultCircleAttribs[9].Value := '1';
       FResultCircleAttribs[10].Name := 'tt_id';
       FResultCircleAttribs[10].Value := IntToStr(aResult.TimeTreeId);
+      FResultCircleAttribs[11].Name := 'adjusted_age';
+      FResultCircleAttribs[11].Value := FloatToStr(aResult.AdjustedAge);
       SvgTag := CircleToSvgCircle(x, y, r, FResultCircleAttribs);
       FSvgStrings.Add(SvgTag);
     end;
@@ -844,8 +848,8 @@ var
 begin
   if FTimeline.Count = 0 then
     Exit;
-  SetLength(FNamesBoxAttribs, 7);
-  SetLength(FUnnamedNodesBoxAttribs, 7);
+  SetLength(FNamesBoxAttribs, 8);
+  SetLength(FUnnamedNodesBoxAttribs, 8);
   FUnnamedNodesBoxAttribs[5].Name := 'class';
   FUnnamedNodesBoxAttribs[5].Value := 'div-time';
   FNamesBoxAttribs[5].Name := 'class';
@@ -856,6 +860,36 @@ begin
     aResult := FTimeline[i];
     if (not FDrawUnknownNodes) and (aResult.IsUnknownEvent) then
       continue;
+    if CompareValue(aResult.AdjustedAge, 0, FP_CUTOFF) > 0 then
+    begin
+      FNamesBoxAttribs[6].Name := 'adjusted_age';
+      FNamesBoxAttribs[6].Value := FloatToStr(aResult.AdjustedAge);
+      FUnnamedNodesBoxAttribs[6].Name := 'adjusted_age';
+      FUnnamedNodesBoxAttribs[6].Value := FloatToStr(aResult.AdjustedAge);
+    end
+    else
+    begin
+      FNamesBoxAttribs[6].Name := EmptyStr;
+      FNamesBoxAttribs[6].Value := EmptyStr;
+      FUnnamedNodesBoxAttribs[6].Name := EmptyStr;
+      FUnnamedNodesBoxAttribs[6].Value := EmptyStr;
+    end;
+
+    if Trim(aResult.CiString) <> EmptyStr then
+    begin
+      FNamesBoxAttribs[7].Name := 'ci_string';
+      FNamesBoxAttribs[7].Value := aResult.CiString;
+      FUnnamedNodesBoxAttribs[7].Name := 'ci_string';
+      FUnnamedNodesBoxAttribs[7].Value := aResult.CiString;
+    end
+    else
+    begin
+      FNamesBoxAttribs[7].Name := EmptyStr;
+      FNamesBoxAttribs[7].Value := EmptyStr;
+      FUnnamedNodesBoxAttribs[7].Name := EmptyStr;
+      FUnnamedNodesBoxAttribs[7].Value := EmptyStr;
+    end;
+
     boxCoords.Left := aResult.TimeTextXCoord;
     boxCoords.Top := aResult.TimeTextYCoord - NAME_BOX_PADDING;
     boxCoords.Right := boxCoords.Left + TIME_BOX_WIDTH;

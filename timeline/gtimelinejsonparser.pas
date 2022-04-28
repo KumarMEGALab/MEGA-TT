@@ -5,7 +5,7 @@ unit gtimelinejsonparser;
 interface
 
 uses
-  Classes, SysUtils, fpjson, jsonparser, gtimelineresult, gconfidenceintervals;
+  Classes, SysUtils, fpjson, jsonparser, gtimelineresult;
 
 type
 
@@ -14,7 +14,6 @@ type
   TTimelineJsonParser = class(TObject)
     private
       FData: TList;
-      FCIParser: TConfidenceIntervalParser;
       function GetItem(Index: Integer): TTimelineResult;
       function LoadSingleResult(JsonStr: String): Boolean;
       function GetScientificName(JsonStr: String): String;
@@ -22,8 +21,9 @@ type
       function GetBranchLength(JsonStr: String): Double;
       function GetCiLow(JsonStr: String): Double;
       function GetCiHigh(JsonStr: String): Double;
+      function GetCiString(JsonStr: String): String;
+      function GetPrecomputedAge(JsonStr: String): Double;
       function GetAdjustedAge(JsonStr: String): Double;
-      function GetPreadjustedAge(JsonStr: String): Double;
       function GetTimeEstimatesStr(JsonStr: String): String;
       procedure Clear;
     public
@@ -57,10 +57,11 @@ var
   aResult: TTimelineResult=nil;
   aArray: TJSONArray=nil;
   i: Integer;
-  adjustedAge, preadjustedAge: Double;
+  preComputedAge, adjustedAge: Double;
   isCI: Boolean = False;
   ciLow, ciHigh: Double;
   timeEstimatesString: String;
+  ciString: String = '';
 begin
   Result := False;
 
@@ -103,16 +104,16 @@ begin
       AData := AJson.Find('studies', jtObject);
       if Assigned(AData) then
       begin
+        ciString := GetCiString(AData.AsJSON);
+        aResult.IsConfidenceInterval := (ciString <> EmptyStr);
+        if ciString <> EmptyStr then
+          aResult.CiString := ciString;
+        preComputedAge := GetPrecomputedAge(AData.AsJSON);
         adjustedAge := GetAdjustedAge(AData.AsJSON);
-        preadjustedAge := GetPreadjustedAge(AData.AsJSON);
+        aResult.AdjustedAge := adjustedAge;
         timeEstimatesString := GetTimeEstimatesStr(AData.AsJSON);
         if Trim(timeEstimatesString) = EmptyStr then
           raise Exception.Create('missing time estimates string');
-
-        FCIParser.ProcessConfidenceInterval(timeEstimatesString, adjustedAge, preadjustedAge, ciLow, ciHigh, isCI);
-        aResult.IsConfidenceInterval := isCI;
-        aResult.ConfidenceIntervalLow := ciLow;
-        aResult.ConfidenceIntervalHigh := ciHigh;
       end;
 
       AData := AJson.Find('figurines', jtArray);
@@ -279,7 +280,33 @@ begin
   end;
 end;
 
-function TTimelineJsonParser.GetAdjustedAge(JsonStr: String): Double;
+function TTimelineJsonParser.GetCiString(JsonStr: String): String;
+var
+  AJson: TJSONObject=nil;
+  AData: TJSONData=nil;
+  AParser: TJSONParser=nil;
+begin
+  Result := EmptyStr;
+
+  try
+    AParser := TJSONParser.Create(JsonStr);
+    AData := AParser.Parse;
+    if (not Assigned(AData)) or (not (AData.JSONType = jtObject)) then
+      raise Exception.Create('failed to parse studies from JSON');
+    AJson := TJSONObject(AData);
+
+    AData := AJson.Find('ci_string', jtString);
+    if Assigned(AData) then
+      Result := AData.Value;
+  finally
+    if Assigned(AJson) then
+      AJson.Free;
+    if Assigned(AParser) then
+      AParser.Free;
+  end;
+end;
+
+function TTimelineJsonParser.GetPrecomputedAge(JsonStr: String): Double;
 var
   AJson: TJSONObject=nil;
   AData: TJSONData=nil;
@@ -307,7 +334,7 @@ begin
   end;
 end;
 
-function TTimelineJsonParser.GetPreadjustedAge(JsonStr: String): Double;
+function TTimelineJsonParser.GetAdjustedAge(JsonStr: String): Double;
 var
   AJson: TJSONObject=nil;
   AData: TJSONData=nil;
@@ -324,9 +351,17 @@ begin
 
     AData := AJson.Find('preadjusted_age', jtNumber);
     if Assigned(AData) then
+    begin
       Result := AData.Value
+    end
     else
-      raise Exception.Create('missing preadjusted_age');
+    begin
+      AData := AJson.Find('adjusted_age', jtNumber);
+      if Assigned(AData) then
+        Result := AData.Value
+      else
+        raise Exception.Create('missing adjusted/preadjusted_age');
+    end;
   finally
     if Assigned(AJson) then
       AJson.Free;
@@ -378,7 +413,6 @@ end;
 constructor TTimelineJsonParser.Create;
 begin
   FData := TList.Create;
-  FCIParser := TConfidenceIntervalParser.Create;
 end;
 
 destructor TTimelineJsonParser.Destroy;
@@ -386,8 +420,6 @@ begin
   Clear;
   if Assigned(FData) then
     FData.Free;
-  if Assigned(FCIParser) then
-    FCIParser.Free;
   inherited Destroy;
 end;
 

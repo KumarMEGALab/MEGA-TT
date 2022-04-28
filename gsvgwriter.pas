@@ -885,7 +885,7 @@ var
   aWidth: Integer;
   rectAttribs: array of TXmlAttribute;
   textAttribs: array of TXmlAttribute;
-  ciLowStr, ciHighStr, divTimeStr, medianTimeStr: String;
+  ciLowStr, ciHighStr, precomputedTimeStr, adjustedTimeStr: String;
 begin
   aRect := ResultsPanelCoords;
   TempRect.Left := 0;
@@ -1018,8 +1018,8 @@ begin
   FStrings.Add(TextStr);
   DrawExtLink(TempRect.Right - 14, TempRect.Top + ((TempRect.Bottom - TempRect.Top) div 2) -12 + (FFontHeight div 4));
 
-  { draw the median time}
-  FormatTimeIntervalStrings(FPairwiseResult.MedianTime, FPairwiseResult.MolecularTime, FPairwiseResult.CILow, FPairwiseResult.CIHigh, medianTimeStr, divTimeStr, ciLowStr, ciHighStr);
+  { draw the precomputed time}
+  FormatTimeIntervalStrings(FPairwiseResult.AdjustedTime, FPairwiseResult.PrecomputedAge, FPairwiseResult.CILow, FPairwiseResult.CIHigh, adjustedTimeStr, precomputedTimeStr, ciLowStr, ciHighStr);
   TempRect.Top := TempRect.Bottom + 20;
   TempRect.Bottom := TempRect.Top + 20;
   SetLength(textAttribs, 4);
@@ -1037,7 +1037,7 @@ begin
   TempRect.Top := TempRect.Bottom;
   TempRect.Bottom := TempRect.Top + FFontHeight;
 
-  TextStr := Format('%s MYA', [medianTimeStr]);
+  TextStr := Format('%s MYA', [precomputedTimeStr]);
   if CustomTextWidth(TextStr) >= aWidth then
   begin
     TextStr := WrapTextInTSpan(TextStr, aWidth div 2, FFontHeight  + 1, 8);
@@ -1048,42 +1048,42 @@ begin
     TextStr := AddSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
   FStrings.Add(TextStr);
 
-  { draw the div time}
-  TempRect.Top := TempRect.Bottom + 20;
-  TempRect.Bottom := TempRect.Top + FFontHeight;
-  TextStr := AddSvgTextToRect(TempRect, 'Estimated Time:', textAttribs, FFontHeight);
-  FStrings.Add(TextStr);
-
-  TempRect.Top := TempRect.Bottom;
-  TempRect.Bottom := TempRect.Top + FFontHeight;
-  TextStr := Format('%s MYA', [divTimeStr]);
-  if CustomTextWidth(TextStr) >= aWidth then
+  if FPairwiseResult.HasAdjustedTime then
   begin
-    TextStr := WrapTextInTSpan(TextStr, aWidth div 2, FFontHeight  + 1, 8);
-    TempRect.Bottom := TempRect.Bottom + (NumOccurences(TextStr, '</tspan>', True) * FFontHeight);
-    TextStr := AddWrappedSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
-  end
-  else
-    TextStr := AddSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
-  FStrings.Add(TextStr);
+    { draw the adjusted time}
+    TempRect.Top := TempRect.Bottom + 20;
+    TempRect.Bottom := TempRect.Top + FFontHeight;
+    TextStr := AddSvgTextToRect(TempRect, 'Adjusted Time:', textAttribs, FFontHeight);
+    FStrings.Add(TextStr);
 
-  TempRect.Top := TempRect.Bottom;
-  TempRect.Bottom := TempRect.Top + FFontHeight + 10;
-  if FPairwiseResult.CIHigh > 0 then
-  begin
-    if FPairwiseResult.IsCI then
-      TextStr := Format('CI: (%s - %s MYA)', [ciLowStr, ciHighStr])
+    TempRect.Top := TempRect.Bottom;
+    TempRect.Bottom := TempRect.Top + FFontHeight;
+    TextStr := Format('%s MYA', [adjustedTimeStr]);
+    if CustomTextWidth(TextStr) >= aWidth then
+    begin
+      TextStr := WrapTextInTSpan(TextStr, aWidth div 2, FFontHeight  + 1, 8);
+      TempRect.Bottom := TempRect.Bottom + (NumOccurences(TextStr, '</tspan>', True) * FFontHeight);
+      TextStr := AddWrappedSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
+    end
     else
-      TextStr := Format('Range: (%s - %s MYA)', [ciLowStr, ciHighStr]);
-  end
-  else
-    TextStr := 'CI: (n/a)';
-  //textAttribs[1].Value := IntToStr(FFontHeight);
-  if CustomTextWidth(TextStr) < aWidth then
-    TextStr := AddWrappedSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight)
-  else
-    TextStr := AddSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
-  FStrings.Add(TextStr);
+      TextStr := AddSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
+    FStrings.Add(TextStr);
+  end;
+
+  if FPairwiseResult.HasCiString then
+  begin
+    TempRect.Top := TempRect.Bottom;
+    TempRect.Bottom := TempRect.Top + FFontHeight + 10;
+    TextStr := FPairwiseResult.CiString;
+    if Trim(TextStr) <> EmptyStr then
+    begin
+      if CustomTextWidth(TextStr) < aWidth then
+        TextStr := AddWrappedSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight)
+      else
+        TextStr := AddSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
+      FStrings.Add(TextStr);
+    end;
+  end;
 
   { draw the TTOL link}
   TempRect.Top := TempRect.Bottom;
@@ -1113,10 +1113,14 @@ begin
   textAttribs[3].Value := 'black';
   TempRect.Top := TempRect.Bottom + 30;
   TempRect.Bottom := TempRect.Bottom + FFontHeight;
-  if FPairwiseResult.NumStudies = 1 then
-    TextStr := Format('(Median and estimated times were derived from %d study)', [FPairwiseResult.NumStudies])
+  if FPairwiseResult.HasAdjustedTime then
+    TextStr := 'Median and adjusted times were derived from '
   else
-    TextStr := Format('(Median and estimated times were derived from %d studies)', [FPairwiseResult.NumStudies]);
+    TextStr := 'Median time was derived from ';
+  if FPairwiseResult.NumStudies = 1 then
+    TextStr := Format('(%s %d study)', [TextStr, FPairwiseResult.NumStudies])
+  else
+    TextStr := Format('(%s %d studies)', [TextStr, FPairwiseResult.NumStudies]);
   TextStr := WrapTextInTSpan(TextStr, (aWidth div 2), FFontHeight  + 1, 10);
   TempRect.Bottom := TempRect.Bottom + (NumOccurences(TextStr, '</tspan>', True) * FFontHeight);
 

@@ -21,7 +21,7 @@ function NumOccurences(FullString: String; SubString: String; IgnoreCase: Boolea
 function HorizontalCenterOfRect(aRect: TRect): Integer;
 function VerticalCenterOfRect(aRect: TRect): Integer;
 procedure FormatTimeIntervalStrings(const divTime: Double; const ciLow: Double; const ciHigh: Double; var divTimeStr: String; var ciLowStr: String; var ciHighStr: String); overload;
-procedure FormatTimeIntervalStrings(const medianTime: Double; const divTime: Double; const ciLow: Double; const ciHigh: Double; var medianTimeStr: String; var divTimeStr: String; var ciLowStr: String; var ciHighStr: String); overload;
+procedure FormatTimeIntervalStrings(const adjustedTime: Double; const precomputedTime: Double; const ciLow: Double; const ciHigh: Double; var adjustedTimeStr: String; var precomputedTimeStr: String; var ciLowStr: String; var ciHighStr: String); overload;
 function AnyTwoStringsAreSame(str1, str2, str3: String): Boolean; overload;
 function AnyTwoStringsAreSame(str1, str2, str3, str4: String): Boolean; overload;
 
@@ -123,23 +123,23 @@ begin
   end;
 end;
 
-procedure FormatTimeIntervalStrings(const medianTime: Double; const divTime: Double; const ciLow: Double; const ciHigh: Double; var medianTimeStr: String; var divTimeStr: String; var ciLowStr: String; var ciHighStr: String);
+procedure FormatTimeIntervalStrings(const adjustedTime: Double; const precomputedTime: Double; const ciLow: Double; const ciHigh: Double; var adjustedTimeStr: String; var precomputedTimeStr: String; var ciLowStr: String; var ciHighStr: String);
 var
   formatStr: String;
   precision: Integer=0;
   maxPrecision: Integer;
 begin
-  if divTime < 0.1 then
+  if precomputedTime < 0.1 then
   begin
     precision := 3;
     maxPrecision := 4;
   end
-  else if divTime < 1.0 then
+  else if precomputedTime < 1.0 then
   begin
     precision := 2;
     maxPrecision := 3;
   end
-  else if divTime < 5.0 then
+  else if precomputedTime < 5.0 then
   begin
     precision := 1;
     maxPrecision := 2;
@@ -151,41 +151,41 @@ begin
   end;
 
   formatStr := '%.' + IntToStr(precision) + 'f';
-  divTimeStr := Format(formatStr, [divTime]);
+  precomputedTimeStr := Format(formatStr, [precomputedTime]);
   ciLowStr := Format(formatStr, [ciLow]);
   ciHighStr := Format(formatStr, [ciHigh]);
-  medianTimeStr := Format(formatStr, [medianTime]);
+  adjustedTimeStr := Format(formatStr, [adjustedTime]);
 
-  if (ciLow > 0) and (ciHigh > 0) and (CompareValue(ciHigh, divTime, 0.0000001) <> 0) then
+  if (ciLow > 0) and (ciHigh > 0) and (CompareValue(ciHigh, precomputedTime, 0.0000001) <> 0) then
   begin
-    while AnyTwoStringsAreSame(medianTimeStr, divTimeStr, ciLowStr, ciHighStr)  and (precision < maxPrecision) do
+    while AnyTwoStringsAreSame(adjustedTimeStr, precomputedTimeStr, ciLowStr, ciHighStr)  and (precision < maxPrecision) do
     begin
       inc(precision);
       formatStr := '%.' + IntToStr(precision) + 'f';
-      divTimeStr := Format(formatStr, [divTime]);
+      precomputedTimeStr := Format(formatStr, [precomputedTime]);
       ciLowStr := Format(formatStr, [ciLow]);
       ciHighStr := Format(formatStr, [ciHigh]);
-      medianTimeStr := Format(formatStr, [medianTime]);
+      adjustedTimeStr := Format(formatStr, [adjustedTime]);
     end;
   end
   else
   begin
-    while (not (StrToFloat(divTimeStr) > 0)) and (precision < maxPrecision) do
+    while (not (StrToFloat(precomputedTimeStr) > 0)) and (precision < maxPrecision) do
     begin
       inc(precision);
       formatStr := '%.' + IntToStr(precision) + 'f';
-      divTimeStr := Format(formatStr, [divTime]);
-      medianTimeStr := Format(formatStr, [medianTime]);
+      precomputedTimeStr := Format(formatStr, [precomputedTime]);
+      adjustedTimeStr := Format(formatStr, [adjustedTime]);
     end;
   end;
-  if divTime < 30 then
+  if precomputedTime < 30 then
   begin
     inc(precision);
     formatStr := '%.' + IntToStr(precision) + 'f';
-    divTimeStr := Format(formatStr, [divTime]);
+    precomputedTimeStr := Format(formatStr, [precomputedTime]);
     ciLowStr := Format(formatStr, [ciLow]);
     ciHighStr := Format(formatStr, [ciHigh]);
-    medianTimeStr := Format(formatStr, [medianTime]);
+    adjustedTimeStr := Format(formatStr, [adjustedTime]);
   end;
 end;
 

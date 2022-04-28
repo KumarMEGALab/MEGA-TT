@@ -6,6 +6,7 @@ __author__ = "Glen Stecher"
 __date__ = "$Oct 25, 2018 8:39:10 PM$"
 
 import os.path
+import sys
 from subprocess import Popen, PIPE
 
 
@@ -26,8 +27,8 @@ class MegattDependencyTest:
         return ''
 
     def current_ldd_result(self):
-        process = Popen(["ldd", self.megatt], stdout=PIPE, stderr=PIPE)
-        stdout, stderr = process.communicate()
+        process = Popen(["ldd", self.megatt], stdout=PIPE, stderr=PIPE, encoding='utf8')
+        stdout, stderr = process.communicate()        
         lines = stdout.split("\n")
         for line in lines:
             if line.strip() != '':
@@ -62,7 +63,7 @@ class MegattDependencyTest:
 
     def init_expected_dependencies(self):
         self.expected_dependencies.append('linux-vdso.so.1')
-        self.expected_dependencies.append('libpthread.so.0')
-        self.expected_dependencies.append('libdl.so.2')
+        #self.expected_dependencies.append('libpthread.so.0')
+        #self.expected_dependencies.append('libdl.so.2')
         self.expected_dependencies.append('libc.so.6')
         self.expected_dependencies.append('/lib64/ld-linux-x86-64.so.2')

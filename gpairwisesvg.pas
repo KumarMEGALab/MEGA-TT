@@ -5,7 +5,7 @@ unit gpairwisesvg;
 interface
 
 uses
-  Classes, SysUtils, fpjson, jsonparser, gconfidenceintervals, fgl;
+  Classes, SysUtils, fpjson, jsonparser, fgl;
 
 type
 
@@ -80,10 +80,11 @@ type
   TPairwiseResult = class(TObject)
 
     private
-      FCIParser: TConfidenceIntervalParser;
       FAncestorId: Integer;
       FCIHigh: Double;
       FCILow: Double;
+      FCiString: String;
+      FAdjustedAge: Double;
       FHitRecords: TList;
       FOutliers: TTimeTreeHitRecordList;
       FIsCI: Boolean;
@@ -91,25 +92,27 @@ type
       FRemoveOutliers: Boolean;
       FShowSummary: Boolean;
       FMedianTime: Double;
-      FMolecularTime: Double;
+      FPrecomputedAge: Double;
       FShowExpert: Boolean;
       FTaxonA: TTimetreeTaxon;
       FTaxonB: TTimetreeTaxon;
+      function GetHasAdjustedTime: Boolean;
+      function GetHasCiString: Boolean;
       function GetNumOutliers: Integer;
       function GetOutlier(Index: Integer): TTimetreeHitRecord;
       procedure SetAncestorId(AValue: Integer);
       procedure SetMedianTime(AValue: Double);
-      procedure SetMolecularTime(AValue: Double);
+      procedure SetPrecomputedAge(AValue: Double);
       procedure SetShowExpert(AValue: Boolean);
       procedure SetShowSummary(AValue: Boolean);
       procedure SortRecords;
       procedure FilterOutliers;
-      function GetCiLow(JsonStr: String): Double;
-      function GetCiHigh(JsonStr: String): Double;
+      function GetCiLow(JsonStr: String): Double; deprecated 'use ci_string from the json';
+      function GetCiHigh(JsonStr: String): Double;  deprecated 'use ci_string from the json';
+      function GetPrecomputedAge(JsonStr: String): Double;
       function GetAdjustedAge(JsonStr: String): Double;
-      function GetPreadjustedAge(JsonStr: String): Double;
       function GetTimeEstimatesStr(JsonStr: String): String;
-      procedure HandleMissingConfidenceIntervalData;
+      function Get_CI_String(JsonStr: String): String;
 
     protected
 
@@ -124,11 +127,13 @@ type
       property ShowExpert: Boolean read FShowExpert write SetShowExpert;
       property ShowSummary: Boolean read FShowSummary write SetShowSummary;
       property HitRecords: TList read FHitRecords write FHitRecords;
-      property MolecularTime: Double read FMolecularTime write SetMolecularTime;
+      property PrecomputedAge: Double read FPrecomputedAge write SetPrecomputedAge;
       property MedianTime: Double read FMedianTime write SetMedianTime;
+      property CiString: String read FCiString;
       property CILow: Double read FCILow write FCILow;
       property CIHigh: Double read FCIHigh write FCIHigh;
       property IsCI: Boolean read FIsCI write FIsCI;
+      property AdjustedTime: Double read FAdjustedAge;
       property AncestorId: Integer read FAncestorId write SetAncestorId;
       property TaxonA: TTimetreeTaxon read FTaxonA;
       property TaxonB: TTimetreeTaxon read FTaxonB;
@@ -136,6 +141,8 @@ type
       property NumOutliers: Integer read GetNumOutliers;
       property Outlier[Index: Integer]: TTimetreeHitRecord read GetOutlier;
       property RemoveOutliers: Boolean read FRemoveOutliers write FRemoveOutliers;
+      property HasAdjustedTime: Boolean read GetHasAdjustedTime;
+      property HasCiString: Boolean read GetHasCiString;
   end;
 
   function CompareHitRecord(Item1: Pointer; Item2: Pointer): Integer;
@@ -143,7 +150,7 @@ type
 implementation
 
 uses
-  math, gsvgstrings;
+  math, gsvgstrings, ttconst;
 
 function CompareHitRecord(Item1: Pointer; Item2: Pointer): Integer;
 var
@@ -211,6 +218,16 @@ begin
     Result := FOutliers.Count;
 end;
 
+function TPairwiseResult.GetHasAdjustedTime: Boolean;
+begin
+  Result := (CompareValue(FAdjustedAge, 0.0, FP_CUTOFF) > 0);
+end;
+
+function TPairwiseResult.GetHasCiString: Boolean;
+begin
+  Result := (Trim(FCiString) <> EmptyStr);
+end;
+
 function TPairwiseResult.GetOutlier(Index: Integer): TTimetreeHitRecord;
 begin
   Result := nil;
@@ -224,10 +241,10 @@ begin
   FMedianTime:=AValue;
 end;
 
-procedure TPairwiseResult.SetMolecularTime(AValue: Double);
+procedure TPairwiseResult.SetPrecomputedAge(AValue: Double);
 begin
-  if FMolecularTime=AValue then Exit;
-  FMolecularTime:=AValue;
+  if FPrecomputedAge=AValue then Exit;
+  FPrecomputedAge:=AValue;
 end;
 
 procedure TPairwiseResult.SetShowExpert(AValue: Boolean);
@@ -244,12 +261,13 @@ end;
 
 constructor TPairwiseResult.Create;
 begin
+  FAdjustedAge := -1;
   FRemoveOutliers := False;
   FTaxonA := TTimetreeTaxon.Create;
   FTaxonB := TTimetreeTaxon.Create;
   FHitRecords := TList.Create;
   FOutliers := TTimeTreeHitRecordList.Create;
-  FCIParser := TConfidenceIntervalParser.Create;
+  //FCIParser := TConfidenceIntervalParser.Create;
 end;
 
 destructor TPairwiseResult.Destroy;
@@ -274,8 +292,8 @@ begin
         FOutliers[i].Free;
     FOutliers.Free;
   end;
-  if Assigned(FCIParser) then
-    FCIParser.Free;
+  //if Assigned(FCIParser) then
+  //  FCIParser.Free;
   inherited Destroy;
 end;
 
@@ -325,6 +343,7 @@ var
   AData: TJSONData=nil;
   AParser: TJSONParser=nil;
 begin
+  raise Exception.Create('CIs are deprecated. Use ci_string from the json instead');
   Result := 0.0;
 
   try
@@ -353,6 +372,7 @@ var
   AData: TJSONData=nil;
   AParser: TJSONParser=nil;
 begin
+  raise Exception.Create('CIs are deprecated. Use ci_string from the json instead');
   Result := 0.0;
 
   try
@@ -375,7 +395,7 @@ begin
   end;
 end;
 
-function TPairwiseResult.GetAdjustedAge(JsonStr: String): Double;
+function TPairwiseResult.GetPrecomputedAge(JsonStr: String): Double;
 var
   AJson: TJSONObject=nil;
   AData: TJSONData=nil;
@@ -403,7 +423,7 @@ begin
   end;
 end;
 
-function TPairwiseResult.GetPreadjustedAge(JsonStr: String): Double;
+function TPairwiseResult.GetAdjustedAge(JsonStr: String): Double;
 var
   AJson: TJSONObject=nil;
   AData: TJSONData=nil;
@@ -422,7 +442,13 @@ begin
     if Assigned(AData) then
       Result := AData.Value
     else
-      raise Exception.Create('missing preadjusted_age');
+    begin
+      aData := AJson.Find('adjusted_age', jtNumber);
+      if Assigned(AData) then
+        Result := AData.Value
+      else
+        raise Exception.Create('missing adjusted/preadjusted_age');
+    end;
   finally
     if Assigned(AJson) then
       AJson.Free;
@@ -459,30 +485,41 @@ begin
   end;
 end;
 
-procedure TPairwiseResult.HandleMissingConfidenceIntervalData;
+function TPairwiseResult.Get_CI_String(JsonStr: String): String;
+var
+  AJson: TJSONObject=nil;
+  AData: TJSONData=nil;
+  AParser: TJSONParser=nil;
 begin
-  if FCIHigh > 0 then
-    Exit;
-  if (FHitRecords.Count > 1) and (FHitRecords.Count < 5) then
-  begin
-    FCILow := TTimetreeHitRecord(FHitRecords[0]).Time;
-    FCIHigh := TTimetreeHitRecord(FHitRecords[FHitRecords.Count - 1]).Time
+  Result := EmptyStr;
+
+  try
+    AParser := TJSONParser.Create(JsonStr);
+    AData := AParser.Parse;
+    if (not Assigned(AData)) or (not (AData.JSONType = jtObject)) then
+      raise Exception.Create('failed to parse studies from JSON');
+    AJson := TJSONObject(AData);
+
+    AData := AJson.Find('ci_string', jtString);
+    if Assigned(AData) then
+      Result := AData.Value;
+  finally
+    if Assigned(AJson) then
+      AJson.Free;
+    if Assigned(AParser) then
+      AParser.Free;
   end;
 end;
 
 function TPairwiseResult.LoadFromJson(jsonData: String): Boolean;
 var
-  AParser: TJSONParser;
-  AJson: TJSONObject;
-  AData: TJSONData;
+  AParser: TJSONParser = nil;
+  AJson: TJSONObject = nil;
+  AData: TJSONData = nil;
   aArray: TJSONArray;
   i: Integer;
-  adjustedAge, preadjustedAge: Double;
-  timeEstimatesString: String;
+  timeEstimatesString: String = '';
  begin
-  AParser := nil;
-  AJson := nil;
-  AData := nil;
   Result := True;
 
   try
@@ -505,26 +542,19 @@ var
       if Assigned(AData) then
         FShowSummary := AData.Value;
 
-      AData := AJson.Find('sum_simple_mol_time', jtString);
-      if Assigned(AData) then
-        FMolecularTime := StrToFloat(AData.Value);
-
-      AData := AJson.Find('sum_median_time', jtString);
-      if Assigned(AData) then
-        FMedianTime := StrToFloat(AData.Value);
-
       AData := AJson.Find('studies', jtObject);
       if Assigned(AData) then
       begin
-        adjustedAge := GetAdjustedAge(AData.AsJSON);
-        preadjustedAge := GetPreadjustedAge(AData.AsJSON);
+        FCiString := Get_CI_String(aData.AsJSON);
+        FPrecomputedAge := GetPrecomputedAge(AData.AsJSON);
+        FAdjustedAge := GetAdjustedAge(AData.AsJSON);
         timeEstimatesString := GetTimeEstimatesStr(AData.AsJSON);
-        FCILow := GetCiLow(AData.AsJSON);
-        FCIHigh := GetCiHigh(AData.AsJSON);
+        FCILow := 0; //GetCiLow(AData.AsJSON);
+        FCIHigh := 0; //GetCiHigh(AData.AsJSON);
         if Trim(timeEstimatesString) = EmptyStr then
           raise Exception.Create('missing time estimates string');
 
-        FCIParser.ProcessConfidenceInterval(timeEstimatesString, adjustedAge, preadjustedAge, FCILow, FCIHigh, FIsCI);
+        //FCIParser.ProcessConfidenceInterval(timeEstimatesString, precomputedAge, adjustedAge, FCILow, FCIHigh, FIsCI);
       end;
 
       AData := AJson.Find('taxon_a', jtString);
@@ -599,7 +629,6 @@ var
       if FRemoveOutliers then
         FilterOutliers;
       SortRecords;
-      HandleMissingConfidenceIntervalData
     except
       on E:Exception do
         raise Exception.Create('Failed to load JSON: ' + E.Message);
