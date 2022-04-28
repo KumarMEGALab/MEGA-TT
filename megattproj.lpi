@@ -38,10 +38,6 @@
               <GenerateDebugInfo Value="False"/>
             </Debugging>
             <LinkSmart Value="True"/>
-            <Options>
-              <PassLinkerOptions Value="True"/>
-              <LinkerOptions Value="-Xt"/>
-            </Options>
           </Linking>
           <Other>
             <ExecuteAfter>
