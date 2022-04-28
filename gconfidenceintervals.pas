@@ -15,6 +15,7 @@ type
     LowerBound: Double;
     TimetreeId: LongInt;
     UpperBound: Double;
+    AdjustedAge: Double;
     IsConfidenceInterval: Boolean; { otherwise it is a range because we did not have enough data to calculate a reasonable confidence interval}
   end;
 
@@ -30,7 +31,7 @@ type
 
     protected
       function ParseTimeEstimates(aStr: String): Integer;
-      function ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean; overload;
+      function ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean; var aAdjustedAge: Double): Boolean; overload;
       //function ParseConfidenceInterval(const aText: String; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean; overload;
       function IsOutsideOfInterval(const adjustedAge: Double; const ciLow: Double; const ciHigh: Double): Boolean;
       procedure AdjustConfidenceInterval(var ciLow: Double; var ciHigh: Double; const adjustedAge: Double; const preadjustedAge: Double);
@@ -112,7 +113,7 @@ begin
   Result := FTimeEstimates.Count;
 end;
 
-function TConfidenceIntervalParser.ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean;
+function TConfidenceIntervalParser.ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean; var aAdjustedAge: Double): Boolean;
 var
   preadjustedAge, adjustedAge: Double;
 begin
@@ -122,9 +123,16 @@ begin
 
   if FTokenSplitter.Count = 3 then
   begin
-    aId := StrToInt(FTokenSplitter[0]);
-    aLower := StrToFloat(FTokenSplitter[1]);
-    aUpper := StrToFloat(FTokenSplitter[2]);
+    try
+      aId := StrToInt(FTokenSplitter[0]);
+      aLower := StrToFloat(FTokenSplitter[1]);
+      aUpper := StrToFloat(FTokenSplitter[2]);
+    except
+      aId := StrToInt(FTokenSplitter[0]);
+      aLower := 0;
+      aUpper := 0;
+      adjustedAge := 0;
+    end;
   end
   else
   if FTokenSplitter.Count = 6 then
@@ -137,10 +145,18 @@ begin
       preadjustedAge := StrToFloat(FTokenSplitter[5])
     else
       preadjustedAge := 0.0;
+    aAdjustedAge := preadjustedAge;
     Result := ProcessConfidenceInterval(FTokenSplitter[0], adjustedAge, preadjustedAge, aLower, aUpper,  IsConfidenceInterval);
   end
   else
-    raise Exception.Create('failed to parse confidence interval, expected 3 tokens, got ' + IntToStr(FTokenSplitter.Count));
+  begin
+    aId := StrToInt(FTokenSplitter[1]);
+    aLower := 0;
+    aUpper := 0;
+    adjustedAge := 0;
+    IsConfidenceInterval := False;
+    //raise Exception.Create('failed to parse confidence interval, expected 3 tokens, got ' + IntToStr(FTokenSplitter.Count));
+  end;
   Result := True;
 end;
 
@@ -250,7 +266,7 @@ var
   i: Integer;
   temp: String;
   aId: LongInt;
-  aLower, aUpper: Double;
+  aLower, aUpper, aAdjustedAge: Double;
   isConfidenceInterval: Boolean;
 begin
   FStartTime := Now;
@@ -273,11 +289,12 @@ begin
             continue;
           if i = 52164 then
             FIsSuccess := True;
-          if not FIntervalParser.ParseConfidenceInterval(sList[i], aId, aLower, aUpper, isConfidenceInterval) then
+          if not FIntervalParser.ParseConfidenceInterval(sList[i], aId, aLower, aUpper, isConfidenceInterval, aAdjustedAge) then
             raise Exception.Create('failed to parse confidence interval: ' + sList[i]);
 
           ConfidenceIntervals[aId].LowerBound := aLower;
           ConfidenceIntervals[aId].UpperBound := aUpper;
+          ConfidenceIntervals[aId].AdjustedAge := aAdjustedAge;
           ConfidenceIntervals[aId].IsConfidenceInterval := isConfidenceInterval;
         end;
         FIsSuccess := True;

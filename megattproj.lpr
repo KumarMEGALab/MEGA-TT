@@ -705,8 +705,8 @@ end;
 procedure megatt.OutputVersionInfo;
 begin
   WriteLn('MEGA-TT (MEGA TimeTree )');
-  WriteLn('Version 2.0.1');
-  WriteLn('copyright 2021');
+  WriteLn('Version 2.0.2');
+  WriteLn('copyright 2022');
   WriteLn('Authors: Glen Stecher <gstecher@bd3software.com>');
 end;
 

@@ -343,6 +343,7 @@ type
     FPanelsSvgFile: TextFile;
     FSvgLineWidth: Integer;
     FSvgLineColor: String;
+    FAdjustedAgeColor: String;
     FSvgDisabledNodeColor: String;
     FSvgTimedNodeColor: String;
     FSvgBgColor: String;
@@ -2821,6 +2822,7 @@ begin
     FTimesFontHeight := 8;
     FBLensFontHeight := 8;
     FFontTarget := tftOtu;
+    FAdjustedAgeColor := '#8b0000';
     FSvgLineColor := '#000';
     FSvgFontColor := '#000';
     FSvgDisabledNodeColor := 'none';
@@ -3660,11 +3662,12 @@ end;
 
 procedure TCustomSvgTree.MegaPolyline(Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
 var
+  strokeColor: String;
   Temp: String;
   i: Integer;
   aRank: TTaxonomicRank;
   IdStr: String;
-  timeStr, ciLowStr, ciHighStr: String;
+  timeStr, ciLowStr, ciHighStr, adjustedAgeStr: String;
   dof: String;
   fillColor: String;
   aHeight: Double;
@@ -3705,11 +3708,16 @@ begin
       aRank := TaxonomicRanks[aNode.timetreeId]
     else
       aRank := trUnknown;
-
+    if CompareValue(aNode.adjustedAge, 0, FP_CUTOFF) > 0 then
+    begin
+      strokeColor := FAdjustedAgeColor;
+    end
+    else
+      strokeColor := FSvgLineColor;
     Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
     Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
     Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
-    Temp := Temp + 'stroke=' + DBLQ + FSvgLineColor + DBLQ + ' ';
+    Temp := Temp + 'stroke=' + DBLQ + strokeColor + DBLQ + ' ';
     Temp := Temp + 'stroke-width=' + DBLQ + '1' + DBLQ + ' ';
     if IsStudyTree and ShowTopologyOnly and (CompareValue(StudyTimeNodeHeights[aNode.index - 1], 0.0, FP_CUTOFF) > 0) then
     begin
@@ -3719,7 +3727,7 @@ begin
     else if (aRank = trUnknown) and (not IsStudyTree) and (not FRenderNewickOnly) then
       fillColor := FSvgDisabledNodeColor
     else
-      fillColor := FSvgLineColor;
+      fillColor := strokeColor;
     Temp := Temp + 'fill=' + DBLQ + fillColor + DBLQ + ' />';
     FCircleTags.Add(Temp);
     //WriteLn(FTreeSvgFile, Temp);
@@ -3741,6 +3749,12 @@ begin
       FormatTimeIntervalStrings(aHeight, aNode.ciLower, aNode.ciUpper, timeStr, ciLowStr, ciHighStr);
       Temp := Temp + 'cilo=' + dblq + ciLowStr + dblq + ' ';
       Temp := Temp + 'cihi=' + dblq + ciHighStr + dblq + ' ';
+
+      if CompareValue(aNode.adjustedAge, 0, FP_CUTOFF) > 0 then
+      begin
+        FormatAgeString(aNode.adjustedAge, adjustedAgeStr);
+        Temp := Temp + 'adjusted_age=' + dblq + adjustedAgeStr + dblq + ' ';
+      end;
 
       if aNode.IsCI then
         Temp := Temp + 'isci=' + dblq + 'true' + dblq + ' '
@@ -3773,7 +3787,7 @@ begin
       Temp := '<circle cx=' + CircleXCoordString(Points[0].X) + ' ';
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
       Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
-      Temp := Temp + 'fill=' + DBLQ + FSvgLineColor + DBLQ + ' />';
+      Temp := Temp + 'fill=' + DBLQ + strokeColor + DBLQ + ' />';
       FCircleTags.Add(Temp);
       //WriteLn(FTreeSvgFile, Temp);
 
@@ -3786,6 +3800,11 @@ begin
       Temp := Temp + 'time=' + dblq + timeStr + dblq + ' ';
       Temp := Temp + 'cilo=' + dblq + ciLowStr + dblq + ' ';
       Temp := Temp + 'cihi=' + dblq + ciHighStr + dblq + ' ';
+      if CompareValue(aNode.anc.adjustedAge, 0, FP_CUTOFF) > 0 then
+      begin
+        FormatAgeString(aNode.anc.adjustedAge, adjustedAgeStr);
+        Temp := Temp + 'adjusted_age=' + dblq + adjustedAgeStr + dblq + ' ';
+      end;
 
       if aNode.anc.IsCI then
         Temp := Temp + 'isci=' + dblq + 'true' + dblq + ' '
@@ -5441,6 +5460,7 @@ begin
       FNode[i].ciLower := ConfidenceIntervals[ttId].LowerBound;
       FNode[i].ciUpper := ConfidenceIntervals[ttId].UpperBound;
       FNode[i].IsCI := ConfidenceIntervals[ttId].IsConfidenceInterval;
+      FNode[i].adjustedAge := ConfidenceIntervals[ttId].AdjustedAge;
     end
     else
       FNode[i].IsCI := False;

@@ -74,7 +74,7 @@ type
       putativeRank: TTaxonomicRank;
       ranksCount: PRanksCount;
       numLeaves: Integer;
-      //divTime: Double;
+      adjustedAge: Double;
   end;
   TpNodeArray = array[1..(2147483647 div SizeOf(TpNode))] of TpNode; {max size of a data structure is 2GB}
 

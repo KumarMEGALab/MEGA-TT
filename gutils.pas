@@ -22,6 +22,7 @@ function HorizontalCenterOfRect(aRect: TRect): Integer;
 function VerticalCenterOfRect(aRect: TRect): Integer;
 procedure FormatTimeIntervalStrings(const divTime: Double; const ciLow: Double; const ciHigh: Double; var divTimeStr: String; var ciLowStr: String; var ciHighStr: String); overload;
 procedure FormatTimeIntervalStrings(const adjustedTime: Double; const precomputedTime: Double; const ciLow: Double; const ciHigh: Double; var adjustedTimeStr: String; var precomputedTimeStr: String; var ciLowStr: String; var ciHighStr: String); overload;
+procedure FormatAgeString(const age: Double; var ageStr: String);
 function AnyTwoStringsAreSame(str1, str2, str3: String): Boolean; overload;
 function AnyTwoStringsAreSame(str1, str2, str3, str4: String): Boolean; overload;
 
@@ -187,6 +188,24 @@ begin
     ciHighStr := Format(formatStr, [ciHigh]);
     adjustedTimeStr := Format(formatStr, [adjustedTime]);
   end;
+end;
+
+procedure FormatAgeString(const age: Double; var ageStr: String);
+var
+  formatStr: String;
+  precision: Integer=0;
+begin
+  if age < 0.1 then
+    precision := 3
+  else if age < 1.0 then
+    precision := 2
+  else if age < 5.0 then
+    precision := 1
+  else
+    precision := 0;
+
+  formatStr := '%.' + IntToStr(precision) + 'f';
+  ageStr := Format(formatStr, [age]);
 end;
 
 function AnyTwoStringsAreSame(str1, str2, str3: String): Boolean;
