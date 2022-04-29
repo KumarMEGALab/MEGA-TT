@@ -879,6 +879,7 @@ end;
 
 procedure TPairwiseSvgWriter.DrawResult;
 var
+  origLeft: Integer = -1;
   aRect: TRect;
   RectStr, TextStr: String;
   TempRect: TRect;
@@ -1056,6 +1057,36 @@ begin
     TextStr := AddSvgTextToRect(TempRect, 'Adjusted Time:', textAttribs, FFontHeight);
     FStrings.Add(TextStr);
 
+
+    //{ draw a link to the FAQ}
+    origLeft := TempRect.Left;
+    TempRect.Left := TempRect.Left + CustomTextWidth('Adjusted Time: ') + 20;
+    SetLength(textAttribs, 8);
+    textAttribs[0].Value := 'Verdana';
+    textAttribs[1].Value := IntToStr(FFontHeight - 2);
+    textAttribs[3].Value := FLinkColor;
+    textAttribs[4].Name := 'text-decoration';
+    textAttribs[4].Value := 'underline';
+    textAttribs[5].Name := 'url';
+    textAttribs[5].Value := 'timetree.org/faqs';
+    textAttribs[6].Name := 'font-style';
+    textAttribs[6].Value := 'italic';
+    textAttribs[7].Name := 'font-weight';
+    textAttribs[7].Value := 'normal';
+    TextStr := AddSvgTextToRect(TempRect, ' ? ', textAttribs, FFontHeight);
+    TextStr := Format('<a href="http://www.timetree.org/faqs" target="_blank">%s</a>', [TextStr]);
+    FStrings.Add(TextStr);
+
+    SetLength(textAttribs, 4);
+    textAttribs[0].Name := 'font-family';
+    textAttribs[0].Value := 'Roboto Condensed';
+    textAttribs[1].Name := 'font-size';
+    textAttribs[1].Value := IntToStr(FFontHeight);
+    textAttribs[2].Name := 'text-anchor';
+    textAttribs[2].Value := 'middle';
+    textAttribs[3].Name := 'fill';
+    textAttribs[3].Value := 'black';
+    TempRect.Left := origLeft;
     TempRect.Top := TempRect.Bottom;
     TempRect.Bottom := TempRect.Top + FFontHeight;
     TextStr := Format('%s MYA', [adjustedTimeStr]);

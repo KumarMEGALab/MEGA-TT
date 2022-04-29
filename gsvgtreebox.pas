@@ -3679,6 +3679,18 @@ var
       Result := Format('%s%d%s', [DBLQ, aX, DBLQ]);
   end;
 
+  function DisplayAsAdjusted(precomputedTime: Double; adjustedTime: Double): Boolean;
+  var
+    diff: Double = 0;
+  begin
+    Result := False;
+    if CompareValue(adjustedTime, 0, FP_CUTOFF) = 0 then
+      Exit;
+    diff := (precomputedTime - adjustedTime)/precomputedTime*100;
+    if CompareValue(abs(diff), 5, FP_CUTOFF) > 0 then
+      Result := True;
+  end;
+
 begin
   Assert(NumPoints >= 2);
   if NumPoints = 2 then
@@ -3707,16 +3719,6 @@ begin
       aRank := TaxonomicRanks[aNode.timetreeId]
     else
       aRank := trUnknown;
-    if CompareValue(aNode.adjustedAge, 0, FP_CUTOFF) > 0 then
-    begin
-      Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
-      Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
-      Temp := Temp + 'r=' + DBLQ + '8' + DBLQ + ' ';
-      Temp := Temp + 'fill=' + DBLQ + 'none' + DBLQ + ' ';
-      Temp := Temp + 'stroke=' + DBLQ + FAdjustedAgeColor + DBLQ + '/>';
-      if not FRenderNewickOnly then
-        FCircleTags.Add(Temp);
-    end;
 
     Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
     Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
@@ -3728,13 +3730,12 @@ begin
       fillColor := FSvgTimedNodeColor;
       aHeight := StudyTimeNodeHeights[aNode.index - 1];
     end
-    else if (aRank = trUnknown) and (not IsStudyTree) and (not FRenderNewickOnly) then
+    else if DisplayAsAdjusted(aNode.height, aNode.adjustedAge) and (not IsStudyTree) and (not FRenderNewickOnly) then
       fillColor := FSvgDisabledNodeColor
     else
       fillColor := FSvgLineColor;
     Temp := Temp + 'fill=' + DBLQ + fillColor + DBLQ + ' />';
     FCircleTags.Add(Temp);
-    //WriteLn(FTreeSvgFile, Temp);
 
     { draw a large circle that is not visible but will have the on-click handler}
     Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
@@ -3783,27 +3784,15 @@ begin
     Temp := Temp + 'id=' + DBLQ + IdStr + DBLQ + '/>';
     if not FRenderNewickOnly then
       FCircleTags.Add(Temp);
-      //WriteLn(FTreeSvgFile, Temp);
 
     if (not FRenderNewickOnly) and (not (aNode = FRoot)) and (aNode.anc.anc = nil) and (aNode = aNode.anc.des1) then { this is descendent 1 of the root node}
     begin
-      if CompareValue(aNode.adjustedAge, 0, FP_CUTOFF) > 0 then
-      begin
-        Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
-        Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
-        Temp := Temp + 'r=' + DBLQ + '8' + DBLQ + ' ';
-        Temp := Temp + 'fill=' + DBLQ + 'none' + DBLQ + ' ';
-        Temp := Temp + 'stroke=' + DBLQ + FAdjustedAgeColor + DBLQ + '/>';
-        if not FRenderNewickOnly then
-          FCircleTags.Add(Temp);
-      end;
       FormatTimeIntervalStrings(aNode.anc.height, aNode.anc.ciLower, aNode.anc.ciUpper, timeStr, ciLowStr, ciHighStr);
       Temp := '<circle cx=' + CircleXCoordString(Points[0].X) + ' ';
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
       Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
       Temp := Temp + 'fill=' + DBLQ + FSvgLineColor + DBLQ + ' />';
       FCircleTags.Add(Temp);
-      //WriteLn(FTreeSvgFile, Temp);
 
       Temp := '<circle cx=' + CircleXCoordString(Points[0].X) + ' ';
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
@@ -3836,7 +3825,6 @@ begin
       end;
       Temp := Temp + 'id=' + DBLQ + IntToStr(aNode.anc.timetreeId) + DBLQ + '/>';
       FCircleTags.Add(Temp);
-      //WriteLn(FTreeSvgFile, Temp);
     end;
   end;
 end;
@@ -5466,10 +5454,13 @@ procedure TCustomSvgTree.MapConfidenceIntervals;
 var
   i: Integer;
   ttId: Integer;
+  //debug: Boolean = False;
 begin
   for i := (NoOfOTUs + 1) to NoOfNodes do
   begin
     ttId := FNode[i].timetreeId;
+    //if ttid = 5536 then
+    //  debug := True;
     if ttId >= 0 then
     begin
       FNode[i].ciLower := ConfidenceIntervals[ttId].LowerBound;

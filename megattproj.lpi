@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="12"/>
+    <Version Value="11"/>
     <General>
       <Flags>
         <MainUnitHasCreateFormStatements Value="False"/>
         <MainUnitHasTitleStatement Value="False"/>
         <MainUnitHasScaledStatement Value="False"/>
-        <CompatibilityMode Value="True"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
       <Title Value="megattproj"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
@@ -17,7 +17,7 @@
     <i18n>
       <EnableI18N LFM="False"/>
     </i18n>
-    <BuildModes Count="2">
+    <BuildModes Count="3">
       <Item1 Name="Default" Default="True"/>
       <Item2 Name="Release">
         <CompilerOptions>
@@ -46,6 +46,37 @@
           </Other>
         </CompilerOptions>
       </Item2>
+      <Item3 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="megatt"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="../Common;../TamuraFuncs;../reltime;common;tests/common;timeline;timetree;utils;../PatristicDist;../RuntimeProgress;../DataOutput;../Alignment;../Process;../MEGA-CC;../InputData;../Compute;../Web;../InputData/nexus;../Captions;../CloneFinder/compute;../CloneFinder/data;../CloneFinder/options;../CloneFinder/parsers;../CloneFinder/process;../BEAM;../UsageStatistics;../MegaVcl;../TreeEditor;../CalibrationTester;../AlignmentEditor;../Clinic;../GeneDuplication;../Applinker;../Private/Help;../TextEditor;../MegaDlgs;../ResultsForms;../Helpers"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <LinkSmart Value="True"/>
+          </Linking>
+        </CompilerOptions>
+      </Item3>
       <SharedMatrixOptions Count="1">
         <Item1 ID="248463092411" Modes="Release,Default" Value="-dDisableUTF8RTL"/>
       </SharedMatrixOptions>
@@ -55,16 +86,16 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
-        <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/pruneTree_97k"/>
+        <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/primates.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+        <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pruneTree_97k"/>
         <Display Use="True"/>
       </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
           <local>
-            <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
-            <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/mega-tt/smoke_tests/pruneTree_97k"/>
+            <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/primates.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+            <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pruneTree_97k"/>
             <Display Use="True"/>
           </local>
         </Mode0>
