@@ -1,0 +1,325 @@
+# to get node id and some other basic info for two taxa
+http://timetree.org/api/names/mus/rattus
+#returns
+[
+  [
+    {
+      "i_node_id": 10088,
+      "c_syn_type": "scientific name",
+      "c_syn_name": "Mus",
+      "c_node_name_scientific": "Mus",
+      "topology_node_id": 78881,
+      "taxonomic_rank": null,
+      "study_times": null,
+      "studies": null,
+      "any_id": 78881,
+      "timetree_id": 78881,
+      "ncbi_id": 10088,
+      "rank": {
+        "this": {
+          "name": "genus",
+          "prettyName": "genus"
+        },
+        "lessSpecific": [
+          {
+            "name": "superkingdom"
+          },
+          {
+            "name": "kingdom"
+          },
+          {
+            "name": "subkingdom"
+          },
+          {
+            "name": "superphylum"
+          },
+          {
+            "name": "phylum"
+          },
+          {
+            "name": "subphylum"
+          },
+          {
+            "name": "superclass"
+          },
+          {
+            "name": "class"
+          },
+          {
+            "name": "subclass"
+          },
+          {
+            "name": "infraclass"
+          },
+          {
+            "name": "superorder"
+          },
+          {
+            "name": "order"
+          },
+          {
+            "name": "suborder"
+          },
+          {
+            "name": "infraorder"
+          },
+          {
+            "name": "parvorder"
+          },
+          {
+            "name": "superfamily"
+          },
+          {
+            "name": "family"
+          },
+          {
+            "name": "subfamily"
+          },
+          {
+            "name": "tribe"
+          },
+          {
+            "name": "subtribe"
+          }
+        ],
+        "moreSpecific": [
+          {
+            "name": "subgenus"
+          },
+          {
+            "name": "species_group"
+          },
+          {
+            "name": "species_subgroup"
+          },
+          {
+            "name": "species"
+          },
+          {
+            "name": "subspecies"
+          },
+          {
+            "name": "varietas"
+          },
+          {
+            "name": "forma"
+          }
+        ]
+      },
+      "isLeaf": false
+    },
+    {
+      "i_node_id": 862507,
+      "c_syn_type": "scientific name",
+      "c_syn_name": "Mus",
+      "c_node_name_scientific": "Mus",
+      "topology_node_id": 78907,
+      "taxonomic_rank": null,
+      "study_times": null,
+      "studies": null,
+      "any_id": 78907,
+      "timetree_id": 78907,
+      "ncbi_id": 862507,
+      "rank": {
+        "this": {
+          "name": "subgenus",
+          "prettyName": "subgenus"
+        },
+        "lessSpecific": [
+          {
+            "name": "superkingdom"
+          },
+          {
+            "name": "kingdom"
+          },
+          {
+            "name": "subkingdom"
+          },
+          {
+            "name": "superphylum"
+          },
+          {
+            "name": "phylum"
+          },
+          {
+            "name": "subphylum"
+          },
+          {
+            "name": "superclass"
+          },
+          {
+            "name": "class"
+          },
+          {
+            "name": "subclass"
+          },
+          {
+            "name": "infraclass"
+          },
+          {
+            "name": "superorder"
+          },
+          {
+            "name": "order"
+          },
+          {
+            "name": "suborder"
+          },
+          {
+            "name": "infraorder"
+          },
+          {
+            "name": "parvorder"
+          },
+          {
+            "name": "superfamily"
+          },
+          {
+            "name": "family"
+          },
+          {
+            "name": "subfamily"
+          },
+          {
+            "name": "tribe"
+          },
+          {
+            "name": "subtribe"
+          },
+          {
+            "name": "genus"
+          }
+        ],
+        "moreSpecific": [
+          {
+            "name": "species_group"
+          },
+          {
+            "name": "species_subgroup"
+          },
+          {
+            "name": "species"
+          },
+          {
+            "name": "subspecies"
+          },
+          {
+            "name": "varietas"
+          },
+          {
+            "name": "forma"
+          }
+        ]
+      },
+      "isLeaf": false
+    }
+  ],
+  {
+    "i_node_id": 10114,
+    "c_syn_type": "scientific name",
+    "c_syn_name": "Rattus",
+    "c_node_name_scientific": "Rattus",
+    "topology_node_id": 78337,
+    "taxonomic_rank": "genus",
+    "study_times": null,
+    "studies": null,
+    "any_id": 78337,
+    "timetree_id": 78337,
+    "ncbi_id": 10114,
+    "rank": {
+      "this": {
+        "name": "genus",
+        "prettyName": "genus"
+      },
+      "lessSpecific": [
+        {
+          "name": "superkingdom"
+        },
+        {
+          "name": "kingdom"
+        },
+        {
+          "name": "subkingdom"
+        },
+        {
+          "name": "superphylum"
+        },
+        {
+          "name": "phylum"
+        },
+        {
+          "name": "subphylum"
+        },
+        {
+          "name": "superclass"
+        },
+        {
+          "name": "class"
+        },
+        {
+          "name": "subclass"
+        },
+        {
+          "name": "infraclass"
+        },
+        {
+          "name": "superorder"
+        },
+        {
+          "name": "order"
+        },
+        {
+          "name": "suborder"
+        },
+        {
+          "name": "infraorder"
+        },
+        {
+          "name": "parvorder"
+        },
+        {
+          "name": "superfamily"
+        },
+        {
+          "name": "family"
+        },
+        {
+          "name": "subfamily"
+        },
+        {
+          "name": "tribe"
+        },
+        {
+          "name": "subtribe"
+        }
+      ],
+      "moreSpecific": [
+        {
+          "name": "subgenus"
+        },
+        {
+          "name": "species_group"
+        },
+        {
+          "name": "species_subgroup"
+        },
+        {
+          "name": "species"
+        },
+        {
+          "name": "subspecies"
+        },
+        {
+          "name": "varietas"
+        },
+        {
+          "name": "forma"
+        }
+      ]
+    },
+    "isLeaf": false
+  }
+]
+
+# to get the pairwise time between two taxa. Note - the ids are taken from i_node_id from the above json
+http://timetree.org/api/pairwise/10088/10114
