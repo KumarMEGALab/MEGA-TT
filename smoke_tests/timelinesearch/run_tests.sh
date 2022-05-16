@@ -25,4 +25,11 @@ else
     echo "FAILED - cyanobacteria timeline"
 fi
 
+./megatt --timeline ./inputs/aves.json --width 1200 --height 1200 --outfile ./outputs/aves.svg --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt
+if [ $? = 0 ]; then
+    echo "Completed - aves timeline"
+else
+    echo "FAILED - aves timeline"
+fi
+
 

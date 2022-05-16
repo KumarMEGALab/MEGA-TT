@@ -742,7 +742,10 @@ begin
       x := aResult.TimelineXCoord;
       y := aResult.TimelineYCoord;
       r := TIME_MARKER_RADIUS;
-      FormatTimeIntervalStrings(aResult.BranchLength, aResult.ConfidenceIntervalLow, aResult.ConfidenceIntervalHigh, divTimeStr, ciLowStr, ciHighStr);
+      if CompareValue(aResult.AdjustedAge, 0, FP_CUTOFF) > 0 then
+        FormatTimeIntervalStrings(aResult.AdjustedAge, aResult.ConfidenceIntervalLow, aResult.ConfidenceIntervalHigh, divTimeStr, ciLowStr, ciHighStr)
+      else
+        FormatTimeIntervalStrings(aResult.BranchLength, aResult.ConfidenceIntervalLow, aResult.ConfidenceIntervalHigh, divTimeStr, ciLowStr, ciHighStr);
       FResultCircleAttribs[0].Name := 'fill';
       FResultCircleAttribs[0].Value := 'url(#dotsGradient)';
       FResultCircleAttribs[1].Name := 'id';
@@ -901,7 +904,10 @@ begin
     FSvgStrings.Add(SvgTag);
 
     boxCoords.Top := boxCoords.Top + 3;
-    SvgTag := AddSvgTextToRect(boxCoords, Format('%0.0f', [aResult.BranchLength]), FNamesFontAttribs, FFontHeight);
+    if CompareValue(aResult.AdjustedAge, 0, FP_CUTOFF) > 0 then
+      SvgTag := AddSvgTextToRect(boxCoords, Format('%0.0f', [aResult.AdjustedAge]), FNamesFontAttribs, FFontHeight)
+    else
+      SvgTag := AddSvgTextToRect(boxCoords, Format('%0.0f', [aResult.BranchLength]), FNamesFontAttribs, FFontHeight);
     FSvgStrings.Add(SvgTag);
   end;
 end;
@@ -1272,7 +1278,10 @@ begin
   for i := 0 to FTimeline.Count - 1 do
   begin
     aResult := FTimeline[i];
-    mya := aResult.BranchLength;
+    if CompareValue(aResult.AdjustedAge, 0, FP_CUTOFF) > 0 then
+      mya := aResult.AdjustedAge
+    else
+      mya := aResult.BranchLength;
     aResult.TimelineYCoord := MyaToYCoord(mya);
     aResult.TimelineXCoord := TIME_POINTS_HORIZ_OFFSET;
     aResult.FigurineXCoord := x - FIGURINE_WIDTH - TEXT_RECT_MARGIN;

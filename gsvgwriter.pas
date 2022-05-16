@@ -1061,18 +1061,16 @@ begin
     //{ draw a link to the FAQ}
     origLeft := TempRect.Left;
     TempRect.Left := TempRect.Left + CustomTextWidth('Adjusted Time: ') + 20;
-    SetLength(textAttribs, 8);
+    SetLength(textAttribs, 7);
     textAttribs[0].Value := 'Verdana';
     textAttribs[1].Value := IntToStr(FFontHeight - 2);
     textAttribs[3].Value := FLinkColor;
     textAttribs[4].Name := 'text-decoration';
     textAttribs[4].Value := 'underline';
-    textAttribs[5].Name := 'url';
-    textAttribs[5].Value := 'timetree.org/faqs';
-    textAttribs[6].Name := 'font-style';
-    textAttribs[6].Value := 'italic';
-    textAttribs[7].Name := 'font-weight';
-    textAttribs[7].Value := 'normal';
+    textAttribs[5].Name := 'font-style';
+    textAttribs[5].Value := 'italic';
+    textAttribs[6].Name := 'font-weight';
+    textAttribs[6].Value := 'normal';
     TextStr := AddSvgTextToRect(TempRect, ' ? ', textAttribs, FFontHeight);
     TextStr := Format('<a href="http://www.timetree.org/faqs" target="_blank">%s</a>', [TextStr]);
     FStrings.Add(TextStr);

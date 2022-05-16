@@ -349,14 +349,14 @@ begin
       raise Exception.Create('failed to parse studies from JSON');
     AJson := TJSONObject(AData);
 
-    AData := AJson.Find('preadjusted_age', jtNumber);
+    AData := AJson.Find('adjusted_age', jtNumber);
     if Assigned(AData) then
     begin
       Result := AData.Value
     end
     else
     begin
-      AData := AJson.Find('adjusted_age', jtNumber);
+      AData := AJson.Find('preadjusted_age', jtNumber);
       if Assigned(AData) then
         Result := AData.Value
       else
