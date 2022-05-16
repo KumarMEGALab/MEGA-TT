@@ -86,7 +86,7 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/primates.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+        <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/140k-family-ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/primates.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
         <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pruneTree_97k"/>
         <Display Use="True"/>
       </local>
@@ -94,7 +94,7 @@
       <Modes Count="1">
         <Mode0 Name="default">
           <local>
-            <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/family_ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/primates.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+            <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/140k-family-ci.csv -leaf-counts ./inputs/leafNodeCounts.csv --ids ./ids/primates.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
             <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pruneTree_97k"/>
             <Display Use="True"/>
           </local>

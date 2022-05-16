@@ -15,8 +15,10 @@ type
     LowerBound: Double;
     TimetreeId: LongInt;
     UpperBound: Double;
+    PrecomputedAge: Double;
     AdjustedAge: Double;
     IsConfidenceInterval: Boolean; { otherwise it is a range because we did not have enough data to calculate a reasonable confidence interval}
+    CiString: String;
   end;
 
   TConfidenceIntervalArray = array of TConfidenceInterval;
@@ -28,11 +30,11 @@ type
       FTokenSplitter: TStringList; { for faster parsing of the csv file, we have a persistent list}
       FTimesTokenSplitter: TStringList; { for parsing just the time estimates}
       FTimeEstimates: TList;
-
+      function IsWhiteSpace(TheChar: String): Boolean;
+      function SplitOnSingleCharFaster(TheString: String; Delimiter: Char; var Tokens: TStringList): Boolean;
     protected
       function ParseTimeEstimates(aStr: String): Integer;
-      function ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean; var aAdjustedAge: Double): Boolean; overload;
-      //function ParseConfidenceInterval(const aText: String; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean; overload;
+      function ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean; var aAdjustedAge: Double; var ciString: String; var precomputedAge: Double): Boolean; overload;
       function IsOutsideOfInterval(const adjustedAge: Double; const ciLow: Double; const ciHigh: Double): Boolean;
       procedure AdjustConfidenceInterval(var ciLow: Double; var ciHigh: Double; const adjustedAge: Double; const preadjustedAge: Double);
       procedure GetRange(var ciLow: Double; var ciHigh: Double);
@@ -58,11 +60,6 @@ type
 
     protected
       procedure LoadConfidenceIntervals;
-      //function ParseTimeEstimates(aStr: String): Integer;
-      //function ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean;
-      //function IsOutsideOfInterval(const adjustedAge: Double; const ciLow: Double; const ciHigh: Double): Boolean;
-      //procedure AdjustConfidenceInterval(var ciLow: Double; var ciHigh: Double; const adjustedAge: Double; const preadjustedAge: Double);
-      //procedure GetRange(var ciLow: Double; var ciHigh: Double);
     public
       constructor Create(CreateSuspended: Boolean);
       destructor Destroy; override;
@@ -92,6 +89,71 @@ end;
 
 { TConfidenceIntervalParser }
 
+function TConfidenceIntervalParser.IsWhiteSpace(TheChar: String): Boolean;
+begin
+  Result := (TheChar = ' ') or
+            (TheChar = #9) or
+            (TheChar = #13#10) or
+            (TheChar = #10) or
+            (TheChar = #13) {$IFDEF FPC}or
+            (TheChar = LineEnding){$ENDIF};
+end;
+
+function TConfidenceIntervalParser.SplitOnSingleCharFaster(TheString: String; Delimiter: Char; var Tokens: TStringList): Boolean;
+var
+  CurrentPosition: Integer;
+  TempString: String;
+  CleanString: String;
+  i: Integer;
+begin
+  Tokens.Clear;
+  Result := True;
+  if TheString[Length(TheString)] = Delimiter then
+    CleanString := Copy(TheString, 1, Length(TheString) - 1)
+  else
+    CleanString := TheString;
+
+  try
+    i := 1;
+    CurrentPosition := 1;
+    while i < Length(CleanString) do
+    begin
+      if (CleanString[i] = #34) and (i < Length(CleanString)) then
+      begin
+        inc(i);
+        while (i < Length(CleanString)) and (CleanString[i] <> #34) do
+          inc(i);
+        inc(i);
+        TempString := Trim(Copy(CleanString, CurrentPosition, i - CurrentPosition));
+        Tokens.Add(TempString);
+        while (i < Length(CleanString)) and  (CleanString[i] = #34) do
+          inc(i);
+        if CleanString[i] = Delimiter then
+          inc(i);
+        CurrentPosition := i;
+      end;
+      if (CleanString[i] = Delimiter) then
+      begin
+        TempString := Trim(Copy(CleanString, CurrentPosition, i - CurrentPosition));
+        Tokens.Add(TempString);
+        while (i < Length(CleanString)) and  (CleanString[i] = Delimiter) do
+          inc(i);
+        CurrentPosition := i;
+      end
+      else
+        inc(i);
+    end;
+    TempString := Trim(Copy(CleanString, CurrentPosition, Length(CleanString)));
+    if (TempString <> EmptyStr) then
+      Tokens.Add(TempString);
+  Except
+    on E:Exception do
+    begin
+      Result := False;
+    end;
+  end;
+end;
+
 function TConfidenceIntervalParser.ParseTimeEstimates(aStr: String): Integer;
 var
   subString: String;
@@ -113,13 +175,15 @@ begin
   Result := FTimeEstimates.Count;
 end;
 
-function TConfidenceIntervalParser.ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean; var aAdjustedAge: Double): Boolean;
+function TConfidenceIntervalParser.ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean; var aAdjustedAge: Double; var ciString: String; var precomputedAge: Double): Boolean;
 var
-  preadjustedAge, adjustedAge: Double;
+  preadjustedAge: Double;
+  aToken: String = '';
 begin
   Result := False;
   FTokenSplitter.Clear;
-  FTokenSplitter.CommaText := aText;
+  //FTokenSplitter.CommaText := aText;
+  SplitOnSingleCharFaster(aText, ',', FTokenSplitter);
 
   if FTokenSplitter.Count = 3 then
   begin
@@ -131,68 +195,51 @@ begin
       aId := StrToInt(FTokenSplitter[0]);
       aLower := 0;
       aUpper := 0;
-      adjustedAge := 0;
+      precomputedAge := 0;
     end;
   end
   else
-  if FTokenSplitter.Count = 6 then
+  if FTokenSplitter.Count >= 6 then
   begin
     aId := StrToInt(FTokenSplitter[1]);
-    adjustedAge := StrToFloat(FTokenSplitter[2]);
+    precomputedAge := StrToFloat(FTokenSplitter[2]);
+    Assert(CompareValue(precomputedAge, 0, FP_CUTOFF) > 0, 'invalid precomputed age');
     aLower := StrToFloat(FTokenSplitter[3]);
     aUpper := StrToFloat(FTokenSplitter[4]);
-    if Trim(FTokenSplitter[5]) <> EmptyStr then
-      preadjustedAge := StrToFloat(FTokenSplitter[5])
+    aToken := Trim(FTokenSplitter[5]);
+    if aToken <> EmptyStr then
+    begin
+      if (Pos('CI:', aToken) = 1) or (Pos('Range:', aToken) = 1) then
+      begin
+        ciString := aToken;
+      end
+      else
+        preadjustedAge := StrToFloat(FTokenSplitter[5])
+    end
     else
       preadjustedAge := 0.0;
     aAdjustedAge := preadjustedAge;
-    Result := ProcessConfidenceInterval(FTokenSplitter[0], adjustedAge, preadjustedAge, aLower, aUpper,  IsConfidenceInterval);
+    if FTokenSplitter.Count > 6 then
+      ciString := FTokenSplitter[6];
   end
   else
   begin
     aId := StrToInt(FTokenSplitter[1]);
     aLower := 0;
     aUpper := 0;
-    adjustedAge := 0;
+    if FTokenSplitter.Count > 2 then
+      precomputedAge := StrToFloat(FTokenSplitter[2])
+    else
+      precomputedAge := 0;
     IsConfidenceInterval := False;
-    //raise Exception.Create('failed to parse confidence interval, expected 3 tokens, got ' + IntToStr(FTokenSplitter.Count));
   end;
   Result := True;
 end;
-
-//function TConfidenceIntervalParser.ParseConfidenceInterval(const aText: String; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean;
-//var
-//  numEstimates: Integer;
-//  adjustedAge, preadjustedAge: Double;
-//begin
-//  numEstimates := ParseTimeEstimates(FTokenSplitter[0]);
-//  adjustedAge := StrToFloat(FTokenSplitter[2]);
-//  if (numEstimates > 1) and (numEstimates < 5) then
-//  begin
-//    GetRange(aLower, aUpper);
-//    IsConfidenceInterval := False;
-//  end
-//  else
-//  begin
-//    if NumEstimates <= 1 then
-//      IsConfidenceInterval := False
-//    else
-//      IsConfidenceInterval := True;
-//    aLower := StrToFloat(FTokenSplitter[3]);
-//    aUpper := StrToFloat(FTokenSplitter[4]);
-//    if (FTokenSplitter[5] <> EmptyStr) and (aUpper > 0) and IsOutsideOfInterval(adjustedAge, aLower, aUpper) then
-//    begin
-//      preadjustedAge := StrToFloat(FTokenSplitter[5]);
-//      AdjustConfidenceInterval(aLower, aUpper, adjustedAge, preadjustedAge);
-//    end;
-//  end;
-//end;
 
 function TConfidenceIntervalParser.ProcessConfidenceInterval(const EstimatesStr: String; const adjustedAge: Double; const preAdjustedAge: Double;  var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean;
 var
   numEstimates: Integer;
 begin
-  //raise Exception.Create('Application Error: call to deprecated TConfidenceIntervalParser.ProcessConfidenceInterval function');
   numEstimates := ParseTimeEstimates(EstimatesStr);
   if (numEstimates > 1) and (numEstimates < 5) then
   begin
@@ -266,8 +313,9 @@ var
   i: Integer;
   temp: String;
   aId: LongInt;
-  aLower, aUpper, aAdjustedAge: Double;
+  aLower, aUpper, aAdjustedAge, aPrecomputedAge: Double;
   isConfidenceInterval: Boolean;
+  ciString: String = '';
 begin
   FStartTime := Now;
   FIsSuccess := False;
@@ -289,13 +337,14 @@ begin
             continue;
           if i = 52164 then
             FIsSuccess := True;
-          if not FIntervalParser.ParseConfidenceInterval(sList[i], aId, aLower, aUpper, isConfidenceInterval, aAdjustedAge) then
+          if not FIntervalParser.ParseConfidenceInterval(sList[i], aId, aLower, aUpper, isConfidenceInterval, aAdjustedAge, ciString, aPrecomputedAge) then
             raise Exception.Create('failed to parse confidence interval: ' + sList[i]);
-
           ConfidenceIntervals[aId].LowerBound := aLower;
           ConfidenceIntervals[aId].UpperBound := aUpper;
           ConfidenceIntervals[aId].AdjustedAge := aAdjustedAge;
           ConfidenceIntervals[aId].IsConfidenceInterval := isConfidenceInterval;
+          ConfidenceIntervals[aId].CiString := ciString;
+          ConfidenceIntervals[aId].PrecomputedAge := aPrecomputedAge;
         end;
         FIsSuccess := True;
       end;
@@ -318,97 +367,6 @@ begin
       sList.Free;
   end;
 end;
-
-//function TLoadConfidenceIntervalsThread.ParseTimeEstimates(aStr: String): Integer;
-//var
-//  subString: String;
-//  i: Integer;
-//  aEstimate: Double;
-//begin
-//  subString := Copy(aStr, 2, Length(aStr) - 2);
-//  FTimesTokenSplitter.Clear;
-//  FTimesTokenSplitter.CommaText := subString;
-//  FTimeEstimates.Clear;
-//  if FTimesTokenSplitter.Count > 0 then
-//  begin
-//    for i := 0 to FTimesTokenSplitter.Count - 1 do
-//    begin
-//      aEstimate := StrToFloat(FTimesTokenSplitter[i]);
-//      FTimeEstimates.Add(Pointer(aEstimate));
-//    end;
-//  end;
-//  Result := FTimeEstimates.Count;
-//end;
-
-//function TLoadConfidenceIntervalsThread.ParseConfidenceInterval(const aText: String; var aId: LongInt; var aLower: Double; var aUpper: Double; var IsConfidenceInterval: Boolean): Boolean;
-//var
-//  preadjustedAge, adjustedAge: Double;
-//  numEstimates: Integer;
-//begin
-//  Result := False;
-//  FTokenSplitter.Clear;
-//  FTokenSplitter.CommaText := aText;
-//
-//  if FTokenSplitter.Count = 3 then
-//  begin
-//    aId := StrToInt(FTokenSplitter[0]);
-//    aLower := StrToFloat(FTokenSplitter[1]);
-//    aUpper := StrToFloat(FTokenSplitter[2]);
-//  end
-//  else
-//  if FTokenSplitter.Count = 6 then
-//  begin
-//    numEstimates := ParseTimeEstimates(FTokenSplitter[0]);
-//    aId := StrToInt(FTokenSplitter[1]);
-//    adjustedAge := StrToFloat(FTokenSplitter[2]);
-//    if (numEstimates > 1) and (numEstimates < 5) then
-//    begin
-//      GetRange(aLower, aUpper);
-//      IsConfidenceInterval := False;
-//    end
-//    else
-//    begin
-//      if NumEstimates <= 1 then
-//        IsConfidenceInterval := False
-//      else
-//        IsConfidenceInterval := True;
-//      aLower := StrToFloat(FTokenSplitter[3]);
-//      aUpper := StrToFloat(FTokenSplitter[4]);
-//      if (FTokenSplitter[5] <> EmptyStr) and (aUpper > 0) and IsOutsideOfInterval(adjustedAge, aLower, aUpper) then
-//      begin
-//        preadjustedAge := StrToFloat(FTokenSplitter[5]);
-//        AdjustConfidenceInterval(aLower, aUpper, adjustedAge, preadjustedAge);
-//      end;
-//    end;
-//  end
-//  else
-//    raise Exception.Create('failed to parse confidence interval, expected 3 tokens, got ' + IntToStr(FTokenSplitter.Count));
-//  Result := True;
-//end;
-
-//function TLoadConfidenceIntervalsThread.IsOutsideOfInterval( const adjustedAge: Double; const ciLow: Double; const ciHigh: Double): Boolean;
-//begin
-// Result := ((adjustedAge < ciLow) or (adjustedAge > ciHigh));
-//end;
-
-//procedure TLoadConfidenceIntervalsThread.AdjustConfidenceInterval(var ciLow: Double; var ciHigh: Double; const adjustedAge: Double; const preadjustedAge: Double);
-//var
-//  deltaLow, deltaHigh: Double;
-//begin
-//  deltaLow := preadjustedAge - ciLow;
-//  deltaHigh := ciHigh - preadjustedAge;
-//  if ciLow > 0 then
-//    ciLow := adjustedAge - deltaLow;
-//  if ciHigh > 0 then
-//    ciHigh := adjustedAge + deltaHigh;
-//end;
-
-//procedure TLoadConfidenceIntervalsThread.GetRange(var ciLow: Double; var ciHigh: Double);
-//begin
-//  FTimeEstimates.Sort(@SortTimeEstimates);
-//  ciLow := Double(FTimeEstimates[0]);
-//  ciHigh := Double(FTimeEstimates[FTimeEstimates.Count - 1]);
-//end;
 
 constructor TLoadConfidenceIntervalsThread.Create(CreateSuspended: Boolean);
 begin

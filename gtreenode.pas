@@ -75,6 +75,8 @@ type
       ranksCount: PRanksCount;
       numLeaves: Integer;
       adjustedAge: Double;
+      precomputedAge: Double;
+      ciString: String;
   end;
   TpNodeArray = array[1..(2147483647 div SizeOf(TpNode))] of TpNode; {max size of a data structure is 2GB}
 

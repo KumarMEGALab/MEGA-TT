@@ -3686,6 +3686,11 @@ var
     Result := False;
     if CompareValue(adjustedTime, 0, FP_CUTOFF) = 0 then
       Exit;
+    if CompareValue(precomputedTime, 0, FP_CUTOFF) = 0 then
+    begin
+      Assert(False, 'missing precomputed time');
+      Exit;
+    end;
     diff := (precomputedTime - adjustedTime)/precomputedTime*100;
     if CompareValue(abs(diff), 5, FP_CUTOFF) > 0 then
       Result := True;
@@ -3730,7 +3735,7 @@ begin
       fillColor := FSvgTimedNodeColor;
       aHeight := StudyTimeNodeHeights[aNode.index - 1];
     end
-    else if DisplayAsAdjusted(aNode.height, aNode.adjustedAge) and (not IsStudyTree) and (not FRenderNewickOnly) then
+    else if DisplayAsAdjusted(aNode.PrecomputedAge, aNode.adjustedAge) and (not IsStudyTree) and (not FRenderNewickOnly) then
       fillColor := FSvgDisabledNodeColor
     else
       fillColor := FSvgLineColor;
@@ -3754,7 +3759,8 @@ begin
       FormatTimeIntervalStrings(aHeight, aNode.ciLower, aNode.ciUpper, timeStr, ciLowStr, ciHighStr);
       Temp := Temp + 'cilo=' + dblq + ciLowStr + dblq + ' ';
       Temp := Temp + 'cihi=' + dblq + ciHighStr + dblq + ' ';
-
+      if Trim(aNode.ciString) <> EmptyStr then
+        Temp := Temp + 'ci_string=' + dblq + aNode.ciString + dblq + ' ';
       if CompareValue(aNode.adjustedAge, 0, FP_CUTOFF) > 0 then
       begin
         FormatAgeString(aNode.adjustedAge, adjustedAgeStr);
@@ -5454,19 +5460,18 @@ procedure TCustomSvgTree.MapConfidenceIntervals;
 var
   i: Integer;
   ttId: Integer;
-  //debug: Boolean = False;
 begin
   for i := (NoOfOTUs + 1) to NoOfNodes do
   begin
     ttId := FNode[i].timetreeId;
-    //if ttid = 5536 then
-    //  debug := True;
     if ttId >= 0 then
     begin
       FNode[i].ciLower := ConfidenceIntervals[ttId].LowerBound;
       FNode[i].ciUpper := ConfidenceIntervals[ttId].UpperBound;
       FNode[i].IsCI := ConfidenceIntervals[ttId].IsConfidenceInterval;
       FNode[i].adjustedAge := ConfidenceIntervals[ttId].AdjustedAge;
+      FNode[i].PrecomputedAge := ConfidenceIntervals[ttId].PrecomputedAge;
+      FNode[i].CiString := ConfidenceIntervals[ttId].CiString;
     end
     else
       FNode[i].IsCI := False;
