@@ -1049,6 +1049,21 @@ begin
     TextStr := AddSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
   FStrings.Add(TextStr);
 
+  if FPairwiseResult.HasCiString then
+  begin
+    TempRect.Top := TempRect.Bottom;
+    TempRect.Bottom := TempRect.Top + FFontHeight + 10;
+    TextStr := FPairwiseResult.CiString;
+    if Trim(TextStr) <> EmptyStr then
+    begin
+      if CustomTextWidth(TextStr) < aWidth then
+        TextStr := AddWrappedSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight)
+      else
+        TextStr := AddSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
+      FStrings.Add(TextStr);
+    end;
+  end;
+
   if FPairwiseResult.HasAdjustedTime then
   begin
     { draw the adjusted time}
@@ -1097,21 +1112,6 @@ begin
     else
       TextStr := AddSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
     FStrings.Add(TextStr);
-  end;
-
-  if FPairwiseResult.HasCiString then
-  begin
-    TempRect.Top := TempRect.Bottom;
-    TempRect.Bottom := TempRect.Top + FFontHeight + 10;
-    TextStr := FPairwiseResult.CiString;
-    if Trim(TextStr) <> EmptyStr then
-    begin
-      if CustomTextWidth(TextStr) < aWidth then
-        TextStr := AddWrappedSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight)
-      else
-        TextStr := AddSvgTextToRect(TempRect, TextStr, textAttribs, FFontHeight);
-      FStrings.Add(TextStr);
-    end;
   end;
 
   { draw the TTOL link}
