@@ -86,16 +86,16 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <CommandLineParams Value="--timeline ./inputs/aves.json --width 1200 --height 1200 --outfile ./outputs/aves.svg --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
-        <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/timelinesearch"/>
+        <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/140k-family_ci.csv -leaf-counts ./inputs/140k-leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+        <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pruneTree_97k"/>
         <Display Use="True"/>
       </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
           <local>
-            <CommandLineParams Value="--timeline ./inputs/aves.json --width 1200 --height 1200 --outfile ./outputs/aves.svg --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
-            <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/timelinesearch"/>
+            <CommandLineParams Value="--tree ./inputs/140k-family-tree.nwk --names-map ./inputs/140k-family-map.txt --ranks ./inputs/140k-family-ranks.txt --target-rank family -ci ./inputs/140k-family_ci.csv -leaf-counts ./inputs/140k-leafNodeCounts.csv --ids ./ids/ids.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/family.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+            <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pruneTree_97k"/>
             <Display Use="True"/>
           </local>
         </Mode0>

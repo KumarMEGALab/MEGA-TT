@@ -80,14 +80,16 @@ var
   formatStr: String;
   precision: Integer=0;
 begin
-  if divTime < 0.1 then
+  if divTime < 0.01 then
+    precision := 4
+  else if divTime < 0.1 then
     precision := 3
   else if divTime < 1.0 then
     precision := 2
-  else if divTime < 5.0 then
-    precision := 1
+  //else if divTime < 5.0 then
+  //  precision := 1
   else
-    precision := 0;
+    precision := 1;
 
   formatStr := '%.' + IntToStr(precision) + 'f';
   divTimeStr := Format(formatStr, [divTime]);
@@ -195,7 +197,11 @@ var
   formatStr: String;
   precision: Integer=0;
 begin
-  if age < 0.1 then
+  if age < 0.001 then
+    precision := 5
+  else if age < 0.01 then
+    precision := 4
+  else if age < 0.1 then
     precision := 3
   else if age < 1.0 then
     precision := 2

@@ -2825,7 +2825,7 @@ begin
     FAdjustedAgeColor := '#8b0000';
     FSvgLineColor := '#000';
     FSvgFontColor := '#000';
-    FSvgDisabledNodeColor := 'none';
+    FSvgDisabledNodeColor := '#f00';
     FSvgTimedNodeColor := '#2ecc71';
     FSvgFontHeight := 16;
     //FSvgFont := 'Helvetica';
@@ -3669,7 +3669,52 @@ var
   timeStr, ciLowStr, ciHighStr, adjustedAgeStr: String;
   dof: String;
   fillColor: String;
+  lineColor: String;
   aHeight: Double;
+
+  function MetaData(n: TpNode; r: TTaxonomicRank; h: Double): String;
+  begin
+    Result := 'rank=' + dblq + TaxonomicRankToString(r) + dblq + ' ';
+    if aNode.OTU then
+    begin
+      Result := Result + 'otu=' + dblq + 'true' + dblq + ' ';
+      Result := Result + 'name=' + dblq + n.name + dblq + ' ';
+    end
+    else
+    begin
+      FormatTimeIntervalStrings(h, n.ciLower, n.ciUpper, timeStr, ciLowStr, ciHighStr);
+      Result := Result + 'cilo=' + dblq + ciLowStr + dblq + ' ';
+      Result := Result + 'cihi=' + dblq + ciHighStr + dblq + ' ';
+      if Trim(n.ciString) <> EmptyStr then
+        Result := Result + 'ci_string=' + dblq + n.ciString + dblq + ' ';
+      if CompareValue(n.adjustedAge, 0, FP_CUTOFF) > 0 then
+      begin
+        FormatAgeString(n.adjustedAge, adjustedAgeStr);
+        Result := Result + 'adjusted_age=' + dblq + adjustedAgeStr + dblq + ' ';
+      end;
+
+      if n.IsCI then
+        Result := Result + 'isci=' + dblq + 'true' + dblq + ' '
+      else
+        Result := Result + 'isci=' + dblq + 'false' + dblq + ' ';
+    end;
+
+    Result := Result + 'time=' + dblq + timeStr + dblq + ' ';
+    Result := Result + 'lncount=' + dblq + IntToStr(Max(1, n.numLeaves)) + dblq + ' ';
+    IdStr := IntToStr(n.timetreeId);
+    if (not n.OTU) and (not FRenderNewickOnly) then
+    begin
+      if NamesMap.Contains(IdStr) then
+        Result := Result + 'name=' + dblq + HtmlEntities(TOtuName(NamesMap[IdStr]).Name) + dblq + ' '
+      else
+      begin
+        dof := FindAncestorName(n);
+        Result := Result + 'dof=' + dblq + dof + dblq + ' ';
+      end;
+    end;
+
+    Result := Result + 'id=' + DBLQ + IdStr + DBLQ + ' ';
+  end;
 
   function CircleXCoordString(aX: Integer): String;
   begin
@@ -3684,16 +3729,17 @@ var
     diff: Double = 0;
   begin
     Result := False;
-    if CompareValue(adjustedTime, 0, FP_CUTOFF) = 0 then
+    if CompareValue(adjustedTime, 0, FP_CUTOFF) <= 0 then
       Exit;
     if CompareValue(precomputedTime, 0, FP_CUTOFF) = 0 then
     begin
       Assert(False, 'missing precomputed time');
       Exit;
     end;
-    diff := (precomputedTime - adjustedTime)/precomputedTime*100;
-    if CompareValue(abs(diff), 5, FP_CUTOFF) > 0 then
-      Result := True;
+    Result := True; { adjusted age is non-zero}
+    //diff := (precomputedTime - adjustedTime)/precomputedTime*100;
+    //if CompareValue(abs(diff), 5, FP_CUTOFF) > 0 then
+    //  Result := True;
   end;
 
 begin
@@ -3719,26 +3765,34 @@ begin
 
   if Assigned(aNode) then
   begin
-    aHeight := aNode.height;
+    aHeight := aNode.precomputedAge;
     if (aNode.timetreeId >= 0) and (not FRenderNewickOnly) then
       aRank := TaxonomicRanks[aNode.timetreeId]
     else
       aRank := trUnknown;
-
+    if DisplayAsAdjusted(aNode.precomputedAge, aNode.adjustedAge) and (not IsStudyTree) and (not FRenderNewickOnly) then
+    begin
+      lineColor := FSvgDisabledNodeColor;
+      fillColor := FSvgDisabledNodeColor;
+    end
+    else
+    begin
+      lineColor := FSvgLineColor;
+      fillColor := FSvgLineColor;
+    end;
+    if aRank = trUnknown then
+      fillColor := 'none';
     Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
     Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
     Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
-    Temp := Temp + 'stroke=' + DBLQ + FSvgLineColor + DBLQ + ' ';
+    Temp := Temp + 'stroke=' + DBLQ + lineColor + DBLQ + ' ';
     Temp := Temp + 'stroke-width=' + DBLQ + '1' + DBLQ + ' ';
     if IsStudyTree and ShowTopologyOnly and (CompareValue(StudyTimeNodeHeights[aNode.index - 1], 0.0, FP_CUTOFF) > 0) then
     begin
       fillColor := FSvgTimedNodeColor;
       aHeight := StudyTimeNodeHeights[aNode.index - 1];
-    end
-    else if DisplayAsAdjusted(aNode.PrecomputedAge, aNode.adjustedAge) and (not IsStudyTree) and (not FRenderNewickOnly) then
-      fillColor := FSvgDisabledNodeColor
-    else
-      fillColor := FSvgLineColor;
+    end;
+    Temp := Temp + MetaData(aNode, aRank, aHeight) + ' ';
     Temp := Temp + 'fill=' + DBLQ + fillColor + DBLQ + ' />';
     FCircleTags.Add(Temp);
 
@@ -3747,53 +3801,13 @@ begin
     Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
     Temp := Temp + 'r=' + DBLQ + '12' + DBLQ + ' ';
     Temp := Temp + 'class=' + DBLQ + 'node' + DBLQ + ' ';
-
-    Temp := Temp + 'rank=' + dblq + TaxonomicRankToString(aRank) + dblq + ' ';
-    if aNode.OTU then
-    begin
-      Temp := Temp + 'otu=' + dblq + 'true' + dblq + ' ';
-      Temp := Temp + 'name=' + dblq + aNode.name + dblq + ' ';
-    end
-    else
-    begin
-      FormatTimeIntervalStrings(aHeight, aNode.ciLower, aNode.ciUpper, timeStr, ciLowStr, ciHighStr);
-      Temp := Temp + 'cilo=' + dblq + ciLowStr + dblq + ' ';
-      Temp := Temp + 'cihi=' + dblq + ciHighStr + dblq + ' ';
-      if Trim(aNode.ciString) <> EmptyStr then
-        Temp := Temp + 'ci_string=' + dblq + aNode.ciString + dblq + ' ';
-      if CompareValue(aNode.adjustedAge, 0, FP_CUTOFF) > 0 then
-      begin
-        FormatAgeString(aNode.adjustedAge, adjustedAgeStr);
-        Temp := Temp + 'adjusted_age=' + dblq + adjustedAgeStr + dblq + ' ';
-      end;
-
-      if aNode.IsCI then
-        Temp := Temp + 'isci=' + dblq + 'true' + dblq + ' '
-      else
-        Temp := Temp + 'isci=' + dblq + 'false' + dblq + ' ';
-    end;
-
-    Temp := Temp + 'time=' + dblq + timeStr + dblq + ' ';
-    Temp := Temp + 'lncount=' + dblq + IntToStr(Max(1, aNode.numLeaves)) + dblq + ' ';
-    IdStr := IntToStr(aNode.timetreeId);
-    if (not aNode.OTU) and (not FRenderNewickOnly) then
-    begin
-      if NamesMap.Contains(IdStr) then
-        Temp := Temp + 'name=' + dblq + HtmlEntities(TOtuName(NamesMap[IdStr]).Name) + dblq + ' '
-      else
-      begin
-        dof := FindAncestorName(ANode);
-        Temp := Temp + 'dof=' + dblq + dof + dblq + ' ';
-      end;
-    end;
-
-    Temp := Temp + 'id=' + DBLQ + IdStr + DBLQ + '/>';
+    Temp := Temp + MetaData(aNode, aRank, aHeight) + ' />';
     if not FRenderNewickOnly then
       FCircleTags.Add(Temp);
 
     if (not FRenderNewickOnly) and (not (aNode = FRoot)) and (aNode.anc.anc = nil) and (aNode = aNode.anc.des1) then { this is descendent 1 of the root node}
     begin
-      FormatTimeIntervalStrings(aNode.anc.height, aNode.anc.ciLower, aNode.anc.ciUpper, timeStr, ciLowStr, ciHighStr);
+      FormatTimeIntervalStrings(aNode.anc.precomputedAge, aNode.anc.ciLower, aNode.anc.ciUpper, timeStr, ciLowStr, ciHighStr);
       Temp := '<circle cx=' + CircleXCoordString(Points[0].X) + ' ';
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
       Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
