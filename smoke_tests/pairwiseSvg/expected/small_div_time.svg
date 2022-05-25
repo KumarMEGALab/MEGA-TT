@@ -2,31 +2,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="800" name="pairwise-luminosity" x="5" y="0" id="pairwise-luminosity" viewBox="0 0 50 800">
 <polygon points="0,10 47,10 1,740 0,740 0,10" fill="#c70039" fill-opacity="0.85" stroke="#c70039" stroke-width="1" />
 <polyline points="1,742 1,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,752)" > 100.0</text>
+<text x="2" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 2,752)" > 100.0</text>
 <polyline points="25,742 25,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 20,752)" > 100.0L</text>
+<text x="20" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 20,752)" > 100.0L</text>
 <polyline points="46,742 46,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="37" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 37,752)" > 100.0</text>
+<text x="37" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 37,752)" > 100.0</text>
 <polyline points="2,742 46,742" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="800" name="pairwise-co2" x="55" y="0" id="pairwise-co2" viewBox="0 0 50 800">
 <polygon points="0,10 16,10 17,11 17,12 14,13 12,14 9,15 6,16 3,17 0,18 1,19 2,20 4,21 5,22 8,23 9,24 8,25 8,26 11,27 13,28 16,29 19,30 20,31 20,32 20,33 23,34 27,35 28,36 29,37 30,38 32,39 34,40 36,41 38,42 37,43 36,44 34,45 33,46 32,47 35,48 39,49 43,50 44,51 45,52 45,53 45,54 45,55 46,56 46,57 47,58 47,59 45,60 45,61 47,62 48,159 48,334 48,639 47,740 0,740 0,10" fill="#ff5733" fill-opacity="0.85" stroke="#ff5733" stroke-width="1" />
 <polyline points="1,742 1,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,752)" >  0.02</text>
+<text x="2" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 2,752)" >  0.02</text>
 <polyline points="25,742 25,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 20,752)" >  0.02%</text>
+<text x="20" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 20,752)" >  0.02%</text>
 <polyline points="46,742 46,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="37" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 37,752)" >  0.03</text>
+<text x="37" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 37,752)" >  0.03</text>
 <polyline points="2,742 46,742" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="800" name="pairwise-o2" x="105" y="0" id="pairwise-o2" viewBox="0 0 50 800">
 <polygon points="0,10 47,10 47,740 0,740 0,10" fill="#ffc300" fill-opacity="0.85" stroke="#ffc300" stroke-width="1" />
 <polyline points="1,742 1,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,752)" >  21.0</text>
+<text x="2" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 2,752)" >  21.0</text>
 <polyline points="25,742 25,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="20" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 20,752)" >  21.0%</text>
+<text x="20" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 20,752)" >  21.0%</text>
 <polyline points="46,742 46,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="37" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 37,752)" >  21.0</text>
+<text x="37" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 37,752)" >  21.0</text>
 <polyline points="2,742 46,742" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="800" name="pairwise-impacts" x="155" y="0" id="pairwise-impacts" viewBox="0 0 50 800">
@@ -41,44 +41,44 @@
 <rect x="1" y="2" width="48" height="8" fill="white" stroke="white" stroke-width="1" />
 <rect x="1" y="740" width="48" height="60" fill="white" stroke="white" stroke-width="1" />
 <polyline points="1,742 1,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="2" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 2,752)" >200</text>
+<text x="2" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 2,752)" >200</text>
 <polyline points="24,742 24,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="19" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 19,752)" >0 km</text>
+<text x="19" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 19,752)" >0 km</text>
 <polyline points="48,742 48,747" stroke="black" stroke-width="1" stroke-linecap="square" />
-<text x="39" y="752" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 39,752)" >200</text>
+<text x="39" y="752" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 39,752)" >200</text>
 <polyline points="2,742 48,742" stroke="black" stroke-width="1" stroke-linecap="square" />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="800" name="eons" x="207" y="0" id="pairwise-eons" viewBox="0 0 25 800">
 <rect x="1" y="10" width="25" height="730" fill="none" stroke="black" stroke-width="1" />
 <rect x="1" y="10" width="25" height="730" fill="#9AD9DD" stroke="#9AD9DD" stroke-width="1" full-name="Phanerozoic" start="542.00" end="0.00" unit="Eon" />
-<text x="6" y="375" transform="rotate(90 6,375)" full-name="Phanerozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="542.00" end="0.00" unit="Eon" >Phanerozoic</text>
-<text x="8" y="750" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 8,750)" >Eons</text>
+<text x="6" y="375" transform="rotate(90 6,375)" full-name="Phanerozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="542.00" end="0.00" unit="Eon" >Phanerozoic</text>
+<text x="8" y="750" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 8,750)" >Eons</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="800" name="eras" x="232" y="0" id="pairwise-eras" viewBox="0 0 25 800">
 <rect x="1" y="10" width="25" height="730" fill="none" stroke="black" stroke-width="1" />
 <rect x="1" y="10" width="25" height="730" fill="#F2F91D" stroke="#F2F91D" stroke-width="1" full-name="Cenozoic" start="65.50" end="0.00" unit="Era" />
-<text x="6" y="375" transform="rotate(90 6,375)" full-name="Cenozoic" font-family="Helvetica" font-size="16" text-anchor="middle" start="65.50" end="0.00" unit="Era" >Cenozoic</text>
-<text x="8" y="750" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 8,750)" >Eras</text>
+<text x="6" y="375" transform="rotate(90 6,375)" full-name="Cenozoic" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="65.50" end="0.00" unit="Era" >Cenozoic</text>
+<text x="8" y="750" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 8,750)" >Eras</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="800" name="periods" x="257" y="0" id="pairwise-periods" viewBox="0 0 25 800">
 <rect x="1" y="10" width="25" height="730" fill="none" stroke="black" stroke-width="1" />
 <rect x="1" y="10" width="25" height="730" fill="#FFE619" stroke="#FFE619" stroke-width="1" full-name="Neogene" start="23.03" end="0.00" unit="Period" />
-<text x="6" y="375" transform="rotate(90 6,375)" full-name="Neogene" font-family="Helvetica" font-size="16" text-anchor="middle" start="23.03" end="0.00" unit="Period" >Neogene</text>
-<text x="8" y="750" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 8,750)" >Periods</text>
+<text x="6" y="375" transform="rotate(90 6,375)" full-name="Neogene" font-family="Roboto Condensed" font-size="16" text-anchor="middle" start="23.03" end="0.00" unit="Period" >Neogene</text>
+<text x="8" y="750" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 8,750)" >Periods</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="74" height="800" name="epochs" x="282" y="0" id="pairwise-epochs" viewBox="0 0 74 800">
 <rect x="1" y="10" width="74" height="730" fill="none" stroke="black" stroke-width="1" />
 <rect x="1" y="10" width="74" height="730" fill="#FFF2AE" stroke="#FFF2AE" stroke-width="1" full-name="Pleistocene" start="1.81" end="0.01" unit="Epoch" />
-<text x="37" y="379" full-name="Pleistocene" font-family="Helvetica" font-size="14" text-anchor="middle" start="1.81" end="0.01" unit="Epoch" >PLE</text>
-<text x="33" y="750" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 33,750)" >Epochs</text>
+<text x="37" y="379" full-name="Pleistocene" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="1.81" end="0.01" unit="Epoch" >PLE</text>
+<text x="33" y="750" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 33,750)" >Epochs</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="44" height="800" name="ages" x="356" y="0" id="pairwise-ages" viewBox="0 0 44 800">
 <rect x="1" y="10" width="44" height="730" fill="none" stroke="black" stroke-width="1" />
 <rect x="1" y="326" width="44" height="414" fill="#FFF2BA" stroke="#FFF2BA" stroke-width="1" full-name="Lower" start="1.81" end="0.78" unit="Age" />
-<text x="22" y="537" full-name="Lower" font-family="Helvetica" font-size="14" text-anchor="middle" start="1.81" end="0.78" unit="Age" >Lower</text>
+<text x="22" y="537" full-name="Lower" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="1.81" end="0.78" unit="Age" >Lower</text>
 <rect x="1" y="10" width="44" height="316" fill="#FFF2C7" stroke="#FFF2C7" stroke-width="1" full-name="Middle" start="0.78" end="0.13" unit="Age" />
-<text x="22" y="172" full-name="Middle" font-family="Helvetica" font-size="14" text-anchor="middle" start="0.78" end="0.13" unit="Age" >m</text>
-<text x="18" y="750" color="black" font-size="14" font-family="Helvetica" transform="rotate(90 18,750)" >Ages</text>
+<text x="22" y="172" full-name="Middle" font-family="Roboto Condensed" font-size="14" text-anchor="middle" start="0.78" end="0.13" unit="Age" >m</text>
+<text x="18" y="750" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 18,750)" >Ages</text>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="60" height="800" name="hit-records" x="400" y="0" id="pairwise-hit-records" viewBox="0 0 60 800">
 <defs><linearGradient id="dotsGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="dddddd"/><stop offset="100%" stop-color="#777777"/></linearGradient></defs>
@@ -125,25 +125,23 @@
 <text x="12" y="676" color="black" font-size="10" >1.26</text>
 <polyline points="4,708 8,708" stroke="black" stroke-width="1" />
 <text x="12" y="712" color="black" font-size="10" >1.32</text>
+<text x="25" y="750" color="black" font-size="14" font-family="Roboto Condensed" transform="rotate(90 25,750)" >MYA</text>
 <circle cx="46" cy="253" r="6" fill="url(#dotsGradient)" abstract="In this study, we examined diversification history of Rheum and tested the hypothesis that morphological traits related to plant 'body-plans' evolved in parallel in this genus. We sequenced eight chloroplast DNA fragments (representing more than 8000 bps of the sequence for each species) of 34 species from the genus and 13 species from closely related genera. Phylogenetic analyses indicate that all species of Rheum form a monophyletic lineage sister to the two-species genus Oxyria, indicating that radiative diversifications have occurred in its evolutionary history. Our dating analyses further suggest that these radiations largely coincided with the extensive uplifts of the Qinghai-Tibetan Plateau (QTP). Ancestral state reconstruction and likelihood sensitivity tests strongly indicate that both decumbent and 'glasshouse-like' body-plan traits evolved in parallel in different clades. Our findings highlight the importance of the uplift of the QTP in promoting species diversification and the parallel evolution of morphological traits that are putatively adaptive during such an evolutionary history." author="Sun" cit-number="1923" pubmed-id="22266181" ref-id="" time="0.68" year="2012" title="Rapid radiation of Rheum (Polygonaceae) and parallel evolution of morphological traits." />
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="235" height="800" name="results" x="464" y="0" id="pairwise-results" viewBox="0 0 235 800">
 <rect x="1" y="30" width="231" height="30" fill="url(#boxGradient)" stroke="#cccccc" stroke-width="1" />
-<text x="115" y="50" font-family="Helvetica" font-size="20" text-anchor="middle" fill="black" >Rheum moorcroftianum</text>
-<text x="115" y="84" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=284364|Rheum moorcroftianum&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Rheum moorcroftianum</text>
+<text x="115" y="50" font-family="Roboto Condensed" font-size="20" text-anchor="middle" fill="black" >Rheum moorcroftianum</text>
+<text x="115" y="84" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=284364&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Rheum moorcroftianum</text>
 <image width="12" height="12" x="217" y="72" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
 <text x="115" y="129" font-family="Verdana" font-size="16" text-anchor="middle" >Versus</text>
 <rect x="1" y="160" width="231" height="30" fill="url(#boxGradient)" stroke="#cccccc" stroke-width="1" />
-<text x="115" y="180" font-family="Helvetica" font-size="20" text-anchor="middle" fill="black" >Rheum reticulatum</text>
-<text x="115" y="214" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=137224|Rheum reticulatum&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Rheum reticulatum</text>
+<text x="115" y="180" font-family="Roboto Condensed" font-size="20" text-anchor="middle" fill="black" >Rheum reticulatum</text>
+<text x="115" y="214" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=137224&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Rheum reticulatum</text>
 <image width="12" height="12" x="217" y="202" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="115" y="254" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Median Time:</text>
-<text x="115" y="272" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >0.680 MYA</text>
-<text x="115" y="308" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >Estimated Time:</text>
-<text x="115" y="324" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >0.680 MYA</text>
-<text x="115" y="341" font-family="Helvetica" font-size="16" text-anchor="middle" fill="black" >CI: (n/a)</text>
-<text x="115" y="366" font-family="Helvetica" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/Mol%20Biol%20Evol-2015-Hedges-835-45.pdf" font-weight="bold" >(TTOL)</text>
-<image width="12" height="12" x="145" y="354" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="115" y="400" font-family="Helvetica" font-size="14" text-anchor="middle" fill="black" ><tspan x="115" dy="17"> (Median and estimated</tspan><tspan x="115" dy="17"> times were derived</tspan><tspan x="115" dy="17"> from 1 study)</tspan></text>
+<text x="115" y="254" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Median Time:</text>
+<text x="115" y="272" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >0.680 MYA</text>
+<text x="115" y="288" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/Mol%20Biol%20Evol-2015-Hedges-835-45.pdf" font-weight="bold" >(TTOL)</text>
+<image width="12" height="12" x="145" y="276" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
+<text x="115" y="322" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="115" dy="17"> (Median time was</tspan><tspan x="115" dy="17"> derived from 1 study)</tspan></text>
 </svg>
 </svg>
