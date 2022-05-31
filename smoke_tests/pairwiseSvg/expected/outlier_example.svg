@@ -176,14 +176,14 @@
 <text x="109" y="211" font-family="Roboto Condensed" font-size="20" text-anchor="middle" fill="black" ><tspan x="109" dy="21"> Phyllodactylus</tspan><tspan x="109" dy="21"> wirshingi</tspan></text>
 <text x="109" y="290" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=312723&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Phyllodactylus wirshingi</text>
 <image width="12" height="12" x="205" y="278" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="109" y="330" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Median Time:</text>
+<text x="109" y="330" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" font-weight="bold" >Median Time:</text>
 <text x="109" y="348" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >35 MYA</text>
-<text x="109" y="369" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Range: (34.8..9 - 57.90285)</text>
-<text x="109" y="410" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Adjusted Time:</text>
-<a href="http://www.timetree.org/faqs" target="_blank"><text x="179" y="410" font-family="Verdana" font-size="14" text-anchor="middle" fill="#194E84" text-decoration="underline" font-style="italic" font-weight="normal" > ? </text></a>
-<text x="109" y="426" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >41 MYA</text>
-<text x="109" y="442" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/Mol%20Biol%20Evol-2015-Hedges-835-45.pdf" font-weight="bold" >(TTOL)</text>
-<image width="12" height="12" x="139" y="430" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="109" y="476" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="109" dy="17"> (Median and adjusted</tspan><tspan x="109" dy="17"> times were derived</tspan><tspan x="109" dy="17"> from 6 studies)</tspan></text>
+<text x="109" y="389" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Range: (34.8..9 - 57.90285)</text>
+<text x="109" y="430" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Adjusted Time:</text>
+<a href="http://www.timetree.org/faqs" target="_blank"><text x="179" y="430" font-family="Verdana" font-size="14" text-anchor="middle" fill="#194E84" text-decoration="underline" font-style="italic" font-weight="normal" > ? </text></a>
+<text x="109" y="446" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >41 MYA</text>
+<text x="109" y="482" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/KumarHedges17.pdf" font-weight="bold" >citation</text>
+<image width="12" height="12" x="147" y="470" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
+<text x="109" y="516" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="109" dy="17"> (Median and adjusted</tspan><tspan x="109" dy="17"> times were derived</tspan><tspan x="109" dy="17"> from 6 studies)</tspan></text>
 </svg>
 </svg>

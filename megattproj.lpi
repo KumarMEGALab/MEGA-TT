@@ -41,7 +41,7 @@
           </Linking>
           <Other>
             <ExecuteAfter>
-              <Command Value="python ./megatt_check_dependencies.py"/>
+              <Command Value="python3 ./megatt_check_dependencies.py"/>
             </ExecuteAfter>
           </Other>
         </CompilerOptions>

@@ -1023,7 +1023,7 @@ begin
   FormatTimeIntervalStrings(FPairwiseResult.AdjustedTime, FPairwiseResult.PrecomputedAge, FPairwiseResult.CILow, FPairwiseResult.CIHigh, adjustedTimeStr, precomputedTimeStr, ciLowStr, ciHighStr);
   TempRect.Top := TempRect.Bottom + 20;
   TempRect.Bottom := TempRect.Top + 20;
-  SetLength(textAttribs, 4);
+  SetLength(textAttribs, 5);
   textAttribs[0].Name := 'font-family';
   textAttribs[0].Value := 'Roboto Condensed';
   textAttribs[1].Name := 'font-size';
@@ -1032,12 +1032,14 @@ begin
   textAttribs[2].Value := 'middle';
   textAttribs[3].Name := 'fill';
   textAttribs[3].Value := 'black';
+  textAttribs[4].Name := 'font-weight';
+  textAttribs[4].Value := 'bold';
   TextStr := AddSvgTextToRect(TempRect, 'Median Time:', textAttribs, FFontHeight);
   FStrings.Add(TextStr);
 
   TempRect.Top := TempRect.Bottom;
   TempRect.Bottom := TempRect.Top + FFontHeight;
-
+  SetLength(textAttribs, 4);
   TextStr := Format('%s MYA', [precomputedTimeStr]);
   if CustomTextWidth(TextStr) >= aWidth then
   begin
@@ -1051,7 +1053,7 @@ begin
 
   if FPairwiseResult.HasCiString then
   begin
-    TempRect.Top := TempRect.Bottom;
+    TempRect.Top := TempRect.Bottom + 20;
     TempRect.Bottom := TempRect.Top + FFontHeight + 10;
     TextStr := FPairwiseResult.CiString;
     if Trim(TextStr) <> EmptyStr then
@@ -1115,7 +1117,7 @@ begin
   end;
 
   { draw the TTOL link}
-  TempRect.Top := TempRect.Bottom;
+  TempRect.Top := TempRect.Bottom + 20;
   TempRect.Bottom := TempRect.Top + FFontHeight;
   SetLength(textAttribs, 7);
   textAttribs[1].Value := IntToStr(FFontHeight);
@@ -1123,12 +1125,12 @@ begin
   textAttribs[4].Name := 'text-decoration';
   textAttribs[4].Value := 'underline';
   textAttribs[5].Name := 'url';
-  textAttribs[5].Value := 'http://www.kumarlab.net/downloads/papers/Mol%20Biol%20Evol-2015-Hedges-835-45.pdf';
+  textAttribs[5].Value := 'http://www.kumarlab.net/downloads/papers/KumarHedges17.pdf';
   textAttribs[6].Name := 'font-weight';
   textAttribs[6].Value := 'bold';
-  TextStr := AddSvgTextToRect(TempRect, '(TTOL)', textAttribs, FFontHeight);
+  TextStr := AddSvgTextToRect(TempRect, 'citation', textAttribs, FFontHeight);
   FStrings.Add(TextStr);
-  DrawExtLink(TempRect.Right - (aWidth div 2) + (CustomTextWidth('(TTOL)') div 2) + 5, TempRect.Top + ((TempRect.Bottom - TempRect.Top) div 2) -12 + (FFontHeight div 4));
+  DrawExtLink(TempRect.Right - (aWidth div 2) + (CustomTextWidth('citation') div 2) + 5, TempRect.Top + ((TempRect.Bottom - TempRect.Top) div 2) -12 + (FFontHeight div 4));
 
   { draw the number of studies}
   SetLength(textAttribs, 4);

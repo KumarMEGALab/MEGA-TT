@@ -224,11 +224,11 @@
 <text x="109" y="180" font-family="Roboto Condensed" font-size="20" text-anchor="middle" fill="black" >crocodile lizard</text>
 <text x="109" y="214" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=52224&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Shinisaurus crocodilurus</text>
 <image width="12" height="12" x="205" y="202" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="109" y="254" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Median Time:</text>
+<text x="109" y="254" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" font-weight="bold" >Median Time:</text>
 <text x="109" y="272" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >161 MYA</text>
-<text x="109" y="289" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >CI: (148.51 - 166.4)</text>
-<text x="109" y="314" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/Mol%20Biol%20Evol-2015-Hedges-835-45.pdf" font-weight="bold" >(TTOL)</text>
-<image width="12" height="12" x="139" y="302" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="109" y="348" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="109" dy="17"> (Median time was</tspan><tspan x="109" dy="17"> derived from 27</tspan><tspan x="109" dy="17"> studies)</tspan></text>
+<text x="109" y="309" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >CI: (148.51 - 166.4)</text>
+<text x="109" y="354" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/KumarHedges17.pdf" font-weight="bold" >citation</text>
+<image width="12" height="12" x="147" y="342" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
+<text x="109" y="388" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="109" dy="17"> (Median time was</tspan><tspan x="109" dy="17"> derived from 27</tspan><tspan x="109" dy="17"> studies)</tspan></text>
 </svg>
 </svg>

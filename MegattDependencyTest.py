@@ -63,7 +63,10 @@ class MegattDependencyTest:
 
     def init_expected_dependencies(self):
         self.expected_dependencies.append('linux-vdso.so.1')
-        #self.expected_dependencies.append('libpthread.so.0')
-        #self.expected_dependencies.append('libdl.so.2')
+        self.expected_dependencies.append('libpthread.so.0')
+        self.expected_dependencies.append('libdl.so.2')
         self.expected_dependencies.append('libc.so.6')
         self.expected_dependencies.append('/lib64/ld-linux-x86-64.so.2')
+        
+
+      
