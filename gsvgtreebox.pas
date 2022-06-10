@@ -3661,6 +3661,8 @@ begin
 end;
 
 procedure TCustomSvgTree.MegaPolyline(Points: array of TPoint; NumPoints: Integer; aNode: TpNode=nil);
+const
+  CIRCLE_COLOR = '#3382D1';
 var
   Temp: String;
   i: Integer;
@@ -3768,18 +3770,12 @@ begin
     else
       aRank := trUnknown;
 
+    lineColor := CIRCLE_COLOR;
+    fillColor := CIRCLE_COLOR;
     if aNode.OTU then
-    begin
-      lineColor := FSvgLineColor;
-      fillColor := lineColor;
-      radiusStr := '2';
-    end
+      radiusStr := '2'
     else
-    begin
-      lineColor := '#3382D1';
-      fillColor := lineColor;
       radiusStr := '4';
-    end;
 
     Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
     Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
@@ -3811,7 +3807,7 @@ begin
       Temp := '<circle cx=' + CircleXCoordString(Points[0].X) + ' ';
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
       Temp := Temp + 'r=' + DBLQ + radiusStr + DBLQ + ' ';
-      Temp := Temp + 'fill=' + DBLQ + FSvgLineColor + DBLQ + ' />';
+      Temp := Temp + 'fill=' + DBLQ + fillColor + DBLQ + ' />';
       FCircleTags.Add(Temp);
 
       Temp := '<circle cx=' + CircleXCoordString(Points[0].X) + ' ';
