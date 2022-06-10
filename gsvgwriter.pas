@@ -880,7 +880,6 @@ end;
 procedure TPairwiseSvgWriter.DrawResult;
 var
   tooltip: String = '';
-  origLeft: Integer = -1;
   aRect: TRect;
   RectStr, TextStr: String;
   TempRect: TRect;
@@ -1072,27 +1071,9 @@ begin
     { draw the adjusted time}
     TempRect.Top := TempRect.Bottom + 20;
     TempRect.Bottom := TempRect.Top + FFontHeight;
-    TextStr := AddSvgTextToRect(TempRect, 'Adjusted Time:', textAttribs, FFontHeight);
-    FStrings.Add(TextStr);
-
-
-    //{ draw a link to the FAQ}
-    origLeft := TempRect.Left;
-    TempRect.Left := TempRect.Left + CustomTextWidth('Adjusted Time: ') + 20;
-    SetLength(textAttribs, 7);
-    textAttribs[0].Value := 'Verdana';
-    textAttribs[1].Value := IntToStr(FFontHeight - 2);
-    textAttribs[3].Value := FLinkColor;
-    textAttribs[4].Name := 'text-decoration';
-    textAttribs[4].Value := 'underline';
-    textAttribs[5].Name := 'font-style';
-    textAttribs[5].Value := 'italic';
-    textAttribs[6].Name := 'font-weight';
-    textAttribs[6].Value := 'normal';
+    TextStr := AddSvgTextToRect(TempRect, '%sAdjusted Time:', textAttribs, FFontHeight);
     tooltip := '<title>Due to conflicting time estimates between studies, ancestral nodes can be assigned younger ages than their descendants. A smoothing technique is used to adjust these times so the resulting tree is ultrametric.</title>';
-    TextStr := AddSvgTextToRect(TempRect, '%s ? ', textAttribs, FFontHeight);
     TextStr := Format(TextStr, [tooltip]);
-    TextStr := Format('<a href="http://www.timetree.org/faqs" target="_blank" >%s</a>', [TextStr]);
     FStrings.Add(TextStr);
 
     SetLength(textAttribs, 4);
@@ -1104,7 +1085,6 @@ begin
     textAttribs[2].Value := 'middle';
     textAttribs[3].Name := 'fill';
     textAttribs[3].Value := 'black';
-    TempRect.Left := origLeft;
     TempRect.Top := TempRect.Bottom + 7;
     TempRect.Bottom := TempRect.Top + FFontHeight;
     TextStr := Format('%s MYA', [adjustedTimeStr]);
