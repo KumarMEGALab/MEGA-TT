@@ -879,6 +879,7 @@ end;
 
 procedure TPairwiseSvgWriter.DrawResult;
 var
+  tooltip: String = '';
   origLeft: Integer = -1;
   aRect: TRect;
   RectStr, TextStr: String;
@@ -1037,7 +1038,7 @@ begin
   TextStr := AddSvgTextToRect(TempRect, 'Median Time:', textAttribs, FFontHeight);
   FStrings.Add(TextStr);
 
-  TempRect.Top := TempRect.Bottom;
+  TempRect.Top := TempRect.Bottom + 5;
   TempRect.Bottom := TempRect.Top + FFontHeight;
   SetLength(textAttribs, 4);
   TextStr := Format('%s MYA', [precomputedTimeStr]);
@@ -1053,7 +1054,7 @@ begin
 
   if FPairwiseResult.HasCiString then
   begin
-    TempRect.Top := TempRect.Bottom + 20;
+    TempRect.Top := TempRect.Bottom + 5;
     TempRect.Bottom := TempRect.Top + FFontHeight + 10;
     TextStr := FPairwiseResult.CiString;
     if Trim(TextStr) <> EmptyStr then
@@ -1088,8 +1089,10 @@ begin
     textAttribs[5].Value := 'italic';
     textAttribs[6].Name := 'font-weight';
     textAttribs[6].Value := 'normal';
-    TextStr := AddSvgTextToRect(TempRect, ' ? ', textAttribs, FFontHeight);
-    TextStr := Format('<a href="http://www.timetree.org/faqs" target="_blank">%s</a>', [TextStr]);
+    tooltip := '<title>Due to conflicting time estimates between studies, ancestral nodes can be assigned younger ages than their descendants. A smoothing technique is used to adjust these times so the resulting tree is ultrametric.</title>';
+    TextStr := AddSvgTextToRect(TempRect, '%s ? ', textAttribs, FFontHeight);
+    TextStr := Format(TextStr, [tooltip]);
+    TextStr := Format('<a href="http://www.timetree.org/faqs" target="_blank" >%s</a>', [TextStr]);
     FStrings.Add(TextStr);
 
     SetLength(textAttribs, 4);
@@ -1102,7 +1105,7 @@ begin
     textAttribs[3].Name := 'fill';
     textAttribs[3].Value := 'black';
     TempRect.Left := origLeft;
-    TempRect.Top := TempRect.Bottom;
+    TempRect.Top := TempRect.Bottom + 7;
     TempRect.Bottom := TempRect.Top + FFontHeight;
     TextStr := Format('%s MYA', [adjustedTimeStr]);
     if CustomTextWidth(TextStr) >= aWidth then
@@ -1128,7 +1131,10 @@ begin
   textAttribs[5].Value := 'http://www.kumarlab.net/downloads/papers/KumarHedges17.pdf';
   textAttribs[6].Name := 'font-weight';
   textAttribs[6].Value := 'bold';
-  TextStr := AddSvgTextToRect(TempRect, 'citation', textAttribs, FFontHeight);
+
+  tooltip := '<title>Kumar S, Stecher G, Suleski M, Hedges SB (2017). TimeTree: A Resource for Timelines, Timetrees, and Divergence Times. Mol Biol Evol 34:1812-1819</title>';
+  TextStr := AddSvgTextToRect(TempRect, '%scitation', textAttribs, FFontHeight);
+  TextStr := Format(TextStr, [tooltip]);
   FStrings.Add(TextStr);
   DrawExtLink(TempRect.Right - (aWidth div 2) + (CustomTextWidth('citation') div 2) + 5, TempRect.Top + ((TempRect.Bottom - TempRect.Top) div 2) -12 + (FFontHeight div 4));
 
