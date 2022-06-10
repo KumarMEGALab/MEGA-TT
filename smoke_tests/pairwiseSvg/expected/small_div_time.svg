@@ -139,9 +139,9 @@
 <text x="115" y="214" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=137224&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Rheum reticulatum</text>
 <image width="12" height="12" x="217" y="202" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
 <text x="115" y="254" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" font-weight="bold" >Median Time:</text>
-<text x="115" y="272" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >0.680 MYA</text>
-<text x="115" y="308" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/KumarHedges17.pdf" font-weight="bold" >citation</text>
-<image width="12" height="12" x="153" y="296" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="115" y="342" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="115" dy="17"> (Median time was</tspan><tspan x="115" dy="17"> derived from 1 study)</tspan></text>
+<text x="115" y="277" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >0.680 MYA</text>
+<text x="115" y="313" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/KumarHedges17.pdf" font-weight="bold" ><title>Kumar S, Stecher G, Suleski M, Hedges SB (2017). TimeTree: A Resource for Timelines, Timetrees, and Divergence Times. Mol Biol Evol 34:1812-1819</title>citation</text>
+<image width="12" height="12" x="153" y="301" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
+<text x="115" y="347" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="115" dy="17"> (Median time was</tspan><tspan x="115" dy="17"> derived from 1 study)</tspan></text>
 </svg>
 </svg>

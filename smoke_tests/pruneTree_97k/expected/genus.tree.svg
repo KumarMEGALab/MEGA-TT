@@ -72,131 +72,131 @@
 <polyline points="20,341 20,515 90,515" fill="none" stroke="#000" stroke-width="2"/>
 </g>
 <g id="timetree-nodes" class="branches" depth="unknown">
-<circle cx="69.8%" cy="59" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Perodicticus" time="" lncount="1" id="41376"  fill="#000" />
+<circle cx="69.8%" cy="59" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Perodicticus" time="" lncount="1" id="41376"  fill="#000" />
 <circle cx="69.8%" cy="59" r="12" class="node" rank="genus" otu="true" name="Perodicticus" time="" lncount="1" id="41376"  />
-<circle cx="69.8%" cy="83" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Arctocebus" time="" lncount="1" id="41377"  fill="#000" />
+<circle cx="69.8%" cy="83" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Arctocebus" time="" lncount="1" id="41377"  fill="#000" />
 <circle cx="69.8%" cy="83" r="12" class="node" rank="genus" otu="true" name="Arctocebus" time="" lncount="1" id="41377"  />
-<circle cx="44.6%" cy="71" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="16.80" cihi="23.45" ci_string="CI: (16.8 - 23.5)" adjusted_age="22" isci="false" time="21.00" lncount="2" dof="Lorisidae" id="41375"  fill="none" />
+<circle cx="44.6%" cy="71" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="16.80" cihi="23.45" ci_string="CI: (16.8 - 23.5)" adjusted_age="22" isci="false" time="21.00" lncount="2" dof="Lorisidae" id="41375"  fill="#3382D1" />
 <circle cx="44.6%" cy="71" r="12" class="node" rank="unknown" cilo="16.80" cihi="23.45" ci_string="CI: (16.8 - 23.5)" adjusted_age="22" isci="false" time="21.00" lncount="2" dof="Lorisidae" id="41375"  />
-<circle cx="69.8%" cy="107" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Nycticebus" time="" lncount="1" id="41379"  fill="#000" />
+<circle cx="69.8%" cy="107" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Nycticebus" time="" lncount="1" id="41379"  fill="#000" />
 <circle cx="69.8%" cy="107" r="12" class="node" rank="genus" otu="true" name="Nycticebus" time="" lncount="1" id="41379"  />
-<circle cx="69.8%" cy="131" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Loris" time="" lncount="1" id="41380"  fill="#000" />
+<circle cx="69.8%" cy="131" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Loris" time="" lncount="1" id="41380"  fill="#000" />
 <circle cx="69.8%" cy="131" r="12" class="node" rank="genus" otu="true" name="Loris" time="" lncount="1" id="41380"  />
-<circle cx="42.7%" cy="119" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="21.14" cihi="29.33" ci_string="Range: (13.3 - 41)" adjusted_age="24" isci="false" time="25.47" lncount="2" dof="Lorisidae" id="41378"  fill="none" />
+<circle cx="42.7%" cy="119" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="21.14" cihi="29.33" ci_string="Range: (13.3 - 41)" adjusted_age="24" isci="false" time="25.47" lncount="2" dof="Lorisidae" id="41378"  fill="#3382D1" />
 <circle cx="42.7%" cy="119" r="12" class="node" rank="unknown" cilo="21.14" cihi="29.33" ci_string="Range: (13.3 - 41)" adjusted_age="24" isci="false" time="25.47" lncount="2" dof="Lorisidae" id="41378"  />
-<circle cx="28.8%" cy="95" r="4" stroke="#f00" stroke-width="1" rank="family" cilo="35.4" cihi="39.9" ci_string="CI: (35.4 - 39.9)" adjusted_age="36" isci="false" time="35.9" lncount="4" name="Lorisidae" id="41374"  fill="#f00" />
+<circle cx="28.8%" cy="95" r="4" stroke="#3382D1" stroke-width="1" rank="family" cilo="35.4" cihi="39.9" ci_string="CI: (35.4 - 39.9)" adjusted_age="36" isci="false" time="35.9" lncount="4" name="Lorisidae" id="41374"  fill="#3382D1" />
 <circle cx="28.8%" cy="95" r="12" class="node" rank="family" cilo="35.4" cihi="39.9" ci_string="CI: (35.4 - 39.9)" adjusted_age="36" isci="false" time="35.9" lncount="4" name="Lorisidae" id="41374"  />
-<circle cx="69.8%" cy="155" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Euoticus" time="" lncount="1" id="41382"  fill="#000" />
+<circle cx="69.8%" cy="155" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Euoticus" time="" lncount="1" id="41382"  fill="#000" />
 <circle cx="69.8%" cy="155" r="12" class="node" rank="genus" otu="true" name="Euoticus" time="" lncount="1" id="41382"  />
-<circle cx="69.8%" cy="179" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galago*" time="" lncount="1" id="41386"  fill="#000" />
+<circle cx="69.8%" cy="179" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galago*" time="" lncount="1" id="41386"  fill="#000" />
 <circle cx="69.8%" cy="179" r="12" class="node" rank="genus" otu="true" name="Galago*" time="" lncount="1" id="41386"  />
-<circle cx="69.8%" cy="203" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41391"  fill="#000" />
+<circle cx="69.8%" cy="203" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41391"  fill="#000" />
 <circle cx="69.8%" cy="203" r="12" class="node" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41391"  />
-<circle cx="69.8%" cy="227" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galago*" time="" lncount="1" id="41392"  fill="#000" />
+<circle cx="69.8%" cy="227" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galago*" time="" lncount="1" id="41392"  fill="#000" />
 <circle cx="69.8%" cy="227" r="12" class="node" rank="genus" otu="true" name="Galago*" time="" lncount="1" id="41392"  />
-<circle cx="64.7%" cy="215" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="1.01" cihi="8.40" ci_string="CI: (1 - 8.4)" adjusted_age="4.5" isci="false" time="4.36" lncount="2" dof="Galagidae" id="41390"  fill="none" />
+<circle cx="64.7%" cy="215" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="1.01" cihi="8.40" ci_string="CI: (1 - 8.4)" adjusted_age="4.5" isci="false" time="4.36" lncount="2" dof="Galagidae" id="41390"  fill="#3382D1" />
 <circle cx="64.7%" cy="215" r="12" class="node" rank="unknown" cilo="1.01" cihi="8.40" ci_string="CI: (1 - 8.4)" adjusted_age="4.5" isci="false" time="4.36" lncount="2" dof="Galagidae" id="41390"  />
-<circle cx="69.8%" cy="251" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41393"  fill="#000" />
+<circle cx="69.8%" cy="251" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41393"  fill="#000" />
 <circle cx="69.8%" cy="251" r="12" class="node" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41393"  />
-<circle cx="58.2%" cy="233" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="0.00" cihi="0.00" ci_string="Range: (5.5 - 27.3)" adjusted_age="18" isci="false" time="10.19" lncount="3" dof="Galagidae" id="41389"  fill="none" />
+<circle cx="58.2%" cy="233" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="0.00" cihi="0.00" ci_string="Range: (5.5 - 27.3)" adjusted_age="18" isci="false" time="10.19" lncount="3" dof="Galagidae" id="41389"  fill="#3382D1" />
 <circle cx="58.2%" cy="233" r="12" class="node" rank="unknown" cilo="0.00" cihi="0.00" ci_string="Range: (5.5 - 27.3)" adjusted_age="18" isci="false" time="10.19" lncount="3" dof="Galagidae" id="41389"  />
-<circle cx="69.8%" cy="275" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41394"  fill="#000" />
+<circle cx="69.8%" cy="275" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41394"  fill="#000" />
 <circle cx="69.8%" cy="275" r="12" class="node" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41394"  />
-<circle cx="56.9%" cy="254" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="0.00" cihi="0.00" ci_string="Range: (5.5 - 27.3)" adjusted_age="18" isci="false" time="11.29" lncount="4" dof="Galagidae" id="41388"  fill="none" />
+<circle cx="56.9%" cy="254" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="0.00" cihi="0.00" ci_string="Range: (5.5 - 27.3)" adjusted_age="18" isci="false" time="11.29" lncount="4" dof="Galagidae" id="41388"  fill="#3382D1" />
 <circle cx="56.9%" cy="254" r="12" class="node" rank="unknown" cilo="0.00" cihi="0.00" ci_string="Range: (5.5 - 27.3)" adjusted_age="18" isci="false" time="11.29" lncount="4" dof="Galagidae" id="41388"  />
-<circle cx="69.8%" cy="299" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41395"  fill="#000" />
+<circle cx="69.8%" cy="299" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41395"  fill="#000" />
 <circle cx="69.8%" cy="299" r="12" class="node" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41395"  />
-<circle cx="69.8%" cy="323" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galago*" time="" lncount="1" id="41397"  fill="#000" />
+<circle cx="69.8%" cy="323" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galago*" time="" lncount="1" id="41397"  fill="#000" />
 <circle cx="69.8%" cy="323" r="12" class="node" rank="genus" otu="true" name="Galago*" time="" lncount="1" id="41397"  />
-<circle cx="69.8%" cy="347" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Otolemur" time="" lncount="1" id="41398"  fill="#000" />
+<circle cx="69.8%" cy="347" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Otolemur" time="" lncount="1" id="41398"  fill="#000" />
 <circle cx="69.8%" cy="347" r="12" class="node" rank="genus" otu="true" name="Otolemur" time="" lncount="1" id="41398"  />
-<circle cx="55.7%" cy="335" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="9.73" cihi="16.87" ci_string="CI: (9.7 - 16.9)" adjusted_age="12" isci="false" time="13.00" lncount="2" dof="Galagidae" id="41396"  fill="none" />
+<circle cx="55.7%" cy="335" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="9.73" cihi="16.87" ci_string="CI: (9.7 - 16.9)" adjusted_age="12" isci="false" time="13.00" lncount="2" dof="Galagidae" id="41396"  fill="#3382D1" />
 <circle cx="55.7%" cy="335" r="12" class="node" rank="unknown" cilo="9.73" cihi="16.87" ci_string="CI: (9.7 - 16.9)" adjusted_age="12" isci="false" time="13.00" lncount="2" dof="Galagidae" id="41396"  />
-<circle cx="49.4%" cy="257" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="14.44" cihi="19.83" ci_string="CI: (14.4 - 19.8)" adjusted_age="18" isci="false" time="17.82" lncount="8" dof="Galagidae" id="41384"  fill="none" />
+<circle cx="49.4%" cy="257" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="14.44" cihi="19.83" ci_string="CI: (14.4 - 19.8)" adjusted_age="18" isci="false" time="17.82" lncount="8" dof="Galagidae" id="41384"  fill="#3382D1" />
 <circle cx="49.4%" cy="257" r="12" class="node" rank="unknown" cilo="14.44" cihi="19.83" ci_string="CI: (14.4 - 19.8)" adjusted_age="18" isci="false" time="17.82" lncount="8" dof="Galagidae" id="41384"  />
-<circle cx="69.8%" cy="371" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41399"  fill="#000" />
+<circle cx="69.8%" cy="371" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41399"  fill="#000" />
 <circle cx="69.8%" cy="371" r="12" class="node" rank="genus" otu="true" name="Galagoides*" time="" lncount="1" id="41399"  />
-<circle cx="47.1%" cy="314" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="15.43" cihi="22.65" ci_string="CI: (15.4 - 22.7)" adjusted_age="20" isci="false" time="19.33" lncount="9" dof="Galagidae" id="41383"  fill="none" />
+<circle cx="47.1%" cy="314" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="15.43" cihi="22.65" ci_string="CI: (15.4 - 22.7)" adjusted_age="20" isci="false" time="19.33" lncount="9" dof="Galagidae" id="41383"  fill="#3382D1" />
 <circle cx="47.1%" cy="314" r="12" class="node" rank="unknown" cilo="15.43" cihi="22.65" ci_string="CI: (15.4 - 22.7)" adjusted_age="20" isci="false" time="19.33" lncount="9" dof="Galagidae" id="41383"  />
-<circle cx="37.4%" cy="234" r="4" stroke="#f00" stroke-width="1" rank="family" cilo="20.33" cihi="33.29" ci_string="CI: (20.3 - 33.3)" adjusted_age="28" isci="false" time="27.62" lncount="10" name="Galagidae" id="41381"  fill="#f00" />
+<circle cx="37.4%" cy="234" r="4" stroke="#3382D1" stroke-width="1" rank="family" cilo="20.33" cihi="33.29" ci_string="CI: (20.3 - 33.3)" adjusted_age="28" isci="false" time="27.62" lncount="10" name="Galagidae" id="41381"  fill="#3382D1" />
 <circle cx="37.4%" cy="234" r="12" class="node" rank="family" cilo="20.33" cihi="33.29" ci_string="CI: (20.3 - 33.3)" adjusted_age="28" isci="false" time="27.62" lncount="10" name="Galagidae" id="41381"  />
-<circle cx="25.3%" cy="164" r="4" stroke="#f00" stroke-width="1" rank="infraorder" cilo="34.5" cihi="40.7" ci_string="Range: (13.8 - 55.1)" adjusted_age="39" isci="false" time="36.6" lncount="14" name="Lorisiformes" id="41373"  fill="#f00" />
+<circle cx="25.3%" cy="164" r="4" stroke="#3382D1" stroke-width="1" rank="infraorder" cilo="34.5" cihi="40.7" ci_string="Range: (13.8 - 55.1)" adjusted_age="39" isci="false" time="36.6" lncount="14" name="Lorisiformes" id="41373"  fill="#3382D1" />
 <circle cx="25.3%" cy="164" r="12" class="node" rank="infraorder" cilo="34.5" cihi="40.7" ci_string="Range: (13.8 - 55.1)" adjusted_age="39" isci="false" time="36.6" lncount="14" name="Lorisiformes" id="41373"  />
 <circle cx="2.2%" cy="337" r="4" fill="#000" />
 <circle cx="2.2%" cy="337" r="12" class="node" rank="suborder" time="59.2" cilo="55.1" cihi="62.1" adjusted_age="59" isci="false" lncount="34" name="Strepsirrhini" id="41372"/>
-<circle cx="69.8%" cy="395" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Daubentonia" time="" lncount="1" id="41401"  fill="#000" />
+<circle cx="69.8%" cy="395" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Daubentonia" time="" lncount="1" id="41401"  fill="#000" />
 <circle cx="69.8%" cy="395" r="12" class="node" rank="genus" otu="true" name="Daubentonia" time="" lncount="1" id="41401"  />
-<circle cx="69.8%" cy="419" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Pachylemur" time="" lncount="1" id="41405"  fill="#000" />
+<circle cx="69.8%" cy="419" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Pachylemur" time="" lncount="1" id="41405"  fill="#000" />
 <circle cx="69.8%" cy="419" r="12" class="node" rank="genus" otu="true" name="Pachylemur" time="" lncount="1" id="41405"  />
-<circle cx="69.8%" cy="443" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Varecia" time="" lncount="1" id="41406"  fill="#000" />
+<circle cx="69.8%" cy="443" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Varecia" time="" lncount="1" id="41406"  fill="#000" />
 <circle cx="69.8%" cy="443" r="12" class="node" rank="genus" otu="true" name="Varecia" time="" lncount="1" id="41406"  />
-<circle cx="54.3%" cy="431" r="4" stroke="#000" stroke-width="1" rank="unknown" cilo="11.68" cihi="15.48" ci_string="CI: (11.7 - 15.5)" isci="false" time="13.58" lncount="2" dof="Lemuridae" id="41404"  fill="none" />
+<circle cx="54.3%" cy="431" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="11.68" cihi="15.48" ci_string="CI: (11.7 - 15.5)" isci="false" time="13.58" lncount="2" dof="Lemuridae" id="41404"  fill="#3382D1" />
 <circle cx="54.3%" cy="431" r="12" class="node" rank="unknown" cilo="11.68" cihi="15.48" ci_string="CI: (11.7 - 15.5)" isci="false" time="13.58" lncount="2" dof="Lemuridae" id="41404"  />
-<circle cx="69.8%" cy="467" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Prolemur" time="" lncount="1" id="41410"  fill="#000" />
+<circle cx="69.8%" cy="467" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Prolemur" time="" lncount="1" id="41410"  fill="#000" />
 <circle cx="69.8%" cy="467" r="12" class="node" rank="genus" otu="true" name="Prolemur" time="" lncount="1" id="41410"  />
-<circle cx="69.8%" cy="491" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Hapalemur" time="" lncount="308" id="41411"  fill="#000" />
+<circle cx="69.8%" cy="491" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Hapalemur" time="" lncount="308" id="41411"  fill="#000" />
 <circle cx="69.8%" cy="491" r="12" class="node" rank="genus" otu="true" name="Hapalemur" time="" lncount="308" id="41411"  />
-<circle cx="59.7%" cy="479" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="6.86" cihi="10.89" ci_string="CI: (6.9 - 10.9)" adjusted_age="9" isci="false" time="8.90" lncount="2" dof="Lemuridae" id="41409"  fill="none" />
+<circle cx="59.7%" cy="479" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="6.86" cihi="10.89" ci_string="CI: (6.9 - 10.9)" adjusted_age="9" isci="false" time="8.90" lncount="2" dof="Lemuridae" id="41409"  fill="#3382D1" />
 <circle cx="59.7%" cy="479" r="12" class="node" rank="unknown" cilo="6.86" cihi="10.89" ci_string="CI: (6.9 - 10.9)" adjusted_age="9" isci="false" time="8.90" lncount="2" dof="Lemuridae" id="41409"  />
-<circle cx="69.8%" cy="515" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Lemur" time="" lncount="1" id="41412"  fill="#000" />
+<circle cx="69.8%" cy="515" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Lemur" time="" lncount="1" id="41412"  fill="#000" />
 <circle cx="69.8%" cy="515" r="12" class="node" rank="genus" otu="true" name="Lemur" time="" lncount="1" id="41412"  />
-<circle cx="58.4%" cy="497" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="8.13" cihi="14.80" ci_string="Range: (7.8 - 16.1)" adjusted_age="10" isci="false" time="10.87" lncount="3" dof="Lemuridae" id="41408"  fill="none" />
+<circle cx="58.4%" cy="497" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="8.13" cihi="14.80" ci_string="Range: (7.8 - 16.1)" adjusted_age="10" isci="false" time="10.87" lncount="3" dof="Lemuridae" id="41408"  fill="#3382D1" />
 <circle cx="58.4%" cy="497" r="12" class="node" rank="unknown" cilo="8.13" cihi="14.80" ci_string="Range: (7.8 - 16.1)" adjusted_age="10" isci="false" time="10.87" lncount="3" dof="Lemuridae" id="41408"  />
-<circle cx="69.8%" cy="539" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Eulemur" time="" lncount="1" id="41413"  fill="#000" />
+<circle cx="69.8%" cy="539" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Eulemur" time="" lncount="1" id="41413"  fill="#000" />
 <circle cx="69.8%" cy="539" r="12" class="node" rank="genus" otu="true" name="Eulemur" time="" lncount="1" id="41413"  />
-<circle cx="47.3%" cy="518" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="17.16" cihi="23.12" ci_string="CI: (17.2 - 23.1)" adjusted_age="20" isci="false" time="19.68" lncount="4" dof="Lemuridae" id="41407"  fill="none" />
+<circle cx="47.3%" cy="518" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="17.16" cihi="23.12" ci_string="CI: (17.2 - 23.1)" adjusted_age="20" isci="false" time="19.68" lncount="4" dof="Lemuridae" id="41407"  fill="#3382D1" />
 <circle cx="47.3%" cy="518" r="12" class="node" rank="unknown" cilo="17.16" cihi="23.12" ci_string="CI: (17.2 - 23.1)" adjusted_age="20" isci="false" time="19.68" lncount="4" dof="Lemuridae" id="41407"  />
-<circle cx="40.2%" cy="474" r="4" stroke="#f00" stroke-width="1" rank="family" cilo="21.63" cihi="29.97" ci_string="CI: (21.6 - 30)" adjusted_age="26" isci="false" time="25.59" lncount="6" name="Lemuridae" id="41403"  fill="#f00" />
+<circle cx="40.2%" cy="474" r="4" stroke="#3382D1" stroke-width="1" rank="family" cilo="21.63" cihi="29.97" ci_string="CI: (21.6 - 30)" adjusted_age="26" isci="false" time="25.59" lncount="6" name="Lemuridae" id="41403"  fill="#3382D1" />
 <circle cx="40.2%" cy="474" r="12" class="node" rank="family" cilo="21.63" cihi="29.97" ci_string="CI: (21.6 - 30)" adjusted_age="26" isci="false" time="25.59" lncount="6" name="Lemuridae" id="41403"  />
-<circle cx="69.8%" cy="563" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Avahi" time="" lncount="1" id="41419"  fill="#000" />
+<circle cx="69.8%" cy="563" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Avahi" time="" lncount="1" id="41419"  fill="#000" />
 <circle cx="69.8%" cy="563" r="12" class="node" rank="genus" otu="true" name="Avahi" time="" lncount="1" id="41419"  />
-<circle cx="69.8%" cy="587" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Propithecus" time="" lncount="1" id="41420"  fill="#000" />
+<circle cx="69.8%" cy="587" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Propithecus" time="" lncount="1" id="41420"  fill="#000" />
 <circle cx="69.8%" cy="587" r="12" class="node" rank="genus" otu="true" name="Propithecus" time="" lncount="1" id="41420"  />
-<circle cx="49.9%" cy="575" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="14.88" cihi="24.00" ci_string="Range: (12.7 - 30.9)" adjusted_age="17" isci="false" time="19.89" lncount="2" dof="Indriidae" id="41418"  fill="none" />
+<circle cx="49.9%" cy="575" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="14.88" cihi="24.00" ci_string="Range: (12.7 - 30.9)" adjusted_age="17" isci="false" time="19.89" lncount="2" dof="Indriidae" id="41418"  fill="#3382D1" />
 <circle cx="49.9%" cy="575" r="12" class="node" rank="unknown" cilo="14.88" cihi="24.00" ci_string="Range: (12.7 - 30.9)" adjusted_age="17" isci="false" time="19.89" lncount="2" dof="Indriidae" id="41418"  />
-<circle cx="69.8%" cy="611" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Indri" time="" lncount="1" id="41421"  fill="#000" />
+<circle cx="69.8%" cy="611" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Indri" time="" lncount="1" id="41421"  fill="#000" />
 <circle cx="69.8%" cy="611" r="12" class="node" rank="genus" otu="true" name="Indri" time="" lncount="1" id="41421"  />
-<circle cx="44.2%" cy="593" r="4" stroke="#f00" stroke-width="1" rank="family" cilo="18.51" cihi="34.01" ci_string="Range: (18.3 - 36.1)" adjusted_age="22" isci="false" time="24.92" lncount="3" name="Indriidae" id="41417"  fill="#f00" />
+<circle cx="44.2%" cy="593" r="4" stroke="#3382D1" stroke-width="1" rank="family" cilo="18.51" cihi="34.01" ci_string="Range: (18.3 - 36.1)" adjusted_age="22" isci="false" time="24.92" lncount="3" name="Indriidae" id="41417"  fill="#3382D1" />
 <circle cx="44.2%" cy="593" r="12" class="node" rank="family" cilo="18.51" cihi="34.01" ci_string="Range: (18.3 - 36.1)" adjusted_age="22" isci="false" time="24.92" lncount="3" name="Indriidae" id="41417"  />
-<circle cx="69.8%" cy="635" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Palaeopropithecus" time="" lncount="1" id="41422"  fill="#000" />
+<circle cx="69.8%" cy="635" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Palaeopropithecus" time="" lncount="1" id="41422"  fill="#000" />
 <circle cx="69.8%" cy="635" r="12" class="node" rank="genus" otu="true" name="Palaeopropithecus" time="" lncount="1" id="41422"  />
-<circle cx="43.3%" cy="614" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="0.00" cihi="0.00" ci_string="CI: (28 - 30.2)" adjusted_age="29" isci="false" time="23.20" lncount="4" dof="Lemuriformes" id="41416"  fill="none" />
+<circle cx="43.3%" cy="614" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="0.00" cihi="0.00" ci_string="CI: (28 - 30.2)" adjusted_age="29" isci="false" time="23.20" lncount="4" dof="Lemuriformes" id="41416"  fill="#3382D1" />
 <circle cx="43.3%" cy="614" r="12" class="node" rank="unknown" cilo="0.00" cihi="0.00" ci_string="CI: (28 - 30.2)" adjusted_age="29" isci="false" time="23.20" lncount="4" dof="Lemuriformes" id="41416"  />
-<circle cx="69.8%" cy="659" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Hadropithecus" time="" lncount="1" id="41424"  fill="#000" />
+<circle cx="69.8%" cy="659" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Hadropithecus" time="" lncount="1" id="41424"  fill="#000" />
 <circle cx="69.8%" cy="659" r="12" class="node" rank="genus" otu="true" name="Hadropithecus" time="" lncount="1" id="41424"  />
-<circle cx="69.8%" cy="683" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Archaeolemur" time="" lncount="1" id="41425"  fill="#000" />
+<circle cx="69.8%" cy="683" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Archaeolemur" time="" lncount="1" id="41425"  fill="#000" />
 <circle cx="69.8%" cy="683" r="12" class="node" rank="genus" otu="true" name="Archaeolemur" time="" lncount="1" id="41425"  />
-<circle cx="54.0%" cy="671" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="0.00" cihi="0.00" ci_string="Range: (12.7 - 30.9)" adjusted_age="17" isci="false" time="13.90" lncount="2" dof="Lemuriformes" id="41423"  fill="none" />
+<circle cx="54.0%" cy="671" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="0.00" cihi="0.00" ci_string="Range: (12.7 - 30.9)" adjusted_age="17" isci="false" time="13.90" lncount="2" dof="Lemuriformes" id="41423"  fill="#3382D1" />
 <circle cx="54.0%" cy="671" r="12" class="node" rank="unknown" cilo="0.00" cihi="0.00" ci_string="Range: (12.7 - 30.9)" adjusted_age="17" isci="false" time="13.90" lncount="2" dof="Lemuriformes" id="41423"  />
-<circle cx="37.1%" cy="642" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="28.02" cihi="30.15" ci_string="CI: (28 - 30.2)" adjusted_age="29" isci="false" time="28.96" lncount="6" dof="Lemuriformes" id="41415"  fill="none" />
+<circle cx="37.1%" cy="642" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="28.02" cihi="30.15" ci_string="CI: (28 - 30.2)" adjusted_age="29" isci="false" time="28.96" lncount="6" dof="Lemuriformes" id="41415"  fill="#3382D1" />
 <circle cx="37.1%" cy="642" r="12" class="node" rank="unknown" cilo="28.02" cihi="30.15" ci_string="CI: (28 - 30.2)" adjusted_age="29" isci="false" time="28.96" lncount="6" dof="Lemuriformes" id="41415"  />
-<circle cx="69.8%" cy="707" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Phaner" time="" lncount="1" id="41428"  fill="#000" />
+<circle cx="69.8%" cy="707" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Phaner" time="" lncount="1" id="41428"  fill="#000" />
 <circle cx="69.8%" cy="707" r="12" class="node" rank="genus" otu="true" name="Phaner" time="" lncount="1" id="41428"  />
-<circle cx="69.8%" cy="731" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Mirza" time="" lncount="1" id="41432"  fill="#000" />
+<circle cx="69.8%" cy="731" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Mirza" time="" lncount="1" id="41432"  fill="#000" />
 <circle cx="69.8%" cy="731" r="12" class="node" rank="genus" otu="true" name="Mirza" time="" lncount="1" id="41432"  />
-<circle cx="69.8%" cy="755" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Microcebus" time="" lncount="1" id="41433"  fill="#000" />
+<circle cx="69.8%" cy="755" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Microcebus" time="" lncount="1" id="41433"  fill="#000" />
 <circle cx="69.8%" cy="755" r="12" class="node" rank="genus" otu="true" name="Microcebus" time="" lncount="1" id="41433"  />
-<circle cx="51.7%" cy="743" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="14.11" cihi="22.11" ci_string="Range: (13.6 - 22.6)" adjusted_age="16" isci="false" time="17.54" lncount="2" dof="Cheirogaleidae" id="41431"  fill="none" />
+<circle cx="51.7%" cy="743" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="14.11" cihi="22.11" ci_string="Range: (13.6 - 22.6)" adjusted_age="16" isci="false" time="17.54" lncount="2" dof="Cheirogaleidae" id="41431"  fill="#3382D1" />
 <circle cx="51.7%" cy="743" r="12" class="node" rank="unknown" cilo="14.11" cihi="22.11" ci_string="Range: (13.6 - 22.6)" adjusted_age="16" isci="false" time="17.54" lncount="2" dof="Cheirogaleidae" id="41431"  />
-<circle cx="69.8%" cy="779" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Allocebus" time="" lncount="1" id="41434"  fill="#000" />
+<circle cx="69.8%" cy="779" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Allocebus" time="" lncount="1" id="41434"  fill="#000" />
 <circle cx="69.8%" cy="779" r="12" class="node" rank="genus" otu="true" name="Allocebus" time="" lncount="1" id="41434"  />
-<circle cx="46.1%" cy="761" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="17.46" cihi="25.04" ci_string="CI: (17.5 - 25)" adjusted_age="21" isci="false" time="21.14" lncount="3" dof="Cheirogaleidae" id="41430"  fill="none" />
+<circle cx="46.1%" cy="761" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="17.46" cihi="25.04" ci_string="CI: (17.5 - 25)" adjusted_age="21" isci="false" time="21.14" lncount="3" dof="Cheirogaleidae" id="41430"  fill="#3382D1" />
 <circle cx="46.1%" cy="761" r="12" class="node" rank="unknown" cilo="17.46" cihi="25.04" ci_string="CI: (17.5 - 25)" adjusted_age="21" isci="false" time="21.14" lncount="3" dof="Cheirogaleidae" id="41430"  />
-<circle cx="69.8%" cy="803" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Cheirogaleus" time="" lncount="1" id="41435"  fill="#000" />
+<circle cx="69.8%" cy="803" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Cheirogaleus" time="" lncount="1" id="41435"  fill="#000" />
 <circle cx="69.8%" cy="803" r="12" class="node" rank="genus" otu="true" name="Cheirogaleus" time="" lncount="1" id="41435"  />
-<circle cx="41.3%" cy="782" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="23.05" cihi="27.35" ci_string="CI: (23 - 27.4)" adjusted_age="25" isci="false" time="26.09" lncount="4" dof="Cheirogaleidae" id="41429"  fill="none" />
+<circle cx="41.3%" cy="782" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="23.05" cihi="27.35" ci_string="CI: (23 - 27.4)" adjusted_age="25" isci="false" time="26.09" lncount="4" dof="Cheirogaleidae" id="41429"  fill="#3382D1" />
 <circle cx="41.3%" cy="782" r="12" class="node" rank="unknown" cilo="23.05" cihi="27.35" ci_string="CI: (23 - 27.4)" adjusted_age="25" isci="false" time="26.09" lncount="4" dof="Cheirogaleidae" id="41429"  />
-<circle cx="32.4%" cy="744" r="4" stroke="#f00" stroke-width="1" rank="family" cilo="31.5" cihi="39.6" ci_string="Range: (27.1 - 40.7)" adjusted_age="33" isci="false" time="34.7" lncount="5" name="Cheirogaleidae" id="41427"  fill="#f00" />
+<circle cx="32.4%" cy="744" r="4" stroke="#3382D1" stroke-width="1" rank="family" cilo="31.5" cihi="39.6" ci_string="Range: (27.1 - 40.7)" adjusted_age="33" isci="false" time="34.7" lncount="5" name="Cheirogaleidae" id="41427"  fill="#3382D1" />
 <circle cx="32.4%" cy="744" r="12" class="node" rank="family" cilo="31.5" cihi="39.6" ci_string="Range: (27.1 - 40.7)" adjusted_age="33" isci="false" time="34.7" lncount="5" name="Cheirogaleidae" id="41427"  />
-<circle cx="69.8%" cy="827" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Lepilemur" time="" lncount="1" id="41437"  fill="#000" />
+<circle cx="69.8%" cy="827" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Lepilemur" time="" lncount="1" id="41437"  fill="#000" />
 <circle cx="69.8%" cy="827" r="12" class="node" rank="genus" otu="true" name="Lepilemur" time="" lncount="1" id="41437"  />
-<circle cx="69.8%" cy="851" r="4" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Megaladapis" time="" lncount="1" id="41438"  fill="#000" />
+<circle cx="69.8%" cy="851" r="2" stroke="#000" stroke-width="1" rank="genus" otu="true" name="Megaladapis" time="" lncount="1" id="41438"  fill="#000" />
 <circle cx="69.8%" cy="851" r="12" class="node" rank="genus" otu="true" name="Megaladapis" time="" lncount="1" id="41438"  />
-<circle cx="29.4%" cy="797" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="28.6" cihi="35.0" ci_string="Range: (27.6 - 40.3)" adjusted_age="35" isci="false" time="32.5" lncount="7" dof="Lemuriformes" id="41426"  fill="none" />
+<circle cx="29.4%" cy="797" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="28.6" cihi="35.0" ci_string="Range: (27.6 - 40.3)" adjusted_age="35" isci="false" time="32.5" lncount="7" dof="Lemuriformes" id="41426"  fill="#3382D1" />
 <circle cx="29.4%" cy="797" r="12" class="node" rank="unknown" cilo="28.6" cihi="35.0" ci_string="Range: (27.6 - 40.3)" adjusted_age="35" isci="false" time="32.5" lncount="7" dof="Lemuriformes" id="41426"  />
-<circle cx="29.2%" cy="635" r="4" stroke="#f00" stroke-width="1" rank="infraorder" cilo="31.1" cihi="40.3" ci_string="CI: (31.1 - 40.3)" adjusted_age="36" isci="false" time="35.6" lncount="19" name="Lemuriformes" id="41402"  fill="#f00" />
+<circle cx="29.2%" cy="635" r="4" stroke="#3382D1" stroke-width="1" rank="infraorder" cilo="31.1" cihi="40.3" ci_string="CI: (31.1 - 40.3)" adjusted_age="36" isci="false" time="35.6" lncount="19" name="Lemuriformes" id="41402"  fill="#3382D1" />
 <circle cx="29.2%" cy="635" r="12" class="node" rank="infraorder" cilo="31.1" cihi="40.3" ci_string="CI: (31.1 - 40.3)" adjusted_age="36" isci="false" time="35.6" lncount="19" name="Lemuriformes" id="41402"  />
-<circle cx="10.0%" cy="515" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="49.6" cihi="58.0" ci_string="CI: (49.6 - 58)" adjusted_age="52" isci="false" time="54.2" lncount="20" dof="Strepsirrhini" id="41400"  fill="none" />
+<circle cx="10.0%" cy="515" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="49.6" cihi="58.0" ci_string="CI: (49.6 - 58)" adjusted_age="52" isci="false" time="54.2" lncount="20" dof="Strepsirrhini" id="41400"  fill="#3382D1" />
 <circle cx="10.0%" cy="515" r="12" class="node" rank="unknown" cilo="49.6" cihi="58.0" ci_string="CI: (49.6 - 58)" adjusted_age="52" isci="false" time="54.2" lncount="20" dof="Strepsirrhini" id="41400"  />
 </g>
 <g id="timetree-names" class="branches" depth="unknown">

@@ -80,105 +80,105 @@
 <polyline points="20,665 20,851 628,851" fill="none" stroke="#000" stroke-width="2"/>
 </g>
 <g id="timetree-nodes" class="branches" depth="unknown">
-<circle cx="69.8%" cy="59" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Porifera" time="" lncount="1" id="63"  fill="#000" />
+<circle cx="69.8%" cy="59" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Porifera" time="" lncount="1" id="63"  fill="#000" />
 <circle cx="69.8%" cy="59" r="12" class="node" rank="phylum" otu="true" name="Porifera" time="" lncount="1" id="63"  />
-<circle cx="69.8%" cy="83" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Ctenophora" time="" lncount="1" id="65"  fill="#000" />
+<circle cx="69.8%" cy="83" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Ctenophora" time="" lncount="1" id="65"  fill="#000" />
 <circle cx="69.8%" cy="83" r="12" class="node" rank="phylum" otu="true" name="Ctenophora" time="" lncount="1" id="65"  />
-<circle cx="69.8%" cy="107" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Hemichordata" time="" lncount="11" id="72"  fill="#000" />
+<circle cx="69.8%" cy="107" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Hemichordata" time="" lncount="11" id="72"  fill="#000" />
 <circle cx="69.8%" cy="107" r="12" class="node" rank="phylum" otu="true" name="Hemichordata" time="" lncount="11" id="72"  />
-<circle cx="69.8%" cy="131" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Echinodermata" time="" lncount="1" id="73"  fill="#000" />
+<circle cx="69.8%" cy="131" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Echinodermata" time="" lncount="1" id="73"  fill="#000" />
 <circle cx="69.8%" cy="131" r="12" class="node" rank="phylum" otu="true" name="Echinodermata" time="" lncount="1" id="73"  />
-<circle cx="69.8%" cy="155" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Xenacoelomorpha" time="" lncount="5" id="74"  fill="#000" />
+<circle cx="69.8%" cy="155" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Xenacoelomorpha" time="" lncount="5" id="74"  fill="#000" />
 <circle cx="69.8%" cy="155" r="12" class="node" rank="phylum" otu="true" name="Xenacoelomorpha" time="" lncount="5" id="74"  />
-<circle cx="39.2%" cy="131" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="561.8" cihi="592.1" ci_string="CI: (561.8 - 592.2)" adjusted_age="596" isci="false" time="580.8" lncount="3" dof="Bilateria" id="70"  fill="none" />
+<circle cx="39.2%" cy="131" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="561.8" cihi="592.1" ci_string="CI: (561.8 - 592.2)" adjusted_age="596" isci="false" time="580.8" lncount="3" dof="Bilateria" id="70"  fill="#3382D1" />
 <circle cx="39.2%" cy="131" r="12" class="node" rank="unknown" cilo="561.8" cihi="592.1" ci_string="CI: (561.8 - 592.2)" adjusted_age="596" isci="false" time="580.8" lncount="3" dof="Bilateria" id="70"  />
-<circle cx="69.8%" cy="179" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Chordata" time="" lncount="1" id="75"  fill="#000" />
+<circle cx="69.8%" cy="179" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Chordata" time="" lncount="1" id="75"  fill="#000" />
 <circle cx="69.8%" cy="179" r="12" class="node" rank="phylum" otu="true" name="Chordata" time="" lncount="1" id="75"  />
-<circle cx="38.0%" cy="155" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="590.0" cihi="802.0" ci_string="Range: (540 - 1001)" adjusted_age="619" isci="false" time="698.6" lncount="4" dof="Bilateria" id="69"  fill="none" />
+<circle cx="38.0%" cy="155" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="590.0" cihi="802.0" ci_string="Range: (540 - 1001)" adjusted_age="619" isci="false" time="698.6" lncount="4" dof="Bilateria" id="69"  fill="#3382D1" />
 <circle cx="38.0%" cy="155" r="12" class="node" rank="unknown" cilo="590.0" cihi="802.0" ci_string="Range: (540 - 1001)" adjusted_age="619" isci="false" time="698.6" lncount="4" dof="Bilateria" id="69"  />
-<circle cx="69.8%" cy="203" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Tardigrada" time="" lncount="1" id="81"  fill="#000" />
+<circle cx="69.8%" cy="203" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Tardigrada" time="" lncount="1" id="81"  fill="#000" />
 <circle cx="69.8%" cy="203" r="12" class="node" rank="phylum" otu="true" name="Tardigrada" time="" lncount="1" id="81"  />
-<circle cx="69.8%" cy="227" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Onychophora" time="" lncount="2" id="83"  fill="#000" />
+<circle cx="69.8%" cy="227" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Onychophora" time="" lncount="2" id="83"  fill="#000" />
 <circle cx="69.8%" cy="227" r="12" class="node" rank="phylum" otu="true" name="Onychophora" time="" lncount="2" id="83"  />
-<circle cx="69.8%" cy="251" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Arthropoda" time="" lncount="1" id="84"  fill="#000" />
+<circle cx="69.8%" cy="251" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Arthropoda" time="" lncount="1" id="84"  fill="#000" />
 <circle cx="69.8%" cy="251" r="12" class="node" rank="phylum" otu="true" name="Arthropoda" time="" lncount="1" id="84"  />
-<circle cx="41.1%" cy="239" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="545.5" cihi="769.4" ci_string="Range: (545.5 - 769.4)" adjusted_age="558" isci="false" time="594.8" lncount="2" dof="Panarthropoda" id="82"  fill="none" />
+<circle cx="41.1%" cy="239" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="545.5" cihi="769.4" ci_string="Range: (545.5 - 769.4)" adjusted_age="558" isci="false" time="594.8" lncount="2" dof="Panarthropoda" id="82"  fill="#3382D1" />
 <circle cx="41.1%" cy="239" r="12" class="node" rank="unknown" cilo="545.5" cihi="769.4" ci_string="Range: (545.5 - 769.4)" adjusted_age="558" isci="false" time="594.8" lncount="2" dof="Panarthropoda" id="82"  />
-<circle cx="69.8%" cy="275" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Nematoda*" time="" lncount="16" id="85"  fill="#000" />
+<circle cx="69.8%" cy="275" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Nematoda*" time="" lncount="16" id="85"  fill="#000" />
 <circle cx="69.8%" cy="275" r="12" class="node" rank="phylum" otu="true" name="Nematoda*" time="" lncount="16" id="85"  />
-<circle cx="69.8%" cy="299" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Nematoda*" time="" lncount="1" id="86"  fill="#000" />
+<circle cx="69.8%" cy="299" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Nematoda*" time="" lncount="1" id="86"  fill="#000" />
 <circle cx="69.8%" cy="299" r="12" class="node" rank="phylum" otu="true" name="Nematoda*" time="" lncount="1" id="86"  />
-<circle cx="69.8%" cy="323" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Priapulida" time="" lncount="1" id="87"  fill="#000" />
+<circle cx="69.8%" cy="323" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Priapulida" time="" lncount="1" id="87"  fill="#000" />
 <circle cx="69.8%" cy="323" r="12" class="node" rank="phylum" otu="true" name="Priapulida" time="" lncount="1" id="87"  />
-<circle cx="69.8%" cy="347" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Rotifera" time="" lncount="1" id="90"  fill="#000" />
+<circle cx="69.8%" cy="347" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Rotifera" time="" lncount="1" id="90"  fill="#000" />
 <circle cx="69.8%" cy="347" r="12" class="node" rank="phylum" otu="true" name="Rotifera" time="" lncount="1" id="90"  />
-<circle cx="69.8%" cy="371" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Entoprocta" time="" lncount="5" id="92"  fill="#000" />
+<circle cx="69.8%" cy="371" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Entoprocta" time="" lncount="5" id="92"  fill="#000" />
 <circle cx="69.8%" cy="371" r="12" class="node" rank="phylum" otu="true" name="Entoprocta" time="" lncount="5" id="92"  />
-<circle cx="69.8%" cy="395" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Annelida" time="" lncount="1" id="98"  fill="#000" />
+<circle cx="69.8%" cy="395" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Annelida" time="" lncount="1" id="98"  fill="#000" />
 <circle cx="69.8%" cy="395" r="12" class="node" rank="phylum" otu="true" name="Annelida" time="" lncount="1" id="98"  />
-<circle cx="69.8%" cy="419" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Phoronida" time="" lncount="188" id="100"  fill="#000" />
+<circle cx="69.8%" cy="419" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Phoronida" time="" lncount="188" id="100"  fill="#000" />
 <circle cx="69.8%" cy="419" r="12" class="node" rank="phylum" otu="true" name="Phoronida" time="" lncount="188" id="100"  />
-<circle cx="69.8%" cy="443" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Brachiopoda" time="" lncount="1" id="101"  fill="#000" />
+<circle cx="69.8%" cy="443" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Brachiopoda" time="" lncount="1" id="101"  fill="#000" />
 <circle cx="69.8%" cy="443" r="12" class="node" rank="phylum" otu="true" name="Brachiopoda" time="" lncount="1" id="101"  />
-<circle cx="40.4%" cy="419" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="260.0" cihi="950.0" ci_string="CI: (260 - 950)" adjusted_age="572" isci="false" time="585.3" lncount="3" dof="Lophotrochozoa" id="97"  fill="none" />
+<circle cx="40.4%" cy="419" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="260.0" cihi="950.0" ci_string="CI: (260 - 950)" adjusted_age="572" isci="false" time="585.3" lncount="3" dof="Lophotrochozoa" id="97"  fill="#3382D1" />
 <circle cx="40.4%" cy="419" r="12" class="node" rank="unknown" cilo="260.0" cihi="950.0" ci_string="CI: (260 - 950)" adjusted_age="572" isci="false" time="585.3" lncount="3" dof="Lophotrochozoa" id="97"  />
-<circle cx="69.8%" cy="467" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Mollusca" time="" lncount="3" id="102"  fill="#000" />
+<circle cx="69.8%" cy="467" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Mollusca" time="" lncount="3" id="102"  fill="#000" />
 <circle cx="69.8%" cy="467" r="12" class="node" rank="phylum" otu="true" name="Mollusca" time="" lncount="3" id="102"  />
-<circle cx="69.8%" cy="491" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Nemertea" time="" lncount="41" id="104"  fill="#000" />
+<circle cx="69.8%" cy="491" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Nemertea" time="" lncount="41" id="104"  fill="#000" />
 <circle cx="69.8%" cy="491" r="12" class="node" rank="phylum" otu="true" name="Nemertea" time="" lncount="41" id="104"  />
-<circle cx="69.8%" cy="515" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Platyhelminthes" time="" lncount="38" id="105"  fill="#000" />
+<circle cx="69.8%" cy="515" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Platyhelminthes" time="" lncount="38" id="105"  fill="#000" />
 <circle cx="69.8%" cy="515" r="12" class="node" rank="phylum" otu="true" name="Platyhelminthes" time="" lncount="38" id="105"  />
-<circle cx="69.8%" cy="539" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Bryozoa" time="" lncount="3" id="106"  fill="#000" />
+<circle cx="69.8%" cy="539" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Bryozoa" time="" lncount="3" id="106"  fill="#000" />
 <circle cx="69.8%" cy="539" r="12" class="node" rank="phylum" otu="true" name="Bryozoa" time="" lncount="3" id="106"  />
-<circle cx="69.8%" cy="563" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Sipuncula" time="" lncount="2" id="107"  fill="#000" />
+<circle cx="69.8%" cy="563" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Sipuncula" time="" lncount="2" id="107"  fill="#000" />
 <circle cx="69.8%" cy="563" r="12" class="node" rank="phylum" otu="true" name="Sipuncula" time="" lncount="2" id="107"  />
-<circle cx="40.3%" cy="491" r="4" stroke="#000" stroke-width="1" rank="unknown" cilo="0.000000000" cihi="0.000000000" isci="false" time="0.000000000" lncount="8" dof="Lophotrochozoa" id="93"  fill="none" />
+<circle cx="40.3%" cy="491" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="0.000000000" cihi="0.000000000" isci="false" time="0.000000000" lncount="8" dof="Lophotrochozoa" id="93"  fill="#3382D1" />
 <circle cx="40.3%" cy="491" r="12" class="node" rank="unknown" cilo="0.000000000" cihi="0.000000000" isci="false" time="0.000000000" lncount="8" dof="Lophotrochozoa" id="93"  />
-<circle cx="69.8%" cy="587" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Chaetognatha" time="" lncount="1" id="108"  fill="#000" />
+<circle cx="69.8%" cy="587" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Chaetognatha" time="" lncount="1" id="108"  fill="#000" />
 <circle cx="69.8%" cy="587" r="12" class="node" rank="phylum" otu="true" name="Chaetognatha" time="" lncount="1" id="108"  />
-<circle cx="36.3%" cy="467" r="4" stroke="#f00" stroke-width="1" rank="no rank" cilo="0.0" cihi="0.0" ci_string="Range: (545.5 - 769.4)" adjusted_age="652" isci="false" time="599.5" lncount="11" name="Spiralia" id="88"  fill="#f00" />
+<circle cx="36.3%" cy="467" r="4" stroke="#3382D1" stroke-width="1" rank="no rank" cilo="0.0" cihi="0.0" ci_string="Range: (545.5 - 769.4)" adjusted_age="652" isci="false" time="599.5" lncount="11" name="Spiralia" id="88"  fill="#3382D1" />
 <circle cx="36.3%" cy="467" r="12" class="node" rank="no rank" cilo="0.0" cihi="0.0" ci_string="Range: (545.5 - 769.4)" adjusted_age="652" isci="false" time="599.5" lncount="11" name="Spiralia" id="88"  />
-<circle cx="36.2%" cy="335" r="4" stroke="#f00" stroke-width="1" rank="no rank" cilo="560.0" cihi="670.1" ci_string="Range: (91.5 - 1114)" adjusted_age="653" isci="false" time="618.9" lncount="17" name="Protostomia" id="76"  fill="#f00" />
+<circle cx="36.2%" cy="335" r="4" stroke="#3382D1" stroke-width="1" rank="no rank" cilo="560.0" cihi="670.1" ci_string="Range: (91.5 - 1114)" adjusted_age="653" isci="false" time="618.9" lncount="17" name="Protostomia" id="76"  fill="#3382D1" />
 <circle cx="36.2%" cy="335" r="12" class="node" rank="no rank" cilo="560.0" cihi="670.1" ci_string="Range: (91.5 - 1114)" adjusted_age="653" isci="false" time="618.9" lncount="17" name="Protostomia" id="76"  />
-<circle cx="69.8%" cy="611" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Cnidaria" time="" lncount="1" id="109"  fill="#000" />
+<circle cx="69.8%" cy="611" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Cnidaria" time="" lncount="1" id="109"  fill="#000" />
 <circle cx="69.8%" cy="611" r="12" class="node" rank="phylum" otu="true" name="Cnidaria" time="" lncount="1" id="109"  />
-<circle cx="69.8%" cy="635" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Placozoa" time="" lncount="1" id="110"  fill="#000" />
+<circle cx="69.8%" cy="635" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Placozoa" time="" lncount="1" id="110"  fill="#000" />
 <circle cx="69.8%" cy="635" r="12" class="node" rank="phylum" otu="true" name="Placozoa" time="" lncount="1" id="110"  />
-<circle cx="34.9%" cy="395" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="608.5" cihi="713.0" ci_string="CI: (608.5 - 713)" adjusted_age="680" isci="false" time="660.7" lncount="23" dof="Eumetazoa" id="66"  fill="none" />
+<circle cx="34.9%" cy="395" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="608.5" cihi="713.0" ci_string="CI: (608.5 - 713)" adjusted_age="680" isci="false" time="660.7" lncount="23" dof="Eumetazoa" id="66"  fill="#3382D1" />
 <circle cx="34.9%" cy="395" r="12" class="node" rank="unknown" cilo="608.5" cihi="713.0" ci_string="CI: (608.5 - 713)" adjusted_age="680" isci="false" time="660.7" lncount="23" dof="Eumetazoa" id="66"  />
-<circle cx="26.1%" cy="227" r="4" stroke="#f00" stroke-width="1" rank="kingdom" cilo="705.0" cihi="960.0" ci_string="CI: (705 - 960)" adjusted_age="851" isci="false" time="832.0" lncount="25" name="Metazoa" id="62"  fill="#f00" />
+<circle cx="26.1%" cy="227" r="4" stroke="#3382D1" stroke-width="1" rank="kingdom" cilo="705.0" cihi="960.0" ci_string="CI: (705 - 960)" adjusted_age="851" isci="false" time="832.0" lncount="25" name="Metazoa" id="62"  fill="#3382D1" />
 <circle cx="26.1%" cy="227" r="12" class="node" rank="kingdom" cilo="705.0" cihi="960.0" ci_string="CI: (705 - 960)" adjusted_age="851" isci="false" time="832.0" lncount="25" name="Metazoa" id="62"  />
-<circle cx="69.8%" cy="659" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Cryptomycota" time="" lncount="25" id="112"  fill="#000" />
+<circle cx="69.8%" cy="659" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Cryptomycota" time="" lncount="25" id="112"  fill="#000" />
 <circle cx="69.8%" cy="659" r="12" class="node" rank="phylum" otu="true" name="Cryptomycota" time="" lncount="25" id="112"  />
-<circle cx="69.8%" cy="683" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Mucoromycota*" time="" lncount="1" id="118"  fill="#000" />
+<circle cx="69.8%" cy="683" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Mucoromycota*" time="" lncount="1" id="118"  fill="#000" />
 <circle cx="69.8%" cy="683" r="12" class="node" rank="phylum" otu="true" name="Mucoromycota*" time="" lncount="1" id="118"  />
-<circle cx="69.8%" cy="707" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Basidiomycota" time="" lncount="1" id="120"  fill="#000" />
+<circle cx="69.8%" cy="707" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Basidiomycota" time="" lncount="1" id="120"  fill="#000" />
 <circle cx="69.8%" cy="707" r="12" class="node" rank="phylum" otu="true" name="Basidiomycota" time="" lncount="1" id="120"  />
-<circle cx="69.8%" cy="731" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Ascomycota" time="" lncount="1" id="121"  fill="#000" />
+<circle cx="69.8%" cy="731" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Ascomycota" time="" lncount="1" id="121"  fill="#000" />
 <circle cx="69.8%" cy="731" r="12" class="node" rank="phylum" otu="true" name="Ascomycota" time="" lncount="1" id="121"  />
-<circle cx="38.2%" cy="719" r="4" stroke="#f00" stroke-width="1" rank="subkingdom" cilo="582.0" cihi="749.0" ci_string="Range: (500 - 1196.8)" adjusted_age="615" isci="false" time="682.0" lncount="2" name="Dikarya" id="119"  fill="#f00" />
+<circle cx="38.2%" cy="719" r="4" stroke="#3382D1" stroke-width="1" rank="subkingdom" cilo="582.0" cihi="749.0" ci_string="Range: (500 - 1196.8)" adjusted_age="615" isci="false" time="682.0" lncount="2" name="Dikarya" id="119"  fill="#3382D1" />
 <circle cx="38.2%" cy="719" r="12" class="node" rank="subkingdom" cilo="582.0" cihi="749.0" ci_string="Range: (500 - 1196.8)" adjusted_age="615" isci="false" time="682.0" lncount="2" name="Dikarya" id="119"  />
-<circle cx="69.8%" cy="755" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Mucoromycota*" time="" lncount="1" id="122"  fill="#000" />
+<circle cx="69.8%" cy="755" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Mucoromycota*" time="" lncount="1" id="122"  fill="#000" />
 <circle cx="69.8%" cy="755" r="12" class="node" rank="phylum" otu="true" name="Mucoromycota*" time="" lncount="1" id="122"  />
-<circle cx="33.7%" cy="719" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="605.2" cihi="1049.0" ci_string="Range: (605.2 - 1049)" adjusted_age="704" isci="false" time="798.5" lncount="4" dof="Fungi" id="116"  fill="none" />
+<circle cx="33.7%" cy="719" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="605.2" cihi="1049.0" ci_string="Range: (605.2 - 1049)" adjusted_age="704" isci="false" time="798.5" lncount="4" dof="Fungi" id="116"  fill="#3382D1" />
 <circle cx="33.7%" cy="719" r="12" class="node" rank="unknown" cilo="605.2" cihi="1049.0" ci_string="Range: (605.2 - 1049)" adjusted_age="704" isci="false" time="798.5" lncount="4" dof="Fungi" id="116"  />
-<circle cx="69.8%" cy="779" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Zoopagomycota" time="" lncount="1" id="123"  fill="#000" />
+<circle cx="69.8%" cy="779" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Zoopagomycota" time="" lncount="1" id="123"  fill="#000" />
 <circle cx="69.8%" cy="779" r="12" class="node" rank="phylum" otu="true" name="Zoopagomycota" time="" lncount="1" id="123"  />
-<circle cx="33.1%" cy="749" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="481.7" cihi="663.8" ci_string="Range: (481.7 - 663.8)" adjusted_age="715" isci="false" time="590.5" lncount="5" dof="Fungi" id="115"  fill="none" />
+<circle cx="33.1%" cy="749" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="481.7" cihi="663.8" ci_string="Range: (481.7 - 663.8)" adjusted_age="715" isci="false" time="590.5" lncount="5" dof="Fungi" id="115"  fill="#3382D1" />
 <circle cx="33.1%" cy="749" r="12" class="node" rank="unknown" cilo="481.7" cihi="663.8" ci_string="Range: (481.7 - 663.8)" adjusted_age="715" isci="false" time="590.5" lncount="5" dof="Fungi" id="115"  />
-<circle cx="69.8%" cy="803" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Chytridiomycota" time="" lncount="66" id="124"  fill="#000" />
+<circle cx="69.8%" cy="803" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Chytridiomycota" time="" lncount="66" id="124"  fill="#000" />
 <circle cx="69.8%" cy="803" r="12" class="node" rank="phylum" otu="true" name="Chytridiomycota" time="" lncount="66" id="124"  />
-<circle cx="69.8%" cy="827" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Blastocladiomycota" time="" lncount="1" id="125"  fill="#000" />
+<circle cx="69.8%" cy="827" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Blastocladiomycota" time="" lncount="1" id="125"  fill="#000" />
 <circle cx="69.8%" cy="827" r="12" class="node" rank="phylum" otu="true" name="Blastocladiomycota" time="" lncount="1" id="125"  />
-<circle cx="30.2%" cy="788" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="707.0" cihi="1156.0" ci_string="Range: (707 - 1156)" adjusted_age="770" isci="false" time="864.4" lncount="7" dof="Fungi" id="113"  fill="none" />
+<circle cx="30.2%" cy="788" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="707.0" cihi="1156.0" ci_string="Range: (707 - 1156)" adjusted_age="770" isci="false" time="864.4" lncount="7" dof="Fungi" id="113"  fill="#3382D1" />
 <circle cx="30.2%" cy="788" r="12" class="node" rank="unknown" cilo="707.0" cihi="1156.0" ci_string="Range: (707 - 1156)" adjusted_age="770" isci="false" time="864.4" lncount="7" dof="Fungi" id="113"  />
-<circle cx="30.0%" cy="723" r="4" stroke="#f00" stroke-width="1" rank="kingdom" cilo="0.0" cihi="0.0" ci_string="Range: (565 - 666)" adjusted_age="574" isci="false" time="775.5" lncount="8" name="Fungi" id="111"  fill="#f00" />
+<circle cx="30.0%" cy="723" r="4" stroke="#3382D1" stroke-width="1" rank="kingdom" cilo="0.0" cihi="0.0" ci_string="Range: (565 - 666)" adjusted_age="574" isci="false" time="775.5" lncount="8" name="Fungi" id="111"  fill="#3382D1" />
 <circle cx="30.0%" cy="723" r="12" class="node" rank="kingdom" cilo="0.0" cihi="0.0" ci_string="Range: (565 - 666)" adjusted_age="574" isci="false" time="775.5" lncount="8" name="Fungi" id="111"  />
-<circle cx="4.6%" cy="475" r="4" stroke="#f00" stroke-width="1" rank="unknown" cilo="985.0" cihi="1392.0" ci_string="CI: (985 - 1392)" adjusted_age="1272" isci="false" time="1231.1" lncount="33" dof="Opisthokonta" id="61"  fill="none" />
+<circle cx="4.6%" cy="475" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="985.0" cihi="1392.0" ci_string="CI: (985 - 1392)" adjusted_age="1272" isci="false" time="1231.1" lncount="33" dof="Opisthokonta" id="61"  fill="#3382D1" />
 <circle cx="4.6%" cy="475" r="12" class="node" rank="unknown" cilo="985.0" cihi="1392.0" ci_string="CI: (985 - 1392)" adjusted_age="1272" isci="false" time="1231.1" lncount="33" dof="Opisthokonta" id="61"  />
 <circle cx="2.2%" cy="661" r="4" fill="#000" />
 <circle cx="2.2%" cy="661" r="12" class="node" rank="no rank" time="296.9" cilo="0.0" cihi="0.0" adjusted_age="1316" isci="false" lncount="34" name="Opisthokonta" id="60"/>
-<circle cx="69.8%" cy="851" r="4" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Microsporidia" time="" lncount="1" id="126"  fill="#000" />
+<circle cx="69.8%" cy="851" r="2" stroke="#000" stroke-width="1" rank="phylum" otu="true" name="Microsporidia" time="" lncount="1" id="126"  fill="#000" />
 <circle cx="69.8%" cy="851" r="12" class="node" rank="phylum" otu="true" name="Microsporidia" time="" lncount="1" id="126"  />
 </g>
 <g id="timetree-names" class="branches" depth="unknown">

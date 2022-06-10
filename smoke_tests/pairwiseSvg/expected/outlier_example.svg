@@ -177,13 +177,13 @@
 <text x="109" y="290" font-family="Verdana" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Undef&amp;name=312723&amp;lvl=0&amp;srchmode=1" font-style="italic" font-weight="bold" >Phyllodactylus wirshingi</text>
 <image width="12" height="12" x="205" y="278" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
 <text x="109" y="330" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" font-weight="bold" >Median Time:</text>
-<text x="109" y="348" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >35 MYA</text>
-<text x="109" y="389" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Range: (34.8..9 - 57.90285)</text>
-<text x="109" y="430" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Adjusted Time:</text>
-<a href="http://www.timetree.org/faqs" target="_blank"><text x="179" y="430" font-family="Verdana" font-size="14" text-anchor="middle" fill="#194E84" text-decoration="underline" font-style="italic" font-weight="normal" > ? </text></a>
-<text x="109" y="446" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >41 MYA</text>
-<text x="109" y="482" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/KumarHedges17.pdf" font-weight="bold" >citation</text>
-<image width="12" height="12" x="147" y="470" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
-<text x="109" y="516" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="109" dy="17"> (Median and adjusted</tspan><tspan x="109" dy="17"> times were derived</tspan><tspan x="109" dy="17"> from 6 studies)</tspan></text>
+<text x="109" y="353" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >35 MYA</text>
+<text x="109" y="379" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Range: (34.8..9 - 57.90285)</text>
+<text x="109" y="420" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >Adjusted Time:</text>
+<a href="http://www.timetree.org/faqs" target="_blank" ><text x="179" y="420" font-family="Verdana" font-size="14" text-anchor="middle" fill="#194E84" text-decoration="underline" font-style="italic" font-weight="normal" ><title>Due to conflicting time estimates between studies, ancestral nodes can be assigned younger ages than their descendants. A smoothing technique is used to adjust these times so the resulting tree is ultrametric.</title> ? </text></a>
+<text x="109" y="443" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="black" >41 MYA</text>
+<text x="109" y="479" font-family="Roboto Condensed" font-size="16" text-anchor="middle" fill="#194E84" text-decoration="underline" url="http://www.kumarlab.net/downloads/papers/KumarHedges17.pdf" font-weight="bold" ><title>Kumar S, Stecher G, Suleski M, Hedges SB (2017). TimeTree: A Resource for Timelines, Timetrees, and Divergence Times. Mol Biol Evol 34:1812-1819</title>citation</text>
+<image width="12" height="12" x="147" y="467" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC"></image>
+<text x="109" y="513" font-family="Roboto Condensed" font-size="14" text-anchor="middle" fill="black" ><tspan x="109" dy="17"> (Median and adjusted</tspan><tspan x="109" dy="17"> times were derived</tspan><tspan x="109" dy="17"> from 6 studies)</tspan></text>
 </svg>
 </svg>
