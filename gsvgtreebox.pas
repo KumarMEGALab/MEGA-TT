@@ -3671,7 +3671,7 @@ var
   fillColor: String;
   lineColor: String;
   aHeight: Double;
-
+  radiusStr: String = '';
   function MetaData(n: TpNode; r: TTaxonomicRank; h: Double): String;
   begin
     Result := 'rank=' + dblq + TaxonomicRankToString(r) + dblq + ' ';
@@ -3724,7 +3724,7 @@ var
       Result := Format('%s%d%s', [DBLQ, aX, DBLQ]);
   end;
 
-  function DisplayAsAdjusted(precomputedTime: Double; adjustedTime: Double): Boolean;
+  function DisplayAsAdjusted(precomputedTime: Double; adjustedTime: Double): Boolean; deprecated; { no longer displaying adjusted nodes differently}
   var
     diff: Double = 0;
   begin
@@ -3737,9 +3737,6 @@ var
       Exit;
     end;
     Result := True; { adjusted age is non-zero}
-    //diff := (precomputedTime - adjustedTime)/precomputedTime*100;
-    //if CompareValue(abs(diff), 5, FP_CUTOFF) > 0 then
-    //  Result := True;
   end;
 
 begin
@@ -3770,21 +3767,23 @@ begin
       aRank := TaxonomicRanks[aNode.timetreeId]
     else
       aRank := trUnknown;
-    if DisplayAsAdjusted(aNode.precomputedAge, aNode.adjustedAge) and (not IsStudyTree) and (not FRenderNewickOnly) then
+
+    if aNode.OTU then
     begin
-      lineColor := FSvgDisabledNodeColor;
-      fillColor := FSvgDisabledNodeColor;
+      lineColor := FSvgLineColor;
+      fillColor := lineColor;
+      radiusStr := '2';
     end
     else
     begin
-      lineColor := FSvgLineColor;
-      fillColor := FSvgLineColor;
+      lineColor := '#3382D1';
+      fillColor := lineColor;
+      radiusStr := '4';
     end;
-    if aRank = trUnknown then
-      fillColor := 'none';
+
     Temp := '<circle cx=' + CircleXCoordString(Points[NumPoints - 1].X) + ' ';
     Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[NumPoints - 1].Y) + DBLQ + ' ';
-    Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
+    Temp := Temp + 'r=' + DBLQ + radiusStr + DBLQ + ' ';
     Temp := Temp + 'stroke=' + DBLQ + lineColor + DBLQ + ' ';
     Temp := Temp + 'stroke-width=' + DBLQ + '1' + DBLQ + ' ';
     if IsStudyTree and ShowTopologyOnly and (CompareValue(StudyTimeNodeHeights[aNode.index - 1], 0.0, FP_CUTOFF) > 0) then
@@ -3802,15 +3801,16 @@ begin
     Temp := Temp + 'r=' + DBLQ + '12' + DBLQ + ' ';
     Temp := Temp + 'class=' + DBLQ + 'node' + DBLQ + ' ';
     Temp := Temp + MetaData(aNode, aRank, aHeight) + ' />';
+    {$IFNDEF DEBUG}
     if not FRenderNewickOnly then
       FCircleTags.Add(Temp);
-
+    {$ENDIF}
     if (not FRenderNewickOnly) and (not (aNode = FRoot)) and (aNode.anc.anc = nil) and (aNode = aNode.anc.des1) then { this is descendent 1 of the root node}
     begin
       FormatTimeIntervalStrings(aNode.anc.precomputedAge, aNode.anc.ciLower, aNode.anc.ciUpper, timeStr, ciLowStr, ciHighStr);
       Temp := '<circle cx=' + CircleXCoordString(Points[0].X) + ' ';
       Temp := Temp + 'cy=' + DBLQ + IntToStr(Points[0].Y) + DBLQ + ' ';
-      Temp := Temp + 'r=' + DBLQ + '4' + DBLQ + ' ';
+      Temp := Temp + 'r=' + DBLQ + radiusStr + DBLQ + ' ';
       Temp := Temp + 'fill=' + DBLQ + FSvgLineColor + DBLQ + ' />';
       FCircleTags.Add(Temp);
 
