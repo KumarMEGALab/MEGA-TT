@@ -1,0 +1,2 @@
+# MEGA-TT
+MEGA-TT (MEGA Time Tree) is a software that is used by the http://www.timetree.org web application for generating dynamic SVG images of timetrees, timelines, and pairwise search results. MEGA-TT is derived from the MEGA (Molecular Evolutionary Genetics Analysis) software. MEGA-TT accepts JSON formatted search results from the timetree API and outputs SVG image files that are displayed by the timetree web application. JavaScript code is then applied by the timetree web application to make the SVG images responsive to user actions.
