@@ -27,7 +27,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="../Common;../TamuraFuncs;../reltime;common;tests/common;timeline;timetree;utils;../PatristicDist;../RuntimeProgress;../DataOutput;../Alignment;../Process;../MEGA-CC;../InputData;../Compute;../Web;../InputData/nexus;../Captions;../CloneFinder/compute;../CloneFinder/data;../CloneFinder/options;../CloneFinder/parsers;../CloneFinder/process;../BEAM;../UsageStatistics;../MegaVcl;../TreeEditor;../CalibrationTester;../AlignmentEditor;../Clinic;../GeneDuplication;../Applinker;../Private/Help;../TextEditor;../MegaDlgs;../ResultsForms;../Helpers"/>
+            <OtherUnitFiles Value="../Common;../reltime;common;tests/common;timeline;timetree;utils;../PatristicDist;../RuntimeProgress;../DataOutput;../Alignment;../Process;../MEGA-CC;../InputData;../Compute;../Web;../InputData/nexus;../Captions;../CloneFinder/compute;../CloneFinder/data;../CloneFinder/options;../CloneFinder/parsers;../CloneFinder/process;../BEAM;../UsageStatistics;../MegaVcl;../TreeEditor;../CalibrationTester;../AlignmentEditor;../Clinic;../GeneDuplication;../Applinker;../Private/Help;../TextEditor;../MegaDlgs;../ResultsForms;../Helpers"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -54,7 +54,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="../Common;../TamuraFuncs;../reltime;common;tests/common;timeline;timetree;utils;../PatristicDist;../RuntimeProgress;../DataOutput;../Alignment;../Process;../MEGA-CC;../InputData;../Compute;../Web;../InputData/nexus;../Captions;../CloneFinder/compute;../CloneFinder/data;../CloneFinder/options;../CloneFinder/parsers;../CloneFinder/process;../BEAM;../UsageStatistics;../MegaVcl;../TreeEditor;../CalibrationTester;../AlignmentEditor;../Clinic;../GeneDuplication;../Applinker;../Private/Help;../TextEditor;../MegaDlgs;../ResultsForms;../Helpers"/>
+            <OtherUnitFiles Value="../Common;../reltime;common;tests/common;timeline;timetree;utils;../PatristicDist;../RuntimeProgress;../DataOutput;../Alignment;../Process;../MEGA-CC;../InputData;../Compute;../Web;../InputData/nexus;../Captions;../CloneFinder/compute;../CloneFinder/data;../CloneFinder/options;../CloneFinder/parsers;../CloneFinder/process;../BEAM;../UsageStatistics;../MegaVcl;../TreeEditor;../CalibrationTester;../AlignmentEditor;../Clinic;../GeneDuplication;../Applinker;../Private/Help;../TextEditor;../MegaDlgs;../ResultsForms;../Helpers"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
@@ -92,16 +92,16 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <CommandLineParams Value="--pairwise ./inputs/outlier_example.json --outfile ./output/outlier_example.svg --width 700 --height 800 --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
-        <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pairwiseSvg"/>
+        <CommandLineParams Value="--tree ./inputs/140k-species-tree.nwk --names-map ./inputs/140k-species-map.txt --ranks ./inputs/140k-species-ranks.txt --target-rank species -ci ./inputs/140k-species-ci.csv -leaf-counts ./inputs/140k-leafNodeCounts.csv --ids ./ids/hominidae-alphabetical-asc.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/hominidae-alphabetical-asc.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+        <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pruneTree_97k"/>
         <Display Use="True"/>
       </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
           <local>
-            <CommandLineParams Value="--pairwise ./inputs/outlier_example.json --outfile ./output/outlier_example.svg --width 700 --height 800 --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt"/>
-            <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pairwiseSvg"/>
+            <CommandLineParams Value="--tree ./inputs/140k-species-tree.nwk --names-map ./inputs/140k-species-map.txt --ranks ./inputs/140k-species-ranks.txt --target-rank species -ci ./inputs/140k-species-ci.csv -leaf-counts ./inputs/140k-leafNodeCounts.csv --ids ./ids/hominidae-alphabetical-asc.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/hominidae-alphabetical-asc.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree -gs"/>
+            <WorkingDirectory Value="/home/gstecher/Documents/lazarusProjects/mega-git/megatt/smoke_tests/pruneTree_97k"/>
             <Display Use="True"/>
           </local>
         </Mode0>
@@ -144,131 +144,131 @@
         <IsPartOfProject Value="True"/>
       </Unit5>
       <Unit6>
-        <Filename Value="../TamuraFuncs/mtreepruner.pas"/>
+        <Filename Value="ttconst.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit6>
       <Unit7>
-        <Filename Value="ttconst.pas"/>
+        <Filename Value="gutils.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit7>
       <Unit8>
-        <Filename Value="gutils.pas"/>
+        <Filename Value="gtreeproc.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit8>
       <Unit9>
-        <Filename Value="gtreeproc.pas"/>
+        <Filename Value="gsvgwriter.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit9>
       <Unit10>
-        <Filename Value="gsvgwriter.pas"/>
+        <Filename Value="gsvgtreebox.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit10>
       <Unit11>
-        <Filename Value="gsvgtreebox.pas"/>
+        <Filename Value="gtreeattrib.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit11>
       <Unit12>
-        <Filename Value="gtreeattrib.pas"/>
+        <Filename Value="gtextwidth.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit12>
       <Unit13>
-        <Filename Value="gtextwidth.pas"/>
+        <Filename Value="../RelTime/geologicaltimes.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit13>
       <Unit14>
-        <Filename Value="../RelTime/geologicaltimes.pas"/>
+        <Filename Value="../RelTime/mearthimpacts.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit14>
       <Unit15>
-        <Filename Value="../RelTime/mearthimpacts.pas"/>
+        <Filename Value="../RelTime/mgeodata.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit15>
       <Unit16>
-        <Filename Value="../RelTime/mgeodata.pas"/>
+        <Filename Value="gtaxonomicrank.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit16>
       <Unit17>
-        <Filename Value="gtaxonomicrank.pas"/>
+        <Filename Value="gnamesmap.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit17>
       <Unit18>
-        <Filename Value="gnamesmap.pas"/>
+        <Filename Value="gpairwisesvg.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit18>
       <Unit19>
-        <Filename Value="gpairwisesvg.pas"/>
+        <Filename Value="gloadtreethread.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit19>
       <Unit20>
-        <Filename Value="gloadtreethread.pas"/>
+        <Filename Value="mgeodatachartformatter.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit20>
       <Unit21>
-        <Filename Value="mgeodatachartformatter.pas"/>
+        <Filename Value="timeline/gtimelinesvg.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit21>
       <Unit22>
-        <Filename Value="timeline/gtimelinesvg.pas"/>
+        <Filename Value="common/gsvgstrings.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit22>
       <Unit23>
-        <Filename Value="common/gsvgstrings.pas"/>
+        <Filename Value="timeline/gtimeline.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit23>
       <Unit24>
-        <Filename Value="timeline/gtimeline.pas"/>
+        <Filename Value="timeline/gtimelinejsonparser.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit24>
       <Unit25>
-        <Filename Value="timeline/gtimelinejsonparser.pas"/>
+        <Filename Value="timeline/gtimelineresult.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit25>
       <Unit26>
-        <Filename Value="timeline/gtimelineresult.pas"/>
+        <Filename Value="timeline/gtimelinesvgwriter.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit26>
       <Unit27>
-        <Filename Value="timeline/gtimelinesvgwriter.pas"/>
+        <Filename Value="tests/common/testconsts.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit27>
       <Unit28>
-        <Filename Value="tests/common/testconsts.pas"/>
+        <Filename Value="timeline/gtimelineresultbin.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit28>
       <Unit29>
-        <Filename Value="timeline/gtimelineresultbin.pas"/>
+        <Filename Value="timeline/gtimelineresultbinarray.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit29>
       <Unit30>
-        <Filename Value="timeline/gtimelineresultbinarray.pas"/>
+        <Filename Value="mearthimpactsrenderer.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit30>
       <Unit31>
-        <Filename Value="mearthimpactsrenderer.pas"/>
+        <Filename Value="timetree/gtimescalerenderer.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit31>
       <Unit32>
-        <Filename Value="timetree/gtimescalerenderer.pas"/>
+        <Filename Value="timetree/gscaleticks.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit32>
       <Unit33>
-        <Filename Value="timetree/gscaleticks.pas"/>
+        <Filename Value="gconfidenceintervals.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit33>
       <Unit34>
-        <Filename Value="gconfidenceintervals.pas"/>
+        <Filename Value="utils/gnamestoidsmapper.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit34>
       <Unit35>
-        <Filename Value="utils/gnamestoidsmapper.pas"/>
+        <Filename Value="utils/gleafnodecounts.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit35>
       <Unit36>
-        <Filename Value="utils/gleafnodecounts.pas"/>
+        <Filename Value="gnewick_to_svg.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit36>
       <Unit37>
-        <Filename Value="gnewick_to_svg.pas"/>
+        <Filename Value="mtreepruner.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit37>
     </Units>
@@ -280,7 +280,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="../Common;../TamuraFuncs;../RelTime;common;tests/common;timeline"/>
+      <OtherUnitFiles Value="../Common;../RelTime;common;tests/common;timeline"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
   </CompilerOptions>

@@ -384,7 +384,7 @@ var
 begin
   startTime := Now;
   Result := False;
-  NodeIdsFile:= aNodeIds;
+  NodeIdsFile := aNodeIds;
   try
     FTreeList := aList;
     if not LoadNodeIds then
@@ -459,6 +459,7 @@ begin
       Result := Result and FileExists(NewickFile);
     end;
     FSvgWriter.SetData(FTreeList, ImpactsFile, O2File, CO2File);
+
     FSvgWriter.DeepestRank := FDeepestRank;
     FSvgWriter.RanksFile := FRanksFile;
     if FNodeIds.Count >= 3 then

@@ -10,13 +10,13 @@ uses
   Classes, SysUtils, CustApp, gtreedata, gtreelist, gtreedataadapter,
   MLongintList, gtreenode, ttconst, gutils, gtreeproc
   { you can add units after this }
-  ,mtreepruner, gsvgwriter, gsvgtreebox, gtreeattrib, gtextwidth,
-  geologicaltimes, mearthimpacts, mgeodata, gtaxonomicrank, gnamesmap,
-  gpairwisesvg, syncobjs, gloadtreethread, dateutils, mgeodatachartformatter,
-  testconsts, gsvgstrings, gtimeline, gtimelinesvgwriter, gtimelineresult,
-  gtimelinejsonparser, gtimelineresultbin, gtimelineresultbinarray,
-  mearthimpactsrenderer, gtimescalerenderer, gscaleticks, typinfo,
-  gconfidenceintervals, gnamestoidsmapper, gleafnodecounts, gnewick_to_svg;
+  , gsvgwriter, gsvgtreebox, gtreeattrib, gtextwidth, geologicaltimes,
+  mearthimpacts, mgeodata, gtaxonomicrank, gnamesmap, gpairwisesvg, syncobjs,
+  gloadtreethread, dateutils, mgeodatachartformatter, testconsts, gsvgstrings,
+  gtimeline, gtimelinesvgwriter, gtimelineresult, gtimelinejsonparser,
+  gtimelineresultbin, gtimelineresultbinarray, mearthimpactsrenderer,
+  gtimescalerenderer, gscaleticks, typinfo, gconfidenceintervals,
+  gnamestoidsmapper, gleafnodecounts, gnewick_to_svg, mtreepruner;
 
 type
 
@@ -705,8 +705,8 @@ end;
 procedure megatt.OutputVersionInfo;
 begin
   WriteLn('MEGA-TT (MEGA TimeTree )');
-  WriteLn('Version 2.0.6');
-  WriteLn('copyright 2022');
+  WriteLn('Version 2.0.7');
+  WriteLn('copyright 2023');
   WriteLn('Authors: Glen Stecher <gstecher@bd3software.com>');
 end;
 
