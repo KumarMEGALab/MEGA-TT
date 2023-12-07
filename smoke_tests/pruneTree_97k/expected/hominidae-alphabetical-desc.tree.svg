@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="248" name="tree" y="0" >
+<defs>
+<g class="background" id="timetree-background-colors" bg-colors="periods" >
+<polyline points="20,248 628,248 628,20 20,20 20,248" class="background" fill="#FFE619" fill-opacity="0.2" stroke="#aaaaaa" stroke-width="0" stroke-linecap="square"/>
+</g>
+<g id="timetree-branches" class="branches" depth="unknown">
+<polyline points="464,69 464,59 628,59" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="464,73 464,83 628,83" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="20,115 20,71 464,71" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="532,117 532,107 628,107" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="532,121 532,131 628,131" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="372,135 372,119 532,119" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="372,139 372,155 628,155" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="284,162 284,137 372,137" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="537,189 537,179 628,179" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="537,193 537,203 628,203" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="284,166 284,191 537,191" fill="none" stroke="#000" stroke-width="2"/>
+<polyline points="20,119 20,164 284,164" fill="none" stroke="#000" stroke-width="2"/>
+</g>
+<g id="timetree-nodes" class="branches" depth="unknown">
+<circle cx="69.8%" cy="59" r="2" stroke="#3382D1" stroke-width="1" rank="species" otu="true" name="Pongo pygmaeus" time="" lncount="1" id="180563"  fill="#3382D1" />
+<circle cx="69.8%" cy="59" r="12" class="node" rank="species" otu="true" name="Pongo pygmaeus" time="" lncount="1" id="180563"  />
+<circle cx="69.8%" cy="83" r="2" stroke="#3382D1" stroke-width="1" rank="species" otu="true" name="Pongo abelii" time="" lncount="1" id="180564"  fill="#3382D1" />
+<circle cx="69.8%" cy="83" r="12" class="node" rank="species" otu="true" name="Pongo abelii" time="" lncount="1" id="180564"  />
+<circle cx="51.6%" cy="71" r="4" stroke="#3382D1" stroke-width="1" rank="genus" cilo="3.80" cihi="4.90" ci_string="CI: (3.8 - 4.9)" isci="false" time="4.11" lncount="2" name="Pongo" id="180562"  fill="#3382D1" />
+<circle cx="51.6%" cy="71" r="12" class="node" rank="genus" cilo="3.80" cihi="4.90" ci_string="CI: (3.8 - 4.9)" isci="false" time="4.11" lncount="2" name="Pongo" id="180562"  />
+<circle cx="2.2%" cy="115" r="4" fill="#3382D1" />
+<circle cx="2.2%" cy="115" r="12" class="node" rank="family" time="15.20" cilo="14.50" cihi="16.30" isci="false" lncount="7" name="Hominidae" id="180552"/>
+<circle cx="69.8%" cy="107" r="2" stroke="#3382D1" stroke-width="1" rank="species" otu="true" name="Pan troglodytes" time="" lncount="1" id="180561"  fill="#3382D1" />
+<circle cx="69.8%" cy="107" r="12" class="node" rank="species" otu="true" name="Pan troglodytes" time="" lncount="1" id="180561"  />
+<circle cx="69.8%" cy="131" r="2" stroke="#3382D1" stroke-width="1" rank="species" otu="true" name="Pan paniscus" time="" lncount="1" id="180560"  fill="#3382D1" />
+<circle cx="69.8%" cy="131" r="12" class="node" rank="species" otu="true" name="Pan paniscus" time="" lncount="1" id="180560"  />
+<circle cx="59.1%" cy="119" r="4" stroke="#3382D1" stroke-width="1" rank="genus" cilo="2.18" cihi="2.97" ci_string="CI: (2.2 - 3)" isci="false" time="2.40" lncount="2" name="Pan" id="180559"  fill="#3382D1" />
+<circle cx="59.1%" cy="119" r="12" class="node" rank="genus" cilo="2.18" cihi="2.97" ci_string="CI: (2.2 - 3)" isci="false" time="2.40" lncount="2" name="Pan" id="180559"  />
+<circle cx="69.8%" cy="155" r="2" stroke="#3382D1" stroke-width="1" rank="species" otu="true" name="Homo sapiens" time="" lncount="1" id="180558"  fill="#3382D1" />
+<circle cx="69.8%" cy="155" r="12" class="node" rank="species" otu="true" name="Homo sapiens" time="" lncount="1" id="180558"  />
+<circle cx="41.3%" cy="137" r="4" stroke="#3382D1" stroke-width="1" rank="unknown" cilo="6.11" cihi="6.70" ci_string="CI: (6.1 - 6.7)" isci="false" time="6.40" lncount="3" dof="Homininae" id="180557"  fill="#3382D1" />
+<circle cx="41.3%" cy="137" r="12" class="node" rank="unknown" cilo="6.11" cihi="6.70" ci_string="CI: (6.1 - 6.7)" isci="false" time="6.40" lncount="3" dof="Homininae" id="180557"  />
+<circle cx="69.8%" cy="179" r="2" stroke="#3382D1" stroke-width="1" rank="species" otu="true" name="Gorilla gorilla" time="" lncount="1" id="180555"  fill="#3382D1" />
+<circle cx="69.8%" cy="179" r="12" class="node" rank="species" otu="true" name="Gorilla gorilla" time="" lncount="1" id="180555"  />
+<circle cx="69.8%" cy="203" r="2" stroke="#3382D1" stroke-width="1" rank="species" otu="true" name="Gorilla beringei" time="" lncount="1" id="180556"  fill="#3382D1" />
+<circle cx="69.8%" cy="203" r="12" class="node" rank="species" otu="true" name="Gorilla beringei" time="" lncount="1" id="180556"  />
+<circle cx="59.7%" cy="191" r="4" stroke="#3382D1" stroke-width="1" rank="genus" cilo="0.68" cihi="5.50" ci_string="CI: (0.7 - 5.5)" isci="false" time="2.27" lncount="2" name="Gorilla" id="180554"  fill="#3382D1" />
+<circle cx="59.7%" cy="191" r="12" class="node" rank="genus" cilo="0.68" cihi="5.50" ci_string="CI: (0.7 - 5.5)" isci="false" time="2.27" lncount="2" name="Gorilla" id="180554"  />
+<circle cx="31.6%" cy="164" r="4" stroke="#3382D1" stroke-width="1" rank="subfamily" cilo="8.25" cihi="9.30" ci_string="CI: (8.2 - 9.3)" isci="false" time="8.60" lncount="5" name="Homininae" id="180553"  fill="#3382D1" />
+<circle cx="31.6%" cy="164" r="12" class="node" rank="subfamily" cilo="8.25" cihi="9.30" ci_string="CI: (8.2 - 9.3)" isci="false" time="8.60" lncount="5" name="Homininae" id="180553"  />
+</g>
+<g id="timetree-names" class="branches" depth="unknown">
+<text x="71.8%" y="64" font-style="italic"> Pongo pygmaeus</text>
+<text x="71.8%" y="88" font-style="italic"> Pongo abelii</text>
+<text x="71.8%" y="112" font-style="italic"> Pan troglodytes</text>
+<text x="71.8%" y="136" font-style="italic"> Pan paniscus</text>
+<text x="71.8%" y="160" font-style="italic"> Homo sapiens</text>
+<text x="71.8%" y="184" font-style="italic"> Gorilla gorilla</text>
+<text x="71.8%" y="208" font-style="italic"> Gorilla beringei</text>
+</g>
+</defs>
+<svg viewBox="0 0 900 248" preserveAspectRatio="none">
+<use href="#timetree-background-colors" width="1" height="1"/>
+</svg>
+<svg viewBox="0 0 900 248" preserveAspectRatio="none">
+<use href="#timetree-branches"/>
+</svg>
+<svg preserveAspectRatio="none">
+<use href="#timetree-nodes"/>
+</svg>
+<svg preserveAspectRatio="none">
+<use href="#timetree-names"/>
+</svg>
+</svg>

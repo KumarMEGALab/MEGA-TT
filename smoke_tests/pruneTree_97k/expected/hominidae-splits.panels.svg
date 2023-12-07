@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="690" name="wrapper" y="0" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100" name="timetree-geo-timescales" y="0" >
+<defs>
+<polyline points="19,0 19,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<g id="timescale-ages" class="geo-timescale">
+<rect x="2.2%" y="0" width="67.7%" height="20" fill="none" stroke="#555555" stroke-width="1" />
+<rect x="2.3%" y="2" width="6.1%" height="16" fill="#FFFF4D" stroke="#FFFF4D" stroke-width="3" full-name="Langhian" start="15.97" end="13.82" unit="Age" title="Langhian" />
+<rect x="8.4%" y="2" width="9.9%" height="18" fill="#FFFF59" stroke="#FFFF59" stroke-width="3" full-name="Serravallian" start="13.82" end="11.61" unit="Age" title="Serravallian" />
+<rect x="18.3%" y="2" width="19.3%" height="18" fill="#FFFF66" stroke="#FFFF66" stroke-width="3" full-name="Tortonian" start="11.61" end="7.25" unit="Age" title="Tortonian" />
+<rect x="37.7%" y="2" width="8.6%" height="18" fill="#FFFF73" stroke="#FFFF73" stroke-width="3" full-name="Messinian" start="7.25" end="5.33" unit="Age" title="Messinian" />
+<rect x="46.2%" y="2" width="7.7%" height="18" fill="#FFFFB3" stroke="#FFFFB3" stroke-width="3" full-name="Zanclean" start="5.33" end="3.60" unit="Age" title="Zanclean" />
+<rect x="53.9%" y="2" width="4.4%" height="18" fill="#FFFFBF" stroke="#FFFFBF" stroke-width="3" full-name="Piacenzian" start="3.60" end="2.59" unit="Age" title="Piacenzian" />
+<rect x="58.3%" y="2" width="3.6%" height="18" fill="#FFFFCC" stroke="#FFFFCC" stroke-width="3" full-name="Gelasian" start="2.59" end="1.81" unit="Age" title="Gelasian" />
+<rect x="61.9%" y="2" width="4.6%" height="18" fill="#FFF2BA" stroke="#FFF2BA" stroke-width="3" full-name="Lower" start="1.81" end="0.78" unit="Age" title="Lower" />
+<rect x="66.4%" y="2" width="2.9%" height="18" fill="#FFF2C7" stroke="#FFF2C7" stroke-width="3" full-name="Middle" start="0.78" end="0.13" unit="Age" title="Middle" />
+<rect x="69.3%" y="2" width="0.6%" height="18" fill="#FFF2D3" stroke="#FFF2D3" stroke-width="3" full-name="Upper" start="0.13" end="0.01" unit="Age" title="Upper" />
+<rect x="69.9%" y="2" width="0.0%" height="18" fill="#FEF2EC" stroke="#FEF2EC" stroke-width="3" full-name=" " start="0.01" end="0.00" unit="Age" title=" " />
+<polyline points="628,0 628,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<rect x="69.9%" y="0" width="0.3%" height="22" fill="white" stroke="white" stroke-width="1" />
+</g>
+<g id="timescale-ages-text" class="geo-timescale">
+<text x="4.0%" y="16" full-name="Langhian" start="15.97" end="13.82" unit="Age" font-family="Roboto Condensed">LAN</text>
+<text x="11.9%" y="18" full-name="Serravallian" start="13.82" end="11.61" unit="Age" font-family="Roboto Condensed">SER</text>
+<text x="23.9%" y="18" full-name="Tortonian" start="11.61" end="7.25" unit="Age" font-family="Roboto Condensed">Tortonian</text>
+<text x="37.8%" y="18" full-name="Messinian" start="7.25" end="5.33" unit="Age" font-family="Roboto Condensed">Messinian</text>
+<text x="46.3%" y="18" full-name="Zanclean" start="5.33" end="3.60" unit="Age" font-family="Roboto Condensed">Zanclean</text>
+<text x="54.7%" y="18" full-name="Piacenzian" start="3.60" end="2.59" unit="Age" font-family="Roboto Condensed">PIA</text>
+<text x="58.7%" y="18" full-name="Gelasian" start="2.59" end="1.81" unit="Age" font-family="Roboto Condensed">GEL</text>
+<text x="61.8%" y="18" full-name="Lower" start="1.81" end="0.78" unit="Age" font-family="Roboto Condensed">Lower</text>
+<text x="67.3%" y="18" full-name="Middle" start="0.78" end="0.13" unit="Age" font-family="Roboto Condensed">m</text>
+<text x="70.3%" y="17" fill="black" font-size="12" font-family="Roboto Condensed">Ages</text>
+</g>
+<polyline points="19,0 628,0" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<polyline points="19,0 19,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<g id="timescale-epochs" class="geo-timescale">
+<rect x="2.2%" y="20" width="67.7%" height="20" fill="none" stroke="#555555" stroke-width="1" />
+<rect x="2.3%" y="21" width="43.9%" height="17" fill="#FFFF00" stroke="#FFFF00" stroke-width="3" full-name="Miocene" start="23.03" end="5.33" unit="Epoch" title="Miocene" />
+<rect x="46.2%" y="21" width="15.7%" height="18" fill="#FFFF99" stroke="#FFFF99" stroke-width="3" full-name="Pliocene" start="5.33" end="1.81" unit="Epoch" title="Pliocene" />
+<rect x="61.9%" y="21" width="8.0%" height="18" fill="#FFF2AE" stroke="#FFF2AE" stroke-width="3" full-name="Pleistocene" start="1.81" end="0.01" unit="Epoch" title="Pleistocene" />
+<rect x="69.9%" y="21" width="0.0%" height="18" fill="#FEF2E0" stroke="#FEF2E0" stroke-width="3" full-name="Holocene" start="0.01" end="0.00" unit="Epoch" title="Holocene" />
+<polyline points="628,0 628,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<rect x="69.9%" y="19" width="0.3%" height="22" fill="white" stroke="white" stroke-width="1" />
+</g>
+<g id="timescale-epochs-text" class="geo-timescale">
+<text x="21.1%" y="36" full-name="Miocene" start="23.03" end="5.33" unit="Epoch" font-family="Roboto Condensed">Miocene</text>
+<text x="50.3%" y="36" full-name="Pliocene" start="5.33" end="1.81" unit="Epoch" font-family="Roboto Condensed">Pliocene</text>
+<text x="64.4%" y="36" full-name="Pleistocene" start="1.81" end="0.01" unit="Epoch" font-family="Roboto Condensed">PLE</text>
+<text x="70.3%" y="36" fill="black" font-size="12" font-family="Roboto Condensed">Epochs</text>
+</g>
+<polyline points="19,0 19,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<g id="timescale-periods" class="geo-timescale">
+<rect x="2.2%" y="40" width="67.7%" height="20" fill="none" stroke="#555555" stroke-width="1" />
+<rect x="2.3%" y="41" width="67.6%" height="17" fill="#FFE619" stroke="#FFE619" stroke-width="3" full-name="Neogene" start="23.03" end="0.00" unit="Period" title="Neogene" />
+<polyline points="628,0 628,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<rect x="69.9%" y="39" width="0.3%" height="21" fill="white" stroke="white" stroke-width="1" />
+</g>
+<g id="timescale-periods-text" class="geo-timescale">
+<text x="32.9%" y="56" full-name="Neogene" start="23.03" end="0.00" unit="Period" font-family="Roboto Condensed">Neogene</text>
+<text x="70.3%" y="55" fill="black" font-size="12" font-family="Roboto Condensed">Periods</text>
+</g>
+<polyline points="19,0 19,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<g id="timescale-eras" class="geo-timescale">
+<rect x="2.2%" y="60" width="67.7%" height="20" fill="none" stroke="#555555" stroke-width="1" />
+<rect x="2.3%" y="61" width="67.6%" height="17" fill="#F2F91D" stroke="#F2F91D" stroke-width="3" full-name="Cenozoic" start="65.50" end="0.00" unit="Era" title="Cenozoic" />
+<polyline points="628,0 628,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<rect x="69.9%" y="59" width="0.3%" height="21" fill="white" stroke="white" stroke-width="1" />
+</g>
+<g id="timescale-eras-text" class="geo-timescale">
+<text x="32.4%" y="76" full-name="Cenozoic" start="65.50" end="0.00" unit="Era" font-family="Roboto Condensed">Cenozoic</text>
+<text x="70.3%" y="75" fill="black" font-size="12" font-family="Roboto Condensed">Eras</text>
+</g>
+<polyline points="19,0 19,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<g id="timescale-eons" class="geo-timescale">
+<rect x="2.2%" y="80" width="67.7%" height="20" fill="none" stroke="#555555" stroke-width="1" />
+<rect x="2.3%" y="81" width="67.6%" height="17" fill="#9AD9DD" stroke="#9AD9DD" stroke-width="3" full-name="Phanerozoic" start="542.00" end="0.00" unit="Eon" title="Phanerozoic" />
+<polyline points="628,0 628,20" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<polyline points="19,19 628,19" fill="none" stroke="#555555" stroke-width="1" stroke-linecap="square"/>
+<rect x="69.9%" y="79" width="0.3%" height="21" fill="white" stroke="white" stroke-width="1" />
+</g>
+<g id="timescale-eons-text" class="geo-timescale">
+<text x="31.1%" y="96" full-name="Phanerozoic" start="542.00" end="0.00" unit="Eon" font-family="Roboto Condensed">Phanerozoic</text>
+<text x="70.3%" y="95" fill="black" font-size="12" font-family="Roboto Condensed">Eons</text>
+<text x="76.4%" y="56" font-height="16" fill="#1c6bc9" font-family="Roboto Condensed">Geologic Timescale</text>
+</g>
+</defs>
+<svg width="100%" height="100" y="0" viewBox="0 0 900 100" preserveAspectRatio="none">
+<use href="#timescale-ages" />
+<use href="#timescale-epochs" />
+<use href="#timescale-periods" />
+<use href="#timescale-eras" />
+<use href="#timescale-eons" />
+</svg>
+<svg width="100%" height="100" y="0"  preserveAspectRatio="none">
+<use href="#timescale-ages-text" />
+<use href="#timescale-epochs-text" />
+<use href="#timescale-periods-text" />
+<use href="#timescale-eras-text" />
+<use href="#timescale-eons-text" />
+</svg>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="35" name="timescale" y="100" >
+<defs>
+<g id="timescale" class="timescale">
+<polyline points="20,5 628,5" fill="none" stroke="#333" stroke-width="1" stroke-linecap="square" />
+<polyline points="628,5 628,20" fill="none" stroke="#333" stroke-width="1" stroke-linecap="square" />
+<polyline points="476,5 476,20" fill="none" stroke="#333" stroke-width="1" stroke-linecap="square" />
+<polyline points="324,5 324,20" fill="none" stroke="#333" stroke-width="1" stroke-linecap="square" />
+<polyline points="172,5 172,20" fill="none" stroke="#333" stroke-width="1" stroke-linecap="square" />
+<polyline points="20,5 20,20" fill="none" stroke="#333" stroke-width="1" stroke-linecap="square" />
+</g>
+<g id="timescale-text" class="timescale">
+<text x="69.6%" y="33" fill="#555555" font-size="12" >0</text>
+<text x="51.8%" y="33" fill="#555555" font-size="12" >3.80</text>
+<text x="35.8%" y="33" fill="#555555" font-size="12" >8</text>
+<text x="18.6%" y="33" fill="#555555" font-size="12" >11</text>
+<text x="1.7%" y="33" fill="#555555" font-size="12" >15</text>
+<text x="76.4%" y="24" font-height="16" fill="#1c6bc9" font-family="Roboto Condensed">Time (MYA)</text>
+</g>
+</defs>
+<svg width="100%" height="100" y="0" viewBox="0 0 900 100" preserveAspectRatio="none">
+<use href="#timescale" />
+</svg>
+<svg width="100%" height="100" y="0"  preserveAspectRatio="none">
+<use href="#timescale-text" />
+</svg>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="115" name="impacts" y="150" >
+<defs>
+<g id="earth-impacts" class="earth-impacts">
+<rect x="1" y="5" width="18" height="100" fill="white" stroke="white" stroke-width="2"  />
+<rect x="629" y="5" width="60" height="100" fill="white" stroke="white" stroke-width="2"  />
+<polyline points="20,105 628,105 628,5" stroke="white" stroke-width="1" fill="white" />
+<polyline points="20,55 628,55" fill="none" stroke-dasharray="5,5" stroke="orange" stroke-width="1" stroke-linecap="square"/>
+<circle cx="428" cy="55" r="12" diam="52.00" age="5" lat="39.017" lon="73.450" name="Kara-Kul" loc="Tajikistan" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="24" cy="55" r="6" diam="24.00" age="15" lat="48.883" lon="10.617" name="Ries" loc="Germany" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="488" cy="55" r="4" diam="18.00" age="4" lat="67.500" lon="172.083" name="El'gygytgyn" loc="Russia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="592" cy="55" r="3" diam="14.00" age="9.000E-001" lat="48.400" lon="60.967" name="Zhamanshin" loc="Kazakhstan" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="585" cy="55" r="2" diam="10.50" age="1" lat="6.500" lon="-1.417" name="Bosumtwi" loc="Ghana" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="428" cy="55" r="2" diam="10.00" age="5" lat="54.917" lon="48.033" name="Karla" loc="Russia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="428" cy="55" r="2" diam="8.00" age="5" lat="48.567" lon="82.017" name="Bigach" loc="Kazakhstan" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="624" cy="55" r="1" diam="4.50" age="1.000E-001" lat="-32.867" lon="-64.233" name="Rio Cuarto" loc="Argentina" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="28" cy="55" r="1" diam="3.80" age="15" lat="48.683" lon="10.067" name="Steinheim" loc="Germany" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="572" cy="55" r="1" diam="3.44" age="1" lat="61.283" lon="-73.667" name="New Quebec" loc="Quebec, Canada" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="480" cy="55" r="1" diam="2.50" age="4" lat="-27.767" lon="16.300" name="Roter Kamm" loc="Namibia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="627" cy="55" r="1" diam="1.90" age="2.140E-002" lat="22.917" lon="-10.400" name="Tenoumer" loc="Mauritania" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="626" cy="55" r="1" diam="1.83" age="5.200E-002" lat="19.967" lon="76.517" name="Lonar" loc="India" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="508" cy="55" r="1" diam="1.75" age="3" lat="33.317" lon="4.033" name="Talemzane" loc="Algeria" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="626" cy="55" r="1" diam="1.18" age="4.900E-002" lat="35.033" lon="-111.017" name="Barringer" loc="Arizona, U.S.A." stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="619" cy="55" r="1" diam="1.13" age="2.200E-001" lat="-25.400" lon="28.083" name="Tswaing" loc="South Africa" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="616" cy="55" r="1" diam="0.87" age="3.000E-001" lat="-19.167" lon="127.800" name="Wolfe Creek" loc="Western Australia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="618" cy="55" r="1" diam="0.64" age="2.500E-001" lat="-32.717" lon="24.433" name="Kalkkop" loc="South Africa" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="588" cy="55" r="1" diam="0.46" age="1" lat="-23.933" lon="-68.283" name="Monturaqui" loc="Chile" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="624" cy="55" r="1" diam="0.45" age="1.000E-001" lat="26.083" lon="4.383" name="Amguid" loc="Algeria" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="508" cy="55" r="1" diam="0.39" age="3" lat="20.250" lon="-12.683" name="Aouelloul" loc="Mauritania" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.30" age="7.000E-003" lat="60.100" lon="117.583" name="Macha" loc="Russia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.17" age="5.400E-003" lat="-22.617" lon="135.200" name="Boxhole" loc="Northern Territory" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="626" cy="55" r="1" diam="0.16" age="5.000E-002" lat="31.750" lon="-102.483" name="Xiuyan" loc="Texas, U.S.A." stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="625" cy="55" r="1" diam="0.16" age="6.350E-002" lat="31.750" lon="-102.483" name="Odessa" loc="Texas, U.S.A." stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.15" age="4.200E-003" lat="-24.567" lon="133.133" name="Henbury" loc="Northern Territory" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.11" age="4.000E-003" lat="58.400" lon="22.667" name="Kaalijarv" loc="Estonia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.11" age="1.400E-004" lat="21.500" lon="50.467" name="Wabar" loc="Saudi Arabia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.10" age="1.000E-002" lat="52.483" lon="16.900" name="Morasko" loc="Poland" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.08" age="6.600E-003" lat="57.967" lon="27.417" name="Ilumetsa" loc="Estonia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="588" cy="55" r="1" diam="0.08" age="1" lat="-22.967" lon="125.367" name="Veevers" loc="Western Australia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.05" age="1.000E-003" lat="46.300" lon="137.867" name="Sobolev" loc="Russia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.05" age="4.000E-003" lat="-27.633" lon="-61.700" name="Campo Del Cielo" loc="Argentina" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.04" age="5.000E-004" lat="22.017" lon="26.083" name="Kamil" loc="Egypt" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.04" age="1.100E-003" lat="54.000" lon="-115.600" name="Whitecourt" loc="Alberta, Canada " stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.02" age="6.700E-005" lat="46.117" lon="134.667" name="Sikhote Alin" loc="Russia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="617" cy="55" r="1" diam="0.02" age="2.700E-001" lat="-27.633" lon="117.283" name="Dalgaranga" loc="Western Australia" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.01" age="7.000E-006" lat="-16.667" lon="-69.050" name="Carancas" loc="Peru" stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<circle cx="628" cy="55" r="1" diam="0.01" age="1.000E-003" lat="37.583" lon="-99.167" name="Haviland" loc="Kansas, U.S.A." stroke="red" stroke-width="1" fill-opacity="0.4" fill="red" />
+<polyline points="630,5 635,5" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,30 635,30" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,55 635,55" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,80 635,80" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,105 635,105" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polyline points="20,105 628,105 628,5" fill="none" stroke="#aaaaaa" stroke-width="1" stroke-linecap="square"/>
+</g>
+<g id="earth-impacts-text" class="earth-impacts">
+<text x="71.3%" y="12" fill="black" font-size="12" font-family="Roboto Condensed">200</text>
+<text x="71.3%" y="33" fill="black" font-size="12" font-family="Roboto Condensed">100</text>
+<text x="71.3%" y="58" fill="black" font-size="12" font-family="Roboto Condensed">0 km</text>
+<text x="71.3%" y="83" fill="black" font-size="12" font-family="Roboto Condensed">100</text>
+<text x="71.3%" y="108" fill="black" font-size="12" font-family="Roboto Condensed">200</text>
+<text x="76.4%" y="58" font-height="16" fill="#1c6bc9" font-family="Roboto Condensed">Earth Impacts</text>
+</g>
+</defs>
+<svg width="100%" height="115" y="0" viewBox="0 0 900 115" preserveAspectRatio="none">
+<use href="#earth-impacts" />
+</svg>
+<svg width="100%" height="115" y="0"  preserveAspectRatio="none">
+<use href="#earth-impacts-text" />
+</svg>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="115" name="o2" y="265" >
+<defs>
+<g id="o2" class="geo-data" name="o2" >
+<polyline points="20,105 628,105 628,5" fill="none" stroke="#aaaaaa" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,5 635,5" fill="none" stroke="#000" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,55 635,55" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,105 635,105" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polygon points="628,104 628,103 409,103 149,103 20,6 20,104 628,104" fill="#ffc300" fill-opacity="0.75" stroke="#ffc300" stroke-width="1" />
+</g>
+<g id="o2-text" class="geo-data" name="o2" >
+<text x="76.4%" y="59" font-height="16" fill="#1c6bc9" font-family="Roboto Condensed">Oxygen</text>
+<text x="71.3%" y="11" fill="black" font-size="12" font-family="Roboto Condensed"> 21.13</text>
+<text x="71.3%" y="58" fill="black" font-size="12" font-family="Roboto Condensed"> 21.07%</text>
+<text x="71.3%" y="108" fill="black" font-size="12" font-family="Roboto Condensed">   21.00</text>
+</g>
+</defs>
+<svg width="100%" height="115" y="0" viewBox="0 0 900 115" preserveAspectRatio="none">
+<use href="#o2" />
+</svg>
+<svg width="100%" height="115" y="0"  preserveAspectRatio="none">
+<use href="#o2-text" />
+</svg>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="115" name="co2" y="380" >
+<defs>
+<g id="co2" class="geo-data" name="co2" >
+<polyline points="20,105 628,105 628,5" fill="none" stroke="#aaaaaa" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,5 635,5" fill="none" stroke="#000" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,55 635,55" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,105 635,105" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polygon points="628,104 628,6 627,84 626,92 625,99 624,91 623,64 622,100 621,102 620,85 619,72 618,64 617,96 616,79 615,65 614,90 613,94 612,69 611,56 606,57 596,57 579,57 555,58 543,54 530,50 522,34 518,38 517,34 511,32 506,30 501,31 495,30 490,31 484,31 479,31 473,31 468,30 462,27 457,24 451,21 446,19 440,20 435,25 430,30 424,35 419,39 413,44 408,47 402,50 397,54 391,58 386,62 380,66 375,69 369,71 364,72 358,73 353,74 348,75 342,75 337,76 331,76 326,76 320,76 315,76 309,75 304,75 298,75 293,74 287,74 282,73 277,72 271,72 266,71 260,70 255,69 249,67 244,65 238,63 233,62 227,60 222,59 216,57 211,56 205,56 200,57 195,59 189,61 184,61 178,62 173,62 167,62 162,62 156,63 151,63 145,64 140,64 134,64 129,64 124,65 118,65 113,66 107,66 102,67 96,69 91,71 85,73 80,76 74,79 69,80 63,82 58,84 52,88 47,88 42,85 36,81 31,74 25,62 20,47 20,104 628,104" fill="#ff5733" fill-opacity="0.75" stroke="#ff5733" stroke-width="1" />
+</g>
+<g id="co2-text" class="geo-data" name="co2" >
+<text x="76.4%" y="59" font-height="16" fill="#1c6bc9" font-family="Roboto Condensed">Carbon Dioxide</text>
+<text x="71.3%" y="11" fill="black" font-size="12" font-family="Roboto Condensed">  0.04</text>
+<text x="71.3%" y="58" fill="black" font-size="12" font-family="Roboto Condensed">  0.03%</text>
+<text x="71.3%" y="108" fill="black" font-size="12" font-family="Roboto Condensed">    0.02</text>
+</g>
+</defs>
+<svg width="100%" height="115" y="0" viewBox="0 0 900 115" preserveAspectRatio="none">
+<use href="#co2" />
+</svg>
+<svg width="100%" height="115" y="0"  preserveAspectRatio="none">
+<use href="#co2-text" />
+</svg>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="115" name="luminosity" y="495" >
+<defs>
+<g id="luminosity" class="geo-data" name="luminosity" >
+<polyline points="20,105 628,105 628,5" fill="none" stroke="#aaaaaa" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,5 635,5" fill="none" stroke="#000" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,55 635,55" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polyline points="630,105 635,105" fill="none" stroke="black" stroke-width="1" stroke-linecap="square"/>
+<polygon points="628,104 628,6 20,103 20,104 628,104" fill="#c70039" fill-opacity="0.75" stroke="#c70039" stroke-width="1" />
+</g>
+<g id="luminosity-text" class="geo-data" name="luminosity" >
+<text x="76.4%" y="59" font-height="16" fill="#1c6bc9" font-family="Roboto Condensed">Solar Luminosity</text>
+<text x="71.3%" y="11" fill="black" font-size="12" font-family="Roboto Condensed">100.00</text>
+<text x="71.3%" y="58" fill="black" font-size="12" font-family="Roboto Condensed"> 99.93L</text>
+<text x="71.3%" y="108" fill="black" font-size="12" font-family="Roboto Condensed">   99.86</text>
+</g>
+</defs>
+<svg width="100%" height="115" y="0" viewBox="0 0 900 115" preserveAspectRatio="none">
+<use href="#luminosity" />
+</svg>
+<svg width="100%" height="115" y="0"  preserveAspectRatio="none">
+<use href="#luminosity-text" />
+</svg>
+</svg>
+</svg>

@@ -1,0 +1,7 @@
+Gorilla gorilla 180555
+Gorilla beringei 180556
+Homo sapiens 180558
+Pan paniscus 180560
+Pan troglodytes 180561
+Pongo pygmaeus 180563
+Pongo abelii 180564

@@ -9,6 +9,7 @@ lib/*
 *.res
 *.pyc
 *.orig
+*/backup/*
 backup/*
 testing/*
 megatt
@@ -32,6 +33,8 @@ smoke_tests/newickToTabular/outputs/primates.svg
 smoke_tests/newickToTabular/outputs/selections.svg
 smoke_tests/pruneTree_2M/
 smoke_tests/pruneTree_50K/
-smoke_tests/pruneTree_97k/outputs/*.svg
+smoke_tests/pruneTree_97k/outputs/*
+smoke_tests/pairwiseSvg/output/*
+smoke_tests/timelinesearch/outputs/*
 
 

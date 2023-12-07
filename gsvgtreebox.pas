@@ -2777,9 +2777,11 @@ var
     begin
       ProcessNode(aNode.des1);
       ProcessNode(aNode.des2);
-      aNode.minOtu := min(aNode.des1.minOtu, aNode.des2.minOtu);
+      if aNode.des1.minOtu < aNode.des2.minOtu then
+        aNode.minOtu := aNode.des1.minOtu
+      else
+        aNode.minOtu := aNode.des2.minOtu;
     end;
-
   end;
 
 begin
@@ -2799,6 +2801,7 @@ begin
     end;
   end;
   ProcessNode(FRoot);
+  SortBranchByOrder(FRoot);
 end;
 
 ///////////////////////////////////////////////////////
