@@ -21,7 +21,7 @@ uses
 type
 
   TActionType = (tatPruneTree, tatPairwise, tatCountRanks, tatTimeline, tatGenerateNameToIdsMap,
-                 tatCountLeafNodes, tatRenderNewick, tatRenderNewickOnly, tatNone);
+                 tatCountLeafNodes, tatRenderNewick, tatRenderNewickOnly, tatNone, tatVersion);
   { megatt }
 
   megatt = class(TCustomApplication)
@@ -178,6 +178,10 @@ begin
     tatRenderNewickOnly:
       begin
         DoRenderNewickOnly;
+      end;
+    tatVersion:
+      begin
+        Halt(0);
       end;
     tatNone:
       begin
@@ -651,6 +655,8 @@ begin
     else if (ParamStr(i) = '-v') or (ParamStr(i) = '--version') then
     begin
      OutputVersionInfo;
+     ActionType := tatVersion;
+     Result := True;
      exit;
     end
     else if (ParamStr(i) = '-mf') or (ParamStr(i) = '--mobile-friendly') then
@@ -1236,88 +1242,94 @@ end;
 procedure megatt.WriteHelp;
 begin
   WriteLn('For usage, see examples at the end of this help.');
-  WriteLn('    -t --tree = <filename>');
-  WriteLn('        Path to the Newick tree file which contains the timetree to be pruned based on the users request. In this tree file, taxa are represented by their integer IDs enclosed in single quotes.');
-  WriteLn('    -names-map --names-map = <filename>');
-  WriteLn('        Path to the text file that gives a mapping of node IDs to taxa names in the form "NodeId=TaxonName" (no quotes).');
-  WriteLn('    -ids --ids = <filename>');
-  WriteLn('        Path to the text file that contains the node IDs that are to be included in the pruned tree.');
-  WriteLn('    -vspacing --vspacing = <1|2|3>');
-  WriteLn('        Specify the amount of vertical spacing between tip nodes in the tree SVG output. Must be a value between 1 and 3 inclusive.');
-  WriteLn('    -panel-height --panel-height  = <pixels>');
-  WriteLn('        Specify the height of geo data panels in the results SVG. Must be either 1, 2, or 3 which correspond to small, medium, and large. Default is 3 (large).');
+  WriteLn('    -ci --confidence-intervals = <filename>');
+  WriteLn('        Path to the CSV file that gives confidence intervals for time estimates.');
+  WriteLn('    -co2 --co2 = <filename>');
+  WriteLn('        Path to the text file that gives historical carbon dioxide levels in Earth' + #39 + 's atmosphere.');
+  WriteLn('    -count-leaves --count-leaves');
+  WriteLn('        DEVELOPER FEATURE ONLY - used to generate a CSV file that counts the number of leaf (tip) nodes for each taxonomic rank');
+  WriteLn('    -count-ranks --count-ranks');
+  WriteLn('        DEVELOPER FEATURE ONLY - used to count the number of nodes at taxonic ranks for a given tree.');
+  WriteLn('    -draw-unnamed --draw-unnamed');
+  WriteLn('        For the timeline search results SVG, specify that unnamed nodes should be drawn.');
+  WriteLn('    -earth-impacts --earth-impacts = <filename>');
+  WriteLn('        Path to the CSV file that contains data on Earth impacts.');
   WriteLn('    -geo-bg-colors --geo-bg-colors = <eons|eras|periods|epochs|ages|auto|none>');
   WriteLn('        Set the background color for geo data panels. Valid values are:');
   WriteLn('            eons, eras, periods, epochs, ages, auto, none');
-  WriteLn('    -newick --newick');
-  WriteLn('        Specify that a Newick file of the prune tree result should be generated along with the SVG tree image.');
-  WriteLn('    -o --outfile = <filename>');
-  WriteLn('        Output file path to use for generated results.');
-  WriteLn('    -logfile --logfile = <filename>');
-  WriteLn('        DEVELOPER FEATURE ONLY - If a log file is provided, a run log will be generated with debugging information. This is disabled in the release builds.');
-  WriteLn('    -tree-name --tree-name = <ID>');
-  WriteLn('        Specify a string to be used for ID tags in the pruned tree SVG image. Needed downstream for JavaScript and CSS selectors.');
+  WriteLn('    -height --height = <pixels>');
+  WriteLn('        Specify the height in pixels of the SVG image file to be generated.');
   WriteLn('    -h --help');
   WriteLn('        Print this help.');
-  WriteLn('    -earth-impacts --earth-impacts = <filename>');
-  WriteLn('        Path to the CSV file that contains data on earch impacts.');
-  WriteLn('    -o2 --o2 = <filename>');
-  WriteLn('        Path to the text file that gives historical oxygen levels in Earth' + #39 + 's atmosphere.');
-  WriteLn('    -co2 --co2 = <filename>');
-  WriteLn('        Path to the text file that gives historical carbon dioxide levels in Earth' + #39 + 's atmoshpere.');
-  WriteLn('    -leaf-counts --leaf-counts = <filename>');
-  WriteLn('        DEVELOPER FEATURE ONLY - used for counting the number of leaf nodes at a given rank in the full timetree.');
-  WriteLn('    -ci --confidence-intervals = <filename>');
-  WriteLn('        Path to the CSV file that gives confidence intervals for time estimates.');
-  WriteLn('    -log-scale --log-scale');
-  WriteLn('        Apply log scaling to the pruned tree SVG image. Default is false');
-  WriteLn('    -p --prune');
-  WriteLn('        Specify that the action to perform is to generate a pruned SVG tree image.');
-  WriteLn('    -r --render');
-  WriteLn('        Specify that the action to perform is to generate an SVG tree image using a provided Newick tree.');
+  WriteLn('    -ids --ids = <filename>');
+  WriteLn('        Path to the text file that contains the IDs for nodes that are to be included in the pruned tree.');
   WriteLn('    -i --input = <Newick string>');
   WriteLn('        Specify a Newick string to use for generating an SVG tree image. Used with -r --render.');
   WriteLn('    -if --input-file = <filename>');
   WriteLn('        Specify a Newick file to use for generating an SVG tree image. Used with -r --render.');
-  WriteLn('    -ps --prune-slow');
-  WriteLn('        DEVELOPER FEATURE ONLY - use the MEGA software to do tree pruning. This method is correct but extremely slow. Used for testing only.');
-  WriteLn('    -pairwise --pairwise = <filename>');
-  WriteLn('        Path to input JSON file that gives pairwise search results for generating an SVG image.');
+  WriteLn('    -leaf-counts --leaf-counts = <filename>');
+  WriteLn('        DEVELOPER FEATURE ONLY - used for counting the number of leaf nodes at a given rank in the full timetree.');
+  WriteLn('    -logfile --logfile = <filename>');
+  WriteLn('        DEVELOPER FEATURE ONLY - If a log file is provided, a run log will be generated with debugging information. This is disabled in the release builds.');
+  WriteLn('    -log-scale --log-scale');
+  WriteLn('        Apply log scaling to the pruned tree SVG image. Default is false.');
   WriteLn('    -map-names --map-names = <list of filenames>');
   WriteLn('        DEVELOPER FEATURE ONLY - used to generate a file that maps taxa names to their IDs.');
-  WriteLn('    -count-leaves --count-leaves');
-  WriteLn('        DEVELOPER FEATURE ONLY - used to generate a CSV file that counts the number of leaf (tip) nodes for each taxonomic rank');
-  WriteLn('    -ranks --ranks = <filename>');
-  WriteLn('        Path to the text file that gives the mapping of node IDs to their taxonomic ranks.');
-  WriteLn('    -timeline --timeline');
-  WriteLn('        Specify that the action to perform is to generate an SVG image for timeline search results. The path to the JSON file containing timeline search results should immediately follow this parameter.');
-  WriteLn('    -draw-unnamed --draw-unnamed');
-  WriteLn('        For the timeline search results SVG, specify that unnamed nodes should be drawn.');
-  WriteLn('    -target-rank --target-rank = <no_rank|unknown|domain|superkingdom|kingdom|subkingdom|superphylum|phylum|subphylum|superclass|class|subclass|infraclass|cohort|subcohort|superorder|order|suborder|infraorder|parvorder|superfamily|family|subfamily|tribe|subtribe|genus|subgenus|species_group|species_subgroup|species|subspecies|varietas|clade>');
-  WriteLn('        Specify the taxonomic rank for tip nodes in the pruned tree result. For example if "family" is specified, then genus, species, subspecies are excluded, i.e. leaf nodes will be at the family level');
-  WriteLn('    -count-ranks --count-ranks');
-  WriteLn('        DEVELOPER FEATURE ONLY - used to count the number of nodes at taxonic ranks for a given tree.');
-  WriteLn('    -width --width = <pixels>');
-  WriteLn('        Specify the width in pixels of the SVG image file to be generated.');
-  WriteLn('    -height --height = <pixels>');
-  WriteLn('        Specify the height in pixels of the SVG image file to be generated.');
-  WriteLn('    -v --version');
-  WriteLn('        Print version information for this build.');
   WriteLn('    -mf --mobile-friendly=<true|false>');
   WriteLn('        Specify whether or not an adaptive or "mobile friendly" SVG should be produced. Valid values are "true" or "false"');
+  WriteLn('    -names-map --names-map = <filename>');
+  WriteLn('        Path to the text file that gives a mapping of node IDs to taxa names in the form "NodeId=TaxonName" (no quotes).');
+  WriteLn('    -newick --newick');
+  WriteLn('        Specify that a Newick file of the prune tree result should be generated along with the SVG tree image.');
+  WriteLn('    -o --outfile = <filename>');
+  WriteLn('        Output file path to use for generated results.');
+  WriteLn('    -o2 --o2 = <filename>');
+  WriteLn('        Path to the text file that gives historical oxygen levels in Earth' + #39 + 's atmosphere.');
+  WriteLn('    -pairwise --pairwise = <filename>');
+  WriteLn('        Path to an input JSON file that gives pairwise search results for generating an SVG image. Also specifies that the action to perform is to generate and SVG image for pairwise search results.');
+  WriteLn('    -panel-height --panel-height = <1|2|3>');
+  WriteLn('        Specify the height of geo data panels in the results SVG. Must be either 1, 2, or 3 which correspond to small, medium, and large. Default is 3 (large).');
+  WriteLn('    -p --prune');
+  WriteLn('        Specify that the action to perform is to generate a pruned SVG tree image.');
+  WriteLn('    -ps --prune-slow');
+  WriteLn('        DEVELOPER FEATURE ONLY - use the MEGA software to do tree pruning. This method is correct but extremely slow. Used for testing only.');
+  WriteLn('    -ranks --ranks = <filename>');
+  WriteLn('        Path to the text file that gives the mapping of node IDs to their taxonomic ranks.');
+  WriteLn('    -r --render');
+  WriteLn('        Specify that the action to perform is to generate an SVG tree image using a provided Newick tree.');
   WriteLn('    -st --studytree = <filename>');
   WriteLn('        Specify that a study tree is being used as input and should be drawn without scaling and without background colors.');
+  WriteLn('    -target-rank --target-rank = <no_rank|unknown|domain|superkingdom|kingdom|subkingdom|superphylum|phylum|subphylum|superclass|class|subclass|infraclass|cohort|subcohort|superorder|order|suborder|infraorder|parvorder|superfamily|family|subfamily|tribe|subtribe|genus|subgenus|species_group|species_subgroup|species|subspecies|varietas|clade>');
+  WriteLn('        Specify the taxonomic rank for tip nodes in the pruned tree result. For example if "family" is specified, then genus, species, subspecies (and anything else below) are excluded, i.e. leaf nodes will be at the family level');
+  WriteLn('    -timeline --timeline = <filename>');
+  WriteLn('        Path to the JSON file containing timeline search results. Also specifies that the action to perform is to generate an SVG image for timeline search results.');
+  WriteLn('    -t --tree = <filename>');
+  WriteLn('        Path to the Newick tree file which contains the timetree to be pruned based on the users request. In this tree file, taxa are represented by their integer IDs enclosed in single quotes.');
+  WriteLn('    -tree-name --tree-name = <ID>');
+  WriteLn('        Specify a string to be used for ID tags in the pruned tree SVG image. Needed downstream for JavaScript and CSS selectors.');
+  WriteLn('    -v --version');
+  WriteLn('        Print version information for this build.');
+  WriteLn('    -vspacing --vspacing = <1|2|3>');
+  WriteLn('        Specify the amount of vertical spacing between tip nodes in the tree SVG output. Must be a value between 1 and 3 inclusive.');
+  WriteLn('    -width --width = <pixels>');
+  WriteLn('        Specify the width in pixels of the SVG image file to be generated.');
   WriteLn('    -xpw --export-pairwise');
-  WriteLn('        Specify that an HTML file of pairwise distance for the pruned tree result should be produced.');
+  WriteLn('        Specify that an HTML file of pairwise distances for the pruned tree result should be produced.');
   WriteLn('Examples');
   WriteLn('    Generate an SVG for pairwise search results');
   WriteLn('        ./megatt --pairwise ./inputs/lizard_bear.json --outfile ./output/lizard_bear.svg --width 700 --height 600 --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt');
+  WriteLn();
   WriteLn('    Generate an SVG for timeline search results');
   WriteLn('        ./megatt --timeline ./inputs/human.json --width 600 --height 800 --outfile ./outputs/human.svg --earth-impacts ./inputs/earth_impacts.csv --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt');
+  WriteLn();
   WriteLn('    Generate a pruned timetree for a given taxon');
-  WriteLn('        ./megatt --tree ./inputs/140k-genus-tree.nwk --names-map ./inputs/140k-genus-map.txt --ranks ./inputs/140k-genus-ranks.txt --target-rank genus -ci inputs/140k-genus-ci.csv -leaf-counts inputs/140k-leafNodeCounts.csv --ids ./ids/ids2.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/genus.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree');
+  WriteLn('        ./megatt --tree ./inputs/140k-genus-tree.nwk --names-map ./inputs/140k-genus-map.txt --ranks ./inputs/140k-genus-ranks.txt --target-rank genus -ci inputs/140k-genus-ci.csv -leaf-counts inputs/140k-leafNodeCounts.csv --ids ./ids/ids2.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --outfile ./outputs/genus.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree');
+  WriteLn();
   WriteLn('    Generate a pruned tree for a user provided list of species');
-  WriteLn('        ./megatt --tree ./inputs/140k-species-tree.nwk --names-map ./inputs/140k-species-map.txt --ranks ./inputs/140k-species-ranks.txt --target-rank species -ci ./inputs/140k-species-ci.csv -leaf-counts ./inputs/140k-leafNodeCounts.csv --ids ./ids/hominidae-alphabetical-asc.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --luminosity ./inputs/luminosity.txt --outfile ./outputs/hominidae-alphabetical-asc.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree');
+  WriteLn('        ./megatt --tree ./inputs/140k-species-tree.nwk --names-map ./inputs/140k-species-map.txt --ranks ./inputs/140k-species-ranks.txt --target-rank species -ci ./inputs/140k-species-ci.csv -leaf-counts ./inputs/140k-leafNodeCounts.csv --ids ./ids/hominidae-alphabetical-asc.txt --o2 ./inputs/O2.txt --co2 ./inputs/CO2.txt --outfile ./outputs/hominidae-alphabetical-asc.svg --prune --earth-impacts ./inputs/earth_impacts.csv --width 900 -geo-bg-colors periods -tree-name timetree');
+  WriteLn();
+  WriteLn('The format of input files can be observed by looking at the smoke test in the public repository at:');
+  WriteLn('      https://github.com/KumarMEGALab/MEGA-TT/tree/master/smoke_tests');
 end;
 
 var
